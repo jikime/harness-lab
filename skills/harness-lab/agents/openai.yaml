@@ -1,0 +1,4 @@
+interface:
+  display_name: "Harness Lab"
+  short_description: "일상 업무를 하네스로 바꾸는 실습 안내"
+  default_prompt: "$harness-lab을 사용해서 내 일상 업무를 작은 에이전트 팀 하네스로 바꿔줘."
