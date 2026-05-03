@@ -1,5 +1,8 @@
 # Harness Engineering Lab
 
+> **감사의 말**
+> 이 프로젝트는 [`revfactory/harness`](https://github.com/revfactory/harness)를 만드신 카카오의 황민호 님의 스킬을 기반으로, 하네스 엔지니어링을 더 쉽게 실습할 수 있도록 교육용 흐름에 맞게 재구성한 것입니다. 좋은 공개 자료와 아이디어를 공유해 주신 황민호 님께 다시 한번 깊이 감사드립니다.
+
 이 프로젝트는 Claude Code에서 하네스 엔지니어링을 연습하고 실행 가능한 하네스를 구성하기 위한 교육용 스킬 프로젝트입니다.
 
 목표는 사용자가 자신의 일상 업무나 작은 프로젝트를 Agent, Skill, Orchestrator, Test, Evolution 구조로 바꾸는 감각을 익히도록 돕는 것입니다.
