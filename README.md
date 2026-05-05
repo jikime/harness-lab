@@ -268,6 +268,19 @@ skills/
       testing-improvement.md
 ```
 
+각 파일은 아래처럼 이해하면 됩니다.
+
+| 파일 | 쉬운 비유 | 역할 |
+| --- | --- | --- |
+| `skills/harness-lab/SKILL.md` | 실습 진행자용 기본 대본 | `/harness-lab`이 언제 실행되고, 어떤 순서로 청사진과 실행 하네스를 만들지 정합니다. |
+| `references/phase-guide.md` | 수업 진행 순서표 | Phase 0부터 Phase 7까지 어떤 질문을 하고, 어떤 산출물을 만들어야 하는지 안내합니다. |
+| `references/everyday-examples.md` | 일상생활 예시 모음 | 여행 계획, 회의록, 블로그 글쓰기처럼 익숙한 업무를 하네스 구조로 설명할 때 참고합니다. |
+| `references/pattern-catalog.md` | 협업 방식 카드 | Pipeline, Fan-out/Fan-in, Producer-Reviewer처럼 어떤 팀 운영 방식을 고를지 도와줍니다. |
+| `references/templates.md` | 빈 양식과 예시 문서 | 실제 `.claude/agents`, `.claude/skills`, Orchestrator Skill, 개선 기록을 만들 때 기본 틀로 사용합니다. |
+| `references/testing-improvement.md` | 점검표와 회고 노트 | 만든 하네스가 잘 작동하는지 테스트하고, 다음 버전에서 무엇을 고칠지 기록하게 합니다. |
+
+정리하면 `SKILL.md`는 전체 실습을 이끄는 안내자이고, `references/` 안의 문서들은 필요할 때만 꺼내 보는 보조 자료입니다. 처음 읽을 때는 `SKILL.md`와 `phase-guide.md`만 봐도 전체 흐름을 이해할 수 있습니다.
+
 ## 설계 원칙
 
 - Claude Code의 `.claude/agents`, `.claude/skills`, `CLAUDE.md` 구조를 기준으로 합니다.
