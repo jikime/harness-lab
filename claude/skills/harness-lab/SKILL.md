@@ -18,6 +18,9 @@ description: Claude Code 전용 교육용 하네스 실습 스킬. 일상 업무
 - 파일 구조를 보여줄 때는 왜 그 파일이 필요한지 함께 설명한다.
 - 기존 `.claude/agents`, `.claude/skills`, `CLAUDE.md`가 있으면 먼저 읽고, 덮어쓰기 전에 변경 범위를 분명히 한다.
 - 실행 하네스 생성 시에는 Claude Code 프로젝트의 `.claude/agents`, `.claude/skills`, `CLAUDE.md` 포인터를 기준으로 구성한다.
+- 실행 하네스를 만들 때 `CLAUDE.md`에는 자연어 라우팅 규칙을 남긴다. 사용자가 스킬명을 직접 입력하지 않아도 해당 하네스의 업무로 판단되면 `{하네스-이름}-orchestrator`를 먼저 사용하도록 안내한다.
+- Orchestrator 역할을 하는 Skill은 폴더명과 frontmatter `name`이 반드시 `-orchestrator`로 끝나야 한다. 예: `.claude/skills/trip-planning-orchestrator/SKILL.md`.
+- 일반 작업 Skill에는 `-orchestrator` 접미사를 쓰지 않는다. 이 접미사는 전체 흐름을 묶는 입구 Skill에만 사용한다.
 
 ## 진행 방식
 
@@ -44,7 +47,7 @@ description: Claude Code 전용 교육용 하네스 실습 스킬. 일상 업무
 - 청사진에는 사람의 작업 절차, Agent 역할표, Skill 목록, Orchestrator 흐름, 테스트 프롬프트를 포함한다.
 - 청사진 끝에는 "이 구조로 실행 가능한 하네스를 구성해드릴까요?"처럼 자연스러운 표현으로 사용자 승인을 요청한다.
 - 사용자가 "좋아", "진행해", "이 구조로 만들어줘", "실제로 사용할 수 있게 만들어줘"처럼 승인하면 실행 하네스 생성으로 넘어간다.
-- 실행 하네스 생성 단계에서는 사용자가 내부 파일 구조를 직접 말하지 않아도 의도를 판단한다. 기존 `.claude/agents`, `.claude/skills`, `CLAUDE.md`를 확인한 뒤 필요한 Agent, Skill, 오케스트레이터 초안과 `CLAUDE.md` 포인터를 만들고, 생성된 하네스를 어떻게 실행할지 안내한다.
+- 실행 하네스 생성 단계에서는 사용자가 내부 파일 구조나 스킬명을 직접 말하지 않아도 의도를 판단한다. 기존 `.claude/agents`, `.claude/skills`, `CLAUDE.md`를 확인한 뒤 필요한 Agent, Skill, 오케스트레이터 초안과 `CLAUDE.md` 포인터를 만들고, 자연어 요청이 오케스트레이터로 이어지는 사용 흐름을 안내한다.
 - 기존 하네스 개선을 원하면 먼저 현재 구조, 중복, 빠진 테스트, 문서 드리프트를 점검한다.
 
 ## 핵심 용어
@@ -74,7 +77,9 @@ description: Claude Code 전용 교육용 하네스 실습 스킬. 일상 업무
 - 각 Agent에는 책임, 입력, 출력, 하지 말아야 할 일을 포함한다.
 - 각 Skill에는 트리거, 절차, 산출물 형식, 품질 체크를 포함한다.
 - Orchestrator에는 작업 순서, 파일 기반 산출물, 실패 시 재시도 또는 사람 확인 조건을 포함한다.
-- Claude Code용 `.claude` 파일을 만들면, 생성된 Agent와 Skill을 어떻게 호출하는지 사용 예시를 함께 남긴다.
+- Orchestrator Skill 이름은 `{하네스-이름}-orchestrator` 형식으로 만든다.
+- `CLAUDE.md`에는 자연어 요청을 Orchestrator Skill로 우선 연결하는 규칙과 예시를 포함한다.
+- Claude Code용 `.claude` 파일을 만들면, 자연어 요청 예시를 먼저 남기고 필요한 경우 직접 호출 예시를 함께 남긴다.
 - 실행 하네스를 만들면, 생성된 파일의 역할을 팀원 카드, 작업 매뉴얼, 전체 진행표, 프로젝트 안내판처럼 일상 언어로 함께 설명한다.
 - 특정 subagent가 특정 Skill을 항상 알아야 한다면 Agent frontmatter의 `skills` 필드를 제안한다.
 - 테스트는 최소 3개를 만든다: 정상 사례, 애매한 사례, 실패하기 쉬운 사례.

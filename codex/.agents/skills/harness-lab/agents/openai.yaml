@@ -1,0 +1,7 @@
+interface:
+  display_name: "Harness Lab"
+  short_description: "일상 업무를 Codex 하네스로 바꾸는 실습 스킬"
+  default_prompt: "Use $harness-lab to turn my everyday workflow into a small Codex harness blueprint."
+
+policy:
+  allow_implicit_invocation: true

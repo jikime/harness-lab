@@ -34,6 +34,8 @@
 - [ ] 역할이 너무 많거나 적지 않다.
 - [ ] Agent와 Skill의 책임이 겹치지 않는다.
 - [ ] Orchestrator가 중간 산출물을 이어준다.
+- [ ] Orchestrator Skill 폴더명과 `name`이 `-orchestrator`로 끝난다.
+- [ ] `CLAUDE.md`에 자연어 요청을 Orchestrator Skill로 연결하는 규칙이 있다.
 - [ ] 애매한 요청에서 필요한 질문을 한다.
 - [ ] 실패 위험 사례에서 추측을 단정하지 않는다.
 - [ ] 개선할 점을 기록한다.
