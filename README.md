@@ -11,6 +11,14 @@
 
 ```text
 harness-engineering-lab/
+  agents/
+    researcher.md
+    editor.md
+    project-manager.md
+    analyst.md
+    recruiter.md
+    ops-lead.md
+    cfo.md
   claude/
     README.md
     skills/
@@ -36,6 +44,22 @@ harness-engineering-lab/
 | Codex CLI | `codex/.agents/skills/harness-lab` | `$harness-lab` | [codex/README.md](codex/README.md) |
 
 Claude Code와 Codex CLI는 스킬을 설치하는 위치와 Agent 파일을 두는 위치가 다릅니다. 그래서 같은 교육 목표를 가진 스킬이라도 폴더를 분리해 두었습니다.
+
+## 예시 Agent 파일
+
+`agents/` 폴더에는 Claude Code의 `.claude/agents/`에 복사해 실험해 볼 수 있는 교육용 Subagent 예시가 들어 있습니다.
+
+| 파일 | 역할 |
+| --- | --- |
+| `researcher.md` | 자료 조사, 근거 확인, 출처 정리 |
+| `editor.md` | 초안 편집, 문장 흐름과 주장 정리 |
+| `project-manager.md` | 목표를 일정, 단계, 위험, 완료 기준으로 나누기 |
+| `analyst.md` | 숫자와 표에서 핵심 의미 찾기 |
+| `recruiter.md` | 채용 기준, 인터뷰 질문, 커뮤니케이션 문안 정리 |
+| `ops-lead.md` | 반복 업무 점검, 자동화 후보, SOP 정리 |
+| `cfo.md` | 예산, 비용, 런웨이, 지출 우선순위 점검 |
+
+처음에는 7개를 모두 설치하기보다 자신의 실습 주제와 가까운 2~3개만 골라 사용하는 것을 권장합니다.
 
 ## 공통 사용 흐름
 
