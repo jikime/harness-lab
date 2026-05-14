@@ -41,16 +41,24 @@ Claude Code를 새로 열면 `/harness-lab`으로 직접 호출할 수 있습니
 
 ## 두 단계 흐름
 
-`harness-lab`은 먼저 청사진을 보여주고, 사용자가 승인하면 실행 가능한 Claude Code 하네스 파일을 만듭니다.
+`harness-lab`은 먼저 청사진을 보여주고, 사용자가 승인하면 현재 프로젝트 안에 실행 가능한 하네스 파일을 만듭니다.
 
 | 단계 | 무엇을 하나 | 사용자가 할 일 |
 | --- | --- | --- |
 | 1. 청사진 제안 | Agent/Skill/Orchestrator 구조, 역할표, 테스트 프롬프트를 제안합니다. | 역할과 흐름이 마음에 드는지 확인합니다. |
-| 2. 실행 하네스 생성 | 사용자가 승인하면 기존 Claude Code 설정을 확인한 뒤 실행 가능한 하네스 구성을 만듭니다. | "좋아, 이 구조로 만들어줘"처럼 승인합니다. |
+| 2. 실행 하네스 생성 | 사용자가 승인하면 현재 프로젝트의 기존 설정을 확인한 뒤 실행 가능한 하네스 구성을 만듭니다. | "좋아, 이 구조로 만들어줘"처럼 승인합니다. |
+
+청사진은 이제 하네스 7요소도 함께 봅니다. 목표, 컨텍스트, 도구, 중간 산출물, 검증, 사람 승인, 개선 기록을 먼저 정리한 뒤 Agent와 Skill로 바꿉니다. 또한 어떤 산출물을 어떤 파일에 남기고 다음 단계가 무엇을 다시 읽을지 정하는 산출물 계약을 포함합니다. 그래서 단순히 파일을 많이 만드는 것이 아니라, 사용자의 반복 업무가 덜 흔들리도록 작업 환경을 잡는 데 초점을 둡니다.
+
+실행 하네스는 Agent Team 흐름을 기본 후보로 설계합니다. Orchestrator가 팀을 구성하고, 작업을 등록하고, Agent들이 메시지로 조율한 뒤, 각 결과를 `artifacts/`에 남기는 방식입니다. 다만 작업이 작거나 독립 조사만 필요하면 단일 흐름이나 Subagent 방식으로 줄일 수 있습니다.
+
+Agent Team으로 구성되는 하네스는 Agent 파일만 여러 개 만드는 데서 끝나지 않습니다. Orchestrator Skill 안에 `TeamCreate`, `TaskCreate`, `SendMessage`, `TeamDelete`, 파일 산출물, 팀 정리 조건이 함께 들어갑니다.
+
+기존 하네스를 개선할 때는 `.claude/agents`, `.claude/skills`, `CLAUDE.md`가 서로 맞는지 먼저 점검합니다. 오래된 Agent, 쓰이지 않는 Skill, 빠진 테스트, 자연어 라우팅 누락도 함께 확인합니다.
 
 ## 생성되는 파일
 
-사용자가 승인하면 Claude Code 프로젝트 안에 보통 아래와 비슷한 구조가 생깁니다.
+사용자가 승인하면 현재 프로젝트 안에 보통 아래와 비슷한 구조가 생깁니다.
 
 ```text
 .claude/
@@ -65,15 +73,23 @@ Claude Code를 새로 열면 `/harness-lab`으로 직접 호출할 수 있습니
       SKILL.md
 CLAUDE.md
 artifacts/
+  README.md
+  00-input.md
+  01-brief.md
+  02-draft.md
+  03-review.md
+  final.md
+  improvement-log.md
 ```
 
 | 위치 | 쉬운 비유 | 역할 |
 | --- | --- | --- |
 | `.claude/agents/{agent-name}.md` | 팀원 역할 카드 | 특정 일을 맡는 Agent의 책임, 입력, 출력, 사용 가능한 도구, 하지 말아야 할 일을 적습니다. |
 | `.claude/skills/{task-skill}/SKILL.md` | 작업 매뉴얼 | 특정 역할이 어떤 순서로 일하고, 어떤 형식으로 결과를 남기며, 무엇을 확인해야 하는지 적습니다. |
-| `.claude/skills/{harness-name}-orchestrator/SKILL.md` | 전체 진행표 | 여러 Agent와 Skill을 어떤 순서로 실행하고, 중간 산출물을 어떻게 이어받을지 정합니다. Orchestrator Skill 폴더명은 항상 `-orchestrator`로 끝납니다. |
-| `CLAUDE.md` | 프로젝트 안내판 | 이 프로젝트에서 만든 하네스가 어디에 있고, 자연어 요청을 어떤 Orchestrator Skill로 먼저 이어야 하는지 Claude Code가 참고할 포인터를 남깁니다. |
-| `artifacts/` | 작업 기록지 | 실행 중 조사 노트, 초안, 검토 결과, 최종 결과처럼 다음 단계가 이어받을 자료를 남깁니다. |
+| `.claude/skills/{harness-name}-orchestrator/SKILL.md` | 전체 진행표 | Agent Team을 어떻게 구성하고, 어떤 작업을 등록하고, 중간 산출물을 어떻게 이어받을지 정합니다. Orchestrator Skill 폴더명은 항상 `-orchestrator`로 끝납니다. |
+| `CLAUDE.md` | 프로젝트 안내판 | 이 프로젝트에서 만든 하네스가 어디에 있고, 자연어 요청을 어떤 Orchestrator Skill로 먼저 이어야 하는지 참고할 포인터를 남깁니다. |
+| `artifacts/README.md` | 산출물 지도 | 어떤 파일이 어떤 역할을 하고 다음 실행이 무엇을 읽어야 하는지 남깁니다. |
+| `artifacts/` | 작업 기록지 | 실행 중 입력 요약, 조사 노트, 초안, 검토 결과, 최종 결과처럼 다음 단계가 이어받을 자료를 남깁니다. |
 
 ## 실행 예시
 
