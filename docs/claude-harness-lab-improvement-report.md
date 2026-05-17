@@ -4,17 +4,8 @@
 
 ## 목적
 
-이 문서는 Claude용 `harness-lab` 스킬을 개선하면서 무엇을 참고했고, 어떤 기준을 적용했으며, 최종적으로 어떤 파일 구조로 정리했는지 남긴 기록이다.
+이 문서는 Claude용 `harness-lab` 스킬을 개선하면서, 어떤 기준을 적용했으며, 최종적으로 어떤 파일 구조로 정리했는지 남긴 기록이다.
 
-이번 개선의 핵심은 원본 `/Users/jikime/Dev/Business/Projects/harness`의 하네스 작동 방식을 그대로 복제하지 않고, `harness-engineering-book/pages`의 하네스 엔지니어링 개념을 결합해 Claude 프로젝트 안에서 바로 사용할 수 있는 교육형 하네스 스킬로 재구성하는 것이었다.
-
-## 참고한 원천
-
-| 원천 | 반영한 내용 | 그대로 옮기지 않은 내용 |
-| --- | --- | --- |
-| `/Users/jikime/Dev/Business/Projects/harness` | Agent Team 실행 흐름, Orchestrator 중심 구성, Agent/Skill/QA reference 분리, 산출물 기반 작업 | 원본의 운영형 문체와 특정 구현 흐름 |
-| `harness-engineering-book/pages` | 하네스 7요소, 성숙도, 청사진, 문맥 경계, 실패와 개선, 산출물 계약 | 책 본문의 긴 설명 |
-| 기존 `claude/skills/harness-lab` | 초보자 친화적 설명, Phase 0-7, 청사진 후 승인 흐름 | 세분화되어 중복되던 reference 구조 |
 
 ## 핵심 개선
 
