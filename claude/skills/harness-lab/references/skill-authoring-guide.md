@@ -2,6 +2,20 @@
 
 이 문서는 하네스 안에서 Skill을 만들거나 점검할 때 읽는다. Skill은 긴 프롬프트가 아니라 반복 업무 매뉴얼이다. 좋은 Skill은 언제 실행되어야 하는지 분명하고, 실행되면 어떤 순서로 일하며, 어떤 형식의 산출물을 남기는지 안정적으로 알려준다.
 
+## 목차
+
+1. Skill의 역할
+2. 기본 구조
+3. Description 작성법
+4. frontmatter 작성 기준
+5. 본문 작성 원칙
+6. Progressive Disclosure
+7. 자유도 맞추기
+8. Output Format
+9. 예시와 Edge Case
+10. Orchestrator Skill 작성 시 주의점
+11. 점검 체크리스트
+
 ## Skill의 역할
 
 하네스에서 Skill은 Agent가 따르는 작업법이다.
@@ -27,7 +41,6 @@ Skill은 아래 질문에 답해야 한다.
 
 ```markdown
 ---
-name: {skill-name}
 description: {트리거와 제외 조건이 분명한 한 문단}
 ---
 
@@ -93,6 +106,21 @@ description: 회의 관련 작업을 도와주는 Skill입니다.
 
 이렇게 쓰면 너무 넓어서 다른 Skill과 충돌하기 쉽다.
 
+## frontmatter 작성 기준
+
+Claude Code Skill은 디렉터리명이 호출 이름이 되고, frontmatter는 표시 이름과 트리거 판단을 보조한다. Agent frontmatter의 `name`과 Skill 디렉터리명을 같은 규칙으로 뭉뚱그리지 않는다.
+
+| 항목 | 기준 |
+| --- | --- |
+| Skill 디렉터리명 | 사용자가 `/skill-name`으로 부르는 호출 이름이다. 소문자·숫자·하이픈을 우선하고, 동작이 보이는 구체적 이름을 쓴다. |
+| Skill `name` | 선택값이다. 쓰는 경우 표시 이름으로 생각하고 디렉터리명과 충돌하지 않게 맞춘다. |
+| Skill `description` | 권장값이다. **무엇을 + 언제**를 앞부분에 담고, 제외 조건이 있으면 함께 적는다. `description`과 `when_to_use`는 목록에서 길게 잘릴 수 있으므로 핵심을 먼저 쓴다. |
+| Agent `name` | Agent 파일의 고유 식별자다. 소문자 영문과 하이픈을 사용하고, 파일명 및 Orchestrator의 호출 이름과 일치시킨다. |
+
+네이밍은 동명사형(gerund)을 우선한다. `processing-pdfs`, `writing-reports`처럼 동작이 보이게 쓰고, `helper`·`utils`·`tools`·`documents`처럼 모호하거나 너무 넓은 이름은 피한다.
+
+`description`은 **3인칭**으로 쓴다. description은 시스템 프롬프트에 주입되므로 "나는 도와줄 수 있다", "당신은 이걸로…" 같은 표현 대신 "회의록을 만들고 액션 아이템을 추출한다"처럼 행동을 서술한다.
+
 ## 본문 작성 원칙
 
 Skill 본문은 실행자가 바로 따를 수 있게 쓴다.
@@ -105,16 +133,39 @@ Skill 본문은 실행자가 바로 따를 수 있게 쓴다.
 
 ## Progressive Disclosure
 
-Skill 본문에는 자주 쓰는 핵심 절차만 둔다. 세부 기준은 필요할 때 읽는 reference로 분리한다.
+Skill 본문에는 자주 쓰는 핵심 절차만 둔다. 세부 기준은 필요할 때 읽는 reference로 분리한다. 로딩은 3단계로 일어나고, 각 단계의 컨텍스트 비용이 다르다.
 
-| 넣을 위치 | 내용 |
-| --- | --- |
-| `SKILL.md` | 트리거, 기본 절차, 출력 형식, 중요한 금지 조건 |
-| `references/` | 긴 판단 기준, 예시, 테스트 케이스, 도메인 배경 |
-| `scripts/` | 반복 실행되는 검증, 변환, 생성 스크립트 |
-| `assets/` | 템플릿, 샘플 입력, 고정 자료 |
+| 단계 | 로딩 시점 | 토큰 예산 | 넣을 위치 |
+| --- | --- | --- | --- |
+| 메타데이터 (description 중심, name 선택) | 항상 | 약 100토큰 | frontmatter |
+| 본문 | 트리거될 때 | **500줄 미만 / 약 5k 토큰 미만** | `SKILL.md` |
+| 리소스 | 필요할 때만 | 사실상 무제한 | `references/`, `scripts/`, `assets/` |
 
-판단 기준은 간단하다. 매번 필요한 내용은 `SKILL.md`에 둔다. 가끔 필요한 긴 내용은 `references/`에 둔다. 사람이 손으로 반복하기 귀찮은 절차는 `scripts/`로 둔다.
+규칙:
+
+- **본문은 500줄 미만**으로 유지한다. 넘어가면 세부를 `references/`로 빼고 본문에는 "언제 이 파일을 읽으라"는 포인터만 남긴다.
+- `references/`는 **SKILL.md에서 한 단계 깊이**로 둔다. 참조가 참조를 다시 부르는 깊은 중첩은 피한다. **100줄을 넘는 참조 파일에는 상단에 목차**를 둔다.
+- 세 리소스 폴더의 용도는 분명히 다르다.
+
+| 폴더 | 용도 | Claude가 읽나 |
+| --- | --- | --- |
+| `references/` | 필요할 때 **읽어서** 판단에 쓰는 문서(판단 기준, 예시, 도메인 배경) | 읽음 |
+| `scripts/` | bash로 **실행**하는 결정적 코드. 내용이 아니라 출력만 컨텍스트로 들어온다 | 실행 |
+| `assets/` | **산출물에 들어가는 재료**(템플릿, 보일러플레이트, 이미지, 폰트, CSS) | 보통 안 읽고 결과물에 채워넣음 |
+
+판단 기준: 매번 필요한 내용은 `SKILL.md`, 가끔 필요한 긴 내용은 `references/`, 손으로 반복하기 귀찮은 절차는 `scripts/`, 결과물 양식·고정 자료는 `assets/`에 둔다. assets는 에이전트가 직접 붙이는 것이 아니라 **Skill이 참조**하고, 그 Skill을 쓰는 에이전트가 거쳐 사용한다.
+
+## 자유도 맞추기
+
+Skill의 지시 강도는 작업이 깨지기 쉬운 정도에 맞춘다. 한 가지 강도로 통일하지 않는다.
+
+| 자유도 | 언제 | 쓰는 방식 |
+| --- | --- | --- |
+| 높음 | 정답이 여러 개, 판단이 필요 | 텍스트 지침으로 방향만 준다 |
+| 중간 | 선호하는 패턴이 있다 | 의사코드나 파라미터화된 절차를 준다 |
+| 낮음 | 깨지기 쉽고 일관성이 중요 | "이 스크립트를 그대로 실행한다. 명령을 바꾸지 않는다"처럼 좁힌다 |
+
+비유로는 절벽 사이 좁은 다리(낮은 자유도)와 열린 들판(높은 자유도)이다. 결정적이어야 하는 검증·변환·발송 직전 단계는 좁게, 창작·탐색 단계는 넓게 둔다.
 
 ## Output Format
 
@@ -181,13 +232,19 @@ Orchestrator Skill은 일반 Skill보다 더 명확해야 한다. 전체 실행�
 - 하네스 목표
 - 읽어야 할 입력과 기존 산출물
 - Agent Team 사용 여부
-- `TeamCreate`, `TaskCreate`, `SendMessage`, `TeamDelete` 흐름
+- `TeamCreate`, `TaskCreate`, `TaskUpdate`, `TaskGet`, `SendMessage`, `TeamDelete` 흐름
+- Agent별 `tools`, 주요 산출물 계약
 - 단계별 산출물 경로
+- `artifacts/README.md` 산출물 지도와 최신 상태 갱신 규칙
+- with/without 벤치마크를 수행할 때 `light`, `targeted`, `full` 중 두께를 먼저 고르고, `artifacts/evals/iteration-N/{eval-name}/` 아래에 그 두께에 맞는 `prompt.md`, `run-config.md`, 출력 파일, `metrics.json`, `comparison.md`를 저장하는 규칙
+- 부분 재실행 시 뒤 단계 산출물을 `stale`로 표시하는 규칙
 - 사람 승인 지점
+- 최종 산출물의 `사용 가능`, `사람 승인 필요`, `미검증 영역` 표시
+- `artifacts/README.md`에서 파일 최신 상태(`current`, `stale`, `needs-review`, `archived`)와 승인 상태(`사용 가능`, `사람 승인 필요`, `미검증 영역 있음`, `해당 없음`)를 분리하는 규칙
 - 실패 시 멈춤 조건
 - 개선 기록 갱신 조건
 
-Orchestrator Skill 이름은 `{harness-name}-orchestrator` 형식을 사용한다.
+Orchestrator Skill 디렉터리명은 `{harness-name}-orchestrator` 형식을 사용한다. frontmatter `name`을 쓴다면 같은 값을 사용한다.
 
 ## Skill에 넣지 않을 것
 
@@ -205,6 +262,9 @@ Skill을 만들고 나면 아래를 확인한다.
 - 쓰면 안 되는 경우가 적혀 있는가?
 - 입력과 출력이 구체적인가?
 - `artifacts/` 또는 사용자가 정한 산출물 위치가 있는가?
+- `artifacts/README.md`에 산출물 상태를 갱신하는가?
+- with/without 비교를 한다면 작업 규모에 맞는 벤치마크 두께를 골랐고, 결과가 `artifacts/evals/`에 남는가?
 - 실패, 정보 부족, 승인 필요 상황을 다루는가?
 - Agent Team에서 쓰인다면 메시지와 파일 산출물의 역할이 구분되어 있는가?
+- Agent Team에서 쓰인다면 Agent별 `tools`가 역할에 맞고 너무 넓지 않은가?
 - 테스트 프롬프트가 정상, 애매함, 실패 위험을 포함하는가?

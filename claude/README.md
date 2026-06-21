@@ -52,7 +52,7 @@ Claude Code를 새로 열면 `/harness-lab`으로 직접 호출할 수 있습니
 
 실행 하네스는 Agent Team 흐름을 기본 후보로 설계합니다. Orchestrator가 팀을 구성하고, 작업을 등록하고, Agent들이 메시지로 조율한 뒤, 각 결과를 `artifacts/`에 남기는 방식입니다. 다만 작업이 작거나 독립 조사만 필요하면 단일 흐름이나 Subagent 방식으로 줄일 수 있습니다.
 
-Agent Team으로 구성되는 하네스는 Agent 파일만 여러 개 만드는 데서 끝나지 않습니다. Orchestrator Skill 안에 `TeamCreate`, `TaskCreate`, `SendMessage`, `TeamDelete`, 파일 산출물, 팀 정리 조건이 함께 들어갑니다.
+Agent Team으로 구성되는 하네스는 Agent 파일만 여러 개 만드는 데서 끝나지 않습니다. Orchestrator Skill 안에 `TeamCreate`, `TaskCreate`, `TaskUpdate`, `TaskGet`, `SendMessage`, `TeamDelete`, 파일 산출물, 팀 정리 조건이 함께 들어갑니다.
 
 기존 하네스를 개선할 때는 `.claude/agents`, `.claude/skills`, `CLAUDE.md`가 서로 맞는지 먼저 점검합니다. 오래된 Agent, 쓰이지 않는 Skill, 빠진 테스트, 자연어 라우팅 누락도 함께 확인합니다.
 
@@ -84,12 +84,18 @@ artifacts/
 
 | 위치 | 쉬운 비유 | 역할 |
 | --- | --- | --- |
-| `.claude/agents/{agent-name}.md` | 팀원 역할 카드 | 특정 일을 맡는 Agent의 책임, 입력, 출력, 사용 가능한 도구, 하지 말아야 할 일을 적습니다. |
+| `.claude/agents/{agent-name}.md` | 팀원 역할 카드 | 특정 일을 맡는 Agent의 책임, 입력, 출력, 사용 가능한 `tools`, 하지 말아야 할 일을 적습니다. |
 | `.claude/skills/{task-skill}/SKILL.md` | 작업 매뉴얼 | 특정 역할이 어떤 순서로 일하고, 어떤 형식으로 결과를 남기며, 무엇을 확인해야 하는지 적습니다. |
 | `.claude/skills/{harness-name}-orchestrator/SKILL.md` | 전체 진행표 | Agent Team을 어떻게 구성하고, 어떤 작업을 등록하고, 중간 산출물을 어떻게 이어받을지 정합니다. Orchestrator Skill 폴더명은 항상 `-orchestrator`로 끝납니다. |
 | `CLAUDE.md` | 프로젝트 안내판 | 이 프로젝트에서 만든 하네스가 어디에 있고, 자연어 요청을 어떤 Orchestrator Skill로 먼저 이어야 하는지 참고할 포인터를 남깁니다. |
-| `artifacts/README.md` | 산출물 지도 | 어떤 파일이 어떤 역할을 하고 다음 실행이 무엇을 읽어야 하는지 남깁니다. |
+| `artifacts/README.md` | 산출물 지도 | 어떤 파일이 어떤 역할을 하고 다음 실행이 무엇을 읽어야 하는지, 현재 파일이 최신인지 남깁니다. |
 | `artifacts/` | 작업 기록지 | 실행 중 입력 요약, 조사 노트, 초안, 검토 결과, 최종 결과처럼 다음 단계가 이어받을 자료를 남깁니다. |
+
+Agent 파일은 역할별로 `tools`를 다르게 둡니다. 예를 들어 조사 담당은 `Read, Grep, Glob`처럼 읽기 중심으로 두고, 구현 담당에게만 필요한 쓰기와 실행 도구를 줍니다. `model`은 기본 Agent frontmatter에 고정하지 않습니다. 직접 Subagent는 기본 모델 정책을 따르게 두고, Agent Team은 팀 생성 지시와 teammate 모델 설정을 실행 기록에 남깁니다.
+
+부분 재실행을 하면 `artifacts/README.md`에서 뒤 단계 산출물을 `stale`로 표시합니다. 예를 들어 조사 요약이 바뀌면 그 요약을 바탕으로 만든 초안, 검토, 최종본은 다시 확인해야 합니다.
+
+하네스가 실제로 나아졌는지 보려면 같은 프롬프트를 하네스를 쓴 결과와 쓰지 않은 결과로 나눠 비교합니다. 작은 하네스는 가볍게 비교하고, 큰 프로젝트는 전체 재실행보다 바뀐 Phase나 핵심 산출물만 `targeted`로 비교합니다. 이 벤치마크 기록은 `artifacts/evals/iteration-N/{eval-name}/` 아래에 남깁니다.
 
 ## 실행 예시
 
@@ -136,13 +142,13 @@ Agent, Skill, Orchestrator, Test, Evolution을 일상 언어로 설명해줘.
 
 - 새로 만든 스킬이나 Agent가 보이지 않으면 Claude Code 세션을 새로 여는 편이 안전합니다.
 - Subagent는 메인 대화의 Skill을 자동으로 모두 물려받지 않습니다.
-- 특정 Agent가 특정 Skill을 항상 알아야 한다면 Agent 파일의 frontmatter에 `skills`를 명시합니다.
+- Agent Team에서 반드시 따라야 하는 작업법은 Agent 본문과 Orchestrator 흐름에 함께 적습니다.
+- Agent 파일에는 역할별 `tools`를 명시해 권한 범위를 조절합니다. `model`은 기본 생성물에 넣지 않고, Agent Team을 쓸 때는 팀 생성 지시와 teammate 모델 설정을 실행 기록에 남깁니다.
 
 ```md
 ---
 name: trip-planner
 description: 여행 일정을 설계하는 Agent입니다.
-skills:
-  - trip-research-guide
+tools: Read, Grep, Glob, Write, Edit
 ---
 ```

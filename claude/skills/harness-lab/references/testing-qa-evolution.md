@@ -2,9 +2,23 @@
 
 이 문서는 Phase 7에서 사용한다. 목표는 "잘 만든 것 같다"가 아니라 "어떤 요청에서 잘 작동했고, 어떤 요청에서 흔들렸는지"를 확인하고 다음 버전에 반영하는 것이다.
 
+## 목차
+
+1. 언제 읽을까
+2. 테스트 3종 세트
+3. With/Without 하네스 A/B 비교
+4. Assertion 기반 검증
+5. Agent Team 검증
+6. QA Agent 원칙
+7. 경계면 교차 검증
+8. 하네스 테스트 체크리스트
+9. Trigger 검증
+10. 기존 하네스 감사와 Drift 점검
+11. 개선 기록 형식
+
 ## 언제 읽을까
 
-- 테스트 프롬프트, baseline 비교, assertion 검증이 필요할 때
+- 테스트 프롬프트, with/without 벤치마크 비교, assertion 검증이 필요할 때
 - QA Agent나 Reviewer를 설계해야 할 때
 - 기존 하네스를 점검하거나 drift를 찾을 때
 - 실패 사례를 바탕으로 Agent, Skill, Orchestrator를 개선할 때
@@ -24,14 +38,170 @@
 | 부정 테스트 | 이 Skill이나 Orchestrator가 쓰이면 안 되는 요청을 가려내는지 확인 |
 | 반복 테스트 | 같은 입력을 여러 번 넣어도 구조와 품질이 안정적인지 확인 |
 
-## Baseline 비교
+## With/Without 하네스 A/B 비교
 
-가능하면 하네스를 쓰지 않은 결과와 하네스를 쓴 결과를 비교한다.
+하네스가 정말 가치를 더하는지 보려면, 같은 요청을 하네스로 한 번, 하네스 없이 한 번 실행해 나란히 비교한다. "좋아 보인다"가 아니라 "하네스를 썼을 때 무엇이 더 나아졌는가"를 증거로 확인한다.
+
+다만 with/without 비교는 항상 전체 실행으로 하지 않는다. 큰 프로젝트에서 전체 비교를 매번 돌리면 비용이 커지고, 결과 차이가 하네스 때문인지 실행 흔들림 때문인지 흐려질 수 있다. 먼저 벤치마크 두께를 고른다.
+
+### 벤치마크 두께 선택
+
+| 두께 | 언제 쓰나 | 실행 범위 | 저장 |
+| --- | --- | --- | --- |
+| `light` | 작은 하네스, 초기 감 잡기, 저위험 업무 | 대표 프롬프트 1개만 비교한다 | `comparison.md` 중심. 필요하면 `metrics.json`을 추가한다 |
+| `targeted` | 중간·큰 프로젝트, 특정 Agent·Skill·Phase를 고쳤을 때 | 바뀐 구간과 그 구간의 입력·출력만 비교한다 | `prompt.md`, `run-config.md`, 관련 산출물, `comparison.md` |
+| `full` | 새 하네스의 가치 증명, 릴리스 전 큰 구조 변경 | 전체 with-harness와 without-harness를 비교한다 | 전체 벤치마크 폴더 구조를 사용한다 |
+
+기본값은 `light`다. 큰 프로젝트에서는 `full`을 기본값으로 쓰지 않는다. 전체 결과보다 바뀐 Phase, 핵심 산출물, 위험 지점을 좁혀 보는 `targeted`를 우선한다.
+
+| 상황 | 권장 두께 |
+| --- | --- |
+| 첫 실습 또는 개인용 작은 문서 하네스 | `light` |
+| Reviewer, QA, 트리거 description만 수정 | `targeted` |
+| 사업계획서, 코드베이스, 여러 Agent가 얽힌 프로젝트 | `targeted` |
+| 새 하네스가 실제로 기준 실행보다 나은지 처음 증명 | `full` |
+| 운영 중 회귀 확인 | with/without보다 regression, assertion, drift 점검 우선 |
+
+### 실행 구조
+
+각 테스트 프롬프트마다 같은 입력을 두 방식으로 실행한다. 테스트 입력은 같아야 하지만 실행 방식은 분명히 분리한다. `targeted`에서는 전체 요청 대신 특정 Phase의 입력 파일과 기대 출력만 공통 입력으로 삼는다.
+
+| 구성 | 입력 | 실행 조건 | 출력 경로 |
+| --- | --- | --- | --- |
+| With-harness | {동일 프롬프트} | Orchestrator·Skill·Agent Team 사용 | `artifacts/evals/iteration-N/{eval-name}/with-harness/` |
+| Without-harness | {동일 프롬프트} | Orchestrator·Skill·Agent Team 미사용 | `artifacts/evals/iteration-N/{eval-name}/without-harness/` |
+
+두 실행의 프롬프트와 입력 자료는 완전히 같아야 한다. 입력이 달라지면, 결과 차이가 하네스 덕분인지 입력 차이 때문인지 구분할 수 없다.
+
+`without-harness`는 기준 실행이다. 같은 프로젝트에서 자동 라우팅이 켜질 수 있으므로, 실행 기록에 "어떤 하네스 요소를 쓰지 않았는지"를 남긴다. 일반 답변, 단일 흐름, 직접 파일 작성은 허용하되, 해당 하네스의 Orchestrator Skill, Agent Team, 작업 Skill 호출은 쓰지 않는다.
+
+### 벤치마크 저장 구조
+
+비교 결과는 임시 메모가 아니라 다음 개선에서 다시 읽을 수 있는 벤치마크 기록으로 남긴다. 다만 두께에 따라 파일 수를 조절한다.
+
+`light` 최소 구조:
 
 ```text
-artifacts/evals/iteration-1/{eval-name}/with-harness/
-artifacts/evals/iteration-1/{eval-name}/baseline/
+artifacts/evals/iteration-N/{eval-name}/
+├── prompt.md
+└── comparison.md
 ```
+
+`targeted` 구조:
+
+```text
+artifacts/evals/iteration-N/{eval-name}/
+├── prompt.md
+├── run-config.md
+├── target-input.md
+├── with-harness-output.md
+├── without-harness-output.md
+└── comparison.md
+```
+
+`full` 구조:
+
+```text
+artifacts/evals/iteration-N/{eval-name}/
+├── prompt.md
+├── run-config.md
+├── with-harness/
+│   ├── output.md
+│   └── metrics.json
+├── without-harness/
+│   ├── output.md
+│   └── metrics.json
+└── comparison.md
+```
+
+파일별 역할:
+
+| 파일 | 내용 |
+| --- | --- |
+| `prompt.md` | 두 실행에 공통으로 준 사용자 요청, 입력 자료, 제약 |
+| `run-config.md` | 벤치마크 두께, 실행 일시, 모델 정책, 허용/금지한 하네스 요소, 평가 기준 |
+| `target-input.md` | `targeted`에서 비교할 Phase 입력, 이전 산출물, 기대 출력 |
+| `with-harness-output.md` | `targeted`에서 하네스 구간을 사용한 결과 |
+| `without-harness-output.md` | `targeted`에서 같은 입력을 하네스 구간 없이 처리한 기준 결과 |
+| `with-harness/output.md` | Orchestrator·Skill·Agent Team을 사용한 결과 |
+| `with-harness/metrics.json` | with 실행의 `total_tokens`, `duration_ms`, 완료 상태 |
+| `without-harness/output.md` | 하네스를 사용하지 않은 기준 결과 |
+| `without-harness/metrics.json` | without 실행의 `total_tokens`, `duration_ms`, 완료 상태 |
+| `comparison.md` | 품질 판정, 비용 대비 개선 여부, 다음 버전 수정 후보 |
+
+### 벤치마크 파일 형식
+
+`run-config.md`에는 두 실행의 차이가 입력 차이가 아니라 실행 방식 차이였음을 증명할 수 있게 적는다.
+
+```md
+# Eval Run Config
+
+- eval name:
+- iteration:
+- benchmark thickness: light | targeted | full
+- 실행 일시:
+- 공통 프롬프트: `prompt.md`
+- 공통 입력 자료:
+- targeted 범위:
+- 모델 정책: Agent frontmatter에는 `model` 생략. 직접 Subagent 기본 모델 정책과 Agent Team teammate 모델 설정 또는 팀 생성 지시문을 기록한다.
+- with-harness 허용: Orchestrator, Skill, Agent Team
+- without-harness 금지: 해당 하네스의 Orchestrator Skill, Agent Team, 작업 Skill 호출
+- 평가 기준:
+```
+
+`metrics.json`은 with와 without 양쪽에 같은 형식으로 둔다.
+
+```json
+{
+  "total_tokens": null,
+  "duration_ms": null,
+  "status": "completed",
+  "notes": ""
+}
+```
+
+`comparison.md`는 판정과 다음 개선으로 바로 이어지게 쓴다.
+
+```md
+# Benchmark Comparison
+
+- eval name:
+- winner: with-harness | without-harness | tie | inconclusive
+- verdict:
+
+## Quality
+
+| 기준 | with-harness | without-harness | 판정 근거 |
+| --- | --- | --- | --- |
+
+## Cost
+
+| 항목 | with-harness | without-harness | 차이 |
+| --- | --- | --- | --- |
+| total_tokens |  |  |  |
+| duration_ms |  |  |  |
+
+## Next Changes
+
+- 유지할 점:
+- 줄일 점:
+- 다음 버전 수정 후보:
+```
+
+### 비교 기준 고르기
+
+| 상황 | 기준 실행 |
+| --- | --- |
+| 새 하네스를 처음 만들 때 | `without-harness`: 하네스 없이 같은 프롬프트 실행 |
+| 기존 하네스를 개선할 때 | 수정 전 버전(Agent·Skill 스냅샷 보존). 필요하면 `without-harness`도 함께 유지 |
+
+기존 하네스를 고칠 때는 수정 전 Agent·Skill을 스냅샷으로 남겨, 새 버전과 옛 버전을 같은 프롬프트로 비교한다.
+
+### 무엇을 기록할까
+
+- 산출물: `light`는 핵심 결과를 `comparison.md`에 요약하고, `targeted`와 `full`은 비교 대상 산출물을 별도 파일로 저장한다.
+- 측정값: 실행 완료 알림의 `total_tokens`, `duration_ms`를 그 자리에서 저장한다. 알림 시점이 지나면 복구할 수 없다. `light`에서 측정값을 못 얻었으면 `알 수 없음`으로 두고 억지로 추정하지 않는다.
+- 판정: `comparison.md`에 with-harness가 without-harness보다 나은지, 같은지, 오히려 나쁜지 적는다.
 
 비교 기준:
 
@@ -40,6 +210,11 @@ artifacts/evals/iteration-1/{eval-name}/baseline/
 - 검토 단계가 실제 오류를 잡았는가?
 - 사용자가 다음 행동을 하기 쉬워졌는가?
 - 설명이 독자 수준에 맞는가?
+- 토큰과 시간이 더 들었다면, 그만큼의 품질 향상이 있었는가?
+
+### 블라인드 비교(선택)
+
+"새 버전이 정말 더 나은가"를 엄밀히 보고 싶으면, 두 산출물을 A/B로 익명화해 어느 쪽이 하네스 결과인지 모르는 상태에서 품질을 판정한다. 일반적인 반복 개선에서는 생략해도 된다. 시간·토큰이 늘었는데 품질이 비슷하면 하네스를 더 얇게 만드는 신호로 본다.
 
 ## Assertion 기반 검증
 
@@ -70,11 +245,15 @@ artifacts/evals/iteration-1/{eval-name}/baseline/
 | 검증 항목 | 확인 방법 |
 | --- | --- |
 | 팀 구성 | Orchestrator에 `TeamCreate` 대상 Agent가 명시되어 있는지 확인 |
+| Agent frontmatter | 각 Agent에 `name`, `description`, `tools`가 있고 역할과 맞는지 확인 |
+| 이름 정합성 | Agent 파일명, frontmatter `name`, Orchestrator의 호출 이름이 일치하는지 확인 |
 | 작업 등록 | Task마다 담당자, 입력, 출력, 의존, 완료 기준이 있는지 확인 |
 | 작업 상태 | `TaskUpdate`로 시작, 차단, 완료, 재할당을 표시하는 기준이 있는지 확인 |
 | 진행 확인 | `TaskGet`으로 Phase 전환 전 누락과 지연을 확인하는지 확인 |
 | 메시지 규칙 | `SendMessage`가 필요한 발견, 질문, 충돌, 차단, 완료 조건이 있는지 확인 |
 | 파일 산출물 | 각 Agent가 자기 결과를 `artifacts/`에 남기도록 되어 있는지 확인 |
+| 산출물 지도 | `artifacts/README.md`에 만든 Agent, 다음에 읽는 Agent, 파일 상태, 승인 상태가 적혀 있는지 확인 |
+| stale 처리 | 부분 재실행에서 뒤 단계 산출물을 `stale` 또는 `needs-review`로 표시하는지 확인 |
 | 팀 정리 | 실행 종료 또는 팀 재구성 시 `TeamDelete` 조건이 있는지 확인 |
 | 팀 재구성 | 중첩 팀 대신 `handoff.md`와 새 팀 생성 절차가 있는지 확인 |
 | 후속 실행 | 재실행, 부분 수정, 업데이트, 이전 결과 기반 개선 분기가 있는지 확인 |
@@ -110,6 +289,7 @@ QA는 전체가 끝난 뒤 한 번만 실행하지 않는다. 중간 산출물�
 | 요구사항 반영 | `00-input.md`의 목표와 제약 | 초안, 구현, 최종 결과 | 입력 조건이 빠지거나 바뀌지 않았는가? |
 | 검토 반영 | `30-review/` 또는 `03-review.md` | 수정본, 최종본 | 지적 사항이 반영, 보류, 거절 중 하나로 처리됐는가? |
 | 승인 조건 | 승인 필요 목록 | 최종 산출물 | 사람 확인 전 완료처럼 표현하지 않았는가? |
+| 최신 상태 | `artifacts/README.md` | 중간 산출물, 최종 산출물 | 앞 단계 변경 후 뒤 단계가 stale로 표시됐는가? |
 | 코드 연결 | API, 타입, 라우트, 상태 | 훅, UI, 테스트 | 생산자와 소비자의 계약이 일치하는가? |
 
 ## QA 산출물 형식
@@ -143,33 +323,72 @@ QA는 전체가 끝난 뒤 한 번만 실행하지 않는다. 중간 산출물�
 
 - [ ] 요청의 목적을 다시 말해준다.
 - [ ] 최종 산출물 형식을 분명히 한다.
+- [ ] 최종 산출물에 `사용 가능`, `사람 승인 필요`, `미검증 영역`이 구분되어 있다.
 - [ ] 역할이 너무 많거나 적지 않다.
 - [ ] Agent와 Skill의 책임이 겹치지 않는다.
+- [ ] 각 Agent frontmatter에 역할에 맞는 `tools`가 있다.
+- [ ] Agent 파일명, frontmatter `name`, Orchestrator의 호출 이름이 일치한다.
 - [ ] Orchestrator가 중간 산출물을 이어준다.
 - [ ] `artifacts/README.md`에 산출물 지도와 다음 단계가 읽을 파일이 적혀 있다.
+- [ ] `artifacts/README.md`에 각 산출물의 상태가 `current`, `stale`, `needs-review`, `archived` 중 하나로 표시되어 있다.
+- [ ] `artifacts/README.md`에 승인 상태가 `사용 가능`, `사람 승인 필요`, `미검증 영역 있음`, `해당 없음` 중 하나로 파일 상태와 분리되어 있다.
 - [ ] 단계별 중간 산출물과 최종 산출물이 대화가 아니라 파일로 남는다.
+- [ ] 부분 재실행으로 앞 단계가 바뀌면 뒤 단계 산출물이 `stale`로 표시된다.
 - [ ] Agent Team 하네스라면 `TeamCreate`, `TaskCreate`, `TaskUpdate`, `TaskGet`, `SendMessage`, `TeamDelete` 흐름이 있다.
 - [ ] QA Agent가 있다면 존재 확인보다 경계면 교차 검증을 수행한다.
 - [ ] QA Agent가 있다면 전체 완료 후 1회가 아니라 중요한 중간 산출물 직후 점진적으로 실행된다.
 - [ ] `CLAUDE.md`에 자연어 요청을 Orchestrator Skill로 연결하는 규칙이 있다.
 - [ ] Orchestrator description에 재실행, 업데이트, 수정, 보완, 이전 결과 기반, 특정 단계만 다시 같은 후속 작업 키워드가 있다.
+- [ ] with/without 비교를 한다면 `light`, `targeted`, `full` 중 두께를 먼저 고르고, `artifacts/evals/iteration-N/{eval-name}/comparison.md`에 토큰·시간 대비 품질 향상을 근거로 남긴다.
+- [ ] 트리거 검증에 경계가 애매한 near-miss should-not-trigger와 기존 Skill 충돌 확인이 포함된다.
 - [ ] 애매한 요청에서 필요한 질문을 한다.
 - [ ] 실패 위험 사례에서 추측을 단정하지 않는다.
 - [ ] 외부 발송, 제출, 삭제, 결제, 개인정보 처리에는 사람 승인 지점이 있다.
+- [ ] 승인 지점에서 실제로 사용자에게 승인을 요청하고 멈춘다. 라벨만 붙이거나 묻지 않고 통과하지 않는다(승인 게이트가 능동적으로 동작하는지 부정 테스트로 확인).
 - [ ] Skill description에 써야 할 상황과 쓰면 안 되는 상황이 함께 있다.
 - [ ] `.claude/commands/`를 새로 만들지 않았다.
 - [ ] 개선할 점을 기록한다.
 
-## Trigger 검증
+## Trigger 검증 — near-miss 중심
 
-Skill과 Orchestrator의 description은 실제 사용자가 말할 법한 문장으로 검증한다.
+Skill과 Orchestrator의 description은 실제 사용자가 말할 법한 문장으로 검증한다. 핵심은 명백한 정답이 아니라, 경계가 애매한 near-miss를 가려내는 것이다.
 
 | 테스트 | 권장 개수 | 기준 |
 | --- | --- | --- |
 | Should trigger | 8-10개 | 반드시 이 Skill 또는 Orchestrator가 실행되어야 하는 표현 |
-| Should not trigger | 8-10개 | 키워드는 비슷하지만 다른 Skill이나 직접 응답이 맞는 표현 |
+| Should not trigger | 8-10개 | 키워드는 비슷하지만 다른 Skill이나 직접 응답이 맞는 near-miss 표현 |
 
-좋은 부정 테스트는 명백히 무관한 문장이 아니라 경계가 애매한 문장이다. 예를 들어 회의록 하네스라면 "회의록 작성"은 trigger이고, "완성된 회의록의 맞춤법만 고쳐줘"는 should not trigger가 될 수 있다.
+### 쿼리 작성 기준
+
+- 실제 사용자가 입력할 법한 구체적이고 자연스러운 문장으로 쓴다. 파일명, 회사명, 개인 맥락 같은 디테일을 넣는다.
+- 톤(공식·캐주얼), 길이, 형식을 섞는다. 일부는 약어나 오타를 포함한다.
+- 명백한 정답보다 경계 케이스에 집중한다.
+
+### Should trigger 쿼리
+
+- 같은 의도를 다른 표현으로 말한 경우(공식·캐주얼)
+- 하네스나 산출물 종류를 직접 말하지 않지만 분명히 필요한 경우
+- 비주류 사용 사례
+- 다른 Skill과 경쟁하지만 이 하네스가 이겨야 하는 경우
+
+### Should not trigger 쿼리 — near-miss가 핵심
+
+- 키워드는 겹치지만 다른 도구나 직접 응답이 맞는 경우
+- 명백히 무관한 문장("피보나치 함수 작성")은 테스트 가치가 없다
+- 인접 도메인, 모호한 표현, 키워드는 같지만 맥락이 다른 경우
+
+예시:
+
+- 회의록 하네스라면 "회의록 작성"은 trigger, "완성된 회의록의 맞춤법만 고쳐줘"는 should not trigger다.
+- 산출물 하네스라면 "매출 리포트 대시보드 만들어줘"는 trigger, "이 엑셀의 차트를 PNG로 추출만 해줘"는 다른 도구가 맞는 near-miss다.
+
+### 기존 Skill 충돌 검증
+
+새 하네스의 description이 기존 Skill의 트리거 영역과 겹치지 않는지 확인한다.
+
+1. 기존 `.claude/skills/`의 description을 모은다.
+2. 새 하네스의 should-trigger 쿼리가 기존 Skill을 잘못 트리거하지 않는지 본다.
+3. 겹치면 description에 "쓰면 안 되는 상황"을 더 분명히 적어 경계를 만든다.
 
 검증 결과는 `artifacts/evals/triggers.md`에 남긴다.
 
@@ -178,24 +397,27 @@ Skill과 Orchestrator의 description은 실제 사용자가 말할 법한 문장
 1. `CLAUDE.md`에서 하네스 포인터와 자연어 라우팅 규칙을 확인한다.
 2. `.claude/agents/` 목록을 확인한다.
 3. `.claude/skills/` 목록과 Orchestrator Skill을 확인한다.
-4. Orchestrator의 Agent 목록과 실제 Agent 파일이 일치하는지 본다.
+4. Orchestrator의 Agent 목록과 실제 Agent 파일, frontmatter `name`이 일치하는지 본다.
 5. Orchestrator의 Skill 목록과 실제 Skill 폴더가 일치하는지 본다.
-6. 각 Skill의 frontmatter `name`, `description`이 폴더명과 충돌하지 않는지 본다.
-7. Agent Team 하네스라면 팀 생성, 작업 등록, 메시지 규칙, 파일 산출물, 팀 정리 절차가 있는지 확인한다.
-8. 테스트 프롬프트, 실패 처리, 사람 승인 조건이 있는지 확인한다.
-9. 오래된 Agent, 쓰이지 않는 Skill, 중복된 규칙을 표시한다.
+6. 각 Agent의 `tools`가 역할과 맞고 너무 넓지 않은지 본다.
+7. 각 Skill의 `description`이 있고, frontmatter `name`을 쓴다면 폴더명과 충돌하지 않는지 본다.
+8. Agent Team 하네스라면 팀 생성, 작업 등록, 메시지 규칙, 파일 산출물, 팀 정리 절차가 있는지 확인한다.
+9. `artifacts/README.md`의 산출물 상태와 부분 재실행 기록을 확인한다.
+10. 테스트 프롬프트, 실패 처리, 사람 승인 조건이 있는지 확인한다.
+11. 오래된 Agent, 쓰이지 않는 Skill, 중복된 규칙을 표시한다.
 
 ## Drift 점검표
 
 | 점검 항목 | 좋은 상태 | 위험 신호 |
 | --- | --- | --- |
 | `CLAUDE.md` 포인터 | 하네스 이름과 Orchestrator가 맞다 | 예전 Skill 이름을 가리킨다 |
-| Agent 목록 | Orchestrator가 부르는 Agent가 실제 존재한다 | 삭제된 Agent를 아직 호출한다 |
+| Agent 목록 | Orchestrator가 부르는 Agent가 실제 존재하고 `name`이 일치한다 | 삭제된 Agent를 아직 호출하거나 파일명과 `name`이 다르다 |
+| Agent 권한 | `tools`가 역할별로 좁게 지정되어 있다 | 모든 Agent가 모든 도구를 가진다 |
 | Skill 목록 | 작업 Skill과 Orchestrator 책임이 구분된다 | Orchestrator가 일반 작업까지 모두 직접 한다 |
 | Agent Team 계약 | TeamCreate, TaskCreate, TaskUpdate, TaskGet, SendMessage, TeamDelete 흐름이 있다 | Agent 파일만 있고 팀 실행 절차가 없다 |
-| 산출물 경로 | 단계별 파일명이 정해져 있다 | 중간 결과가 대화에만 남는다 |
+| 산출물 경로 | 단계별 파일명과 최신 상태가 정해져 있다 | 중간 결과가 대화에만 남거나 stale 결과를 그대로 쓴다 |
 | 검증 | 테스트와 체크리스트가 있다 | "검토한다"만 있고 기준이 없다 |
-| 승인 | 위험 행동 전에 멈춘다 | 외부 발송, 제출, 삭제를 자동으로 끝낸다 |
+| 승인 | 최종 산출물에 승인 상태가 표시되고 위험 행동 전에 멈춘다 | 외부 발송, 제출, 삭제를 자동으로 끝낸다 |
 | 기록 | 변경 이력이 있다 | 언제 왜 바꿨는지 모른다 |
 
 ## 개선 기록 형식
