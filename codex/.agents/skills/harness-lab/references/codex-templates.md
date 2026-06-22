@@ -2,6 +2,16 @@
 
 이 문서는 실제 Codex용 파일이나 하네스 청사진을 작성할 때 사용한다. 프로젝트의 기존 규칙이 있으면 기존 규칙을 우선한다.
 
+## 목차
+
+1. 하네스 청사진
+2. `.codex/agents/{agent-name}.toml`
+3. `.agents/skills/{skill-name}/SKILL.md`
+4. `.agents/skills/{harness-name}-orchestrator/SKILL.md`
+5. `AGENTS.md` 포인터
+6. 생성 후 사용 안내
+7. 개선 기록
+
 ## 하네스 청사진
 
 ```md
