@@ -164,7 +164,7 @@ artifacts/evals/iteration-N/{eval-name}/
 - 공통 프롬프트: `prompt.md`
 - 공통 입력 자료:
 - targeted 범위:
-- 모델 정책: Agent frontmatter에는 `model` 생략. 직접 Subagent 기본 모델 정책과 Agent Team teammate 모델 설정 또는 팀 생성 지시문을 기록한다.
+- 모델 정책: 각 Agent의 `model`을 역할별 루브릭(haiku/sonnet/opus/fable, 균형 작업은 sonnet 또는 inherit)으로 정한 값과, Agent Team teammate 모델 설정 또는 팀 생성 지시문을 기록한다.
 - with-harness 허용: Orchestrator, Skill, Agent Team
 - without-harness 금지: 해당 하네스의 Orchestrator Skill, Agent Team, 작업 Skill 호출
 - 평가 기준:

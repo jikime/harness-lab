@@ -230,37 +230,7 @@ artifacts/
 
 with-harness와 without-harness를 비교할 때는 일반 최종 산출물 경로와 별도로 아래 경로를 사용한다. 비교 결과가 대화에만 남으면 다음 개선에서 재사용할 수 없으므로 반드시 파일로 저장한다.
 
-먼저 벤치마크 두께를 고른다.
-
-| 두께 | 사용 상황 | 저장 방식 |
-| --- | --- | --- |
-| `light` | 작은 하네스, 빠른 가치 확인 | `prompt.md`, `comparison.md` 중심 |
-| `targeted` | 큰 프로젝트, 특정 Phase·Agent·Skill 변경 | `target-input.md`, 관련 출력, `comparison.md` |
-| `full` | 새 하네스 가치 증명, 릴리스 전 큰 구조 변경 | 아래 전체 폴더 구조 |
-
-큰 프로젝트에서는 `full`을 기본으로 쓰지 않는다. 전체 결과 비교보다 바뀐 구간만 좁혀 비교하는 `targeted`를 우선한다.
-
-아래는 전체 구조다. `light`에서는 `prompt.md`와 `comparison.md`만 둘 수 있고, `target-input.md`는 `targeted`에서만 만든다.
-
-```text
-artifacts/evals/iteration-N/{eval-name}/
-├── prompt.md
-├── run-config.md
-├── target-input.md
-├── with-harness/
-│   ├── output.md
-│   └── metrics.json
-├── without-harness/
-│   ├── output.md
-│   └── metrics.json
-└── comparison.md
-```
-
-- `prompt.md`: 두 실행에 공통으로 사용한 요청과 입력 자료
-- `run-config.md`: 벤치마크 두께, with/without 실행 조건, 모델 정책, 사용하지 않은 하네스 요소, 평가 기준
-- `target-input.md`: `targeted`에서 비교할 Phase 입력과 기대 출력
-- `metrics.json`: 각 실행의 `total_tokens`, `duration_ms`, 완료 상태
-- `comparison.md`: 품질 판정, 비용 대비 효과, 다음 수정 후보
+벤치마크 두께(`light`/`targeted`/`full`) 선택, 폴더 구조, 파일별 역할(`prompt.md`·`run-config.md`·`target-input.md`·`metrics.json`·`comparison.md`)은 `testing-qa-evolution.md`의 "With/Without 하네스 A/B 비교"를 정본으로 따른다. 여기서는 산출물이 `artifacts/evals/iteration-N/{eval-name}/` 아래에 파일로 남는다는 경로 약속만 둔다.
 
 ## `.claude/agents/{agent-name}.md`
 

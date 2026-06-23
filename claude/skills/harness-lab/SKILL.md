@@ -111,7 +111,7 @@ description: 하네스 엔지니어링 실습·설계·생성 스킬. 사용자�
 아래 순서를 기본 흐름으로 사용한다.
 
 1. Phase 0. 현재 상황 확인: 사용자의 목표, 경험 수준, 기존 파일을 확인한다.
-2. Phase 1. 일상 언어로 풀어보기: 사용자의 일을 사람이 하는 절차로 풀어쓴다.
+2. Phase 1. 도메인 분석: 사용자의 일을 사람이 하는 절차로 풀어쓰면서, 작업 유형·기존 자료나 코드베이스·반복 작업·위험 지점·기존 하네스 충돌·숙련도를 읽는다. 결과는 적합성 게이트, 역할 후보, 사람 승인 지점의 입력이 된다. 자세한 항목은 `references/harness-design-workflow.md`의 도메인 분석을 따른다.
 3. Phase 2. 산출물 정의: 마지막에 무엇이 나오면 성공인지 정한다.
 4. Phase 3. 실행 모드와 Agent Team 패턴 선택: 단일 흐름, Subagent, Agent Team 중 적절한 모드를 고르고 순차, 병렬, 작성-검토, 감독형 등 협업 방식을 정한다.
 5. Phase 4. Agent 설계: 누가 어떤 역할을 맡을지 정한다.
@@ -145,6 +145,7 @@ Phase 0에서는 신규 구축, 기존 확장, 운영/유지보수 중 어디에
 - 직전 응답에서 청사진을 제시했고, 사용자가 "좋아", "진행해", "이 구조로 만들어줘", "실제로 사용할 수 있게 만들어줘"처럼 승인하면 실행 하네스 생성으로 넘어간다.
 - 실행 하네스 생성 단계에서는 사용자가 내부 파일 구조나 스킬명을 직접 말하지 않아도 의도를 판단한다. 기존 `.claude/agents`, `.claude/skills`, `CLAUDE.md`를 확인한 뒤 필요한 Agent, Skill, Orchestrator Skill과 `CLAUDE.md` 포인터를 만든다.
 - 실행 하네스 생성 단계에서 Agent Team이 필요하면 `references/agent-team-design.md`를 읽고, 산출물 구조가 필요하면 `references/orchestrator-artifacts-template.md`를 읽는다.
+- Skill description·본문·progressive disclosure 설계가 필요하면 `references/skill-authoring-guide.md`를 읽는다.
 - 기존 하네스 개선, 점검, 동기화, drift 확인을 원하면 먼저 현재 구조, 중복, 빠진 테스트, 오래된 규칙, `CLAUDE.md` 포인터 불일치를 점검한다. 이때 `references/testing-qa-evolution.md`를 읽는다.
 - 사용자가 첫 요청에서 "바로 파일로 만들어줘", "이미 승인했어", "분석 없이 생성해"라고 해도 승인된 것으로 보지 않는다. 청사진을 먼저 보여주고 사용자의 후속 승인을 기다린다.
 
@@ -162,19 +163,7 @@ Agent Team을 쓰기 좋은 경우:
 - 병렬 조사 뒤 합의된 최종 결과가 필요하다.
 - 진행 상태와 의존 관계를 명확히 추적해야 한다.
 
-Orchestrator Skill에는 아래 실행 흐름을 포함한다.
-
-1. `TeamCreate`로 필요한 Agent를 팀원으로 구성한다.
-2. `TaskCreate`로 단계별 작업과 의존 관계를 등록한다.
-3. 팀원과 Orchestrator는 필요할 때 `TaskUpdate`로 진행 상태, 차단, 완료를 갱신한다.
-4. Orchestrator는 `TaskGet`으로 지연, 누락, 의존 관계 막힘을 확인한다.
-5. 팀원들은 `SendMessage`로 발견, 질문, 충돌 지점을 공유한다.
-6. 각 팀원은 자기 결과를 `artifacts/{phase}-{role}-{artifact}.md` 같은 파일로 저장한다.
-7. Orchestrator는 `artifacts/` 산출물을 읽어 통합하고, 사람 승인 지점을 확인한다.
-8. 최종 결과, 승인 상태, 개선 기록을 `artifacts/`에 저장한다.
-9. 승인 필요한 위험 행동이 남아 있으면 그 행동은 실행하지 않고 승인 상태를 남긴다.
-10. 실행이 끝나면 `TeamDelete`로 팀을 정리한다.
-11. 승인 필요한 위험 행동이 남아 있으면 팀 정리 후 사용자에게 승인 요청을 남기고 멈춘다.
+Orchestrator Skill에는 팀 생성(`TeamCreate`) → 작업 등록(`TaskCreate`) → 상태 관리(`TaskUpdate`/`TaskGet`) → 발견·충돌 공유(`SendMessage`) → 각자 결과를 `artifacts/`에 저장 → Orchestrator가 통합하고 사람 승인 지점 확인 → `TeamDelete` 정리의 흐름을 담는다. 승인이 필요한 위험 행동(발송·제출·배포·삭제)은 실행하지 않고 팀 정리 후 사용자에게 승인을 요청한 뒤 멈춘다. 단계별 상세 계약은 `references/agent-team-design.md`의 Orchestrator 실행 흐름을 따른다.
 
 팀 재구성이 필요하면 이전 팀의 결과를 먼저 `artifacts/`에 저장한 뒤 팀을 정리하고 새 팀을 만든다. 대화 메시지는 조율에 쓰고, 다음 단계가 반드시 읽어야 하는 내용은 파일 산출물로 남긴다.
 
@@ -237,7 +226,7 @@ Orchestrator Skill에는 아래 실행 흐름을 포함한다.
 - 한 번에 너무 많은 에이전트를 만들지 않는다. 첫 실습은 보통 3-4개 역할이 적당하다. 다만 문서 작성, 프로젝트 운영, 제출 준비처럼 흐름이 긴 작업은 5-7개까지 허용하되, 왜 별도 역할인지 설명한다.
 - Agent를 별도로 만들기 전에는 네 가지를 확인한다: 입력과 출력이 독립적인가, 다른 전문성이 필요한가, 반복해서 다시 쓰일 책임인가, 빠지면 품질이나 안전에 큰 문제가 생기는가. 답이 약하면 새 Agent 대신 Orchestrator 단계나 체크리스트로 둔다.
 - 각 Agent에는 책임, 입력, 출력, 하지 말아야 할 일을 포함한다.
-- 각 Agent frontmatter에는 `name`, `description`, `tools`를 포함한다. `model`은 기본적으로 생략하고, 사용자가 비용·속도·품질 정책을 명시한 경우에만 선택적으로 검토한다. 직접 Subagent의 모델 정책과 Agent Team teammate 모델 정책은 다를 수 있으므로, 팀 실행에서는 팀 생성 지시나 벤치마크 `run-config.md`에 실제 모델 정책을 기록한다. `tools`는 최소 권한으로 둔다.
+- 각 Agent frontmatter에는 `name`, `description`, `tools`, `model`을 역할에 맞춰 정한다. `model`은 작업의 추론 깊이로 고른다 — 규칙기반·정적·추출은 `haiku`, 의미 해석·분석·리뷰는 `sonnet`(대부분의 기본), 상충 해소·구조 판단·설계·리팩토링은 `opus`, 장시간 자율·다단계 검증은 `fable`. 전 에이전트 opus(과지출)도 무조건 생략(티어 무시)도 피하고, 균형 작업이면 `sonnet` 또는 생략(=inherit)한다. frontmatter에 `type` 필드는 없으며 빌트인 타입(general-purpose/Explore/Plan)은 `subagent_type`로 지정하되 빌트인이라도 `.claude/agents/{name}.md` 파일을 만들고 prompt에 역할을 inline하지 않는다. `tools`는 최소 권한으로 둔다. 자세한 루브릭은 `references/agent-team-design.md`의 Agent 모델 선택을 따른다.
 - Agent frontmatter `name`은 소문자 영문과 하이픈을 사용하고, 파일명 및 Orchestrator의 호출 이름과 일치시킨다.
 - Skill의 호출 이름은 `.claude/skills/{directory}` 디렉터리명을 기준으로 정해진다. frontmatter `name`을 쓴다면 표시 이름으로만 생각하고 디렉터리명과 충돌하지 않게 맞춘다. Skill과 Agent의 `description`은 소개문이 아니라 "무엇을 + 언제"를 3인칭으로 담는다.
 - 생성하는 SKILL.md 본문은 500줄 미만으로 두고, 넘으면 세부를 `references/`로 빼고 포인터만 남긴다. 참조는 한 단계 깊이로, 100줄 넘는 참조에는 목차를 둔다.

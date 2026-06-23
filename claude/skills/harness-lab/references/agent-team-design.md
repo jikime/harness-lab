@@ -6,14 +6,14 @@
 
 1. 언제 읽을까
 2. Agent, Skill, Orchestrator의 차이
-3. Agent frontmatter 설계
+3. Agent frontmatter 설계, 모델 선택, 빌트인 규칙
 4. Agent를 분리하기 전 질문
 5. 실행 모드 선택
 6. Agent Team 최소 실행 계약
 7. 위임, Task, 메시지, 데이터 전달 규칙
 8. Agent 파일 구조
 9. 팀 패턴, 팀 크기, 전환 규칙
-10. 에러 처리, 생성자-평가자 분리, 반복·합의·자기비판 패턴, Skill 작성 요약
+10. 에러 처리, 생성자-평가자 분리, 반복·합의·자기비판 패턴, Agent Team 안티패턴
 
 ## 언제 읽을까
 
@@ -21,7 +21,6 @@
 - 단일 흐름, Subagent, Agent Team 중 무엇이 맞는지 정해야 할 때
 - Agent 파일에 팀 통신 프로토콜을 작성해야 할 때
 - Orchestrator에 `TeamCreate`, `TaskCreate`, `TaskUpdate`, `TaskGet`, `SendMessage`, `TeamDelete` 흐름을 넣어야 할 때
-- Skill description, workflow, output format, edge case를 설계해야 할 때
 
 ## Agent, Skill, Orchestrator의 차이
 
@@ -35,7 +34,7 @@
 
 ## Agent frontmatter 설계
 
-Agent 파일의 frontmatter에는 역할과 실행 범위를 먼저 고정한다. 특히 `tools`는 기능별로 명시해두면 팀 실행 중 권한 경계가 흔들리지 않는다. `model`은 기본 생성물에서 생략한다. 직접 Subagent와 Agent Team teammate는 모델 정책이 다를 수 있으므로, 팀 실행에서는 팀 생성 지시와 실행 기록에 실제 모델 정책을 남긴다.
+Agent 파일의 frontmatter에는 역할과 실행 범위를 먼저 고정한다. 특히 `tools`는 기능별로 명시해두면 팀 실행 중 권한 경계가 흔들리지 않는다. `model`은 역할의 추론 깊이에 맞춰 아래 "Agent 모델 선택" 루브릭으로 고른다(균형 작업은 sonnet 또는 생략=inherit). 직접 Subagent와 Agent Team teammate는 모델 정책이 다를 수 있으므로, 팀 실행에서는 팀 생성 지시와 실행 기록에 실제 모델 정책을 남긴다.
 
 | 필드 | 기준 |
 | --- | --- |
@@ -44,6 +43,7 @@ Agent 파일의 frontmatter에는 역할과 실행 범위를 먼저 고정한다
 | `tools` | Agent가 실제로 필요한 도구만 허용한다. 생략하면 상위 세션의 도구를 넓게 상속하므로 실무 하네스에서는 명시를 우선한다. |
 | `disallowedTools` | 대부분의 도구는 상속하되 일부만 막아야 할 때 쓴다. |
 | `skills` | 직접 Subagent로 호출할 때 보조적으로 쓸 수 있다. Agent Team teammate 실행에서는 필수 매뉴얼 전달 수단으로 의존하지 않는다. |
+| `model` | 역할에 맞춰 모델 선택 루브릭으로 고른다. 별칭 `haiku`/`sonnet`/`opus`/`fable`, 풀 모델 ID, `inherit`(생략 시 기본)을 쓴다. frontmatter에 `type` 필드는 없다. |
 
 역할별 기본 추천:
 
@@ -57,6 +57,23 @@ Agent 파일의 frontmatter에는 역할과 실행 범위를 먼저 고정한다
 | 단순 분류, 포맷 정리 | `Read, Grep, Glob` | 위험도가 낮아도 불필요한 쓰기 권한은 주지 않는다. |
 
 `tools`는 편의를 위해 넓히는 값이 아니라 책임 경계다. 예를 들어 Reviewer에게 `Write`와 `Edit`을 주면 검토자가 직접 고쳐버려 작성자와 검토자의 책임이 섞일 수 있다.
+
+## Agent 모델 선택
+
+`model`은 역할의 추론 깊이에 맞춰 고른다. 전 에이전트에 opus를 박는 것(과지출)도, 무조건 생략하는 것(티어 무시)도 피한다. 균형 작업이면 `sonnet`으로 두거나 생략(=inherit)한다.
+
+| 작업 성격 | model | 이유 |
+| --- | --- | --- |
+| 규칙 기반·정적 점검·추출·분류·고볼륨 | `haiku` | 빠르고 저비용, 의미 해석이 거의 필요 없다 |
+| 의미 해석·분석·리뷰·일반 작성(균형) | `sonnet` | 능력과 속도의 균형, 대부분의 역할 기본값 |
+| 상충 해소·구조 판단·설계·리팩토링·복잡 추론 | `opus` | 깊은 추론과 아키텍처 결정 |
+| 장시간 자율 세션·다단계 검증·착수 전 조사 | `fable` | 긴 세션 유지와 자가 검증 |
+
+예: 정적 점검·필드 추출 워커는 `haiku`, 보안 감사·코드 리뷰처럼 의미 해석이 필요한 역할은 `sonnet`, 설계·리팩토링처럼 상충 해소가 필요한 역할은 `opus`. Agent Team에서는 통합·위험 판단을 맡는 리드에 강한 모델을, 병렬 조사·정적 점검 워커에 가벼운 모델을 섞는다. 값은 별칭(`haiku`/`sonnet`/`opus`/`fable`), 풀 모델 ID, `inherit` 중 하나이며, 생략하면 세션 모델을 상속한다.
+
+## 빌트인 타입과 Agent 파일 규칙
+
+frontmatter에는 `type` 필드가 없다. 빌트인 타입(`general-purpose`, `Explore`, `Plan`)은 Agent 도구의 `subagent_type` 파라미터로 지정한다. 빌트인 타입을 쓰더라도 `.claude/agents/{name}.md` 정의 파일을 만들어 역할·원칙·프로토콜을 담는다. Agent 도구의 prompt에 역할을 직접 inline하지 않는다 — 파일로 있어야 다음 세션에서 재사용되고 팀 협업 품질이 보장된다.
 
 ## Agent를 분리하기 전 질문
 
@@ -95,7 +112,7 @@ Agent Team-first는 "무조건 팀을 만든다"는 뜻이 아니다. 기본 후
 
 단순한 것에서 시작해 필요할 때만 복잡도를 올린다. 멀티에이전트는 공짜가 아니다. 여러 에이전트가 각자 컨텍스트를 돌리면 단일 흐름보다 토큰을 훨씬 많이(경험적으로 채팅 대비 십수 배) 쓴다. 그래서 팀은 **가치가 높고, 폭넓고, 병렬화되는** 작업에만 쓴다. 공유 문맥이 많거나 단계가 강하게 얽힌 일은 단일 흐름이나 Subagent가 낫다.
 
-모델은 기본 Agent frontmatter에 고정하지 않는다. 역할별로 낮은 모델을 고정하면 생성 품질이 흔들릴 수 있으므로, 비용·속도 정책이 명확한 실험에서만 `model` frontmatter를 선택적으로 검토한다. Agent Team에서는 teammate 기본 모델 설정이나 팀 생성 지시가 실행 모델에 영향을 줄 수 있으므로, Orchestrator와 벤치마크 기록에는 실제 모델 정책을 따로 적는다.
+모델은 위 "Agent 모델 선택" 루브릭으로 역할에 맞춰 고른다(균형 작업은 sonnet 또는 생략=inherit). 전 에이전트에 opus를 박는 것도, 무조건 생략하는 것도 피한다. Agent Team에서는 teammate 기본 모델 설정이나 팀 생성 지시가 실행 모델에 영향을 줄 수 있으므로, Orchestrator와 벤치마크 기록에는 실제 모델 정책을 따로 적는다.
 
 ## Agent Team 최소 실행 계약
 
@@ -262,7 +279,7 @@ tools: Read, Grep, Glob
 - 확인하지 않은 사실을 단정하지 않는다.
 ```
 
-필요한 경우에만 `model`, `disallowedTools`, `permissionMode`, `maxTurns`, `effort`, `color` 같은 추가 frontmatter를 검토한다. 실행 하네스의 기본 Agent 템플릿은 `name`, `description`, `tools`를 우선한다.
+기본 Agent 템플릿은 `name`, `description`, `tools`, `model`(역할별 루브릭)을 포함한다. `disallowedTools`, `permissionMode`, `maxTurns`, `effort`, `isolation`, `mcpServers`, `color` 같은 추가 frontmatter는 필요할 때만 검토한다.
 
 특정 작업 매뉴얼을 반드시 따라야 하면 Agent 본문과 Orchestrator의 Task 설명에 적는다. `skills` frontmatter는 직접 Subagent로 호출할 때의 보조 설정으로만 사용하고, Agent Team teammate 실행의 필수 전달 수단으로 보지 않는다.
 
@@ -380,25 +397,9 @@ Producer-Reviewer를 "한 번 검토"가 아니라 통과까지 반복하는 형
 
 Expert Pool을 쓸 때 "어떤 전문가를 부를지"를 즉흥 판단하지 말고, 입력을 먼저 분류하는 단계를 1급으로 둔다. 분류 기준과 어디에도 안 맞을 때의 기본 경로를 명시하면 라우팅이 안정된다.
 
-## Skill 작성 요약
+## Agent Team 안티패턴
 
-좋은 Skill에는 다섯 가지가 들어간다.
-
-| 구성요소 | 역할 | 작성 팁 |
-| --- | --- | --- |
-| YAML frontmatter | 트리거와 표시 이름(선택) | description은 소개문이 아니라 출입 조건이다 |
-| Overview | 목적과 결과 기준 | 한 단락으로 짧게 쓴다 |
-| Workflow | 작업 순서 | 번호를 붙이고 한 단계에 한 행동만 둔다 |
-| Output Format | 결과 모양 | 다음 단계가 그대로 읽을 수 있게 한다 |
-| Examples and Edge Cases | 정상·예외 예시 | 부족한 정보, 쓰면 안 되는 경우를 포함한다 |
-
-description에는 세 가지가 들어간다.
-
-1. 이 Skill이 무엇을 하는지
-2. 사용자가 어떤 말을 할 때 써야 하는지
-3. 어떤 요청에는 쓰면 안 되는지
-
-피해야 할 설계:
+Skill 작성 자체(구조·description·본문·progressive disclosure)는 `skill-authoring-guide.md`를 정본으로 따른다. 여기서는 팀 설계에서 피해야 할 구조만 둔다.
 
 - Agent 파일만 여러 개 만들고 `TeamCreate` 흐름이 없는 구조
 - 메시지로만 중요한 결정을 주고받고 파일 산출물을 남기지 않는 구조
