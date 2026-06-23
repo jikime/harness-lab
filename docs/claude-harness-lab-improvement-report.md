@@ -1,6 +1,7 @@
 # Claude Harness Lab 개선 적용 보고서
 
 작성일: 2026-05-13
+갱신일: 2026-06-23 (주제별 1파일 재구성 반영)
 
 ## 목적
 
@@ -112,13 +113,21 @@ QA Agent는 단순 존재 확인이 아니라 경계면 교차 검증을 맡도�
 | 새 reference | 역할 | 통합한 기존 주제 |
 | --- | --- | --- |
 | `harness-design-workflow.md` | 청사진 승인, 하네스 7요소, Phase 0-7, 성숙도, 설계 카드 | `phase-guide`, `harness-design-cards` |
-| `agent-team-design.md` | Agent/Skill/Orchestrator 구분, Agent Team 실행 계약, 팀 패턴 | `agent-skill-design`, `agent-team-runtime`, `pattern-catalog` |
-| `orchestrator-artifacts-template.md` | 청사진, Agent, Skill, Orchestrator, `CLAUDE.md`, `artifacts/` 템플릿 | `templates`, `artifact-contract` |
+| `agent-design.md` | Agent frontmatter·모델 선택·빌트인·분리, 실행 모드, 팀 패턴, Agent 파일 구조, 생성자-평가자·반복합의 패턴 | `agent-skill-design`, `pattern-catalog` |
+| `orchestrator-design.md` | Orchestrator 실행 계약·흐름·Task·데이터 전달·에러, 청사진·`artifacts/` 산출물 템플릿, Orchestrator·`CLAUDE.md` 템플릿 | `agent-team-runtime`, `templates`, `artifact-contract` |
 | `skill-authoring-guide.md` | Skill description, workflow, output format, examples, progressive disclosure | Skill 작성 기준 |
 | `testing-qa-evolution.md` | 테스트, QA, baseline, assertion, drift, 개선 기록 | `testing-improvement`, `qa-agent-guide`, `failure-maintenance` |
 | `examples.md` | 일상 업무와 사업계획서 예시 | `everyday-examples` |
 
 결과적으로 원본과 비슷한 효과를 유지하면서도, 책의 개념과 Claude용 실행 구조를 더 잘 묶는 형태가 되었다.
+
+### 7. 주제별 1파일 재구성 (후속, 2026-06-23)
+
+처음 통합본은 `agent-team-design.md`가 Agent 개념과 Orchestrator 런타임을 함께 담고, `orchestrator-artifacts-template.md`가 Agent·Skill·Orchestrator 템플릿을 모두 모아 두었다. 점검 결과 Orchestrator 내용이 두 파일에 흩어지고, Agent·Skill 파일 템플릿이 주제 문서와 템플릿 파일에 중복되는 문제가 있었다. 원본 harness의 "1주제=1파일" 원칙에 맞춰 아래로 재구성했다.
+
+- `agent-team-design.md` → **`agent-design.md`** 로 rename. Orchestrator 런타임(최소 실행 계약·실행 흐름·Task·데이터 전달·에러·팀 재구성)을 빼내고 Agent 설계 + 팀 패턴만 남겼다.
+- `orchestrator-artifacts-template.md` → **`orchestrator-design.md`** 로 rename. 빼낸 Orchestrator 런타임을 모아 받았고, Agent·Skill 파일 템플릿은 본문을 지우고 `agent-design.md`·`skill-authoring-guide.md`를 가리키는 포인터로 바꿔 중복을 제거했다.
+- 결과: **Agent 정본 = `agent-design.md`, Orchestrator 정본 = `orchestrator-design.md`, Skill 정본 = `skill-authoring-guide.md`** 로 주제가 한 파일씩 정리되고, 파일명이 내용과 일치하게 되었다.
 
 ## 현재 파일 구조
 
@@ -128,10 +137,10 @@ QA Agent는 단순 존재 확인이 아니라 경계면 교차 검증을 맡도�
 claude/skills/harness-lab/
 ├── SKILL.md
 └── references/
-    ├── agent-team-design.md
+    ├── agent-design.md
     ├── examples.md
     ├── harness-design-workflow.md
-    ├── orchestrator-artifacts-template.md
+    ├── orchestrator-design.md
     ├── skill-authoring-guide.md
     └── testing-qa-evolution.md
 ```
@@ -166,35 +175,31 @@ claude/skills/harness-lab/
 - 하네스 두께
 - 청사진 입력 프롬프트
 
-### `claude/skills/harness-lab/references/agent-team-design.md`
+### `claude/skills/harness-lab/references/agent-design.md`
 
-적용 내용:
+적용 내용 (Agent + 팀 패턴):
 
 - Agent, Skill, Orchestrator 구분
-- 단일 흐름, Subagent, Agent Team 선택 기준
-- Agent Team 최소 실행 계약
-- `TeamCreate`, `TaskCreate`, `TaskUpdate`, `TaskGet`, `SendMessage`, `TeamDelete` 흐름
-- 데이터 전달 프로토콜
-- 하이브리드 전환 규칙
-- 팀 크기 가이드
-- 작업 재할당과 에러 처리 기준
-- Agent 파일의 팀 통신 프로토콜
-- 팀 패턴과 재구성 기준
+- 단일 흐름, Subagent, Agent Team 선택 기준(실행 모드)
+- Agent frontmatter 설계와 역할별 model 선택 루브릭(haiku/sonnet/opus/fable), 빌트인 타입 규칙
+- Agent 분리 기준
+- Agent 파일 구조 템플릿과 팀 통신 프로토콜
+- 팀 패턴과 팀 크기 가이드
+- 생성자-평가자 분리, 반복·합의·자기비판 패턴
+- Agent Team 안티패턴
+- (Orchestrator 런타임·Task·데이터 전달·에러·팀 재구성은 `orchestrator-design.md`로 이동)
 
-### `claude/skills/harness-lab/references/orchestrator-artifacts-template.md`
+### `claude/skills/harness-lab/references/orchestrator-design.md`
 
-적용 내용:
+적용 내용 (Orchestrator 런타임 + 템플릿 + artifacts):
 
-- 하네스 청사진 템플릿
-- 산출물 구조 선택 기준
-- 산출물 계약 표
-- 실행 모드별 데이터 전달 표
-- Agent 템플릿
-- Skill 템플릿
-- Orchestrator Skill 템플릿
-- 후속 작업 description 키워드
-- `TaskUpdate`, `TaskGet`, 하이브리드 전환, 실패 처리 템플릿
-- `CLAUDE.md` 포인터 템플릿
+- Agent Team 최소 실행 계약과 Orchestrator 실행 흐름(`TeamCreate`~`TeamDelete`)
+- 위임 4종 세트, Task 설계, `TaskUpdate`/`TaskGet` 운영 규칙
+- 데이터 전달 프로토콜, `SendMessage` 규칙
+- 하이브리드 전환·팀 재구성·에러 처리 규칙
+- 하네스 청사진 템플릿, 산출물 구조·`artifacts/README.md`·산출물 계약·벤치마크 템플릿
+- Orchestrator Skill 템플릿과 승인 게이트 형식, `CLAUDE.md` 포인터 템플릿
+- Agent·Skill 파일 템플릿은 `agent-design.md`·`skill-authoring-guide.md`를 가리키는 포인터로 정리(중복 제거)
 
 ### `claude/skills/harness-lab/references/skill-authoring-guide.md`
 
