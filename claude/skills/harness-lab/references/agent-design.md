@@ -68,6 +68,18 @@ Agent 파일의 frontmatter에는 역할과 실행 범위를 먼저 고정한다
 
 예: 정적 점검·필드 추출 워커는 `haiku`, 보안 감사·코드 리뷰처럼 의미 해석이 필요한 역할은 `sonnet`, 설계·리팩토링처럼 상충 해소가 필요한 역할은 `opus`. Agent Team에서는 통합·위험 판단을 맡는 리드에 강한 모델을, 병렬 조사·정적 점검 워커에 가벼운 모델을 섞는다. 값은 별칭(`haiku`/`sonnet`/`opus`/`fable`), 풀 모델 ID, `inherit` 중 하나이며, 생략하면 세션 모델을 상속한다.
 
+**한 팀에 같은 모델을 일괄로 박지 않는다.** 모델은 팀 단위가 아니라 역할 단위로 고른다. 같은 하네스 안에서도 역할마다 추론 깊이가 다르므로 티어가 갈린다. 예를 들어 코드 리뷰 팀이라면:
+
+| 역할 | model | 이유 |
+| --- | --- | --- |
+| review-lead (통합·심각도 종합) | `opus` | 상충 결과 통합, 우선순위 판단 |
+| review-architect (의존성·결합도) | `opus` | 구조 판단 |
+| review-security (취약점 의미 해석) | `sonnet` | 위험도 높으면 `opus`로 올림 |
+| review-performance (병목 분석) | `sonnet` | 의미 해석 리뷰 |
+| review-style (네이밍·데드코드·길이) | `haiku` | 규칙 기반 정적 점검 |
+
+전부 `opus`(과지출)나 전부 생략(티어 무시)은 둘 다 실패다. 팀을 배치 생성할 때 한 값을 모든 팀원에 복사하지 말고, 위 루브릭으로 역할마다 따로 정한다.
+
 ## 빌트인 타입과 Agent 파일 규칙
 
 frontmatter에는 `type` 필드가 없다. 빌트인 타입(`general-purpose`, `Explore`, `Plan`)은 Agent 도구의 `subagent_type` 파라미터로 지정한다. 빌트인 타입을 쓰더라도 `.claude/agents/{name}.md` 정의 파일을 만들어 역할·원칙·프로토콜을 담는다. Agent 도구의 prompt에 역할을 직접 inline하지 않는다 — 파일로 있어야 다음 세션에서 재사용되고 팀 협업 품질이 보장된다.
@@ -118,6 +130,7 @@ Agent Team-first는 "무조건 팀을 만든다"는 뜻이 아니다. 기본 후
 name: example-agent
 description: 이 Agent가 언제 호출되어야 하는지 구체적으로 쓴다.
 tools: Read, Grep, Glob
+model: sonnet   # 필수. 역할별로 고른다 → haiku=정적·추출·분류 / sonnet=분석·리뷰·작성(기본) / opus=설계·상충해소·구조판단 / fable=장시간 자율. 아래 "Agent 모델 선택" 루브릭 참조
 ---
 
 당신은 {역할 이름}입니다.

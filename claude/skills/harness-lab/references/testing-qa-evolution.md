@@ -266,7 +266,8 @@ artifacts/evals/iteration-N/{eval-name}/
 | 검증 항목 | 확인 방법 |
 | --- | --- |
 | 팀 구성 | Orchestrator에 `TeamCreate` 대상 Agent가 명시되어 있는지 확인 |
-| Agent frontmatter | 각 Agent에 `name`, `description`, `tools`가 있고 역할과 맞는지 확인 |
+| Agent frontmatter | 각 Agent에 `name`, `description`, `tools`, `model`이 있고 역할과 맞는지 확인 |
+| 모델 정합성 | 각 Agent의 `model`이 역할 루브릭(haiku=정적·추출 / sonnet=분석·리뷰·작성 / opus=설계·상충해소 / fable=장시간 자율)과 맞는지, 한 팀이 전부 같은 모델(일괄 opus=과지출, 일괄 생략=티어 무시)은 아닌지 확인 |
 | 이름 정합성 | Agent 파일명, frontmatter `name`, Orchestrator의 호출 이름이 일치하는지 확인 |
 | 작업 등록 | Task마다 담당자, 입력, 출력, 의존, 완료 기준이 있는지 확인 |
 | 작업 상태 | `TaskUpdate`로 시작, 차단, 완료, 재할당을 표시하는 기준이 있는지 확인 |
@@ -348,6 +349,8 @@ QA는 전체가 끝난 뒤 한 번만 실행하지 않는다. 중간 산출물�
 - [ ] 역할이 너무 많거나 적지 않다.
 - [ ] Agent와 Skill의 책임이 겹치지 않는다.
 - [ ] 각 Agent frontmatter에 역할에 맞는 `tools`가 있다.
+- [ ] 각 Agent frontmatter에 `model`이 있고(생략 시 inherit를 의도한 것인지 확인), 역할 루브릭(haiku/sonnet/opus/fable)과 맞는다.
+- [ ] 한 팀의 Agent가 전부 같은 모델이 아니다(일괄 opus=과지출, 일괄 생략=티어 무시). 역할별로 티어가 갈렸는지 확인한다.
 - [ ] 산출물 계약에서 파일을 소유한 모든 Agent가 그 파일을 만들 `Write` 권한을 갖췄다(검토·QA도 자기 판정 파일을 쓰므로 포함). 권한과 산출물이 어긋나면 저장 실패나 헛보고가 난다.
 - [ ] Agent 파일명, frontmatter `name`, Orchestrator의 호출 이름이 일치한다.
 - [ ] Orchestrator가 중간 산출물을 이어준다.
