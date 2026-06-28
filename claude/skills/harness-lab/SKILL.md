@@ -19,7 +19,7 @@ description: 하네스 엔지니어링 실습·설계·생성 스킬. 사용자�
 
 ## 기본 원칙
 
-- Phase 이름과 번호는 항상 Phase 0부터 Phase 7까지로 고정한다.
+- Phase 이름과 번호는 Phase 0부터 Phase 7까지로 일관되게 쓴다(문서마다 재번호하지 않는다). 단, 모든 Phase를 매번 실행한다는 뜻은 아니다 — 빠른 설계나 기존 확장에서는 필요한 Phase만 골라 쓰되 번호·이름은 그대로 유지한다.
 - 하네스 생성 요청은 반드시 청사진 승인 게이트를 지난다. 먼저 청사진을 보여주고, 사용자가 그 청사진에 대해 명시적으로 구성 요청을 한 뒤에만 파일을 만든다.
 - 처음 접하는 사람에게는 파일보다 역할과 흐름을 먼저 설명한다.
 - 사용자의 숙련도를 대화 단서로 가늠해 설명 밀도를 맞춘다. 초보에게는 비유와 보편 인테이크 5문항으로 시작하고, 실무자에게는 청사진과 핵심 결정 위주로, 전문가에게는 설계 카드·스펙 위주로 간결하게 응답한다. 결과물 구조는 같고 설명의 두께만 바꾼다. 상세 기준은 `references/harness-design-workflow.md`의 "숙련도 적응"을 따른다.
@@ -177,6 +177,7 @@ Orchestrator Skill에는 팀 생성(`TeamCreate`) → 작업 등록(`TaskCreate`
 | 프로젝트 안내 | `CLAUDE.md` | 프로젝트 안내판 |
 | Agent 정의 | `.claude/agents/{agent-name}.md` | 팀원 역할 카드 |
 | 작업 Skill | `.claude/skills/{skill-name}/SKILL.md` | 작업 매뉴얼 |
+| 결정적 검증 스크립트 | `.claude/skills/{skill-name}/scripts/` | 링크·숫자·섹션·금지어처럼 객관 점검을 코드로 거는 자동 채점기 |
 | Orchestrator Skill | `.claude/skills/{harness-name}-orchestrator/SKILL.md` | 전체 진행표 |
 | 산출물 지도 | `artifacts/README.md` | 어떤 결과가 어디에 있고 다음 실행이 무엇을 읽어야 하는지 알려주는 지도 |
 | 중간 산출물 | `artifacts/` 또는 사용자가 정한 폴더 | 작업 기록지 |
@@ -245,6 +246,7 @@ Orchestrator Skill에는 팀 생성(`TeamCreate`) → 작업 등록(`TaskCreate`
 - `.claude` 파일을 만들면, 자연어 요청 예시를 먼저 남기고 필요한 경우 직접 호출 예시를 함께 남긴다.
 - 실행 하네스를 만들면, 생성된 파일의 역할을 팀원 카드, 작업 매뉴얼, 전체 진행표, 프로젝트 안내판처럼 일상 언어로 함께 설명한다.
 - 특정 Agent가 특정 Skill을 항상 따라야 한다면 Agent 본문과 Orchestrator 흐름에 그 Skill 사용 조건을 적는다. `skills` frontmatter는 직접 Subagent로 호출할 때의 보조 설정으로만 제안하고, Agent Team 실행의 필수 전달 수단으로 보지 않는다.
+- 결정적으로 검증 가능한 항목(링크 유효성, 숫자·합계 일치, 필수 섹션 존재, 금지어, 형식 규칙)은 LLM 검토에 맡기지 말고 `scripts/`의 자동 체크로 빼고, LLM 검토는 논리·톤·사실성처럼 판단이 필요한 영역에 집중시킨다. 객관 항목을 LLM에 맡기면 거수기 검증이 되기 쉽다. 단, 모든 하네스가 scripts를 만들 필요는 없다 — 반복되는 객관 점검이 있을 때만 둔다.
 - 테스트는 최소 3개를 만든다: 정상 사례, 애매한 사례, 실패하기 쉬운 사례. 실무용 하네스라면 부정 테스트와 반복 테스트도 제안한다. 하네스에 결정적 검증·점검 단계가 있으면 결함 주입 회귀 테스트를 선택이 아니라 기본으로 넣어, 일부러 망가뜨린 입력을 그 단계가 실제로 잡는지 확인한다(거수기 검증 방지).
 - 하네스의 가치를 증명할 때는 먼저 벤치마크 두께를 `light`, `targeted`, `full` 중에서 고른다. 작은 하네스는 대표 프롬프트 1개로 가볍게 비교하고, 큰 프로젝트는 전체 with/without 실행보다 바뀐 Phase, 핵심 산출물, 위험 지점만 비교하는 `targeted`를 우선한다. 비교 결과는 `artifacts/evals/iteration-N/{eval-name}/` 아래에 저장하고, 완료 알림의 토큰·시간은 그 자리에서 기록한다. 양쪽에서 항상 통과하는 검증 항목은 차별력이 없으므로 더 도전적인 항목으로 바꾼다.
 - Skill과 Orchestrator description은 should-trigger 8-10개와 should-not-trigger 8-10개로 검증하되, 명백히 무관한 문장이 아니라 경계가 애매한 near-miss와 기존 Skill 트리거 충돌에 집중한다.

@@ -80,6 +80,10 @@ Agent 파일의 frontmatter에는 역할과 실행 범위를 먼저 고정한다
 
 전부 `opus`(과지출)나 전부 생략(티어 무시)은 둘 다 실패다. 팀을 배치 생성할 때 한 값을 모든 팀원에 복사하지 말고, 위 루브릭으로 역할마다 따로 정한다.
 
+**effort를 opus 점프의 대안으로 먼저 본다.** `sonnet`으로 부족해 보일 때 바로 `opus`로 올리기 전에, `sonnet` + 높은 reasoning effort(`effort: high` 등)가 더 싸게 깊이를 줄 수 있는지 본다. 모델 티어 상향과 effort 상향은 별개 레버이고, 둘을 함께 조절한다. effort는 frontmatter 옵션이며 기본은 생략(상속)이다.
+
+**Agent Team 모드에서는 frontmatter `model`이 런타임을 보장하지 못할 수 있다.** 직접 Subagent 호출은 `.md`의 `model`을 따르지만, Agent Team teammate의 실제 모델은 `TeamCreate` 지시나 팀 기본 설정으로 정해질 수 있다. 그래서 팀 하네스에서는 (1) 각 Agent 파일의 `model`을 역할 루브릭으로 정하고, (2) Orchestrator의 `TeamCreate` 단계와 벤치마크 `run-config.md`에 같은 모델 정책을 명시해 둘을 일치시킨다. frontmatter만 고치고 팀 생성 지시를 비워 두면, 적은 값과 실제 실행 모델이 어긋난다.
+
 ## 빌트인 타입과 Agent 파일 규칙
 
 frontmatter에는 `type` 필드가 없다. 빌트인 타입(`general-purpose`, `Explore`, `Plan`)은 Agent 도구의 `subagent_type` 파라미터로 지정한다. 빌트인 타입을 쓰더라도 `.claude/agents/{name}.md` 정의 파일을 만들어 역할·원칙·프로토콜을 담는다. Agent 도구의 prompt에 역할을 직접 inline하지 않는다 — 파일로 있어야 다음 세션에서 재사용되고 팀 협업 품질이 보장된다.
