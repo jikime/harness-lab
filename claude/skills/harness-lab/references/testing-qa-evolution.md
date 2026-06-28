@@ -363,6 +363,7 @@ QA는 전체가 끝난 뒤 한 번만 실행하지 않는다. 중간 산출물�
 - [ ] 각 Agent frontmatter에 `model`이 있고(생략 시 inherit를 의도한 것인지 확인), 역할 루브릭(haiku/sonnet/opus/fable)과 맞는다.
 - [ ] 한 팀의 Agent가 전부 같은 모델이 아니다(일괄 opus=과지출, 일괄 생략=티어 무시). 역할별로 티어가 갈렸는지 확인한다.
 - [ ] Agent Team 하네스면 frontmatter `model`과 Orchestrator의 `TeamCreate` 모델 정책이 일치한다(팀 모드에서는 frontmatter만으로 런타임 모델이 보장되지 않는다).
+- [ ] 각 Agent를 배정한 model 티어로 실제 테스트했다(haiku=지침이 충분한가, opus=과설명 아닌가).
 - [ ] 산출물 계약에서 파일을 소유한 모든 Agent가 그 파일을 만들 `Write` 권한을 갖췄다(검토·QA도 자기 판정 파일을 쓰므로 포함). 권한과 산출물이 어긋나면 저장 실패나 헛보고가 난다.
 - [ ] Agent 파일명, frontmatter `name`, Orchestrator의 호출 이름이 일치한다.
 - [ ] Orchestrator가 중간 산출물을 이어준다.
