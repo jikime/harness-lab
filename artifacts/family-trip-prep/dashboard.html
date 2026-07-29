@@ -3,536 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴욕 여행 준비 대시보드 (v4) — 2026.12.25~2027.01.02</title>
+    <title>뉴욕 여행 준비 대시보드 v5</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif; }
-        .badge-complete { @apply inline-block bg-green-100 text-green-800 px-2 py-1 text-xs font-semibold rounded; }
-        .badge-pending { @apply inline-block bg-yellow-100 text-yellow-800 px-2 py-1 text-xs font-semibold rounded; }
-        .badge-cash { @apply inline-block bg-red-100 text-red-800 px-2 py-1 text-xs font-semibold rounded; }
-        .card-day { @apply bg-white rounded-lg shadow border-l-4 p-4 mb-4; }
-        .card-day.day-odd { border-left-color: #3b82f6; }
-        .card-day.day-even { border-left-color: #8b5cf6; }
-        .meal-restaurant { @apply font-bold text-sm text-blue-700; }
-        .meal-casual { @apply text-sm text-gray-600; }
-        .cash-warning { @apply bg-red-50 border-2 border-red-300 rounded-lg p-4 my-3; }
-        .cash-amount { @apply font-bold text-lg text-red-700; }
-        @media (max-width: 768px) {
-            .grid-2 { @apply grid grid-cols-1; }
-            .text-sm { font-size: 0.875rem; }
-            table { font-size: 0.75rem; }
+        .badge-approval { @apply inline-block bg-yellow-100 text-yellow-800 px-2 py-1 text-xs font-semibold rounded; }
+        .badge-iconic { @apply inline-block bg-blue-100 text-blue-800 px-2 py-1 text-xs font-semibold rounded; }
+        .day-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        @media (max-width: 380px) {
+            .text-xs { font-size: 0.65rem; }
+            .text-sm { font-size: 0.75rem; }
+            .px-3 { padding-left: 0.5rem; padding-right: 0.5rem; }
+            table { font-size: 0.7rem; }
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <div class="max-w-7xl mx-auto px-3 sm:px-4 py-6">
-        <!-- 헤더 -->
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-6">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg shadow-lg p-4 sm:p-6 mb-6">
+            <h1 class="text-2xl sm:text-3xl font-bold mb-1">🗽 뉴욕 가족 여행 준비</h1>
+            <p class="text-blue-100 text-sm sm:text-base">2026.12.25 ~ 2027.01.02 (8박 9일) | 성인 2명 (부부)</p>
+            <p class="text-blue-100 text-xs sm:text-sm mt-2">✓ v5 (12/30 맛집 Joe's Pizza로 교체 + 식비 버퍼 조정) | 체크리스트 검토 승인 완료</p>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mb-6">
+            <div class="bg-white rounded-lg shadow p-3 sm:p-4 text-center">
+                <p class="text-gray-600 text-xs sm:text-sm font-semibold">총 예산</p>
+                <p class="text-lg sm:text-2xl font-bold text-blue-600 mt-1">1,500<span class="text-xs sm:text-sm">만원</span></p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-3 sm:p-4 text-center">
+                <p class="text-gray-600 text-xs sm:text-sm font-semibold">항공권</p>
+                <p class="text-lg sm:text-2xl font-bold text-green-600 mt-1">280<span class="text-xs sm:text-sm">만원</span></p>
+                <p class="inline-block badge-approval text-xs px-2 py-0.5 rounded mt-2">확정</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-3 sm:p-4 text-center">
+                <p class="text-gray-600 text-xs sm:text-sm font-semibold">숙소</p>
+                <p class="text-lg sm:text-2xl font-bold text-green-600 mt-1">248<span class="text-xs sm:text-sm">만원</span></p>
+                <p class="inline-block badge-approval text-xs px-2 py-0.5 rounded mt-2">확정</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-3 sm:p-4 text-center">
+                <p class="text-gray-600 text-xs sm:text-sm font-semibold">예비비</p>
+                <p class="text-lg sm:text-2xl font-bold text-amber-600 mt-1">190<span class="text-xs sm:text-sm">만원</span></p>
+            </div>
+        </div>
+
+        <!-- v5 업데이트 공지 -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-3 sm:p-4 rounded mb-6">
+            <p class="text-xs sm:text-sm text-amber-900"><strong>🔄 v5 주요 변경:</strong> 12/30 유명 맛집을 <strong>Lombardi's Pizza(105,000원) → Joe's Pizza(60,000원)</strong>로 교체했습니다. 선정 기준이 "아이코닉·유명세"에서 <strong>"한국인 여행자 만족도"</strong> 기준으로 재평가되었습니다. 차액 45,000원은 식비 버퍼(280,000→325,000원)로 흡수되었으며, 총 예산과 잔여 배분은 불변입니다.</p>
+        </div>
+
+        <!-- 피터루거 참고 정보 -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 rounded mb-6">
+            <p class="text-xs sm:text-sm text-blue-900"><strong>💡 피터루거 참고:</strong> 한국인 사이에서도 평가가 혼재합니다 (NYT 0스타 리뷰 vs 긍정 후기 공존). 기대치를 낮춰 방문하는 것을 권장합니다. <strong>⚠️ 신용카드 전면 불가 — 현금 전용</strong></p>
+        </div>
+
+        <!-- Day-by-Day Itinerary (축약 카드형) -->
         <div class="mb-8">
-            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">뉴욕 가족 여행 준비</h1>
-            <p class="text-lg text-gray-600">2026.12.25 ~ 2027.01.02 (8박 9일)</p>
-            <p class="text-sm text-gray-500 mt-2">✈️ 부부 2인 | 총 예산 1,500만원 | v4 확정</p>
-        </div>
-
-        <!-- 기본 정보 요약 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div class="bg-white rounded-lg shadow p-4">
-                <h3 class="text-gray-600 text-sm font-semibold uppercase mb-2">항공권</h3>
-                <p class="text-2xl font-bold text-gray-900">2,800,000원</p>
-                <div class="mt-2"><span class="badge-complete">결제 완료</span></div>
-            </div>
-            <div class="bg-white rounded-lg shadow p-4">
-                <h3 class="text-gray-600 text-sm font-semibold uppercase mb-2">숙소 (8박)</h3>
-                <p class="text-2xl font-bold text-gray-900">2,480,000원</p>
-                <div class="mt-2"><span class="badge-complete">예약 완료</span></div>
-                <p class="text-xs text-gray-500 mt-2">331 E 8th St, 이스트빌리지</p>
-            </div>
-            <div class="bg-white rounded-lg shadow p-4">
-                <h3 class="text-gray-600 text-sm font-semibold uppercase mb-2">식·활동·이동</h3>
-                <p class="text-2xl font-bold text-gray-900">9,720,000원</p>
-                <p class="text-xs text-gray-500 mt-2">예비비 포함</p>
-            </div>
-        </div>
-
-        <!-- ⚠️ 현금 필수 알림 -->
-        <div class="cash-warning">
-            <h3 class="font-bold text-red-700 mb-2">⚠️ 현금(달러) 준비 필수</h3>
-            <p class="text-sm text-red-800 mb-3">
-                신용카드 사용 불가 맛집: <strong>Peter Luger (12/27)</strong>, <strong>J.G. Melon (12/28)</strong>
-            </p>
-            <p class="cash-amount">권장 환전액: $500 (약 665,000원)</p>
-            <ul class="text-xs text-red-700 mt-2 ml-4 list-disc space-y-1">
-                <li>Peter Luger: 약 $325~350 (팁 포함)</li>
-                <li>J.G. Melon: 약 $90 (팁 포함)</li>
-                <li>소액권 포함 준비</li>
-            </ul>
-        </div>
-
-        <!-- 예산 차트 -->
-        <div class="bg-white rounded-lg shadow p-6 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">예산 배분 (잔여 972만원, v4 확정)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <canvas id="budgetChart"></canvas>
+            <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">📅 일자별 일정 요약</h2>
+            <div class="space-y-2 sm:space-y-3">
+                <!-- Day 1 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 1 — 12/25 | 크리스마스·도착</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">도착</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>13:00~16:15</strong> JFK 입국 → 숙소 도착·체크인</p>
+                        <p><strong>16:15~18:00</strong> 이스트빌리지 산책</p>
+                        <p><strong>18:15~19:45</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">Veselka</span> (우크라이나 식당, 도보 5분) | ⚠️ 12/25 영업 확인 필요</p>
+                    </div>
                 </div>
-                <div class="text-sm space-y-2">
-                    <div class="flex justify-between"><span>식비 (18끼)</span><strong>2,950,000원</strong></div>
-                    <div class="flex justify-between"><span>새해 전야 (Trattoria)</span><strong>900,000원</strong></div>
-                    <div class="flex justify-between"><span>액티비티·관람</span><strong>1,750,000원</strong></div>
-                    <div class="flex justify-between"><span>공항·짐 보관</span><strong>320,000원</strong></div>
-                    <div class="flex justify-between"><span>시내 이동</span><strong>480,000원</strong></div>
-                    <div class="flex justify-between"><span>브로드웨이</span><strong>320,000원</strong></div>
-                    <div class="flex justify-between"><span>쇼핑·기념품</span><strong>650,000원</strong></div>
-                    <div class="flex justify-between"><span>보험</span><strong>100,000원</strong></div>
-                    <div class="flex justify-between text-blue-600"><span>예비비</span><strong>1,900,000원</strong></div>
-                    <div class="flex justify-between text-blue-600"><span>미배분 완충</span><strong>350,000원</strong></div>
+
+                <!-- Day 2 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 2 — 12/26 | 미드타운 홀리데이</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">문화</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>10:15~13:00</strong> MoMA | <strong>14:00~17:30</strong> 5번가 쇼윈도 → Top of the Rock 전망대 → 브라이언트 파크</p>
+                        <p><strong>19:15~21:00</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">Keens</span> (72 W 36th St) | ✓ 예약 필수</p>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 3 — 12/27 | 브루클린·피터루거</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">필수</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>10:30~13:15</strong> 9/11 메모리얼 & 뮤지엄 | <strong>14:15~15:30</strong> 브루클린 브리지 도보</p>
+                        <p><strong>15:30~17:15</strong> DUMBO | <strong>18:00~19:45</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">Peter Luger</span> (윌리엄스버그)</p>
+                        <p class="text-red-600 text-xs">⚠️ 현금 전용($325~350) | 예약 실패 → 당일 워크인 → Grimaldi's/Juliana's</p>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 4 — 12/28 | 업타운 (The Met·스케이팅)</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">활동</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>10:30~14:00</strong> The Met 관람 | <strong>15:00~16:30</strong> 센트럴파크 산책</p>
+                        <p><strong>16:45~18:15</strong> 월먼 링크 스케이팅 | <strong>19:00~20:15</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">J.G. Melon</span> (버거, UES)</p>
+                        <p class="text-red-600 text-xs">⚠️ 현금 전용($90) | 워크인, 대기 10~75분</p>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 5 — 12/29 | 웨스트사이드·브로드웨이</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">공연</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>09:15~10:40</strong> 러시 티켓 구매 시도 | <strong>11:30~12:45</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">Los Tacos</span> (첼시 마켓)</p>
+                        <p><strong>13:00~16:00</strong> 하이라인 → Edge 전망대 | <strong>19:00~21:45</strong> 브로드웨이 공연</p>
+                    </div>
+                </div>
+
+                <!-- Day 6 ★v5 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden border-2 border-amber-400">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 6 — 12/30 | 소호·빌리지 [v5★]</span>
+                        <span class="bg-amber-500 text-xs px-1.5 py-0.5 rounded">변경</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm">
+                        <p class="text-gray-700"><strong>11:00~13:30</strong> 소호 쇼핑 | <strong>13:30~14:00</strong> 워싱턴 스퀘어 파크</p>
+                        <p class="bg-yellow-50 px-2 py-1 rounded my-1"><strong>14:00~14:50</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5">Joe's Pizza ★v5</span> (그리니치빌리지) — v4의 Lombardi's에서 교체</p>
+                        <p class="text-gray-700"><strong>14:50~16:00</strong> 빌리지 산책 | <strong>18:15~19:30</strong> 이른 저녁</p>
+                        <p class="text-gray-700"><strong>20:00~22:30</strong> 재즈클럽 (백업 후보)</p>
+                    </div>
+                </div>
+
+                <!-- Day 7 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 7 — 12/31 | 새해 전야</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">특별</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>11:30~15:00</strong> QC NY Spa 커플 스파 (거버너스 아일랜드) | <strong>16:15~19:10</strong> 휴식·준비</p>
+                        <p><strong>20:00~00:30</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">Trattoria</span> (900 7th Ave) | 7코스 + 볼드롭</p>
+                        <p class="text-xs text-gray-600">✓ 예약 필수 | 자정 후 귀가 (128~138분 이동, 다음날 오전 여유)</p>
+                    </div>
+                </div>
+
+                <!-- Day 8 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 8 — 1/1 | 신정 회복일</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">회복</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>~11:30</strong> 늦잠 | <strong>12:00~13:30</strong> 브런치 | <strong>13:45~16:15</strong> 센트럴파크 산책</p>
+                        <p><strong>18:30~21:00</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">특별 디너</span> (파인다이닝, 미정) | ✓ 예약 필수</p>
+                    </div>
+                </div>
+
+                <!-- Day 9 -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <div class="day-header text-white p-2 sm:p-3 flex items-center justify-between">
+                        <span class="text-xs sm:text-sm font-bold">Day 9 — 1/2 | 자유 + 귀국</span>
+                        <span class="badge-iconic text-xs px-1.5 py-0.5">귀국</span>
+                    </div>
+                    <div class="p-2 sm:p-3 text-xs sm:text-sm text-gray-700">
+                        <p><strong>11:00</strong> 체크아웃 · 짐 보관 | <strong>13:00~14:10</strong> [유명] <span class="badge-iconic text-xs px-1 py-0.5 rounded">Katz's</span> (델리, LES)</p>
+                        <p><strong>15:00~18:00</strong> 메이시스 → ESB 전망대 | <strong>20:20~21:35</strong> → JFK | 1/3 새벽 00:30 출발</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 일정: 식사 중심 요약 -->
-        <div class="bg-white rounded-lg shadow p-6 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">하루 2끼 식사 배치 (유명 맛집 + 캐주얼)</h2>
+        <!-- 식사 요약표 -->
+        <div class="mb-8">
+            <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">🍽️ 식사 배치 (하루 2끼 원칙, 18끼 = 9일)</h2>
             <div class="overflow-x-auto">
-                <table class="w-full text-sm">
-                    <thead class="bg-gray-100">
+                <table class="w-full text-xs bg-white rounded-lg shadow">
+                    <thead class="bg-indigo-600 text-white">
                         <tr>
-                            <th class="text-left px-3 py-2 font-semibold">날짜</th>
-                            <th class="text-left px-3 py-2 font-semibold">유명 맛집 (1회)</th>
-                            <th class="text-left px-3 py-2 font-semibold">상태</th>
-                            <th class="text-left px-3 py-2 font-semibold">캐주얼 (1회)</th>
+                            <th class="px-2 py-2 text-left">날짜</th>
+                            <th class="px-2 py-2 text-left">[유명] 맛집</th>
+                            <th class="px-2 py-2 text-left">위치</th>
+                            <th class="px-2 py-2 text-left">비고</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y">
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">12/25(금)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Veselka</span><br/><span class="text-xs text-gray-600">이스트빌리지 우크라이나 식당</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">영업확인필요</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">베이글·슬라이스 (도보 5분)</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">12/26(토)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Keens Steakhouse</span><br/><span class="text-xs text-gray-600">1885년 명물 머튼찹 $68~73</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">예약필수</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">베이글 브런치</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 bg-red-50">
-                            <td class="px-3 py-2 font-semibold">12/27(일)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Peter Luger ⭐</span><br/><span class="text-xs text-red-700 font-semibold">현금만 가능 · 예약 경쟁 심함</span><br/><span class="text-xs text-gray-600">윌리엄스버그, 드라이에이지드 포터하우스</span></td>
-                            <td class="px-3 py-2">
-                                <span class="badge-cash">현금필수</span><br/>
-                                <span class="badge-pending text-xs mt-1 block">Resy 30일 오픈</span><br/>
-                                <span class="text-xs text-orange-600 font-semibold mt-1">백업: Grimaldi's/<br/>Juliana's 즉시전환</span>
-                            </td>
-                            <td class="px-3 py-2"><span class="meal-casual">베이글·샌드위치</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">12/28(월)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">J.G. Melon ⭐</span><br/><span class="text-xs text-red-700 font-semibold">현금만 가능</span><br/><span class="text-xs text-gray-600">UES 명물 버거, 예약불가</span></td>
-                            <td class="px-3 py-2"><span class="badge-cash">현금필수</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">The Met 인근 델리</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">12/29(화)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Los Tacos No.1</span><br/><span class="text-xs text-gray-600">첼시 마켓 스탠드형 명소</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">예약불가</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">허드슨야드 이른저녁</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">12/30(수)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Lombardi's Pizza</span><br/><span class="text-xs text-gray-600">1905년 미국 최초 피자점</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">예약불가</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">이스트빌리지 이른저녁</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50 bg-blue-50">
-                            <td class="px-3 py-2 font-semibold">12/31(목)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Trattoria Dell'Arte</span><br/><span class="text-xs text-blue-700">새해 전야 7코스 디너</span><br/><span class="text-xs text-gray-600">카네기홀 인근, 볼드롭 조망 가능</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">예약필수</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">숙소 인근 브런치</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">1/1(금)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">특별 디너</span><br/><span class="text-xs text-gray-600">파인다이닝/시푸드/프렌치 (미정)</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">예약필수</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">브런치 (신정 영업 확인)</span></td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="px-3 py-2 font-semibold">1/2(토)</td>
-                            <td class="px-3 py-2"><span class="meal-restaurant">Katz's Delicatessen</span><br/><span class="text-xs text-gray-600">뉴욕 가장 유명한 델리, 파스트라미</span></td>
-                            <td class="px-3 py-2"><span class="badge-pending">예약불가</span></td>
-                            <td class="px-3 py-2"><span class="meal-casual">미드타운 마지막 저녁</span></td>
-                        </tr>
+                    <tbody class="divide-y text-xs">
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">12/25</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Veselka</span></td><td class="px-2 py-1">이스트빌리지</td><td class="px-2 py-1 text-gray-600">예약 불가 / 카드 가능</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">12/26</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Keens</span></td><td class="px-2 py-1">미드타운</td><td class="px-2 py-1 text-gray-600">예약 필수 / 카드 가능</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">12/27</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Peter Luger</span></td><td class="px-2 py-1">윌리엄스버그</td><td class="px-2 py-1 text-red-600 font-bold">현금 전용</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">12/28</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">J.G. Melon</span></td><td class="px-2 py-1">UES</td><td class="px-2 py-1 text-red-600 font-bold">현금 전용</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">12/29</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Los Tacos</span></td><td class="px-2 py-1">첼시 마켓</td><td class="px-2 py-1 text-gray-600">예약 불가 / 카드 가능</td></tr>
+                        <tr class="hover:bg-gray-50 bg-amber-50"><td class="px-2 py-1 font-bold">12/30 ★v5</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Joe's Pizza</span></td><td class="px-2 py-1">그리니치빌리지</td><td class="px-2 py-1 text-xs">v4: Lombardi's → v5: Joe's</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">12/31</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Trattoria</span></td><td class="px-2 py-1">카네기홀 인근</td><td class="px-2 py-1 text-gray-600">예약 필수 / 카드 가능</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">1/1</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">특별 디너</span></td><td class="px-2 py-1">미드타운 (미정)</td><td class="px-2 py-1 text-gray-600">예약 필수 / 카드 가능</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">1/2</td><td class="px-2 py-1"><span class="badge-iconic text-xs px-1.5 py-0.5">Katz's</span></td><td class="px-2 py-1">로어 이스트</td><td class="px-2 py-1 text-gray-600">워크인 / 카드 가능</td></tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-xs text-gray-600 mt-4">
-                ⭐ = 현금 전용 | 총 18끼: 유명 맛집 9회 + 캐주얼 9회
-            </p>
+            <p class="text-xs text-gray-600 mt-2">✓ 유명 9회 + 캐주얼 9회 | 현금 필수 2곳: Peter Luger(12/27), J.G. Melon(12/28) → 약 $500 필요</p>
         </div>
 
-        <!-- Peter Luger 백업 플랜 -->
-        <div class="bg-orange-50 border-2 border-orange-300 rounded-lg p-4 mb-8">
-            <h3 class="font-bold text-orange-800 mb-3">🔄 12/27 Peter Luger 백업 계획</h3>
-            <div class="space-y-3 text-sm text-orange-900">
-                <div>
-                    <strong>1단계 (12/27 당일 즉시):</strong><br/>
-                    Resy 예약 실패 → 워크인 대기 시도 → 대기 60분 초과 시 <strong>그 자리에서 Grimaldi's/Juliana's(DUMBO) 즉시 전환</strong> → 그날 저녁 식사 확정
-                </div>
-                <div>
-                    <strong>2단계 (선택):</strong><br/>
-                    1단계에서 Grimaldi's로 확정했으나 피터루거를 포기하고 싶지 않다면 <strong>12/30 저녁 재시도 옵션 유지</strong> (이때 재즈클럽은 포기)
-                </div>
-                <div>
-                    <strong>최종:</strong><br/>
-                    12/30 재시도까지 실패하면 이번 여행에서 피터루거 최종 포기 (12/27 Grimaldi's로 확정)
-                </div>
-                <div class="mt-2 text-xs bg-orange-100 p-2 rounded">
-                    ⚠️ <strong>12/30 슬롯 우선순위:</strong> 같은 날 브로드웨이 관람도 실패해 12/30이 필요하면 → <strong>피터루거가 우선</strong>, 브로드웨이는 TKTS 당일 반값 구매로 전환
-                </div>
-            </div>
-        </div>
-
-        <!-- 일일 일정 카드 -->
+        <!-- 예산 -->
         <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">일정 요약 (9일)</h2>
-
-            <!-- Day 1 -->
-            <div class="card-day day-odd">
-                <div class="flex justify-between items-start mb-3">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">Day 1: 12/25(금) 크리스마스 도착</h3>
-                        <p class="text-sm text-gray-600">오후~저녁 활동 가능</p>
-                    </div>
-                    <span class="badge-pending">영업 확인</span>
-                </div>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 13:00 JFK 도착 (예정) → 숙소 직행</li>
-                    <li>• 15:45 체크인 (체크인 15:00 가정)</li>
-                    <li>• 16:15 숙소 인근 가벼운 요기 (캐주얼)</li>
-                    <li>• 16:45 Tompkins Square Park 동네 산책</li>
-                    <li>• 18:15 <strong>Veselka</strong> 저녁 (유명)</li>
-                </ul>
-            </div>
-
-            <!-- Day 2 -->
-            <div class="card-day day-even">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Day 2: 12/26(토) 미드타운 홀리데이</h3>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 09:00 베이글 브런치 (캐주얼)</li>
-                    <li>• 10:15 MoMA 관람</li>
-                    <li>• 14:00 5번가 홀리데이 쇼윈도 & 록펠러 크리스마스 트리</li>
-                    <li>• 16:00 Top of the Rock 전망대 (일몰~야경)</li>
-                    <li>• 17:45 브라이언트 파크 윈터 빌리지</li>
-                    <li>• 19:15 <span class="font-bold text-red-600">Keens Steakhouse</span> (유명) <span class="badge-pending text-xs">예약필수</span></li>
-                </ul>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="card-day day-odd">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Day 3: 12/27(일) 로어맨해튼→브루클린 DUMBO→윌리엄스버그</h3>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 09:30 베이글·샌드위치 브런치 (캐주얼)</li>
-                    <li>• 10:30 9/11 메모리얼 & 뮤지엄 관람</li>
-                    <li>• 14:15 브루클린 브리지 도보 횡단</li>
-                    <li>• 15:30 DUMBO 포토스팟·브루클린 브리지 파크 야경</li>
-                    <li>• 17:15 윌리엄스버그로 이동</li>
-                    <li>• 18:00 <span class="font-bold text-red-600">Peter Luger</span> 예약 시도 (유명)
-                        <span class="badge-cash">현금필수</span><br/>
-                        <span class="text-xs text-orange-600 ml-2">실패 시 즉시 Grimaldi's/Juliana's 전환</span>
-                    </li>
-                </ul>
-                <div class="bg-blue-50 p-3 rounded mt-3 text-xs text-blue-900">
-                    <strong>날씨 대체 경로:</strong> 폭설·결빙 시 브루클린 브리지 대신 A/C 지하철 이용 (안전상 사유에 한정)
-                </div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="card-day day-even">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Day 4: 12/28(월) 업타운 The Met·센트럴파크·스케이팅</h3>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 10:30 메트로폴리탄 미술관 관람</li>
-                    <li>• 14:00 The Met 인근 점심 (캐주얼)</li>
-                    <li>• 15:00 센트럴파크 산책</li>
-                    <li>• 16:45 월먼 링크 아이스 스케이팅</li>
-                    <li>• 18:20 3rd Ave로 이동</li>
-                    <li>• 19:00 <span class="font-bold text-red-600">J.G. Melon</span> (유명)
-                        <span class="badge-cash">현금필수</span><br/>
-                        <span class="text-xs text-gray-600 ml-2">예약불가, 대기 10~75분</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Day 5 -->
-            <div class="card-day day-odd">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Day 5: 12/29(화) 웨스트사이드 + 브로드웨이 (1순위 시도)</h3>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 08:30 로터리 당첨 확인 / 미당첨 시 러시 티켓 플랜</li>
-                    <li>• 09:15 박스오피스 러시 티켓 구매 시도 ($40~80/인)</li>
-                    <li>• 11:30 <span class="font-bold">Los Tacos No.1</span> (유명, 첼시 마켓)</li>
-                    <li>• 13:00 하이라인 북행 산책</li>
-                    <li>• 14:30 Edge 전망대 (유리 바닥·스카이라인)</li>
-                    <li>• 17:30 타임스퀘어 극장으로 이동</li>
-                    <li>• 19:00 <strong>브로드웨이 공연</strong> (티켓 확보 시) <span class="badge-pending">선택</span></li>
-                </ul>
-            </div>
-
-            <!-- Day 6 -->
-            <div class="card-day day-even">
-                <div class="flex justify-between items-start mb-3">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">Day 6: 12/30(수) 소호·빌리지 쇼핑</h3>
-                        <p class="text-xs text-gray-600">브로드웨이·재즈클럽 백업 슬롯</p>
-                    </div>
-                </div>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 10:15 소호 편집숍 쇼핑</li>
-                    <li>• 13:30 <span class="font-bold">Lombardi's Pizza</span> (유명)</li>
-                    <li>• 15:00 워싱턴 스퀘어 파크 & 그리니치 빌리지 산책</li>
-                    <li>• 16:15 유니언 스퀘어 홀리데이 마켓</li>
-                    <li>• 18:15 이스트빌리지 이른 저녁 (캐주얼)</li>
-                    <li>• 20:00 <strong>그리니치 빌리지 재즈클럽</strong> (가능 시)
-                        <span class="badge-pending">예약권장</span><br/>
-                        <span class="text-xs text-orange-600 ml-2">백업: 브로드웨이 재도전 또는 피터루거 재시도 (피터루거 우선)</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Day 7 -->
-            <div class="card-day day-odd bg-purple-50">
-                <div class="flex justify-between items-start mb-3">
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900">Day 7: 12/31(목) 새해 전야 🎊</h3>
-                        <p class="text-xs text-gray-600">스파 → 디너 (2시간 초과일, 심야 복귀)</p>
-                    </div>
-                    <span class="badge-pending">예약완료</span>
-                </div>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 09:30 브런치 (캐주얼)</li>
-                    <li>• 10:30 거버너스 아일랜드 <strong>QC NY Spa 커플 스파</strong> (11:30~15:00)</li>
-                    <li>• 15:35 스파 페리 복귀</li>
-                    <li>• 16:15~19:10 숙소 휴식·드레스업 (3시간 버퍼)</li>
-                    <li>• 19:15 Trattoria로 이동</li>
-                    <li>• 20:00 <span class="font-bold text-purple-700">Trattoria Dell'Arte 7코스 디너</span> (7시간)</li>
-                    <li>• 자정 <strong>타임스퀘어 볼드롭 카운트다운</strong> (인파 해산 대기)</li>
-                    <li>• 01:10 <strong>심야 귀가</strong> (지하철 우선, 35~45분)</li>
-                </ul>
-                <div class="bg-yellow-100 p-3 rounded mt-3 text-xs text-yellow-900">
-                    ⚠️ 이날 대중교통 합계: 128~138분 (2시간 8~18분 초과, 심야 귀가 포함). 다음 날 오전을 비워 실행 가능.
-                </div>
-            </div>
-
-            <!-- Day 8 -->
-            <div class="card-day day-even">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Day 8: 1/1(금) 신정 회복 + 기념일 특별 디너</h3>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 전날 새벽 복귀 → 늦잠·완전 회복</li>
-                    <li>• 12:00 브런치 (캐주얼, 신정 영업 확인 필수)</li>
-                    <li>• 13:45 센트럴파크 남단 산책 & 록펠러 트리 야간 점등 재방문</li>
-                    <li>• 18:30 <strong>특별 디너</strong> (파인다이닝/시푸드/프렌치)
-                        <span class="badge-pending">예약필수</span><br/>
-                        <span class="text-xs text-gray-600 ml-2">Keens·Peter Luger와 겹치지 않는 장르 권장</span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Day 9 -->
-            <div class="card-day day-odd">
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Day 9: 1/2(토) 마지막 활동 → 공항 출발</h3>
-                <ul class="space-y-1 text-sm text-gray-700">
-                    <li>• 10:30 체크아웃 → 짐 보관 (숙소 협의 또는 러기지 스토리지)</li>
-                    <li>• 11:15 유니언 스퀨어 마지막 쇼핑·기념품</li>
-                    <li>• 13:00 <span class="font-bold">Katz's Delicatessen</span> (유명) 점심<br/>
-                        <span class="text-xs text-gray-600">※ 12/25에 Katz's 쓴 경우 Veselka로 스왑</span></li>
-                    <li>• 15:00 메이시스 헤럴드 스퀨어</li>
-                    <li>• 16:30 엠파이어스테이트 빌딩 전망대 (일몰~야경)</li>
-                    <li>• 18:10 마지막 저녁 (캐주얼)</li>
-                    <li>• 19:30 짐 회수</li>
-                    <li>• 20:20 JFK 공항 출발 (야간 택시/라이드셰어)</li>
-                    <li>• 21:35 도착 (1/3 00:30 탑승 기준 3시간 전)</li>
-                </ul>
+            <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">💰 예산 상세 (9,720,000원)</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-xs bg-white rounded-lg shadow">
+                    <thead class="bg-emerald-600 text-white">
+                        <tr>
+                            <th class="px-2 py-1.5 text-left">항목</th>
+                            <th class="px-2 py-1.5 text-right">금액</th>
+                            <th class="px-2 py-1.5 text-left">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y text-xs">
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">식비</td><td class="px-2 py-1 text-right font-semibold">2,950,000원</td><td class="px-2 py-1">유명 9회(1,785,000) + 캐주얼 9회(540,000) + 카페(300,000) + 버퍼(325,000)</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">새해 전야</td><td class="px-2 py-1 text-right">900,000원</td><td class="px-2 py-1">Trattoria 7코스 (1인 $275)</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">액티비티</td><td class="px-2 py-1 text-right">1,750,000원</td><td class="px-2 py-1">전망대·박물관·스파 등</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">공항 이동</td><td class="px-2 py-1 text-right">320,000원</td><td class="px-2 py-1">JFK 양방향</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">시내 이동</td><td class="px-2 py-1 text-right">480,000원</td><td class="px-2 py-1">지하철·택시·라이드셰어</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">브로드웨이</td><td class="px-2 py-1 text-right">320,000원</td><td class="px-2 py-1">러시/로터리 또는 정가</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">쇼핑</td><td class="px-2 py-1 text-right">650,000원</td><td class="px-2 py-1">기념품·쇼핑</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">보험</td><td class="px-2 py-1 text-right">100,000원</td><td class="px-2 py-1">여행자보험 (2인)</td></tr>
+                        <tr class="hover:bg-gray-50 bg-gray-100"><td class="px-2 py-1 font-bold">예비비</td><td class="px-2 py-1 text-right font-bold">1,900,000원</td><td class="px-2 py-1">리스크 대응(최소 150~200만원)</td></tr>
+                        <tr class="hover:bg-gray-50"><td class="px-2 py-1">미배분</td><td class="px-2 py-1 text-right">350,000원</td><td class="px-2 py-1">변동 대비</td></tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <!-- 준비물·확인 체크리스트 -->
-        <div class="bg-white rounded-lg shadow p-6 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">준비물 & 확인 체크리스트</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- 서류 -->
-                <div>
-                    <h3 class="font-bold text-lg text-gray-800 mb-3">📋 서류 & 결제</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><label><input type="checkbox" class="mr-2"> 여권 유효기간 확인 (6개월 이상)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> ESTA 신청 & 승인 (출발 72시간 전)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 항공 e-티켓·예약확인서</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 숙소 예약확인서 + 체크인/아웃 시각</label></li>
-                        <li><label><input type="checkbox" class="mr-2 text-red-600"> <strong>현금($500) 환전</strong> (소액권 포함)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 해외 신용카드 사용 등록</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 여행자보험 가입</label></li>
-                    </ul>
-                </div>
-
-                <!-- 예약 -->
-                <div>
-                    <h3 class="font-bold text-lg text-gray-800 mb-3">🍽️ 맛집 & 액티비티 예약</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><label><input type="checkbox" class="mr-2"> <strong>Peter Luger 12/27</strong> (Resy 11/27 자정 오픈 시도)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> Grimaldi's/Juliana's 12/27 영업·대기 확인</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> Keens 12/26 예약 (Resy/전화)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> Trattoria Dell'Arte 12/31 예약 + 볼드롭 좌석</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 1/1 특별 디너 업장 선정 & 예약</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> QC NY Spa 12/31 스케줄 & 페리 막차</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 전망대 3곳 지정시간 예매</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 재즈클럽 예약 (취소 가능 정책)</label></li>
-                    </ul>
-                </div>
-
-                <!-- 엔터테인먼트 -->
-                <div>
-                    <h3 class="font-bold text-lg text-gray-800 mb-3">🎭 브로드웨이 & 문화</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><label><input type="checkbox" class="mr-2"> 러시/로터리 앱 설치 (TodayTix)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 관람 공연 1~2순위 확정</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> TKTS 당일 반값 부스 연말 운영 확인</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 12/25·1/1 영업시간 확인</label></li>
-                    </ul>
-                </div>
-
-                <!-- 준비물 & 건강 -->
-                <div>
-                    <h3 class="font-bold text-lg text-gray-800 mb-3">🧥 물품 & 건강</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><label><input type="checkbox" class="mr-2"> 방풍·방수 아우터 & 방한용품</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 핫팩·여벌 양말·방수 부츠</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 상비약·처방약 (영문 처방전)</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 해외 로밍/eSIM 준비</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 국제 전원 어댑터</label></li>
-                        <li><label><input type="checkbox" class="mr-2"> 비상연락처 저장</label></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-6 p-4 bg-blue-50 rounded text-sm text-blue-900">
-                <strong>최종 확인 (출발 1주일 전):</strong> 도착 공항(JFK/EWR/LGA), 정확한 도착·귀국 시각, 1/2 짐 보관 가능 여부, 워터프론트 도보 경로 실측
-            </div>
-        </div>
-
-        <!-- 리스크 & 대안 -->
-        <div class="bg-white rounded-lg shadow p-6 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">⚠️ 주요 리스크 & 대안</h2>
-            <div class="space-y-4">
-                <div class="border-l-4 border-red-400 pl-4 py-2">
-                    <h4 class="font-bold text-red-700">Peter Luger 예약 실패</h4>
-                    <p class="text-sm text-gray-700 mt-1">Resy 경쟁 심함 (30일 전 오픈, 연말 성수기). 실패 시 1단계: 워크인 대기 → 대기 60분+ 시 Grimaldi's/Juliana's 즉시 전환. 2단계: 12/30 선택적 재시도.</p>
-                </div>
-                <div class="border-l-4 border-orange-400 pl-4 py-2">
-                    <h4 class="font-bold text-orange-700">12/30 저녁 슬롯 경합</h4>
-                    <p class="text-sm text-gray-700 mt-1">브로드웨이(12/29)와 피터루거 백업(12/27) 동시 필요 시: <strong>피터루거 우선</strong> (12/30 배정). 브로드웨이는 TKTS 당일 반값 부스로 전환 (약 319,000원, 브로드웨이 항목 320,000원 내 흡수).</p>
-                </div>
-                <div class="border-l-4 border-yellow-400 pl-4 py-2">
-                    <h4 class="font-bold text-yellow-700">현금 부족</h4>
-                    <p class="text-sm text-gray-700 mt-1">Peter Luger · J.G. Melon 신용카드 불가. 권장 환전 $500으로도 부족할 수 있음. 소액권 포함 준비 필수.</p>
-                </div>
-                <div class="border-l-4 border-blue-400 pl-4 py-2">
-                    <h4 class="font-bold text-blue-700">결빙·폭설 (12/27 브루클린 브리지)</h4>
-                    <p class="text-sm text-gray-700 mt-1">안전상 사유 한정, A/C 지하철 대체 (Chambers St → High St, 약 8분)</p>
-                </div>
-                <div class="border-l-4 border-purple-400 pl-4 py-2">
-                    <h4 class="font-bold text-purple-700">12/31 심야 복귀 (2시간 초과)</h4>
-                    <p class="text-sm text-gray-700 mt-1">Trattoria 후 타임스퀘어 교통 혼란 → 지하철 우선. 이동 시간 128~138분 예정. 1/1 오전 비워 완충.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 예산 최종 요약 -->
-        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg shadow p-6 mb-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">예산 최종 요약 (v4 확정, 변경 없음)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                <div>
-                    <h3 class="font-bold text-lg text-gray-800 mb-3">배분 (9,720,000원)</h3>
-                    <ul class="space-y-1">
-                        <li class="flex justify-between"><span>식비 (18끼)</span><strong>2,950,000</strong></li>
-                        <li class="flex justify-between"><span>새해 전야 Trattoria</span><strong>900,000</strong></li>
-                        <li class="flex justify-between"><span>액티비티·관람</span><strong>1,750,000</strong></li>
-                        <li class="flex justify-between"><span>공항·짐</span><strong>320,000</strong></li>
-                        <li class="flex justify-between"><span>시내 이동</span><strong>480,000</strong></li>
-                        <li class="flex justify-between"><span>브로드웨이</span><strong>320,000</strong></li>
-                        <li class="flex justify-between"><span>쇼핑</span><strong>650,000</strong></li>
-                        <li class="flex justify-between"><span>보험</span><strong>100,000</strong></li>
-                        <li class="flex justify-between text-blue-600"><span>예비비</span><strong>1,900,000</strong></li>
-                        <li class="flex justify-between text-blue-600"><span>미배분</span><strong>350,000</strong></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-gray-800 mb-3">재원 (총 1,500만원)</h3>
-                    <div class="bg-white p-4 rounded border border-green-200">
-                        <div class="flex justify-between mb-3 pb-3 border-b">
-                            <span>항공</span>
-                            <strong>2,800,000</strong>
-                        </div>
-                        <div class="flex justify-between mb-3 pb-3 border-b">
-                            <span>숙소</span>
-                            <strong>2,480,000</strong>
-                        </div>
-                        <div class="flex justify-between mb-3 pb-3 border-b">
-                            <span>잔여 배분</span>
-                            <strong>9,720,000</strong>
-                        </div>
-                        <div class="flex justify-between text-lg font-bold text-green-700">
-                            <span>총 예산</span>
-                            <strong>15,000,000</strong>
-                        </div>
-                    </div>
-                    <p class="text-xs text-gray-600 mt-4">
-                        <strong>완충:</strong> 예비비 1,900,000 + 미배분 350,000 = 2,250,000원 (예산의 23.1%)<br/>
-                        <strong>✔ 목표 달성:</strong> 예비비 150~200만원 이상 확보
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 버전 정보 -->
-        <div class="bg-gray-100 rounded-lg p-4 text-center text-xs text-gray-600">
-            <p><strong>Dashboard v4 (2026-07-28)</strong> | checklist-reviewer 최종 승인 완료</p>
-            <p>입력: 00-trip-brief.md · 01-research-notes.md · 02-itinerary-draft.md v4 · 03-checklist-review.md (v4 검토)</p>
-        </div>
-    </div>
-
-    <script>
-        // 예산 차트 (Chart.js, v4 최종 숫자)
-        const ctx = document.getElementById('budgetChart').getContext('2d');
-        const chart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['식비', '새해 전야', '액티비티', '이동·공항', '브로드웨이', '쇼핑', '보험', '예비비·완충'],
-                datasets: [{
-                    data: [2950, 900, 1750, 800, 320, 650, 100, 2250],
-                    backgroundColor: [
-                        '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A',
-                        '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2'
-                    ],
-                    borderColor: '#fff',
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: { font: { size: 11 }, padding: 15 }
+        <!-- 예산 차트 -->
+        <div class="bg-white rounded-lg shadow p-4 sm:p-6 mb-8">
+            <h2 class="text-lg sm:text-xl font-bold text-gray-800 mb-4">📊 예산 항목별 비중 (총 1,500만원)</h2>
+            <canvas id="budgetChart" style="max-height: 350px;"></canvas>
+            <script>
+                const ctx = document.getElementById('budgetChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['식비\n2,950만', '액티비티\n1,750만', '새해전야\n900만', '쇼핑\n650만',
+                                '시내이동\n480만', '공항이동\n320만', '브로드웨이\n320만', '예비비\n1,900만', '보험·기타\n100+350만'],
+                        datasets: [{
+                            data: [295, 175, 90, 65, 48, 32, 32, 190, 73],
+                            backgroundColor: [
+                                '#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8',
+                                '#F7DC6F', '#BB8FCE', '#F8B88B', '#D3D3D3'
+                            ],
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        }]
                     },
-                    tooltip: {
-                        callbacks: {
-                            label: (context) => {
-                                const value = context.parsed;
-                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                                const percent = ((value / total) * 100).toFixed(1);
-                                return `${context.label}: ${value.toLocaleString('ko-KR')}원 (${percent}%)`;
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { font: { size: 10 }, padding: 10 }
                             }
                         }
                     }
-                }
-            }
-        });
-    </script>
+                });
+            </script>
+        </div>
+
+        <!-- 주요 확인사항 -->
+        <div class="mb-8 space-y-3">
+            <h2 class="text-lg sm:text-xl font-bold text-gray-800">⚠️ 최우선 확인 사항</h2>
+
+            <div class="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 rounded">
+                <p class="text-sm font-bold text-red-900">💵 현금(달러) 약 $500 환전 필수</p>
+                <p class="text-xs text-red-800 mt-1">• Peter Luger(12/27): $325~350 | J.G. Melon(12/28): $90 | 소액권 포함</p>
+            </div>
+
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-3 sm:p-4 rounded">
+                <p class="text-sm font-bold text-amber-900">📅 예약 3곳 (가능한 즉시)</p>
+                <p class="text-xs text-amber-800 mt-1">• Keens(12/26): Resy · Trattoria(12/31): 예약 오픈 확인 · 1/1 특별 디너: 3주 전 선정</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 rounded">
+                <p class="text-sm font-bold text-blue-900">🎯 Peter Luger Resy 경쟁 (30일 전 자정 오픈)</p>
+                <p class="text-xs text-blue-800 mt-1">• 12/27 18:00 목표 · 실패 시 백업: 당일 워크인 → Grimaldi's/Juliana's(DUMBO) → 12/30 재시도</p>
+            </div>
+
+            <div class="bg-green-50 border-l-4 border-green-500 p-3 sm:p-4 rounded">
+                <p class="text-sm font-bold text-green-900">✅ v5 Joe's Pizza 확인</p>
+                <p class="text-xs text-green-800 mt-1">• 슬라이스 단가($4~) · 12/30 영업시간 · 좌석/포장 방식 · 초과분은 버퍼(325,000)에서 흡수</p>
+            </div>
+
+            <div class="bg-purple-50 border-l-4 border-purple-500 p-3 sm:p-4 rounded">
+                <p class="text-sm font-bold text-purple-900">🛫 출발·도착 최종 확인</p>
+                <p class="text-xs text-purple-800 mt-1">• 도착 공항(JFK/EWR/LGA) · 정확한 도착·귀국 시각 · 숙소 체크인/체크아웃 시각 · 1/2 짐 보관 가능 여부</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-gray-100 rounded-lg p-3 sm:p-4 text-center text-xs text-gray-700">
+            <p><strong>생성 일자:</strong> 2026-07-29 | <strong>버전:</strong> v5 (체크리스트 검토 완료)</p>
+            <p class="mt-2 text-gray-600">본 대시보드는 `02-itinerary-draft.md` v5 및 `03-checklist-review.md` v5 검토 승인본 기반입니다.</p>
+        </div>
+    </div>
 </body>
 </html>
