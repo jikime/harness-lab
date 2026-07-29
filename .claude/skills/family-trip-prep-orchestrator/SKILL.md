@@ -39,8 +39,11 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 | T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md` | `artifacts/family-trip-prep/02-itinerary-draft.md` | T02 | 예산 항목 합산과 표시 합계 일치 | 시작, 차단, 완료 |
 | T04-checklist-review | checklist-reviewer | `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-draft.md` | `artifacts/family-trip-prep/03-checklist-review.md` | T03 | 예산 재검산·동선 검토 완료, 이슈 심각도 판정 | 시작, 차단, 완료 |
 | T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인 | 시작, 차단, 완료 |
+| T06-artifact-sync | Orchestrator (dashboard-builder에게 위임하지 않음) | `dashboard.html`(갱신된 최종본) | `artifacts/family-trip-prep/dashboard-artifact.html` + Artifact 웹 발행/갱신 | T05 | `dashboard-artifact.html`의 데이터가 `dashboard.html`과 일치, 기존 Artifact URL이 있으면 그 URL로 갱신(새 URL 발급 방지) | 시작, 차단, 완료 |
 
 T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Task를 재등록한다(최대 2회, `T03-itinerary-revision-N`).
+
+**T06을 Orchestrator가 직접 맡는 이유**: `Artifact` 발행 도구는 최상위 대화(Orchestrator)에만 있고 Task 서브에이전트에는 없다. `dashboard.html`은 TailwindCSS/Chart.js를 CDN으로 불러오는데, Artifact 게시 환경은 외부 CDN 요청을 막는 CSP를 쓰기 때문에 그대로 발행하면 스타일·차트가 깨진다. 그래서 CDN 없이 완전히 자체완결된 쌍둥이 파일(`dashboard-artifact.html`, 폰트까지 데이터 URI로 내장)을 별도로 유지한다.
 
 ## Agent Team 실행 흐름
 
@@ -54,8 +57,9 @@ T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Ta
 8. 각 산출물은 파일로 저장한다(`artifacts/family-trip-prep/` 아래).
 9. Orchestrator는 모든 산출물을 읽고 누락·충돌·승인 필요 지점을 정리한다.
 10. `dashboard.html`을 최종 산출물로 삼고, `artifacts/family-trip-prep/README.md`와 `improvement-log.md`를 갱신한다.
-11. `TeamDelete`로 팀을 정리한다.
-12. 항공권/숙소 예약, 결제처럼 사람 승인이 필요한 항목이 있으면 아래 "승인 요청" 형식으로 멈추고 사용자에게 확인을 요청한다. 승인 전에는 실제 예약·결제를 진행하지 않는다.
+11. **Artifact 동기화(T06, Orchestrator 직접 수행)**: `artifacts/family-trip-prep/dashboard-artifact.html`이 아직 없으면 `dashboard.html`을 CDN 없는 자체완결 버전으로 새로 만들어 저장한다(폰트는 data URI로 내장, 디자인은 처음 한 번만 공들여 만들고 이후에는 데이터만 갱신). 이미 있으면 `dashboard.html`과 같은 값으로 데이터 부분만 옮겨 적는다(레이아웃·CSS·폰트는 그대로 둔다). 그 다음 `Artifact` 도구로 발행한다 — `README.md`에 기록된 기존 Artifact URL이 있으면 그 `url`을 지정해 같은 링크를 유지하고, 없으면 새로 발행한 뒤 URL을 `README.md`에 기록한다.
+12. `TeamDelete`로 팀을 정리한다.
+13. 항공권/숙소 예약, 결제처럼 사람 승인이 필요한 항목이 있으면 아래 "승인 요청" 형식으로 멈추고 사용자에게 확인을 요청한다. 승인 전에는 실제 예약·결제를 진행하지 않는다.
 
 ## 승인 요청 형식
 

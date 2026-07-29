@@ -22,6 +22,7 @@ model: haiku
 ## 출력
 
 - `artifacts/family-trip-prep/dashboard.html`에 저장한다.
+- `artifacts/family-trip-prep/dashboard-artifact.html`(CDN 없는 자체완결 쌍둥이본, Artifact 웹 발행용)이 있어도 이 파일은 건드리지 않는다 — 그 파일의 데이터 갱신과 Artifact 재발행은 Orchestrator가 T06에서 직접 처리한다(dashboard-builder 책임 아님).
 - TailwindCSS(CDN)로 카드형 일정, 예산 표, 체크리스트, 항공권/숙소 후보 카드를 구성한다.
 - Chart.js(CDN)로 예산 항목별 비중 차트를 만들되, 차트 데이터는 `02-itinerary-draft.md`의 예산 내역표 숫자와 정확히 같아야 한다.
 - 항공권/숙소 후보와 결제가 필요한 모든 항목에는 "사람 승인 필요" 배지를 눈에 띄게 표시한다.

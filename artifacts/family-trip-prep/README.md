@@ -6,6 +6,7 @@
 - 실행 모드: 완료 (3회 부분 재실행: 항공/예산/NYE 정정 → 체력·식사스타일 반영 → 한국인 만족도 기준 맛집 재조사·12/30 교체)
 - 마지막 갱신: 2026-07-29
 - 최종 산출물: `dashboard.html` (v5 데이터 반영 완료)
+- 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v5 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
 - 실행 보조 산출물: `04-execution-action-checklist.md` (예약·확인 액션 분리)
 - 승인 상태: 사람 승인 필요 (항공권·숙소는 결제 완료 / Trattoria Dell'Arte 예약, QC NY Spa 예약, Peter Luger Resy 시도, 항공 스케줄 최종 확인은 사람 승인·확인 대기)
 
@@ -17,7 +18,8 @@
 | `01-research-notes.md` | 조사 노트(볼거리·날씨·연말 이벤트·이동수단·숙소 참고 시세·NYE 대안 8장·유명 맛집 9장·한국인 만족도 재조사 10장) | trip-researcher | itinerary-planner | current | 해당 없음 | `00-trip-brief.md` |
 | `02-itinerary-draft.md` | 일자별 일정 + 예산 내역 초안(v5 — 12/30 Lombardi's → Joe's Pizza 교체, 예산 재배분 1곳) | itinerary-planner | checklist-reviewer, dashboard-builder | current (checklist-reviewer v5 검토 통과) | 사용 가능 | `00-trip-brief.md`(재조사 결과 확정), `01-research-notes.md`(10장) |
 | `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v5 검토 — 승인, 스코프 한정 재확인 완료) | 사용 가능 | `02-itinerary-draft.md` |
-| `dashboard.html` | 최종 HTML 여행 대시보드 | dashboard-builder | 사용자 | current (v5 반영 재생성 완료) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
+| `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v5 반영 재생성 완료) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
+| `dashboard-artifact.html` | `dashboard.html`의 자체완결 쌍둥이본(CDN 없음, 폰트 내장) — Artifact 웹 발행 전용 | Orchestrator (dashboard.html 데이터를 옮겨 담음) | 사용자(웹 링크로 확인) | current (v5 반영, URL: a139c73b-b86f-4dc2-a61a-edd55bd58d1e) | 사람 승인 필요(동일) | `dashboard.html` |
 | `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Trattoria, QC NY Spa, TKTS, 항공·숙소 확인) | Codex 보조 검토 | 사용자/오케스트레이터 | current | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, 공식 페이지 확인 |
 
 상태 값: `미생성`(아직 실행 전) / `current`(최신 입력 반영) / `stale`(앞 단계가 바뀌어 재검토 필요) / `needs-review`(사람 확인 필요) / `archived`(이전 실행 보관).
@@ -39,3 +41,4 @@
 - 미검증: 도착 공항(JFK/EWR/LGA)·정확한 도착 시각, 숙소 체크인/아웃 세부, Trattoria Dell'Arte 조망석 지정 가능 여부, QC NY Spa 12/31 페리 운항 스케줄, Grimaldi's/Juliana's 12/27 영업·대기 상황(피터루거 즉시 백업용), TKTS 연말 운영시간·판매시각, DUMBO↔윌리엄스버그 도보 대체경로 실측(3.5km/45~55분 추정치).
 - 사람 승인 필요: Trattoria Dell'Arte 예약(90만원), QC NY Spa 예약(40만원), Peter Luger Resy 예약 시도(30일 전 오픈, 신용카드 불가·현금 전용), 항공 스케줄 최종 확인. 항공권·숙소는 이미 결제 완료(하네스가 예약을 대신하지 않음). 피터루거·J.G. Melon 현금 약 $500 환전 필요.
 - 다음 실행에서 먼저 볼 파일: `04-execution-action-checklist.md`(예약·확인 실행용), `dashboard.html`(최종 확인용), 부분 재실행 시 `00-trip-brief.md`부터.
+- `dashboard.html`을 재생성할 때마다 `dashboard-artifact.html`도 같은 데이터로 갱신하고, 위에 적힌 URL로 Artifact를 재발행할 것(자동으로 동기화되지 않음 — `family-trip-prep-orchestrator` SKILL.md의 T06 참고).
