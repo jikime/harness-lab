@@ -1,0 +1,65 @@
+# 실행 전 예약·확인 체크리스트 (v1)
+
+## 상태
+
+- 작성일: 2026-07-28
+- 목적: v4 일정은 유지하되, 실제 예약·확인·현금 준비가 필요한 항목을 실행 순서로 분리
+- 기준 산출물: `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md`
+- 주의: 이 문서는 예약·결제를 대신 실행하지 않는다. 실제 예약·결제는 사용자가 직접 승인하고 진행한다.
+
+## 즉시 확인 필요
+
+| 우선순위 | 항목 | 현재 확인된 사실 | 해야 할 일 | 마감/시점 | 일정 영향 |
+| --- | --- | --- | --- | --- | --- |
+| P0 | 항공 도착 공항·현지 도착시각 | 현재 일정은 도착 공항을 JFK, 12/25 13:00 전후 도착으로 가정 | 항공권 예약 내역에서 도착 공항(JFK/EWR/LGA), 현지 도착시각, 귀국편 1/3 00:30 출발 공항 확인 | 지금 확인 가능하면 즉시 | EWR/LGA면 Day 1·Day 9 공항 이동 시간과 출발 시각 재산정 |
+| P0 | 숙소 체크인·체크아웃·짐 보관 | 현재 일정은 체크인 15:00, 체크아웃 11:00을 가정 | 예약 내역에서 체크인/아웃, 1/2 체크아웃 후 짐 보관 가능 여부 확인 | 지금 확인 가능하면 즉시 | 짐 보관 불가 시 Day 9 오후 일정 조정 |
+| P0 | 현금 준비 | Peter Luger와 J.G. Melon은 카드 결제 실패 위험이 있음 | 출국 전 달러 현금 약 $500 준비, 소액권 포함 | 출발 1주 전까지 | 미준비 시 12/27·12/28 식사 실행 불가 |
+
+## 예약·확인 일정표
+
+| 날짜/시점 | 항목 | 실행 내용 | 실패 시 대응 |
+| --- | --- | --- | --- |
+| 지금~2026-11월 | Trattoria Dell'Arte 12/31 | 공식 페이지 또는 전화(212-245-9800)로 2026-12-31 예약 가능 여부, 볼드롭 조망 좌석 지정 가능 여부, $275에 음료·세금·팁 제외 여부, 취소·환불 조건 확인 | 조망석 확보 불가하면 기존 NYE 대안 후보(Aqua, Union Square Cafe 등) 재검토 |
+| 2026-11-27 전후 | Peter Luger 12/27 18:00 | Resy Brooklyn 페이지와 공식 예약 페이지에서 온라인 예약 오픈 여부 확인. 30일 전 오픈 룰은 출발 전 다시 확인 | 실패 시 `02-itinerary-draft.md` Day 3 메모의 1단계 워크인 → 2단계 12/30 백업 순서 적용 |
+| 2026-12-01 전후 | Governors Island/QC NY Spa 페리 | Governors Island ferry 티켓은 다음 달 티켓이 전월 1일에 열리는 구조로 안내됨. 12월 티켓·스케줄 확인 | 12/31 페리/스파 시간 불가 시 스파를 12/30 오전으로 이동 |
+| 출발 2주 전 | QC NY Spa 12/31 | QC NY Spa 운영시간, 전용 페리 12/31 운항, 마지막 복귀 가능 시각 확인 | 12/30 오전으로 이동하고 Day 7 낮을 비움 |
+| 출발 1~2주 전 | TKTS | TDF/TKTS 공식 운영시간과 연말 특별 운영시간 확인 | 12/30 슬롯 경합 시 Broadway는 TKTS 전환, 물량 없으면 공연 포기 |
+| 출발 1~2주 전 | 크리스마스·신정 식당 영업 | Veselka, Katz's, Grimaldi's/Juliana's, Lombardi's, Joe's Pizza 등의 12/25·1/1 영업 확인 | Day 1 Veselka/Katz's 스왑, Day 3 피자 백업 조정 |
+
+## 항목별 확인 메모
+
+### Peter Luger
+
+- 공식 사이트는 결제 가능 수단을 Peter Luger Card, 미국 수표(ID), 미국 직불카드, 현금으로 안내하며, 신용카드를 받지 않는다고 안내한다.
+- Resy는 Brooklyn 지점 온라인 예약 페이지를 제공한다. 다만 2026-12-27 예약 오픈 정확한 시각과 예약 가능 범위는 예약 시점에 다시 확인해야 한다.
+- 실행 기준: 12/27 18:00 예약 확보가 1순위. 실패하면 일정표의 백업 순서(워크인 → 12/30 저녁 백업)를 따른다.
+
+### Trattoria Dell'Arte
+
+- 공식 NYE 페이지는 1인 $275이며 음료, 세금, 팁은 제외라고 안내한다.
+- 예약은 공식 페이지 또는 전화(212-245-9800)로 안내된다.
+- 실행 기준: 볼드롭 조망 좌석 지정 가능 여부가 핵심이다. 조망석이 아니면 이 식당을 선택한 근거가 약해진다.
+
+### QC NY Spa / Governors Island Ferry
+
+- QC NY Spa 전용 페리는 현재 공식 안내상 30분 간격, 일~목 8:30~22:00, 금~토 8:30~23:00 운항으로 안내된다.
+- Governors Island 공식 ferry FAQ는 다음 달 티켓을 전월 1일에 온라인 오픈한다고 안내한다.
+- 2026-12-31은 목요일이므로 현재 안내가 유지되면 22:00까지가 기준이다. 연말 특별 스케줄은 별도 확인이 필요하다.
+
+### TKTS
+
+- 공식 TKTS/TDF 페이지와 Times Square 안내 페이지는 현행 운영시간을 제공한다.
+- 연말 특별 운영시간은 해마다 달라질 수 있으므로 2026년 12월에 재확인해야 한다.
+- Broadway 러시/로터리가 실패하고 Peter Luger 백업과 12/30 슬롯이 겹치면, v4 일정 기준으로 Peter Luger를 우선하고 Broadway는 TKTS 전환을 시도한다.
+
+## 출처 확인일
+
+- 확인일: 2026-07-28
+- Peter Luger 공식: https://peterluger.com/
+- Peter Luger Resy: https://resy.com/cities/new-york-ny/venues/peter-luger-steak-house
+- Trattoria Dell'Arte NYE 공식: https://www.trattoriadellarte.com/new-years-eve-at-trattoria-dell-arte/
+- QC NY Spa 공식: https://www.qcny.com/
+- QC NY Spa 전용 페리: https://www.qcny.com/dedicated-ferry
+- Governors Island ferry: https://www.govisland.com/plan-your-visit/ferry
+- TKTS by TDF: https://www.tdf.org/discount-ticket-programs/tkts-by-tdf/tkts-live/
+- TKTS Times Square 안내: https://www.timessquarenyc.org/retail/tkts-times-square
