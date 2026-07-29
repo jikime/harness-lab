@@ -26,7 +26,7 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 | 팀원 | Agent 파일 | tools | model | 주요 산출물 |
 | --- | --- | --- | --- | --- |
 | trip-researcher | `.claude/agents/trip-researcher.md` | `WebSearch, WebFetch, Read, Write` | sonnet | `artifacts/family-trip-prep/01-research-notes.md` |
-| itinerary-planner | `.claude/agents/itinerary-planner.md` | `Read, Write` | opus | `artifacts/family-trip-prep/02-itinerary-draft.md` |
+| itinerary-planner | `.claude/agents/itinerary-planner.md` | `Read, Write, Edit` | opus | `artifacts/family-trip-prep/02-itinerary-draft.md` |
 | checklist-reviewer | `.claude/agents/checklist-reviewer.md` | `Read, Write` | sonnet | `artifacts/family-trip-prep/03-checklist-review.md` |
 | dashboard-builder | `.claude/agents/dashboard-builder.md` | `Read, Write` | haiku | `artifacts/family-trip-prep/dashboard.html` |
 

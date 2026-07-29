@@ -3,10 +3,10 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (3회 부분 재실행: 항공/예산/NYE 정정 → 체력·식사스타일 반영 → 한국인 만족도 기준 맛집 재조사·12/30 교체)
+- 실행 모드: 완료 (4회 부분 재실행: 항공/예산/NYE 정정 → 체력·식사스타일 반영 → 한국인 만족도 기준 맛집 재조사·12/30 교체 → 45,000원 재배분 확정)
 - 마지막 갱신: 2026-07-29
-- 최종 산출물: `dashboard.html` (v5 데이터 반영 완료)
-- 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v5 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
+- 최종 산출물: `dashboard.html` (v6 데이터 반영 완료)
+- 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v6 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
 - 실행 보조 산출물: `04-execution-action-checklist.md` (예약·확인 액션 분리)
 - 승인 상태: 사람 승인 필요 (항공권·숙소는 결제 완료 / Trattoria Dell'Arte 예약, QC NY Spa 예약, Peter Luger Resy 시도, 항공 스케줄 최종 확인은 사람 승인·확인 대기)
 
@@ -16,10 +16,10 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | `00-trip-brief.md` | 목적지·날짜·가족 구성·예산·제약 정리 | Orchestrator | trip-researcher | current | 해당 없음 | 사용자 요청(유명 맛집 선정 기준을 "한국인 만족도" 우선으로 재조정, 12/30 교체 확정) |
 | `01-research-notes.md` | 조사 노트(볼거리·날씨·연말 이벤트·이동수단·숙소 참고 시세·NYE 대안 8장·유명 맛집 9장·한국인 만족도 재조사 10장) | trip-researcher | itinerary-planner | current | 해당 없음 | `00-trip-brief.md` |
-| `02-itinerary-draft.md` | 일자별 일정 + 예산 내역 초안(v5 — 12/30 Lombardi's → Joe's Pizza 교체, 예산 재배분 1곳) | itinerary-planner | checklist-reviewer, dashboard-builder | current (checklist-reviewer v5 검토 통과) | 사용 가능 | `00-trip-brief.md`(재조사 결과 확정), `01-research-notes.md`(10장) |
-| `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v5 검토 — 승인, 스코프 한정 재확인 완료) | 사용 가능 | `02-itinerary-draft.md` |
-| `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v5 반영 재생성 완료) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
-| `dashboard-artifact.html` | `dashboard.html`의 자체완결 쌍둥이본(CDN 없음, 폰트 내장) — Artifact 웹 발행 전용 | Orchestrator (dashboard.html 데이터를 옮겨 담음) | 사용자(웹 링크로 확인) | current (v5 반영, URL: a139c73b-b86f-4dc2-a61a-edd55bd58d1e) | 사람 승인 필요(동일) | `dashboard.html` |
+| `02-itinerary-draft.md` | 일자별 일정 + 예산 내역 초안(v6 — 12/30 Lombardi's → Joe's Pizza 교체, 45,000원을 쇼핑·기념품으로 재배분) | itinerary-planner | checklist-reviewer, dashboard-builder | current (checklist-reviewer v6 검토 통과) | 사용 가능 | `00-trip-brief.md`(재조사 결과·v5 잔여 결정사항 확정), `01-research-notes.md`(10장) |
+| `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v6 검토 — 승인, 스코프 한정 재확인 완료) | 사용 가능 | `02-itinerary-draft.md` |
+| `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v6 반영 재생성 완료) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
+| `dashboard-artifact.html` | `dashboard.html`의 자체완결 쌍둥이본(CDN 없음, 폰트 내장) — Artifact 웹 발행 전용 | Orchestrator (dashboard.html 데이터를 옮겨 담음) | 사용자(웹 링크로 확인) | current (v6 반영, URL: a139c73b-b86f-4dc2-a61a-edd55bd58d1e) | 사람 승인 필요(동일) | `dashboard.html` |
 | `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Trattoria, QC NY Spa, TKTS, 항공·숙소 확인) | Codex 보조 검토 | 사용자/오케스트레이터 | current | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, 공식 페이지 확인 |
 
 상태 값: `미생성`(아직 실행 전) / `current`(최신 입력 반영) / `stale`(앞 단계가 바뀌어 재검토 필요) / `needs-review`(사람 확인 필요) / `archived`(이전 실행 보관).
@@ -35,6 +35,7 @@
 | 2026-07-28 | `04-execution-action-checklist.md` 신규 작성 | 없음 | 실행 전 예약·확인 액션 분리 | v4 산출물은 current로 유지하되, 실제 여행 준비 단계에서 필요한 항공·숙소·예약·현금·연말 운영 확인 항목을 별도 체크리스트로 분리 |
 | 2026-07-29 | `00-trip-brief.md` (유명 맛집 선정 기준을 "아이코닉·유명세" → "한국인 여행자 만족도 우선"으로 재조정, 피터루거·울프강 비교 및 12/26·12/27 이틀 연속 스테이크하우스 재검토 추가) | `01-research-notes.md`(9장), `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html` | T02(9장 맛집만 재조사, 사용자 선택 후 진행), T03~T05(선택 확정 후 순차 재실행) | 사용자가 기존 맛집 리스트("피터루거·Keens·Katz's 등")가 대안 비교 없이 "이미 유명한 곳"을 그대로 채운 것임을 지적하고, 한국인 만족도 기준 재평가와 스테이크하우스 중복 재검토를 요청 |
 | 2026-07-29 | 재조사 결과 확정(12/26 Keens 유지, 12/30 Lombardi's → Joe's Pizza 교체) → `02-itinerary-draft.md` v5(스코프 한정 수정), `03-checklist-review.md` v5(스코프 한정 재검토), `dashboard.html` 재생성 | `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html` | T03(v5, 12/30 항목·예산 재배분 1곳만 수정), T04(v5 스코프 한정 재검토), T05(대시보드 재생성) | 한국어 소스(마일모아·브런치 등) 기준 Joe's Pizza가 Lombardi's보다 근거 탄탄, 12/26은 Grand Central Oyster Bar 대안도 검토했으나 Keens 유지가 사용자 선택. 전면 재작성 대신 최소 범위 수정으로 v4의 나머지 승인 내용을 보존 |
+| 2026-07-29 | v5가 planner 판단으로 남겨뒀던 "45,000원 배분처"를 사용자가 쇼핑·기념품 복원으로 확정(식비 버퍼 325,000→280,000 원복, 식비 2,950,000→2,905,000, 쇼핑 650,000→695,000) → `02-itinerary-draft.md` v6, `03-checklist-review.md` v6, `dashboard.html`·`dashboard-artifact.html` 재생성·재발행 | `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html`, `dashboard-artifact.html` | T03(v6, 숫자 2곳 재배분만), T04(v6 스코프 한정 재검토), T05(대시보드 재생성), T06(Artifact 동기화·재발행) | 사용자가 "울프강도 3대 스테이크인데 안 가냐"고 물어 Keens 유지를 재확인하고, 동시에 v5의 미확정 항목(45,000원 배분처)을 쇼핑 복원으로 확정. itinerary-planner가 965줄 파일을 Write로 통째로 재출력하다 출력 한도에 두 번 걸려 실패 — 대신 OLD→NEW 패치 스펙(38곳)을 만들었고 Orchestrator가 Edit 도구로 직접 적용(부분 편집 도구가 없는 서브에이전트의 한계를 오케스트레이터가 보완한 사례) |
 
 ## 미검증 영역과 승인 필요
 
