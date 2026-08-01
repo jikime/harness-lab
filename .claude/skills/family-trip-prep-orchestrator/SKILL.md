@@ -36,12 +36,27 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 | --- | --- | --- | --- | --- | --- | --- |
 | T01-input | Orchestrator | 사용자 요청 | `artifacts/family-trip-prep/00-trip-brief.md` | 없음 | 목적지, 날짜, 가족 구성, 예산, 제약이 정리됨 | 작성 완료 |
 | T02-research | trip-researcher | `00-trip-brief.md` | `artifacts/family-trip-prep/01-research-notes.md` | T01 | 항공권·숙소 후보 각 2개 이상, 출처 포함 | 시작, 차단, 완료 |
-| T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md` | `artifacts/family-trip-prep/02-itinerary-draft.md` | T02 | 예산 항목 합산과 표시 합계 일치 | 시작, 차단, 완료 |
+| T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md`, (있으면) 직전 `03-checklist-review.md` | `artifacts/family-trip-prep/02-itinerary-draft.md` | T02, **미검토 버전 확인(아래 T03 진입 검사)** | 예산 항목 합산과 표시 합계 일치 | 시작, 차단, 완료 |
 | T04-checklist-review | checklist-reviewer | `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-draft.md` | `artifacts/family-trip-prep/03-checklist-review.md` | T03 | 예산 재검산·동선 검토 완료, 이슈 심각도 판정 | 시작, 차단, 완료 |
-| T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인 | 시작, 차단, 완료 |
+| T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인, **직전 검토가 조건부 승인이면 그 조건이 산출물에 실제로 반영됨(아래 T05 조건 이행 확인)** | 시작, 차단, 완료 |
 | T06-artifact-sync | Orchestrator (dashboard-builder에게 위임하지 않음) | `dashboard.html`(갱신된 최종본) | `artifacts/family-trip-prep/dashboard-artifact.html` + Artifact 웹 발행/갱신 | T05 | `dashboard-artifact.html`의 데이터가 `dashboard.html`과 일치, 기존 Artifact URL이 있으면 그 URL로 갱신(새 URL 발급 방지) | 시작, 차단, 완료 |
+| T07-record-close | Orchestrator | 이번 회차에 바뀐 모든 산출물 | `artifacts/family-trip-prep/README.md`, `artifacts/family-trip-prep/improvement-log.md` | T06(대시보드까지 간 회차) 또는 실제로 수행한 마지막 단계 | 이번 회차가 두 파일에 모두 기록됨(아래 T07 완료 기준) | 시작, 차단, 완료 |
 
 T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Task를 재등록한다(최대 2회, `T03-itinerary-revision-N`).
+
+### T03 진입 검사 — 미검토 버전 위에 덧쓰지 않기
+
+T03을 시작하기 전에 **직전 버전이 T04 검토를 받았는지** 확인한다. `README.md`의 `03-checklist-review.md` 행이 현재 `02-itinerary-draft.md` 버전을 검토한 상태가 아니면(예: 일정은 v7인데 검토는 v6까지), 그대로 진행하지 말고 다음 중 하나를 택한다.
+
+- **원칙**: 미검토분을 먼저 T04로 검토한 뒤 새 요청을 T03에 태운다.
+- **예외**: 사용자가 연속으로 요청해 중간 검토가 비효율적이면, 새 버전 작업을 진행하되 **다음 T04를 "통합 검토"로 등록**한다(예: `T04-checklist-review-v7+v8`). 이때 checklist-reviewer에게 **미검토 구간이 어디부터인지 명시적으로 알린다** — 그러지 않으면 reviewer가 마지막 회차만 보고 넘어간다.
+- 어느 쪽이든 `README.md`에 미검토 구간이 있었다는 사실을 남긴다.
+
+이 검사가 없으면 요청이 연달아 들어올 때 T04를 건너뛰고 T03만 반복하는 흐름이 생긴다(2026-07-30 v7이 실제로 그랬다).
+
+### T05 조건 이행 확인 — "조건부 승인"의 조건은 승인의 일부다
+
+T04 결과가 **조건부 승인**이면(예: "이 리스크를 대시보드에 반드시 노출할 것"), 그 조건은 권고가 아니라 승인의 전제다. Orchestrator는 T05 완료를 판정하기 전에 **조건이 산출물에 실제로 들어갔는지 직접 확인한다** — dashboard-builder의 자체보고로 대신하지 않고, 생성된 `dashboard.html`에서 해당 문구·경고 요소를 찾아 확인한다. 조건이 빠졌으면 T05를 완료로 표시하지 않고 dashboard-builder에게 반영을 요청한다. T06의 `dashboard-artifact.html`에도 같은 조건이 들어가야 한다.
 
 **T06을 Orchestrator가 직접 맡는 이유**: `Artifact` 발행 도구는 최상위 대화(Orchestrator)에만 있고 Task 서브에이전트에는 없다. `dashboard.html`은 TailwindCSS/Chart.js를 CDN으로 불러오는데, Artifact 게시 환경은 외부 CDN 요청을 막는 CSP를 쓰기 때문에 그대로 발행하면 스타일·차트가 깨진다. 그래서 CDN 없이 완전히 자체완결된 쌍둥이 파일(`dashboard-artifact.html`, 폰트까지 데이터 URI로 내장)을 별도로 유지한다.
 
@@ -50,16 +65,17 @@ T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Ta
 1. 사용자 요청에서 목적지, 날짜, 가족 구성(인원·나이), 예산, 제약을 확인한다. 부족하면 질문하고 추측하지 않는다.
 2. `artifacts/family-trip-prep/00-trip-brief.md`에 정리해 저장한다.
 3. `TeamCreate`로 4개 역할을 팀원으로 구성한다(모델 정책은 위 표를 그대로 팀 생성 지시에 반영한다).
-4. `TaskCreate`로 T01-T05를 등록한다.
+4. `TaskCreate`로 T01-T07을 등록한다(T06·T07은 Orchestrator가 직접 수행하는 단계지만, 빠뜨리지 않도록 Task로도 등록한다).
 5. 각 팀원은 자기 Task를 시작·차단·완료 시 `TaskUpdate`로 갱신한다.
 6. Orchestrator는 `TaskGet`으로 지연·차단·의존 관계 막힘을 확인한다.
 7. 팀원은 발견·충돌·완료를 `SendMessage`로 공유한다. checklist-reviewer가 중요 이상 이슈를 찾으면 itinerary-planner에게 수정 요청 메시지를 보낸다.
 8. 각 산출물은 파일로 저장한다(`artifacts/family-trip-prep/` 아래).
 9. Orchestrator는 모든 산출물을 읽고 누락·충돌·승인 필요 지점을 정리한다.
-10. `dashboard.html`을 최종 산출물로 삼고, `artifacts/family-trip-prep/README.md`와 `improvement-log.md`를 갱신한다.
+10. `dashboard.html`을 최종 산출물로 삼는다. 이때 직전 T04가 조건부 승인이었으면 위 "T05 조건 이행 확인"을 수행한다.
 11. **Artifact 동기화(T06, Orchestrator 직접 수행)**: `artifacts/family-trip-prep/dashboard-artifact.html`이 아직 없으면 `dashboard.html`을 CDN 없는 자체완결 버전으로 새로 만들어 저장한다(폰트는 data URI로 내장, 디자인은 처음 한 번만 공들여 만들고 이후에는 데이터만 갱신). 이미 있으면 `dashboard.html`과 같은 값으로 데이터 부분만 옮겨 적는다(레이아웃·CSS·폰트는 그대로 둔다). 그 다음 `Artifact` 도구로 발행한다 — `README.md`에 기록된 기존 Artifact URL이 있으면 그 `url`을 지정해 같은 링크를 유지하고, 없으면 새로 발행한 뒤 URL을 `README.md`에 기록한다.
-12. `TeamDelete`로 팀을 정리한다.
-13. 항공권/숙소 예약, 결제처럼 사람 승인이 필요한 항목이 있으면 아래 "승인 요청" 형식으로 멈추고 사용자에게 확인을 요청한다. 승인 전에는 실제 예약·결제를 진행하지 않는다.
+12. **기록 종료(T07, Orchestrator 직접 수행)**: 아래 "기록 종료(T07)" 절차대로 `README.md`와 `improvement-log.md`를 갱신한다. **이 단계를 끝내기 전에는 회차를 완료로 보고하지 않는다.**
+13. `TeamDelete`로 팀을 정리한다.
+14. 항공권/숙소 예약, 결제처럼 사람 승인이 필요한 항목이 있으면 아래 "승인 요청" 형식으로 멈추고 사용자에게 확인을 요청한다. 승인 전에는 실제 예약·결제를 진행하지 않는다.
 
 ## 승인 요청 형식
 
@@ -82,6 +98,18 @@ T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Ta
 - dashboard-builder가 입력 파일 간 숫자 불일치를 보고하면, 임의로 조정하지 말고 itinerary-planner에게 재확인을 요청한다.
 - 항공권/숙소 예약, 결제는 사람 승인 전 완료하지 않는다.
 
-## 개선 기록 갱신
+## 기록 종료(T07)
 
-각 실행(초기 실행, 부분 재실행 모두) 후 `artifacts/family-trip-prep/improvement-log.md`에 날짜, 바뀐 점, 실패했던 케이스, 다음 실행에서 고칠 후보를 남긴다.
+각 회차(초기 실행, 부분 재실행 모두)는 산출물을 만든 것으로 끝나지 않는다. **아래 두 파일을 갱신해야 회차가 닫힌다.**
+
+1. **`artifacts/family-trip-prep/README.md`**
+   - 상단 "현재 실행"의 버전·마지막 갱신일·승인 상태
+   - "산출물 지도" 표의 상태(`current`/`stale`/`needs-review`)와 버전 표기
+   - **"부분 재실행 기록" 표에 이번 회차 행 추가** — 날짜, 바뀐 파일, stale로 표시한 파일, 다시 실행한 단계, 사유
+2. **`artifacts/family-trip-prep/improvement-log.md`**
+   - 날짜, 바뀐 점, 실패했던 케이스, 다음 실행에서 고칠 후보
+   - 하네스 자체를 고쳤으면 저장소 루트 `CLAUDE.md`의 "하네스 변경 이력" 표에도 남긴다(산출물만 바뀐 회차는 여기 적지 않는다)
+
+**완료 기준**: `README.md`의 "부분 재실행 기록" 표 마지막 행과 `improvement-log.md` 마지막 행이 **모두 이번 회차를 가리킨다.** 헤더의 버전 표기만 바꾸고 표에 행을 추가하지 않는 것은 완료가 아니다.
+
+**왜 정식 단계인가**: 2026-07-30 v7·v8 두 회차는 산출물·검토·발행이 모두 정상이었는데 이 기록만 빠진 채 커밋됐다(README 헤더의 버전 표기만 v8로 바뀌어 있어 더 알아채기 어려웠다). 기록 갱신이 T01~T06 어디에도 속하지 않은 "마무리 관행"으로만 존재했던 것이 원인이라, 번호가 붙은 단계로 승격했다. 사용자 요청이 연달아 들어오는 회차에서 특히 빠지기 쉬우므로, 다음 요청을 받기 전에 먼저 닫는다.
