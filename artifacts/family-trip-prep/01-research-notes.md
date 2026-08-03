@@ -165,6 +165,14 @@
 
 출처: [Peter Luger 공식 - Locations & Reservations](https://peterluger.com/pages/locations-reservations), [Resy - Peter Luger Steak House](https://resy.com/cities/new-york-ny/venues/peter-luger-steak-house), [Yelp - Peter Luger](https://www.yelp.com/biz/peter-luger-brooklyn-2), [Michelin Guide - Peter Luger](https://guide.michelin.com/us/en/new-york-state/brooklyn/restaurant/peter-luger), [themenuprices.com - Peter Luger 메뉴 가격](https://themenuprices.com/peter-luger-steakhouse/), [amNY - Peter Luger 소개](https://www.amny.com/lifestyle/eat-and-drink/peter-luger-brooklyn-steakhouse-1-37303037/), [Mashed - Peter Luger 방문 전 알아둘 점](https://www.mashed.com/1656874/peter-luger-steak-house-know-before-eating-there/) (조사 시점: 2026-07-28)
 
+**[추가 확인, 「리얼 뉴욕(2026~2027)」 가이드북 306페이지, 2026-08-03]** 이 책의 "브루클린 윌리엄스버그" 상세 지도에서 피터루거가 식당 부문 **1번**으로 표시될 만큼 대표 맛집으로 소개됨. 책에 실린 정보:
+- **교통편 추가 옵션**: 기존에 확인한 L선 Bedford Ave역 외에, **J/M/Z선 Marcy Ave역에서 도보 5분**이라는 경로도 소개됨. 숙소(이스트빌리지)에서 출발 시 어느 쪽이 더 빠른지는 실제 노선 재확인 필요(확인 필요 사항으로 추가).
+- **영업시간**: 매일 11:45~21:15(기존 조사의 "11:45am~9:30pm"과 마감 시각이 15분 차이 — 재확인 권장).
+- **스테이크 2인 가격**: $155.90(기존 조사의 $135.95~$147.90 범위보다 약간 높음 — 최신 반영치일 가능성, 예산표는 이미 여유(2인 예상 $180~250)를 두고 있어 초과 없음).
+- **현금만 받음**: 기존 조사와 일치, 책에서도 명시.
+- 1887년 카를 루거가 연 카페에서 시작해 스테이크하우스로 변모, 1903년 윌리엄스버그 브리지 완공 이후 맨해튼 손님이 몰리며 번창했다는 역사도 소개됨. 입구 벽에 자갓 서베이 최고 등급 액자가 가득하다는 묘사도 있음(참고용, 예약·가격 판단에는 영향 없음).
+- **보너스(참고용, 일정 추가 제안 아님)**: 피터루거 바로 옆 블록(462 Bedford Ave)에 "윌리엄스버그의 모나리자"로 불리는 벽화(원제 'Lost Time')가 있음 — 대기 중 짧게 둘러볼 수 있는 무료 포토스팟.
+
 ### 9-2. 날짜별 유명·아이코닉 맛집 후보 (하루 1곳 + 대안 1곳)
 
 | 날짜 | 동선/지역(v2 기준) | 후보 1 | 후보 2(대안) |
@@ -187,7 +195,7 @@
 1. 피터루거 Resy 예약 오픈 정확한 시점(30일 전 자정 룰의 최신 유효성)과 연말 성수기(12/25~1/2) 특별 운영 여부 — 예약 시점이 임박하면 재확인 필요.
 2. 피터루거 방문을 12/27(DUMBO)에 결합할지, 숙소에서 직접 왕복하는 별도 일정으로 뺄지 — itinerary-planner 결정 필요.
 3. Los Tacos No.1의 2026년 정확한 타코 가격(이번 조사에서 정확한 개당 가격을 교차 확인하지 못함).
-4. Union Square Cafe와 마찬가지로, 위 각 맛집의 12월 말~1월 초 연말연시 특별 영업시간(단축/휴무 여부)은 별도 확인되지 않음 — 특히 Grimaldi's·Juliana's·Joe's Pizza·Lombardi's·Veselka·Katz's의 12/25, 1/1 영업 여부는 브리프 8장 "12/25 크리스마스 당일 영업 식당 확보" 항목과 함께 재확인 필요. **[부분 해소, 10-4 참고]** Katz's는 12/25 영업 확인됨.
+4. Union Square Cafe와 마찬가지로, 위 각 맛집의 12월 말~1월 초 연말연시 특별 영업시간(단축/휴무 여부)은 별도 확인되지 않음 — 특히 Grimaldi's·Juliana's·Joe's Pizza·Lombardi's·Veselka·Katz's의 12/25, 1/1 영업 여부는 브리프 8장 "12/25 크리스마스 당일 영업 식당 확보" 항목과 함께 재확인 필요. **[부분 해소, 10-4 참고]** Katz's는 12/25 영업 확인됨. **[추가 확인, 「리얼 뉴욕(2026~2027)」 가이드북 226페이지, 2026-08-03]** Katz's 평상시 영업시간: 월~금 08:00~23:00, **토·일 24시간**(1/2가 토요일이므로 방문 시간 13:00경엔 문제없이 영업 중), 다만 *추수감사절 18:00까지, **12월 24일 22:30까지** 단축 운영한다는 별도 안내가 있음(1/2 방문에는 해당 없으나 참고). 파스트라미 샌드위치 단품 $28.95로 기존 조사와 일치. 주소 205 E Houston St 확인, F라인 2 Av역 도보 2분.
 5. 해외 카드(한국 발급) 결제 가능 여부는 피터루거·J.G. Melon을 제외하면 대체로 가능할 것으로 보이나 개별 매장 확인 권장.
 
 ---
