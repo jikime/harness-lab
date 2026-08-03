@@ -3,8 +3,8 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (5회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8, 12/26 여유 0분 조건부 승인))
-- 마지막 갱신: 2026-07-30
+- 실행 모드: 완료 (6회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화)
+- 마지막 갱신: 2026-08-03
 - 최종 산출물: `dashboard.html` (v8 데이터 반영 완료)
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v8 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
 - 실행 보조 산출물: `04-execution-action-checklist.md` (예약·확인 액션 분리)
@@ -15,7 +15,7 @@
 | 파일 | 역할 | 만드는 Agent | 다음에 읽는 Agent/단계 | 상태 | 승인 상태 | 근거/입력 |
 | --- | --- | --- | --- | --- | --- | --- |
 | `00-trip-brief.md` | 목적지·날짜·가족 구성·예산·제약 정리 | Orchestrator | trip-researcher | current | 해당 없음 | 사용자 요청(유명 맛집 선정 기준을 "한국인 만족도" 우선으로 재조정, 12/30 교체 확정) |
-| `01-research-notes.md` | 조사 노트(볼거리·날씨·연말 이벤트·이동수단·숙소 참고 시세·NYE 대안 8장·유명 맛집 9장·한국인 만족도 재조사 10장·쇼핑 추천 11장·미채택 후보 정리 12장·미채택 명소 백업 13장) | trip-researcher | itinerary-planner | current | 해당 없음 | `00-trip-brief.md` |
+| `01-research-notes.md` | 조사 노트(볼거리·날씨·연말 이벤트·이동수단·숙소 참고 시세·NYE 대안 8장·유명 맛집 9장·한국인 만족도 재조사 10장·쇼핑 추천 11장·미채택 후보 정리 12장(맛집·쇼핑·NYE)·미채택 명소 백업 13장) | trip-researcher | itinerary-planner | current | 해당 없음 | `00-trip-brief.md` |
 | `02-itinerary-draft.md` | 일자별 일정 + 예산 내역 초안(v8 — 쇼핑 스팟 반영: Exit9·MoMA Design Store·LEGO Store·Nintendo NY·Rough Trade·Kinokuniya·Nike SoHo·Village Revival Records) | itinerary-planner | checklist-reviewer, dashboard-builder | current (checklist-reviewer v8 검토 통과, 조건부) | 사용 가능(조건: 12/26 오후 여유 0분 사전 숙지) | `01-research-notes.md`(11장 쇼핑 추천) |
 | `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v8 검토 — 조건부 승인, 12/26 오후 여유 0분을 중요 이슈로 등록) | 사용 가능 | `02-itinerary-draft.md` |
 | `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v8 반영 재생성 완료, 12/26 여유 0분 경고 박스 포함) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
@@ -38,6 +38,7 @@
 | 2026-07-29 | v5가 planner 판단으로 남겨뒀던 "45,000원 배분처"를 사용자가 쇼핑·기념품 복원으로 확정(식비 버퍼 325,000→280,000 원복, 식비 2,950,000→2,905,000, 쇼핑 650,000→695,000) → `02-itinerary-draft.md` v6, `03-checklist-review.md` v6, `dashboard.html`·`dashboard-artifact.html` 재생성·재발행 | `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html`, `dashboard-artifact.html` | T03(v6, 숫자 2곳 재배분만), T04(v6 스코프 한정 재검토), T05(대시보드 재생성), T06(Artifact 동기화·재발행) | 사용자가 "울프강도 3대 스테이크인데 안 가냐"고 물어 Keens 유지를 재확인하고, 동시에 v5의 미확정 항목(45,000원 배분처)을 쇼핑 복원으로 확정. itinerary-planner가 965줄 파일을 Write로 통째로 재출력하다 출력 한도에 두 번 걸려 실패 — 대신 OLD→NEW 패치 스펙(38곳)을 만들었고 Orchestrator가 Edit 도구로 직접 적용(부분 편집 도구가 없는 서브에이전트의 한계를 오케스트레이터가 보완한 사례) |
 | 2026-07-30 | 조사노트 11장(쇼핑 추천)의 매장을 12/25·12/26·12/30 동선에 배치 → `02-itinerary-draft.md` v7 (S1~S7: Exit9 20분, MoMA Design Store 관람 내 흡수, LEGO 25분, Kinokuniya 35분, 소호 4개 매장 150분 구체화, Village Revival Records 30분) | `02-itinerary-draft.md` | T03(v7, 쇼핑 3개 날짜 한정 수정) | 사용자가 "예산은 재배분하지 말 것, 12/26에 다 욱여넣지 말 것, 자전거 용품은 시간 배정하지 말 것" 조건으로 쇼핑 스팟 구체화를 요청. 각 날의 블록 총량(12/25 75분, 12/30 소호 150분·빌리지 70분)을 유지한 채 내부에서만 분할해 예산·맛집 배치·이동시간 표기는 전부 불변 |
 | 2026-07-30 | v7이 "확인 필요"로 남긴 판단 3건을 사용자가 결정 → `02-itinerary-draft.md` v8(U1~U8: Nintendo NY 확정 25분 승격, Rough Trade 확정 15분 재삽입, 재원은 커피 −15·5번가 −20·LEGO −5로 ±40분 상계, ToR 입장 대기 15분 명시), `03-checklist-review.md` v7+v8 통합 검토(**조건부 승인**), `dashboard.html`·`dashboard-artifact.html` 재생성·재발행 | `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html`, `dashboard-artifact.html` | T03(v8, 12/26 오후 창 내부 재배분만), T04(v7+v8 통합 재검토), T05(대시보드 재생성), T06(Artifact 동기화·재발행) | 사용자 결정 3건(①닌텐도 확정 배정 ②Rough Trade 재삽입 ③윈터빌리지↔Kinokuniya 배분은 planner 위임)에 "고정 시각·예산 불변, 무리하게 욱여넣고 숨기지 말 것" 조건. v7이 검토 없이 반영된 상태였어서 checklist-reviewer가 v7+v8을 한 번에 원문 대조 — 치명 0건이나 **12/26 오후 창 여유 0분을 중요 이슈(I1)로 신규 등록**, 대시보드 경고 노출을 조건으로 승인 |
+| 2026-08-03 | "왜 안 골랐는지" 문서화 3건 → `01-research-notes.md` 12장에 맛집(Wolfgang's·Benjamin·Quality Meats·Grand Central Oyster Bar·가이드북 리스트)·쇼핑(스미스키·건프라·넨도로이드·플레이모빌 등)·**NYE 후보(One40·Aqua·Union Square Cafe·Members Only, 신규 12-3)** 미선택 사유 정리, 13장에 미채택 관광명소 12곳(자유의여신상·원월드전망대 등) 백업 조사 완료. 일정·대시보드는 변경 없음(순수 참고 문서) | `01-research-notes.md` | T02(문서화·백업 조사만, T03~T06 해당 없음) | 사용자가 "안 가는 것도 이유를 쓰기로 했다"고 재확인해 남은 미문서화 항목(NYE 3후보)을 찾아 보완. trip-researcher의 응답 길이 한도 초과(64,000토큰) 재발로 Edit 도구 추가 및 오케스트레이터의 직접 저장 개입 병행 |
 
 ## 미검증 영역과 승인 필요
 
