@@ -644,6 +644,115 @@
 5. 코니아일랜드 2027-01-01 Polar Bear Plunge 정확한 날짜·시간 공지(아직 미공지)
 6. 양키스타디움 투어의 12월 말~1월 초 정확한 운영 요일·시간, 12/25·1/1 휴무 여부(자료 상충, 공식 문의 필요)
 
+### 13-7. 스태튼아일랜드 페리 (Staten Island Ferry)
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 맨해튼 승선지 Whitehall Terminal(4 South Street, 로어맨해튼) ↔ 스태튼아일랜드 St. George Terminal |
+| 지하철 | 1선 South Ferry역(도보 1~2분), 4/5선 Bowling Green역, R/W선 Whitehall St역, J/Z선 Broad St역 모두 도보 5분 내. 숙소(이스트빌리지)에서는 6호선으로 Bowling Green까지 약 20~25분 |
+| 운영시간 | 24시간 연중무휴. 평일 러시아워(06:00~09:30, 15:30~20:00)는 15~20분 간격, 그 외 평일·주말은 30분 간격 |
+| 입장료 | **무료**(승선권 불필요) |
+| 소요시간 | 편도 약 25분, 왕복 약 1~1.5시간(내리지 않고 그대로 왕복 가능) |
+| 자유의여신상 조망 관련 | 리버티 섬·엘리스 아일랜드에 정박하지 않고 약 450m 거리를 스쳐 지나감. 가까이서 보거나 상륙하려면 별도 유료 페리(Statue Cruises, 13-1 참고) 필요 |
+| 겨울철 특이사항 | 연중무휴. 크리스마스(12/25)·새해(1/1)는 holiday schedule 적용(양 터미널 매시 정각·30분 출발, 30분 간격). 갑판은 겨울 강풍·한파 노출이 커 방한 필수 |
+| 미채택 판단 | **(d) 애초에 후보에 없었음.** 조사 노트 전체에 언급 없음 |
+| 결합 제안 | 13-1(유료 자유의여신상 크루즈) 대신 무료 대안으로 쓰거나, 배터리파크→페리 왕복→원 월드 전망대를 묶어 "로어맨해튼 반나절"로 구성 가능 |
+
+출처: [thebettervacation.com](https://thebettervacation.com/new-york/staten-island-ferry/), [siferry.com](https://siferry.com/schedules/), [statenislandferry.com](https://statenislandferry.com/ferry-schedule-and-times/)
+
+### 13-8. 센트럴파크 주요 스팟 (베데스다 분수·스트로베리 필즈)
+
+**베데스다 분수·테라스**
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 센트럴파크 중앙, Mall/Literary Walk 남쪽 끝 |
+| 지하철 | B/C선 72 St 또는 6선 68 St–Hunter College에서 도보 10~15분 |
+| 입장료 | 무료 |
+| 겨울철 특이사항(이번 여행과 직접 겹침) | **분수는 2026년 8월 초부터 약 1년간(2027년 여름까지) $37M 복원공사로 폐쇄.** 이번 여행(2026-12-25~2027-01-02)은 폐쇄 기간 한가운데라 분수 물·조각상은 볼 수 없음. 다만 테라스 자체는 공사 중에도 개방 |
+| 미채택 판단 | **(b) 시즌(공사)으로 인한 사실상 배제** |
+| 결합 제안 | 테라스·Bow Bridge·Mall 산책 경유지 정도로 기대치를 낮춰 포함 |
+
+**스트로베리 필즈(Imagine 모자이크)**
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 71~74번가 사이(베데스다 분수에서 도보 약 10분 서쪽) |
+| 지하철 | B/C선 72 St역 출구 바로 맞은편. 1/2/3선 72 St역도 도보 7분 |
+| 입장료 | 무료 |
+| 소요시간 | 15~30분 |
+| 겨울철 특이사항 | 실외 조형물, 계절 제한 없음 |
+| 미채택 판단 | **(d) 애초에 후보에 없었음** |
+| 결합 제안 | Day4(12/28, 업타운) 동선 시작/끝에 배치(Wollman Rink와는 파크 종단 필요) |
+
+출처: [centralpark.com](https://www.centralpark.com/news/bethesda-fountain-to-close-for-a-year-in-37-million-restorat/), [hoodline.com](https://hoodline.com/2026/07/central-park-s-bethesda-fountain-to-go-dry-as-37m-fix-sinks-model-boat-pond/), [timeout.com](https://www.timeout.com/newyork/news/one-of-central-parks-most-iconic-landmarks-will-shutter-for-an-entire-year-to-undergo-a-37-million-facelift-072326), [centralparknyc.org](https://www.centralparknyc.org/press/central-park-conservancy-announces-major-investment-in-two-of-the-parks-most-iconic-destinations), [freetoursbyfoot.com](https://freetoursbyfoot.com/strawberry-fields-central-park/)
+
+### 13-9. 브루클린 보태닉 가든 / 프로스펙트 파크
+
+**브루클린 보태닉 가든**
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 990 Washington Ave, Prospect Heights — 브루클린 뮤지엄(13-4)과 도보 5분 |
+| 지하철 | 2/3선 Eastern Parkway–Brooklyn Museum역(Eastern Parkway 입구는 임시 폐쇄, 455 Flatbush Ave 또는 990 Washington Ave 입구 이용) |
+| 운영시간(겨울, 9~2월) | 화~일 10:00~16:30, **월요일 휴관**. 12~2월 평일은 자율지불(pay-what-you-wish) |
+| 입장료 | $22(성인)/$16(시니어·학생)/12세 미만 무료. 겨울 평일 자율지불 시 더 저렴 |
+| 소요시간 | 1.5~2시간(겨울엔 온실 위주) |
+| 겨울철 특이사항 | 야외 정원은 볼거리 제한적, 온실(Steinhardt Conservatory)은 연중 개방. 12월 유료 야간 조명쇼 **Lightscape**(2026 시즌 ~2027-01-04까지 추정, 성인 오프피크 약 $39·아동 약 $22, 사전 슬롯 예매 필수) |
+| 미채택 판단 | **(c)+(d).** 기존 브루클린 동선(Day3, DUMBO+윌리엄스버그)과 지하철 40분 이상 이탈 |
+| 결합 제안 | 브루클린 뮤지엄(13-4)·프로스펙트 파크와 묶어 "프로스펙트 하이츠 반나절/하루" 신설 |
+
+**프로스펙트 파크**
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 보태닉 가든 서쪽 바로 옆(도보 5분) |
+| 지하철 | 2/3선 Grand Army Plaza역, B/Q선 Prospect Park역 |
+| 입장료 | 무료 |
+| 겨울철 특이사항 | LeFrak Center at Lakeside 겨울 실외 아이스링크(대략 11월~3월) — Wollman Rink 대안 가능, 요금·시간 확인 필요 |
+| 미채택 판단 | **(c) 동선 이탈**(보태닉 가든과 동일 사유) |
+| 결합 제안 | 위 두 곳과 묶어 별도 반나절로만 현실적 |
+
+출처: [bbg.org/visit/hours](https://www.bbg.org/visit/hours), [away.mta.info](https://away.mta.info/articles/guide-to-new-york-city-botanical-gardens/), [bbg.org/lightscape](https://www.bbg.org/lightscape), [brooklynbridgeparents.com](https://brooklynbridgeparents.com/lightscape-at-brooklyn-botanic-garden-what-you-need-to-know/), [abc7ny.com](https://abc7ny.com/post/brooklyn-botanic-gardens-annual-winter-light-show-lightscape-returns-holiday-season/18191614/)
+
+### 13-10. 루즈벨트 아일랜드 트램 (Roosevelt Island Tram)
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 맨해튼 승강장 Tramway Plaza, 2nd Ave & E 60th St ↔ 루즈벨트 아일랜드 |
+| 지하철 | F선 Roosevelt Island역(섬 도착 후). 맨해튼 측은 4/5/6선 59 St, N/R/W선 Lexington Ave–59 St에서 도보 5~10분 |
+| 운영시간 | 월~목·일 06:00~02:00, 금·토 06:00~03:30, 7~10분 간격 |
+| 입장료 | **지하철과 동일한 대중교통 요금(편도 $2.90), MetroCard/OMNY 태그로 탑승 — 별도 관광 입장료 아님.** 44인치 미만 아동은 동반 성인 요금 지불 시 무료 |
+| 소요시간 | 편도 4~5분(이스트강·스카이라인 조망), 왕복 15~20분이면 충분 |
+| 겨울철 특이사항 | 연중무휴이나 강풍 시 지연·일시 중단 가능성(공식 확인 필요) |
+| 미채택 판단 | **(d) 애초에 후보에 없었음.** 저렴한 "가성비 전망 스팟"이나 결합할 만한 다른 목적지가 마땅치 않음 |
+| 결합 제안 | 록펠러 센터·5번가 동선(12/26)에서 다소 벗어나나, 저녁 시간대 짧은 전망 체험(30분)으로 부담 없이 추가 가능 |
+
+출처: [tripadvisor.com](https://www.tripadvisor.com/Attraction_Review-g60763-d548557-Reviews-The_Roosevelt_Island_Tramway-New_York_City_New_York.html), [storyhunt.io](https://www.storyhunt.io/en/articles/roosevelt-island-tramway), [metroeasy.com](https://metroeasy.com/usa/roosevelt-island-tramway/)
+
+### 13-11. The Vessel (허드슨야드)
+
+| 항목 | 내용 |
+|---|---|
+| 위치 | 20 Hudson Yards, 첼시/허드슨야드 |
+| 지하철 | 7선 34 St–Hudson Yards역 직결(도보 2~3분) |
+| 최신 운영 상태 | **2021년 1월 잇단 투신 사고로 폐쇄됐다가 약 3년 만인 2024년 10월 안전 그물(강철 메시) 설치 후 재개장.** 다만 **최상층 전망 데크는 여전히 폐쇄**. 2026년 초에도 기상 상황에 따라 운영 조정 사례(3월 재개장 공지 등)가 있어 방문 당일 공식 사이트(vesselnyc.com) 재확인 필요 |
+| 입장료 | 시간 지정 사전예약 $10, 시간 미지정 플렉스 티켓 $15. 5세 이하 무료. 24시간 전까지 무료 취소·변경 |
+| 소요시간 | 30분~1시간 |
+| 겨울철 특이사항 | 야외 구조물, 방한 필요. 강풍·결빙 시 안전상 일시 폐쇄 가능성(확인 필요) |
+| 미채택 판단 | **(a)+(b) 혼합 추정, 확정 근거 없음.** 조사 노트 전체에 언급 없어 (d) 성격도 있으나, 2021~2024 장기 폐쇄 이력 자체가 "갈 수 없었던 곳"에 가까움 |
+| 결합 제안 | 같은 건물·구역의 Edge 전망대 방문일에 30분~1시간만 추가하면 새 동선 없이 결합 가능 |
+
+출처: [archdaily.com](https://www.archdaily.com/1015765/heatherwick-studios-vessel-to-reopen-with-enhanced-safety-measures-in-new-york), [gothamist.com](https://gothamist.com/news/the-vessel-at-manhattans-hudson-yards-reopens-with-suicide-prevention-measures), [nbcnewyork.com](https://www.nbcnewyork.com/manhattan/vessel-hudson-yards-reopens-safety-measures-what-to-know/5909071/), [timeout.com](https://www.timeout.com/newyork/news/the-infamous-vessel-at-hudson-yards-is-reopening-in-four-days-022326), [ticketstodo.com](https://www.ticketstodo.com/new-york/vessel-hudson-yards-tickets)
+
+### 13-12. 확인 필요 사항 추가분 (13-7~13-11 관련)
+
+7. 스태튼아일랜드 페리 겨울철 갑판(실외) 개방 여부(혹한기 실내만 개방하는지)
+8. 베데스다 분수 폐쇄 공사가 실제 2026년 8월 초 예정대로 시작되는지, 12/25~1/2 시점 정확한 접근 제한 범위(테라스 전체 vs 분수 주변만)
+9. 브루클린 보태닉 가든 12월 평일 자율지불 정확한 적용 시간대, Lightscape 2026-2027 시즌 종료일과 12/25~1/2 매진 여부
+10. 루즈벨트 아일랜드 트램 강풍 운행중단 기준, 겨울 야간 막차 변동 여부
+11. The Vessel 최상층 재개장 여부, 12/25·1/1 특별 운영시간(휴무 여부), 성수기 예약 매진 가능성
+
 ---
 
 ## 다음 단계 안내

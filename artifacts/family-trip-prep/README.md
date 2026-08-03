@@ -15,7 +15,7 @@
 | 파일 | 역할 | 만드는 Agent | 다음에 읽는 Agent/단계 | 상태 | 승인 상태 | 근거/입력 |
 | --- | --- | --- | --- | --- | --- | --- |
 | `00-trip-brief.md` | 목적지·날짜·가족 구성·예산·제약 정리 | Orchestrator | trip-researcher | current | 해당 없음 | 사용자 요청(유명 맛집 선정 기준을 "한국인 만족도" 우선으로 재조정, 12/30 교체 확정) |
-| `01-research-notes.md` | 조사 노트(볼거리·날씨·연말 이벤트·이동수단·숙소 참고 시세·NYE 대안 8장·유명 맛집 9장·한국인 만족도 재조사 10장) | trip-researcher | itinerary-planner | current | 해당 없음 | `00-trip-brief.md` |
+| `01-research-notes.md` | 조사 노트(볼거리·날씨·연말 이벤트·이동수단·숙소 참고 시세·NYE 대안 8장·유명 맛집 9장·한국인 만족도 재조사 10장·쇼핑 추천 11장·미채택 후보 정리 12장·미채택 명소 백업 13장) | trip-researcher | itinerary-planner | current | 해당 없음 | `00-trip-brief.md` |
 | `02-itinerary-draft.md` | 일자별 일정 + 예산 내역 초안(v8 — 쇼핑 스팟 반영: Exit9·MoMA Design Store·LEGO Store·Nintendo NY·Rough Trade·Kinokuniya·Nike SoHo·Village Revival Records) | itinerary-planner | checklist-reviewer, dashboard-builder | current (checklist-reviewer v8 검토 통과, 조건부) | 사용 가능(조건: 12/26 오후 여유 0분 사전 숙지) | `01-research-notes.md`(11장 쇼핑 추천) |
 | `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v8 검토 — 조건부 승인, 12/26 오후 여유 0분을 중요 이슈로 등록) | 사용 가능 | `02-itinerary-draft.md` |
 | `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v8 반영 재생성 완료, 12/26 여유 0분 경고 박스 포함) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
