@@ -3,7 +3,7 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (6회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화)
+- 실행 모드: 완료 (7회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가)
 - 마지막 갱신: 2026-08-03
 - 최종 산출물: `dashboard.html` (v8 데이터 반영 완료)
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v8 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
@@ -39,6 +39,7 @@
 | 2026-07-30 | 조사노트 11장(쇼핑 추천)의 매장을 12/25·12/26·12/30 동선에 배치 → `02-itinerary-draft.md` v7 (S1~S7: Exit9 20분, MoMA Design Store 관람 내 흡수, LEGO 25분, Kinokuniya 35분, 소호 4개 매장 150분 구체화, Village Revival Records 30분) | `02-itinerary-draft.md` | T03(v7, 쇼핑 3개 날짜 한정 수정) | 사용자가 "예산은 재배분하지 말 것, 12/26에 다 욱여넣지 말 것, 자전거 용품은 시간 배정하지 말 것" 조건으로 쇼핑 스팟 구체화를 요청. 각 날의 블록 총량(12/25 75분, 12/30 소호 150분·빌리지 70분)을 유지한 채 내부에서만 분할해 예산·맛집 배치·이동시간 표기는 전부 불변 |
 | 2026-07-30 | v7이 "확인 필요"로 남긴 판단 3건을 사용자가 결정 → `02-itinerary-draft.md` v8(U1~U8: Nintendo NY 확정 25분 승격, Rough Trade 확정 15분 재삽입, 재원은 커피 −15·5번가 −20·LEGO −5로 ±40분 상계, ToR 입장 대기 15분 명시), `03-checklist-review.md` v7+v8 통합 검토(**조건부 승인**), `dashboard.html`·`dashboard-artifact.html` 재생성·재발행 | `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html`, `dashboard-artifact.html` | T03(v8, 12/26 오후 창 내부 재배분만), T04(v7+v8 통합 재검토), T05(대시보드 재생성), T06(Artifact 동기화·재발행) | 사용자 결정 3건(①닌텐도 확정 배정 ②Rough Trade 재삽입 ③윈터빌리지↔Kinokuniya 배분은 planner 위임)에 "고정 시각·예산 불변, 무리하게 욱여넣고 숨기지 말 것" 조건. v7이 검토 없이 반영된 상태였어서 checklist-reviewer가 v7+v8을 한 번에 원문 대조 — 치명 0건이나 **12/26 오후 창 여유 0분을 중요 이슈(I1)로 신규 등록**, 대시보드 경고 노출을 조건으로 승인 |
 | 2026-08-03 | "왜 안 골랐는지" 문서화 3건 → `01-research-notes.md` 12장에 맛집(Wolfgang's·Benjamin·Quality Meats·Grand Central Oyster Bar·가이드북 리스트)·쇼핑(스미스키·건프라·넨도로이드·플레이모빌 등)·**NYE 후보(One40·Aqua·Union Square Cafe·Members Only, 신규 12-3)** 미선택 사유 정리, 13장에 미채택 관광명소 12곳(자유의여신상·원월드전망대 등) 백업 조사 완료. 일정·대시보드는 변경 없음(순수 참고 문서) | `01-research-notes.md` | T02(문서화·백업 조사만, T03~T06 해당 없음) | 사용자가 "안 가는 것도 이유를 쓰기로 했다"고 재확인해 남은 미문서화 항목(NYE 3후보)을 찾아 보완. trip-researcher의 응답 길이 한도 초과(64,000토큰) 재발로 Edit 도구 추가 및 오케스트레이터의 직접 저장 개입 병행 |
+| 2026-08-03 | 가이드북(「리얼 뉴욕」) 브루클린·이스트빌리지·그리니치빌리지 챕터를 추가로 확인해 확정 맛집(Katz's·Peter Luger·Grimaldi's·Joe's Pizza) 영업시간·가격 보강. `dashboard.html`·`dashboard-artifact.html`에 "우리는 이런 여행자입니다" 취향 소개 섹션 추가(체력·식사·쇼핑 취향 → 일정 반영 연결, 일정·예산 변경 없음), Artifact 재발행 | `01-research-notes.md`, `dashboard.html`, `dashboard-artifact.html` | T05(대시보드 섹션 추가), T06(Artifact 재발행) | 사용자가 대시보드에 "우리가 어떤 취향의 여행자인지"가 드러나면 좋겠다고 요청 — 이미 확정된 00-trip-brief.md 데이터를 재료로 "취향 → 이 부분에 반영됨" 연결을 시각화. dashboard-builder가 버전을 v9로 임의 상향했던 것을 v8(변경 없음)로 정정해 itinerary-draft·checklist-review와의 버전 표기 일관성 유지 |
 
 ## 미검증 영역과 승인 필요
 
