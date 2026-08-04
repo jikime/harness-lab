@@ -3,8 +3,8 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (7회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가)
-- 마지막 갱신: 2026-08-03
+- 실행 모드: 완료 (8회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사)
+- 마지막 갱신: 2026-08-04
 - 최종 산출물: `dashboard.html` (v8 데이터 반영 완료)
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v8 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
 - 실행 보조 산출물: `04-execution-action-checklist.md` (예약·확인 액션 분리)
@@ -20,7 +20,7 @@
 | `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v8 검토 — 조건부 승인, 12/26 오후 여유 0분을 중요 이슈로 등록) | 사용 가능 | `02-itinerary-draft.md` |
 | `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v8 반영 재생성 완료, 12/26 여유 0분 경고 박스 포함) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
 | `dashboard-artifact.html` | `dashboard.html`의 자체완결 쌍둥이본(CDN 없음, 폰트 내장) — Artifact 웹 발행 전용 | Orchestrator (dashboard.html 데이터를 옮겨 담음) | 사용자(웹 링크로 확인) | current (v8 반영, URL: a139c73b-b86f-4dc2-a61a-edd55bd58d1e) | 사람 승인 필요(동일) | `dashboard.html` |
-| `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Trattoria, QC NY Spa, TKTS, 항공·숙소 확인) | Codex 보조 검토 | 사용자/오케스트레이터 | current | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, 공식 페이지 확인 |
+| `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Trattoria, QC NY Spa, TKTS, 항공·숙소 확인, 귀국편 라운지) | Codex 보조 검토 → Orchestrator(v3, 라운지 항목 추가) | 사용자/오케스트레이터 | current (v3) | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, `01-research-notes.md`(14장), 공식 페이지 확인 |
 
 상태 값: `미생성`(아직 실행 전) / `current`(최신 입력 반영) / `stale`(앞 단계가 바뀌어 재검토 필요) / `needs-review`(사람 확인 필요) / `archived`(이전 실행 보관).
 
@@ -40,6 +40,7 @@
 | 2026-07-30 | v7이 "확인 필요"로 남긴 판단 3건을 사용자가 결정 → `02-itinerary-draft.md` v8(U1~U8: Nintendo NY 확정 25분 승격, Rough Trade 확정 15분 재삽입, 재원은 커피 −15·5번가 −20·LEGO −5로 ±40분 상계, ToR 입장 대기 15분 명시), `03-checklist-review.md` v7+v8 통합 검토(**조건부 승인**), `dashboard.html`·`dashboard-artifact.html` 재생성·재발행 | `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html`, `dashboard-artifact.html` | T03(v8, 12/26 오후 창 내부 재배분만), T04(v7+v8 통합 재검토), T05(대시보드 재생성), T06(Artifact 동기화·재발행) | 사용자 결정 3건(①닌텐도 확정 배정 ②Rough Trade 재삽입 ③윈터빌리지↔Kinokuniya 배분은 planner 위임)에 "고정 시각·예산 불변, 무리하게 욱여넣고 숨기지 말 것" 조건. v7이 검토 없이 반영된 상태였어서 checklist-reviewer가 v7+v8을 한 번에 원문 대조 — 치명 0건이나 **12/26 오후 창 여유 0분을 중요 이슈(I1)로 신규 등록**, 대시보드 경고 노출을 조건으로 승인 |
 | 2026-08-03 | "왜 안 골랐는지" 문서화 3건 → `01-research-notes.md` 12장에 맛집(Wolfgang's·Benjamin·Quality Meats·Grand Central Oyster Bar·가이드북 리스트)·쇼핑(스미스키·건프라·넨도로이드·플레이모빌 등)·**NYE 후보(One40·Aqua·Union Square Cafe·Members Only, 신규 12-3)** 미선택 사유 정리, 13장에 미채택 관광명소 12곳(자유의여신상·원월드전망대 등) 백업 조사 완료. 일정·대시보드는 변경 없음(순수 참고 문서) | `01-research-notes.md` | T02(문서화·백업 조사만, T03~T06 해당 없음) | 사용자가 "안 가는 것도 이유를 쓰기로 했다"고 재확인해 남은 미문서화 항목(NYE 3후보)을 찾아 보완. trip-researcher의 응답 길이 한도 초과(64,000토큰) 재발로 Edit 도구 추가 및 오케스트레이터의 직접 저장 개입 병행 |
 | 2026-08-03 | 가이드북(「리얼 뉴욕」) 브루클린·이스트빌리지·그리니치빌리지 챕터를 추가로 확인해 확정 맛집(Katz's·Peter Luger·Grimaldi's·Joe's Pizza) 영업시간·가격 보강. `dashboard.html`·`dashboard-artifact.html`에 "우리는 이런 여행자입니다" 취향 소개 섹션 추가(체력·식사·쇼핑 취향 → 일정 반영 연결, 일정·예산 변경 없음), Artifact 재발행 | `01-research-notes.md`, `dashboard.html`, `dashboard-artifact.html` | T05(대시보드 섹션 추가), T06(Artifact 재발행) | 사용자가 대시보드에 "우리가 어떤 취향의 여행자인지"가 드러나면 좋겠다고 요청 — 이미 확정된 00-trip-brief.md 데이터를 재료로 "취향 → 이 부분에 반영됨" 연결을 시각화. dashboard-builder가 버전을 v9로 임의 상향했던 것을 v8(변경 없음)로 정정해 itinerary-draft·checklist-review와의 버전 표기 일관성 유지 |
+| 2026-08-04 | 귀국편(1/2 밤~1/3 00:30) JFK 라운지 이용 조사 → `01-research-notes.md` 14장 신설(아시아나 이코노미 무료 자격 없음, JFK 터미널1 KAL 라운지·더라운지 앱·신한카드 SOL트래블 조합이 실질 경로, 운영시간 상충으로 앱에서 슬롯 직접 확인 필요). `04-execution-action-checklist.md` v3(라운지 항목 추가), `dashboard.html`·`dashboard-artifact.html` Day 9 카드에 라운지 메모 추가, Artifact 재발행 | `01-research-notes.md`, `04-execution-action-checklist.md`, `dashboard.html`, `dashboard-artifact.html` | T02(라운지만 추가 조사), T05(대시보드 메모 추가), T06(Artifact 재발행) | 사용자가 귀국편 자정 출발 전 라운지 이용을 고민하며 신한카드·"더라운지" 앱·KAL 라운지 단서를 순차적으로 제공 — 각 단서를 조사 에이전트에 실시간으로 전달해 범위를 좁혀감. 일정·예산은 변경 없음(선택 사항이라 itinerary-planner 미개입) |
 
 ## 미검증 영역과 승인 필요
 
