@@ -13,6 +13,14 @@
         .warning-box { background-color: #fef3c7; border-left: 4px solid #f59e0b; }
         .badge-approve { background-color: #fee2e2; color: #991b1b; }
         .time-label { font-size: 0.875rem; font-weight: 600; color: #1e40af; min-width: 100px; }
+        details { margin-bottom: 1rem; }
+        details summary { cursor: pointer; font-weight: 600; color: #1e40af; padding: 0.75rem; background-color: #f0f4f8; border-radius: 0.375rem; user-select: none; }
+        details summary:hover { background-color: #e0e7f1; }
+        details[open] summary { color: #1e40af; }
+        .backup-item { display: flex; gap: 0.5rem; font-size: 0.875rem; padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; }
+        .backup-item:last-child { border-bottom: none; }
+        .backup-item strong { color: #1f2937; min-width: 120px; flex-shrink: 0; }
+        .backup-item span { color: #6b7280; }
         @media (max-width: 640px) {
             .dashboard-container { padding: 1rem; }
             .card { margin-bottom: 1rem; }
@@ -22,6 +30,9 @@
             .warning-box { padding: 12px; font-size: 0.9rem; }
             h2 { font-size: 1.25rem; }
             h3 { font-size: 1rem; }
+            details summary { font-size: 0.9rem; padding: 0.5rem; }
+            .backup-item { font-size: 0.75rem; padding: 0.4rem 0; }
+            .backup-item strong { min-width: 100px; }
         }
     </style>
 </head>
@@ -386,10 +397,75 @@
             </div>
         </div>
 
+        <!-- 검토했지만 선택하지 않은 후보 -->
+        <div class="bg-white rounded-lg card-shadow p-6 mb-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">검토했지만 선택하지 않은 후보 (백업용 참고자료)</h2>
+            <p class="text-sm text-gray-600 mb-6">현지에서 마음이 바뀌거나 예약이 실패했을 때 참고할 수 있도록, 검토했으나 최종 채택하지 않은 후보들을 정리했습니다. 각 항목은 이름과 선택하지 않은 이유만 간결하게 표기합니다.</p>
+
+            <!-- 맛집 후보 -->
+            <details class="bg-gray-50 rounded-lg">
+                <summary>🍽️ 맛집 후보 (미선택)</summary>
+                <div class="p-4 pt-2">
+                    <div class="backup-item"><strong>Wolfgang's Steakhouse</strong> <span>한국인 사이 평가 혼재 (0스타 리뷰 vs 긍정 후기), Keens가 더 일관되게 긍정적</span></div>
+                    <div class="backup-item"><strong>Benjamin Steakhouse</strong> <span>한국인 사이 인지도 및 후기 부족, 근거 미흡</span></div>
+                    <div class="backup-item"><strong>Quality Meats</strong> <span>한국어 소스 미확인, 인지도 없음</span></div>
+                    <div class="backup-item"><strong>Grand Central Oyster Bar</strong> <span>12/26 스테이크 다양성 대안으로 제안했으나 미채택, 필요 시 참고</span></div>
+                    <div class="backup-item"><strong>Lombardi's Pizza</strong> <span>12/30 대안 후보, 역사성은 있으나 한국인 만족도 근거 약함</span></div>
+                    <div class="backup-item"><strong>Veselka (1/2 후보1)</strong> <span>한국어 직접 방문 후기 부족, Katz's가 더 강한 근거</span></div>
+                    <div class="backup-item"><strong>가이드북 미드타운 리스트</strong> <span>The Modern·Kochi·Marea·Monkey Bar 등, 개별 검증 미실시</span></div>
+                </div>
+            </details>
+
+            <!-- 쇼핑·수집 후보 -->
+            <details class="bg-gray-50 rounded-lg">
+                <summary>🛍️ 쇼핑·수집 후보 (미선택)</summary>
+                <div class="p-4 pt-2">
+                    <div class="backup-item"><strong>스미스키</strong> <span>한국이 20~30% 더 저렴, 뉴욕에서 사지 않기 권장</span></div>
+                    <div class="backup-item"><strong>건프라</strong> <span>한국이 더 저렴, 구매 권장 안 함</span></div>
+                    <div class="backup-item"><strong>귀멸의 칼날 넨도로이드</strong> <span>한국이 50% 이상 저렴, 뉴욕 구매 비추천</span></div>
+                    <div class="backup-item"><strong>레고 NYC스카이라인/밀레니엄팔콘</strong> <span>일부 제품 제외 대부분 한국이 저렴 또는 단종</span></div>
+                    <div class="backup-item"><strong>플레이모빌</strong> <span>뉴욕 한정 세트 미확인, 검증 필요</span></div>
+                    <div class="backup-item"><strong>자전거 용품 (Rapha/NYC Velo)</strong> <span>확실한 가격 우위 근거 부족, 참고만 제공</span></div>
+                </div>
+            </details>
+
+            <!-- 새해 전야 후보 -->
+            <details class="bg-gray-50 rounded-lg">
+                <summary>🎆 새해 전야 후보 (미선택)</summary>
+                <div class="p-4 pt-2">
+                    <div class="backup-item"><strong>One40 Rooftop</strong> <span>목표 예산에 부합하나 창가석 미보장, 볼드롭 조망 없음</span></div>
+                    <div class="backup-item"><strong>Aqua New York</strong> <span>목표 예산 근처, 볼드롭 조망 없음</span></div>
+                    <div class="backup-item"><strong>Union Square Cafe</strong> <span>목표 예산에 부합하나 2026 페이지 미게시, 세부 가격 미확정</span></div>
+                    <div class="backup-item"><strong>Members Only</strong> <span>오픈바 포함으로 음주 비중 높음, 음주 미선호자에게 부적합</span></div>
+                    <div class="backup-item"><strong>Brooklyn Diner · Rosie O'Grady's</strong> <span>목표 예산 초과 ($455~$745/인), 가격 우위 불리</span></div>
+                </div>
+            </details>
+
+            <!-- 관광명소 후보 -->
+            <details class="bg-gray-50 rounded-lg">
+                <summary>🗽 관광명소 후보 (미선택, 총 12곳)</summary>
+                <div class="p-4 pt-2">
+                    <div class="backup-item"><strong>자유의 여신상 & 엘리스 아일랜드</strong> <span>배터리 파크 왕복 페리 $27/인, 입장 $21/인 추가 필요, 현재 일정상 시간 미확보</span></div>
+                    <div class="backup-item"><strong>원 월드 전망대</strong> <span>Edge·Top of the Rock·ESB 3곳 이미 포함, 4번째 전망대로 중복 높음</span></div>
+                    <div class="backup-item"><strong>아메리칸 자연사박물관</strong> <span>조사 노트 전체에 언급 없음, 애초 후보 아님</span></div>
+                    <div class="backup-item"><strong>휘트니 미술관</strong> <span>하이라인 남단 바로 옆이나 12/29는 화요일 휴관 (동선 겹침)</span></div>
+                    <div class="backup-item"><strong>구겐하임 미술관</strong> <span>뮤지엄 마일(업타운)에 있으나 Day4 이미 가득 찼음</span></div>
+                    <div class="backup-item"><strong>브루클린 뮤지엄</strong> <span>프로스펙트 하이츠, 기존 브루클린 동선(DUMBO/윌리엄스버그)과 40분 이상 이동</span></div>
+                    <div class="backup-item"><strong>코니 아일랜드</strong> <span>겨울철(10월 말~3월) 놀이기구 전부 휴업, 방문 가치 크게 감소</span></div>
+                    <div class="backup-item"><strong>양키 스타디움 투어</strong> <span>브롱스, 기존 모든 일정과 별개 지역, 새로운 반나절 필요</span></div>
+                    <div class="backup-item"><strong>스태튼 아일랜드 페리</strong> <span>자유의 여신상 상륙 불가 (약 450m 거리 통과만), 무료지만 별도 목적지 필요</span></div>
+                    <div class="backup-item"><strong>센트럴파크 베데스다 분수</strong> <span>2026년 8월~2027년 여름까지 복원 공사로 폐쇄 (여행 기간 중 미개방)</span></div>
+                    <div class="backup-item"><strong>브루클린 보태닉 가든 & 프로스펙트 파크</strong> <span>프로스펙트 하이츠, 기존 동선과 40분+ 이동 필요</span></div>
+                    <div class="backup-item"><strong>루즈벨트 아일랜드 트램</strong> <span>저렴 전망 스팟($2.90)이지만 결합할 만한 다른 목적지 부재</span></div>
+                    <div class="backup-item"><strong>The Vessel (허드슨야드)</strong> <span>2021~2024 장기 폐쇄, 2024년 재개장했으나 최상층 여전히 폐쇄</span></div>
+                </div>
+            </details>
+        </div>
+
         <!-- 푸터 -->
         <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
             <p>뉴욕 여행 준비 대시보드 v8 | 2026-08-03 업데이트</p>
-            <p class="text-xs text-gray-500 mt-2">일정·예산은 v8 그대로(변경 없음). "우리는 이런 여행자입니다" 소개 섹션만 추가</p>
+            <p class="text-xs text-gray-500 mt-2">일정·예산은 v8 그대로(변경 없음). "우리는 이런 여행자입니다" 소개 섹션만 추가 + 검토했지만 선택하지 않은 후보 백업 섹션 추가(2026-08-04)</p>
         </div>
 
     </div>

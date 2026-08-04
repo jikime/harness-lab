@@ -3,7 +3,7 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (8회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사)
+- 실행 모드: 완료 (9회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사 → 미선택 후보 대시보드 백업 섹션 추가)
 - 마지막 갱신: 2026-08-04
 - 최종 산출물: `dashboard.html` (v8 데이터 반영 완료)
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v8 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
@@ -41,6 +41,7 @@
 | 2026-08-03 | "왜 안 골랐는지" 문서화 3건 → `01-research-notes.md` 12장에 맛집(Wolfgang's·Benjamin·Quality Meats·Grand Central Oyster Bar·가이드북 리스트)·쇼핑(스미스키·건프라·넨도로이드·플레이모빌 등)·**NYE 후보(One40·Aqua·Union Square Cafe·Members Only, 신규 12-3)** 미선택 사유 정리, 13장에 미채택 관광명소 12곳(자유의여신상·원월드전망대 등) 백업 조사 완료. 일정·대시보드는 변경 없음(순수 참고 문서) | `01-research-notes.md` | T02(문서화·백업 조사만, T03~T06 해당 없음) | 사용자가 "안 가는 것도 이유를 쓰기로 했다"고 재확인해 남은 미문서화 항목(NYE 3후보)을 찾아 보완. trip-researcher의 응답 길이 한도 초과(64,000토큰) 재발로 Edit 도구 추가 및 오케스트레이터의 직접 저장 개입 병행 |
 | 2026-08-03 | 가이드북(「리얼 뉴욕」) 브루클린·이스트빌리지·그리니치빌리지 챕터를 추가로 확인해 확정 맛집(Katz's·Peter Luger·Grimaldi's·Joe's Pizza) 영업시간·가격 보강. `dashboard.html`·`dashboard-artifact.html`에 "우리는 이런 여행자입니다" 취향 소개 섹션 추가(체력·식사·쇼핑 취향 → 일정 반영 연결, 일정·예산 변경 없음), Artifact 재발행 | `01-research-notes.md`, `dashboard.html`, `dashboard-artifact.html` | T05(대시보드 섹션 추가), T06(Artifact 재발행) | 사용자가 대시보드에 "우리가 어떤 취향의 여행자인지"가 드러나면 좋겠다고 요청 — 이미 확정된 00-trip-brief.md 데이터를 재료로 "취향 → 이 부분에 반영됨" 연결을 시각화. dashboard-builder가 버전을 v9로 임의 상향했던 것을 v8(변경 없음)로 정정해 itinerary-draft·checklist-review와의 버전 표기 일관성 유지 |
 | 2026-08-04 | 귀국편(1/2 밤~1/3 00:30) JFK 라운지 이용 조사 → `01-research-notes.md` 14장 신설(아시아나 이코노미 무료 자격 없음, JFK 터미널1 KAL 라운지·더라운지 앱·신한카드 SOL트래블 조합이 실질 경로, 운영시간 상충으로 앱에서 슬롯 직접 확인 필요). `04-execution-action-checklist.md` v3(라운지 항목 추가), `dashboard.html`·`dashboard-artifact.html` Day 9 카드에 라운지 메모 추가, Artifact 재발행 | `01-research-notes.md`, `04-execution-action-checklist.md`, `dashboard.html`, `dashboard-artifact.html` | T02(라운지만 추가 조사), T05(대시보드 메모 추가), T06(Artifact 재발행) | 사용자가 귀국편 자정 출발 전 라운지 이용을 고민하며 신한카드·"더라운지" 앱·KAL 라운지 단서를 순차적으로 제공 — 각 단서를 조사 에이전트에 실시간으로 전달해 범위를 좁혀감. 일정·예산은 변경 없음(선택 사항이라 itinerary-planner 미개입) |
+| 2026-08-04 | `01-research-notes.md` 12장(맛집·쇼핑·NYE 미선택 사유)·13장(미채택 명소 12곳)을 대시보드에도 노출 — `dashboard.html`·`dashboard-artifact.html` 맨 아래에 "검토했지만 선택하지 않은 후보" 접이식 섹션 4개 카테고리로 추가, Artifact 재발행 | `dashboard.html`, `dashboard-artifact.html` | T05(백업 섹션 추가), T06(Artifact 재발행) | 사용자가 "선택 안 한 것도 아티팩트 맨 아래에 넣기로 하지 않았냐"고 재확인 — research-notes.md에만 있고 대시보드에는 없었던 걸 발견해 보완. 나중에 현지에서 예약 실패·마음 변경 시 바로 참고할 수 있는 백업 용도 |
 
 ## 미검증 영역과 승인 필요
 

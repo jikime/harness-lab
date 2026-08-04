@@ -211,6 +211,18 @@
 
   /* ---------- Risks ---------- */
   .risk-list { display: flex; flex-direction: column; gap: .6rem; }
+
+  .backup-list { display: flex; flex-direction: column; gap: .6rem; }
+  .backup-list details { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .backup-list summary { cursor: pointer; font-family: var(--font-display); font-weight: 500; letter-spacing: .03em; padding: .8rem 1rem; background: var(--surface-2); list-style: none; }
+  .backup-list summary::-webkit-details-marker { display: none; }
+  .backup-list summary::before { content: "+ "; color: var(--accent); font-weight: 700; }
+  .backup-list details[open] summary::before { content: "− "; }
+  .backup-list .backup-body { padding: .3rem 1rem 1rem; display: flex; flex-direction: column; }
+  .backup-item { display: flex; flex-wrap: wrap; gap: .3rem .6rem; font-size: .86rem; padding: .55rem 0; border-top: 1px solid var(--line); }
+  .backup-item:first-child { border-top: none; }
+  .backup-item strong { flex: 0 0 auto; min-width: 11rem; }
+  .backup-item span { color: var(--ink-dim); flex: 1 1 16rem; }
   .risk-row { display: grid; grid-template-columns: 14rem 1fr; gap: .3rem 1rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: .8rem 1rem; box-shadow: var(--shadow); }
   @media (max-width: 640px) { .risk-row { grid-template-columns: 1fr; } }
   .risk-row .rk-name { font-weight: 700; font-size: .9rem; }
@@ -610,9 +622,68 @@
     </div>
   </section>
 
+  <section class="block">
+    <div class="block-head">
+      <h2>검토했지만 선택하지 않은 후보</h2>
+      <span class="hint">백업용 참고자료 — 현지에서 마음이 바뀌거나 예약 실패 시 참고</span>
+    </div>
+    <div class="backup-list">
+      <details>
+        <summary>맛집 후보 (미선택, 7곳)</summary>
+        <div class="backup-body">
+          <div class="backup-item"><strong>Wolfgang's Steakhouse</strong><span>한국인 사이 평가 혼재(0스타 리뷰 vs 긍정 후기), Keens가 더 일관되게 긍정적</span></div>
+          <div class="backup-item"><strong>Benjamin Steakhouse</strong><span>한국인 사이 인지도·후기 부족, 근거 미흡</span></div>
+          <div class="backup-item"><strong>Quality Meats</strong><span>한국어 소스 미확인, 인지도 없음</span></div>
+          <div class="backup-item"><strong>Grand Central Oyster Bar</strong><span>12/26 스테이크 다양성 대안으로 제안했으나 Keens 유지로 미채택</span></div>
+          <div class="backup-item"><strong>Lombardi's Pizza</strong><span>12/30 당일 대안으로는 유지, 역사성은 있으나 한국인 만족도 근거는 Joe's보다 약함</span></div>
+          <div class="backup-item"><strong>Veselka (1/2 후보)</strong><span>한국어 직접 방문 후기 부족, Katz's가 근거 더 강함 — 대신 12/25로 배치</span></div>
+          <div class="backup-item"><strong>가이드북 미드타운 리스트</strong><span>The Modern·Kochi·Marea·Monkey Bar 등, 개별 검증은 안 함(참고만)</span></div>
+        </div>
+      </details>
+      <details>
+        <summary>쇼핑·수집 후보 (미선택, 6가지)</summary>
+        <div class="backup-body">
+          <div class="backup-item"><strong>스미스키</strong><span>한국이 약 55~58% 저렴, 뉴욕에서 사지 말 것</span></div>
+          <div class="backup-item"><strong>건프라</strong><span>한국이 약 44% 저렴</span></div>
+          <div class="backup-item"><strong>귀멸의 칼날 넨도로이드</strong><span>한국이 약 20~25% 저렴</span></div>
+          <div class="backup-item"><strong>레고 NYC스카이라인·밀레니엄팔콘</strong><span>오히려 한국이 12~25% 저렴(엠파이어스테이트빌딩 세트만 예외로 채택)</span></div>
+          <div class="backup-item"><strong>플레이모빌</strong><span>현재 판매 중인 뉴욕 한정판 없음(과거엔 있었으나 단종)</span></div>
+          <div class="backup-item"><strong>자전거 용품(Rapha·NYC Velo)</strong><span>글로벌 정가라 가격 우위 근거 부족 — 지나가다 구경만</span></div>
+        </div>
+      </details>
+      <details>
+        <summary>새해 전야 후보 (미선택, 4곳)</summary>
+        <div class="backup-body">
+          <div class="backup-item"><strong>One40 Rooftop</strong><span>볼드롭 조망 없음(창가석도 미보장), $200/인+세금서비스료 20%</span></div>
+          <div class="backup-item"><strong>Aqua New York</strong><span>볼드롭 조망 없음, $226/인(5코스 테이스팅)</span></div>
+          <div class="backup-item"><strong>Union Square Cafe</strong><span>볼드롭 조망 없음, 평가는 높으나 타임스퀘어와 거리 있음</span></div>
+          <div class="backup-item"><strong>Members Only</strong><span>볼드롭 조망 없음, 오픈바 포함이라 음주 중심 — 음주 안 즐기는 성향과 안 맞음</span></div>
+        </div>
+      </details>
+      <details>
+        <summary>관광명소 후보 (미선택, 12곳)</summary>
+        <div class="backup-body">
+          <div class="backup-item"><strong>자유의 여신상·엘리스아일랜드</strong><span>페리 편도 왕복 소요, 시간 미확보. 스태튼아일랜드 페리(무료)가 대안</span></div>
+          <div class="backup-item"><strong>원 월드 전망대</strong><span>Edge·Top of the Rock·ESB 3곳 이미 확정 — 4번째는 중복</span></div>
+          <div class="backup-item"><strong>아메리칸 자연사박물관</strong><span>조사 후보에 애초 없었음</span></div>
+          <div class="backup-item"><strong>휘트니 미술관</strong><span>하이라인 남단 바로 옆이나, 하이라인 방문일(12/29)이 화요일 휴관일</span></div>
+          <div class="backup-item"><strong>구겐하임 미술관</strong><span>뮤지엄마일(업타운), Day4가 이미 The Met으로 가득 참</span></div>
+          <div class="backup-item"><strong>브루클린 뮤지엄</strong><span>프로스펙트하이츠, 기존 브루클린 동선(DUMBO·윌리엄스버그)과 40분+ 이동</span></div>
+          <div class="backup-item"><strong>코니아일랜드</strong><span>겨울철(10월말~3월) 놀이기구 전면 휴업</span></div>
+          <div class="backup-item"><strong>양키스타디움 투어</strong><span>브롱크스, 기존 모든 동선과 완전히 별개 지역</span></div>
+          <div class="backup-item"><strong>스태튼아일랜드 페리</strong><span>무료지만 리버티섬 상륙은 불가(약 450m 거리 통과만)</span></div>
+          <div class="backup-item"><strong>센트럴파크 베데스다 분수</strong><span>2026년 8월부터 1년간 복원공사 폐쇄 — 여행 기간과 겹침</span></div>
+          <div class="backup-item"><strong>브루클린 보태닉가든·프로스펙트파크</strong><span>기존 브루클린 동선과 40분+ 이동</span></div>
+          <div class="backup-item"><strong>루즈벨트아일랜드 트램</strong><span>저렴한 전망 스팟($2.90)이나 결합할 다른 목적지가 마땅치 않음</span></div>
+          <div class="backup-item"><strong>The Vessel(허드슨야드)</strong><span>2021~2024 장기 폐쇄 후 재개장, 최상층은 여전히 폐쇄</span></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
   <footer>
-    <span>Dashboard v8 · 2026-08-04 갱신(일정·예산 변경 없음, 취향 소개 섹션 + 귀국편 라운지 검토 메모 추가) · checklist-reviewer 조건부 승인(12/26 오후 여유 0분 강조 표시 조건)</span>
-    <span>입력: 00-trip-brief · 01-research-notes(11~12장) · 02-itinerary-draft v8 · 03-checklist-review v8</span>
+    <span>Dashboard v8 · 2026-08-04 갱신(일정·예산 변경 없음, 취향 소개 + 귀국편 라운지 메모 + 선택하지 않은 후보 백업 섹션 추가) · checklist-reviewer 조건부 승인(12/26 오후 여유 0분 강조 표시 조건)</span>
+    <span>입력: 00-trip-brief · 01-research-notes(11~14장) · 02-itinerary-draft v8 · 03-checklist-review v8</span>
   </footer>
 
 </div>
