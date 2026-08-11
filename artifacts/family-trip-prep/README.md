@@ -3,7 +3,7 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (10회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사 → 미선택 후보 대시보드 백업 섹션 추가 → 개인조건 확인·라운지 KAL 확정·예약 마감 형식 통일)
+- 실행 모드: 완료 (11회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사 → 미선택 후보 대시보드 백업 섹션 추가 → 개인조건 확인·라운지 KAL 확정·예약 마감 형식 통일 → 대시보드 시각 보강(D-day·일자별 아이콘·예산 도넛 차트))
 - 마지막 갱신: 2026-08-05
 - 최종 산출물: `dashboard.html` (v8 데이터 반영 완료)
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v8 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
@@ -43,6 +43,7 @@
 | 2026-08-04 | 귀국편(1/2 밤~1/3 00:30) JFK 라운지 이용 조사 → `01-research-notes.md` 14장 신설(아시아나 이코노미 무료 자격 없음, JFK 터미널1 KAL 라운지·더라운지 앱·신한카드 SOL트래블 조합이 실질 경로, 운영시간 상충으로 앱에서 슬롯 직접 확인 필요). `04-execution-action-checklist.md` v3(라운지 항목 추가), `dashboard.html`·`dashboard-artifact.html` Day 9 카드에 라운지 메모 추가, Artifact 재발행 | `01-research-notes.md`, `04-execution-action-checklist.md`, `dashboard.html`, `dashboard-artifact.html` | T02(라운지만 추가 조사), T05(대시보드 메모 추가), T06(Artifact 재발행) | 사용자가 귀국편 자정 출발 전 라운지 이용을 고민하며 신한카드·"더라운지" 앱·KAL 라운지 단서를 순차적으로 제공 — 각 단서를 조사 에이전트에 실시간으로 전달해 범위를 좁혀감. 일정·예산은 변경 없음(선택 사항이라 itinerary-planner 미개입) |
 | 2026-08-04 | `01-research-notes.md` 12장(맛집·쇼핑·NYE 미선택 사유)·13장(미채택 명소 12곳)을 대시보드에도 노출 — `dashboard.html`·`dashboard-artifact.html` 맨 아래에 "검토했지만 선택하지 않은 후보" 접이식 섹션 4개 카테고리로 추가, Artifact 재발행 | `dashboard.html`, `dashboard-artifact.html` | T05(백업 섹션 추가), T06(Artifact 재발행) | 사용자가 "선택 안 한 것도 아티팩트 맨 아래에 넣기로 하지 않았냐"고 재확인 — research-notes.md에만 있고 대시보드에는 없었던 걸 발견해 보완. 나중에 현지에서 예약 실패·마음 변경 시 바로 참고할 수 있는 백업 용도 |
 | 2026-08-05 | 개인 조건(알레르기·이동 제약·기타 없음) 확인 → `00-trip-brief.md` 확정 및 "확인 필요" 항목 해소 표시. 귀국편 라운지가 사용자의 더라운지 앱 직접 확인(21:30부터 이용 가능)으로 KAL 라운지 확정 → `01-research-notes.md` 14장, `04-execution-action-checklist.md`(v4) 갱신. `04-execution-action-checklist.md`의 "예약·확인 일정표" 전 행을 "최소 며칠 전(기준일)" 형식으로 통일. `dashboard.html`·`dashboard-artifact.html` Day 9 라운지 메모를 확정 문구로 교체, Artifact 재발행 | `00-trip-brief.md`, `01-research-notes.md`, `04-execution-action-checklist.md`, `dashboard.html`, `dashboard-artifact.html` | T02(라운지 확정 반영만), T05(대시보드 메모 갱신), T06(Artifact 재발행) | 사용자가 정확한 항공 시각은 이미 확정돼 있었음을 재확인시키고, 알레르기·이동 제약 등 개인 조건이 없음을 확정하며, 예약 마감을 "최소 며칠 전" 형식으로 통일해달라고 요청. 귀국편 라운지는 사용자가 직접 앱에서 21:30 슬롯을 확인해줘 기존 운영시간 상충 이슈가 해소됨 |
+| 2026-08-05 | 대시보드가 "밋밋하다"는 사용자 피드백 반영 — `dashboard-artifact.html`에 D-day 카운트다운(masthead), 일자별 카드 노드를 숫자 대신 테마 이모지로 교체(✈️🎄🌉⛸️🎭🛍️🎆💕🛫), 예산 배분 섹션에 6구간 도넛 차트(dataviz 스킬의 카테고리 팔레트, 라이트/다크 모드 각각 validate_palette.js 통과) 추가. `dashboard.html`에도 D-day 배지와 Day 헤딩 이모지를 동일하게 반영. Artifact 재발행 | `dashboard.html`, `dashboard-artifact.html` | T05(시각 요소 추가, 데이터 변경 없어 v8 유지), T06(Artifact 재발행) | 사용자가 책(교보문고 e-book) 캡쳐를 대시보드에 넣어도 되는지 물어봐 — 구매한 저작물의 페이지 이미지를 비공개라도 공유 가능한 산출물에 넣는 건 저작권상 부적절하다고 판단해 거절하고, 대신 이모지·색상·차트 등 저작권 문제 없는 시각 요소로 대체 제안함(사용자 동의 하에 진행) |
 
 ## 미검증 영역과 승인 필요
 
