@@ -3,8 +3,8 @@
 ## 현재 실행
 
 - 실행 목적: 뉴욕 여행(2026-12-25 도착~2027-01-03 새벽 출발, 부부 2인) 준비
-- 실행 모드: 완료 (11회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사 → 미선택 후보 대시보드 백업 섹션 추가 → 개인조건 확인·라운지 KAL 확정·예약 마감 형식 통일 → 대시보드 시각 보강(D-day·일자별 아이콘·예산 도넛 차트))
-- 마지막 갱신: 2026-08-05
+- 실행 모드: 완료 (13회 부분 재실행: 항공/예산/NYE → 체력·식사스타일 → 한국인 만족도 맛집 재조사 → 45,000원 재배분 → 쇼핑 스팟 반영(v8) → 미채택 후보·명소 백업 문서화 → 취향 소개 섹션 추가 → 귀국편 라운지 조사 → 미선택 후보 대시보드 백업 섹션 추가 → 개인조건 확인·라운지 KAL 확정·예약 마감 형식 통일 → 대시보드 시각 보강(D-day·일자별 아이콘·예산 도넛 차트) → 겨울 한파 소화 가능성 점검 → 귀국편 라운지 리스크 재정정·맛집 재검토·다이커하이츠 검토)
+- 마지막 갱신: 2026-08-11
 - 최종 산출물: `dashboard.html` (v8 데이터 반영 완료)
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v8 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
 - 실행 보조 산출물: `04-execution-action-checklist.md` (예약·확인 액션 분리)
@@ -20,7 +20,7 @@
 | `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer | dashboard-builder | current (v8 검토 — 조건부 승인, 12/26 오후 여유 0분을 중요 이슈로 등록) | 사용 가능 | `02-itinerary-draft.md` |
 | `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v8 반영 재생성 완료, 12/26 여유 0분 경고 박스 포함) | 사람 승인 필요(Trattoria·QC Spa·Peter Luger Resy 예약, 항공 스케줄 확인) | 위 네 파일 |
 | `dashboard-artifact.html` | `dashboard.html`의 자체완결 쌍둥이본(CDN 없음, 폰트 내장) — Artifact 웹 발행 전용 | Orchestrator (dashboard.html 데이터를 옮겨 담음) | 사용자(웹 링크로 확인) | current (v8 반영, URL: a139c73b-b86f-4dc2-a61a-edd55bd58d1e) | 사람 승인 필요(동일) | `dashboard.html` |
-| `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Trattoria, QC NY Spa, TKTS, 항공·숙소 확인, 귀국편 라운지) | Codex 보조 검토 → Orchestrator(v4, 라운지 KAL 확정 + 전 행 "최소 며칠 전" 형식 통일) | 사용자/오케스트레이터 | current (v4) | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, `01-research-notes.md`(14장), 공식 페이지 확인 |
+| `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Trattoria, QC NY Spa, TKTS, 항공·숙소 확인, 귀국편 라운지) | Codex 보조 검토 → Orchestrator(v5, 라운지를 "확정"에서 "불확실"로 재정정) | 사용자/오케스트레이터 | current (v5) | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행, 특히 라운지는 현장 재확인 필수) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, `01-research-notes.md`(14·16장), 공식 페이지 확인 |
 
 상태 값: `미생성`(아직 실행 전) / `current`(최신 입력 반영) / `stale`(앞 단계가 바뀌어 재검토 필요) / `needs-review`(사람 확인 필요) / `archived`(이전 실행 보관).
 
@@ -44,6 +44,7 @@
 | 2026-08-04 | `01-research-notes.md` 12장(맛집·쇼핑·NYE 미선택 사유)·13장(미채택 명소 12곳)을 대시보드에도 노출 — `dashboard.html`·`dashboard-artifact.html` 맨 아래에 "검토했지만 선택하지 않은 후보" 접이식 섹션 4개 카테고리로 추가, Artifact 재발행 | `dashboard.html`, `dashboard-artifact.html` | T05(백업 섹션 추가), T06(Artifact 재발행) | 사용자가 "선택 안 한 것도 아티팩트 맨 아래에 넣기로 하지 않았냐"고 재확인 — research-notes.md에만 있고 대시보드에는 없었던 걸 발견해 보완. 나중에 현지에서 예약 실패·마음 변경 시 바로 참고할 수 있는 백업 용도 |
 | 2026-08-05 | 개인 조건(알레르기·이동 제약·기타 없음) 확인 → `00-trip-brief.md` 확정 및 "확인 필요" 항목 해소 표시. 귀국편 라운지가 사용자의 더라운지 앱 직접 확인(21:30부터 이용 가능)으로 KAL 라운지 확정 → `01-research-notes.md` 14장, `04-execution-action-checklist.md`(v4) 갱신. `04-execution-action-checklist.md`의 "예약·확인 일정표" 전 행을 "최소 며칠 전(기준일)" 형식으로 통일. `dashboard.html`·`dashboard-artifact.html` Day 9 라운지 메모를 확정 문구로 교체, Artifact 재발행 | `00-trip-brief.md`, `01-research-notes.md`, `04-execution-action-checklist.md`, `dashboard.html`, `dashboard-artifact.html` | T02(라운지 확정 반영만), T05(대시보드 메모 갱신), T06(Artifact 재발행) | 사용자가 정확한 항공 시각은 이미 확정돼 있었음을 재확인시키고, 알레르기·이동 제약 등 개인 조건이 없음을 확정하며, 예약 마감을 "최소 며칠 전" 형식으로 통일해달라고 요청. 귀국편 라운지는 사용자가 직접 앱에서 21:30 슬롯을 확인해줘 기존 운영시간 상충 이슈가 해소됨 |
 | 2026-08-05 | 대시보드가 "밋밋하다"는 사용자 피드백 반영 — `dashboard-artifact.html`에 D-day 카운트다운(masthead), 일자별 카드 노드를 숫자 대신 테마 이모지로 교체(✈️🎄🌉⛸️🎭🛍️🎆💕🛫), 예산 배분 섹션에 6구간 도넛 차트(dataviz 스킬의 카테고리 팔레트, 라이트/다크 모드 각각 validate_palette.js 통과) 추가. `dashboard.html`에도 D-day 배지와 Day 헤딩 이모지를 동일하게 반영. Artifact 재발행 | `dashboard.html`, `dashboard-artifact.html` | T05(시각 요소 추가, 데이터 변경 없어 v8 유지), T06(Artifact 재발행) | 사용자가 책(교보문고 e-book) 캡쳐를 대시보드에 넣어도 되는지 물어봐 — 구매한 저작물의 페이지 이미지를 비공개라도 공유 가능한 산출물에 넣는 건 저작권상 부적절하다고 판단해 거절하고, 대신 이모지·색상·차트 등 저작권 문제 없는 시각 요소로 대체 제안함(사용자 동의 하에 진행) |
+| 2026-08-11 | 사용자가 "겨울 추위 때문에 일정을 소화 못 할까 걱정"이라고 물어 trip-researcher에게 평년 기온·체감온도와 일정 내 옥외 노출 구간(브루클린 브리지·하이라인·전망대들·거버너스아일랜드 페리 등)을 대조 조사시킴 → `01-research-notes.md` 15장 신설(종합 판단: 평년 기준 소화 가능, 12/27·12/28만 연속 노출이 길어 중간 실내 휴식 권장). 이어서 사용자가 준 새 정보 4건(① KAL 라운지 대한항공 골든타임 외부인 제한 우려 ② 로스타코스·조스피자 만족도 낮았다는 실사용 후기 ③ 다이커하이츠 신규 후보 ④ 겨울 추위 실사용 확인)을 같은 에이전트에 이어서 조사시킴 → 16~18장 추가. ①이 실제로 근거 있는 리스크로 확인되어 `04-execution-action-checklist.md`(v5)·`dashboard.html`·`dashboard-artifact.html`의 라운지를 "확정"에서 "불확실"로 재정정, Artifact 재발행 | `01-research-notes.md`, `04-execution-action-checklist.md`, `dashboard.html`, `dashboard-artifact.html` | T02(겨울 추위 + 신규 정보 4건 조사), T05(라운지 메모 재정정), T06(Artifact 재발행) | 로스타코스·조스피자 재검토(17장)와 다이커하이츠(18장)는 조사만 하고 일정은 바꾸지 않음 — 사용자 확인 대기 중. 다이커하이츠는 12/27 동선에 최소 60~70분 추가 이동이 필요해 붙일 수 없다는 결론 |
 
 ## 미검증 영역과 승인 필요
 
