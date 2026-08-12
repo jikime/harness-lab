@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴욕 여행 준비 대시보드 v9</title>
+    <title>뉴욕 여행 준비 대시보드 v11</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <style>
@@ -44,7 +44,7 @@
             <h1 class="text-3xl font-bold text-gray-800 mb-2">뉴욕 가족 여행 준비 대시보드</h1>
             <p class="text-gray-600">2026-12-25 ~ 2027-01-02 (8박 9일) | 성인 2명(부부)</p>
             <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">D-142 · 2026-08-05 기준 출발까지</span></p>
-            <p class="text-sm text-gray-500 mt-2">v9 업데이트 — 12/28 저녁에 루즈벨트 아일랜드 트램웨이 왕복 추가</p>
+            <p class="text-sm text-gray-500 mt-2">v11 업데이트 — 12/26 저녁(FAO Schwarz 추가), 12/29 오후(The Vessel 추가), 12/30 오후(르뱅 베이커리 추가)</p>
         </div>
 
         <!-- 우리는 이런 여행자입니다 -->
@@ -111,6 +111,7 @@
                             <li>✓ 12/25: <strong>Exit9</strong> (돈키호테 스타일 소품)</li>
                             <li>✓ 12/26: <strong>Kinokuniya·LEGO·Nintendo</strong> (록펠러센터 반경 묶음)</li>
                             <li>✓ 12/26: <strong>Rough Trade</strong> (30 Rock, 재즈 LP)</li>
+                            <li>✓ 12/26: <strong>FAO Schwarz</strong> (록펠러센터, 한정판)</li>
                             <li>✓ 12/30: <strong>Village Revival Records</strong> (재즈 LP)</li>
                             <li>✓ 12/30: Nike SoHo</li>
                         </ul>
@@ -169,7 +170,7 @@
 
         <!-- 예산 요약 표 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v9 — 변경 없음)</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v11 — The Vessel 40,000원 추가, 소계 무변동)</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead class="bg-gray-100 border-b">
@@ -227,7 +228,7 @@
                 </div>
             </div>
 
-            <!-- Day 2 중요 -->
+            <!-- Day 2 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-orange-400">
                 <div class="flex items-start justify-between mb-3">
                     <div><h3 class="text-lg font-bold text-gray-800">🎄 Day 2 — 12/26(토) 미드타운 홀리데이</h3><p class="text-sm text-orange-600 font-semibold">⚠️ 오후 여유 0분</p></div>
@@ -242,8 +243,9 @@
                     <div class="flex gap-2"><span class="time-label">15:30~15:45</span><span><strong>Rough Trade</strong> (30 Rock 콩코스, 재즈 LP, v8 확정)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:45~16:00</span><span>Top of the Rock 입장 대기(15분)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:00~17:30</span><span><strong>Top of the Rock 전망대</strong> (지정시간 예매)</span></div>
-                    <div class="flex gap-2"><span class="time-label">17:45~18:20</span><span><strong>Kinokuniya</strong> (1073 6th Ave, 귀멸의 칼날·스미스키)</span></div>
-                    <div class="flex gap-2"><span class="time-label">18:20~19:00</span><span>브라이언트 파크 윈터 빌리지 (40분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">17:30~17:45</span><span><strong>[v10·신규] FAO Schwarz</strong>(30 Rockefeller Plaza · 한정판 Funko Pop·Jellycat) <span class="text-green-700 font-semibold">[v10]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">18:00~18:30</span><span><strong>Kinokuniya</strong> (1073 6th Ave, 귀멸의 칼날·스미스키) <span class="text-green-700 font-semibold">[v10]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">18:30~19:00</span><span>브라이언트 파크 윈터 빌리지 (30분) <span class="text-green-700 font-semibold">[v10]</span></span></div>
                     <div class="flex gap-2"><span class="time-label">19:15~21:00</span><span><strong>[유명] Keens Steakhouse</strong> (머튼찹, 예약 필수)</span></div>
                 </div>
                 <div class="mt-3 pt-3 border-t border-orange-200 bg-orange-50 px-3 py-2 rounded text-xs text-orange-900">
@@ -267,7 +269,7 @@
                 </div>
             </div>
 
-            <!-- Day 4 — v9 업데이트 -->
+            <!-- Day 4 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4">
                 <div class="flex items-start justify-between mb-3">
                     <div><h3 class="text-lg font-bold text-gray-800">⛸️ Day 4 — 12/28(월) 업타운</h3><p class="text-sm text-gray-600">The Met + 센트럴파크 + 스케이팅 + 루즈벨트 트램 + J.G. Melon</p></div>
@@ -278,46 +280,64 @@
                     <div class="flex gap-2"><span class="time-label">14:00~15:00</span><span>점심 (The Met 인근)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:00~16:30</span><span>센트럴파크 남하 산책 (90분)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:45~18:15</span><span>월먼 링크 아이스 스케이팅 (90분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">18:15~18:30</span><span>월먼 링크 → 트램 승강장(Tramway Plaza, 2nd Ave & E 60th St) 도보 15분 <span class="text-green-700 font-semibold">[v9]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">18:30~19:10</span><span><strong>루즈벨트 아일랜드 트램웨이 왕복</strong> (이스트강·퀸즈보로 브리지 조망, 야간 추천 시간대) <span class="text-green-700 font-semibold">[v9]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">19:10~19:30</span><span>트램 승강장 → J.G. Melon 도보 20분 <span class="text-green-700 font-semibold">[v9]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">19:30~20:45</span><span><strong>[유명] J.G. Melon</strong> (UES 버거, 예약 불가·현금 $90·대기 10~75분) <span class="text-green-700 font-semibold">[v9]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">21:00~21:30</span><span>숙소 귀가 <span class="text-green-700 font-semibold">[v9]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">18:15~18:30</span><span>월먼 링크 → 트램 승강장(2nd Ave & E 60th St) 도보 15분</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:30~19:10</span><span><strong>루즈벨트 아일랜드 트램웨이 왕복</strong> (이스트강·퀸즈보로 브리지 조망, 야간)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:10~19:30</span><span>트램 승강장 → J.G. Melon 도보 20분</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:30~20:45</span><span><strong>[유명] J.G. Melon</strong> (UES 버거, 예약 불가·현금 $90·대기 10~75분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">21:00~21:30</span><span>숙소 귀가</span></div>
                 </div>
                 <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-sm text-red-900">
-                    <strong>⚠️ J.G. Melon 대기 경고 (v9 조건부 승인):</strong><br>
-                    <span class="text-xs">대기가 길어지면(최대 75분) 귀가가 22:00 이후로 밀릴 수 있습니다. 이 경우 <strong>20:30을 넘기면 즉시 인근 대체 업장(Serendipity 3 등)으로 전환하는 것이 더 안전합니다</strong>. 문서상 "최악 귀가 22:15"는 대기 규칙을 지키지 않을 때의 수치이므로, 규칙을 지키는 쪽이 오히려 더 안전함을 인지하세요.</span>
+                    <strong>⚠️ J.G. Melon 대기 경고:</strong><br>
+                    <span class="text-xs">대기가 길어지면(최대 75분) 귀가가 22:00 이후로 밀릴 수 있습니다. 이 경우 <strong>20:30을 넘기면 즉시 인근 대체 업장(Serendipity 3 등)으로 전환하는 것이 더 안전합니다</strong>.</span>
                 </div>
             </div>
 
             <!-- Day 5 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🎭 Day 5 — 12/29(화) 웨스트사이드</h3><p class="text-sm text-gray-600">첼시 마켓 + 하이라인 + Edge + Los Tacos</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">🎭 Day 5 — 12/29(화) 웨스트사이드</h3><p class="text-sm text-gray-600">첼시 마켓 + 하이라인 + Edge + The Vessel + Los Tacos</p></div>
                 </div>
                 <div class="space-y-1 text-sm">
                     <div class="flex gap-2"><span class="time-label">10:00~11:00</span><span>첼시 마켓 (푸드홀)</span></div>
                     <div class="flex gap-2"><span class="time-label">11:15~12:00</span><span>하이라인 산책</span></div>
                     <div class="flex gap-2"><span class="time-label">12:15~14:00</span><span>Edge at Hudson Yards 전망대 (105분)</span></div>
                     <div class="flex gap-2"><span class="time-label">14:00~14:45</span><span><strong>[유명] Los Tacos No.1</strong> (첼시 마켓 내, 타코)</span></div>
+                    <div class="flex gap-2"><span class="time-label">16:05~16:45</span><span><strong>[v10·신규] The Vessel</strong> (20 Hudson Yards, 나선형 구조물, 일몰 시간대) <span class="text-green-700 font-semibold">[v10]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">16:50~18:00</span><span>[캐주얼] 허드슨야드 이른 저녁 (70분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span>브로드웨이 공연 관람 (티켓 확보 시)</span></div>
                 </div>
             </div>
 
             <!-- Day 6 -->
-            <div class="bg-white rounded-lg card-shadow p-5 mb-4">
+            <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-red-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🛍️ Day 6 — 12/30(수) 소호·빌리지</h3><p class="text-sm text-gray-600">v8 쇼핑 스팟 추가: Nike SoHo, Village Revival Records</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">🛍️ Day 6 — 12/30(수) 소호·빌리지</h3><p class="text-sm text-red-600 font-semibold">⚠️ v11 신규: 르뱅 베이커리 · 완충 0분</p></div>
                 </div>
                 <div class="space-y-1 text-sm">
                     <div class="flex gap-2"><span class="time-label">11:00~13:30</span><span><strong>소호 쇼핑: Nike SoHo / MoMA Design Store SoHo</strong> (150분)</span></div>
                     <div class="flex gap-2"><span class="time-label">14:00~14:50</span><span><strong>[유명] Joe's Pizza</strong> (7 Carmine St, 그리니치빌리지)</span></div>
-                    <div class="flex gap-2"><span class="time-label">14:50~16:00</span><span>워싱턴 스퀘어 + 빌리지 산책</span></div>
-                    <div class="flex gap-2"><span class="time-label">14:50~16:00</span><span class="text-gray-600">└ <strong>Village Revival Records</strong> (재즈 LP, v8 추가, 30분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">20:00~23:30</span><span>재즈 클럽 (보류: 피터루거 백업 우선순위)</span></div>
+                    <div class="flex gap-2"><span class="time-label">14:50~15:15</span><span>그리니치 빌리지 산책 (전반)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:15~15:45</span><span><strong>Village Revival Records</strong> (재즈 LP)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:45~16:00</span><span>그리니치 빌리지 산책 (후반)</span></div>
+                    <div class="flex gap-2"><span class="time-label">16:00~17:00</span><span>유니언 스퀘어 홀리데이 마켓 (도보 15분 + 체류 45분) <span class="text-green-700 font-semibold">[v11]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">17:05~17:30</span><span><strong>[v11·신규] 르뱅 베이커리 Flatiron점</strong> (2 W 18th St, 한정판 쿠키, 대기 포함) <span class="text-green-700 font-semibold">[v11]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">17:50~18:15</span><span>숙소 복귀·휴식 (25분, 기존 40분 → 축소) <span class="text-green-700 font-semibold">[v11]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">18:15~19:30</span><span>[캐주얼] 이스트빌리지 이른 저녁</span></div>
+                    <div class="flex gap-2"><span class="time-label">20:00~22:30</span><span>재즈 클럽 (보류: 피터루거 백업 우선순위)</span></div>
+                </div>
+                <!-- 조건부 사항 1: 피터루거 백업 경고 -->
+                <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
+                    <strong>⚠️ 피터루거 백업 시나리오 (v11 조건부 사항 1):</strong><br>
+                    <span class="text-xs">12/30 저녁이 피터루거 백업으로 전환될 경우(12/27 실패 확정 시), <strong>르뱅 베이커리를 생략하고 유니언스퀘어 마켓 종료(17:15) 직후 곧바로 윌리엄스버그로 직행</strong>해야 합니다(숙소 미경유). T10 2단계 "18:00 착석 가능"은 더 이상 유효하지 않습니다(v11 기준 17:50 귀가 시 15~20분 지각 예상).</span>
+                </div>
+                <!-- 조건부 사항 2: 완충 시간 소멸 경고 -->
+                <div class="mt-2 pt-2 bg-red-50 px-3 py-2 rounded text-sm text-red-900">
+                    <strong>⚠️ 12/30 오후 완충 시간 소멸 (v11 조건부 사항 2):</strong><br>
+                    <span class="text-xs"><strong>16:00~16:15의 유일한 완충 시간(15분)이 르뱅 베이커리 삽입으로 소멸했습니다.</strong> 이는 12/26 오후 창(여유 0분)과 동일한 수준의 구조적 리스크입니다. 빌리지 산책이 정시에 끝나지 않으면 지연이 곧바로 숙소 휴식에서 흡수됩니다.</span>
                 </div>
             </div>
 
-            <!-- Day 7 — v9 업데이트: 2시간 초과 표시 -->
+            <!-- Day 7 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-purple-400">
                 <div class="flex items-start justify-between mb-3">
                     <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야</h3><p class="text-sm text-purple-600 font-semibold">특별 디너 · ⚠️ 대중교통 이동 2시간 초과</p></div>
@@ -405,9 +425,13 @@
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>Top of the Rock 온라인 예매</strong> — 12/26 16:00 지정시간 확보</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">방한용품 — 아우터·기모·목도리·장갑·방수부츠</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>12/26 절단 우선순위 숙지</strong> — Rough Trade→LEGO→5번가 순서 사전 확인</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">Exit9·Kinokuniya·Nintendo·LEGO 12/26 영업시간 확인 (출발 1주 전)</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v9 신규] 12/28 루즈벨트 아일랜드 트램 운항 상태 확인</strong> (당일 아침 RIOC 공지 확인)</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v9 신규] J.G. Melon 대기 20:30 컷오프 규칙 숙지</strong> — 대기 60분을 넘기면 대체 업장으로 즉시 이동</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">FAO Schwarz·Kinokuniya·Nintendo·LEGO 12/26 영업시간 확인 (출발 1주 전) <span class="text-green-700 font-semibold">[v10]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v10] 12/28 루즈벨트 아일랜드 트램 운항 상태 확인</strong> (당일 아침 RIOC 공지 확인)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v10] J.G. Melon 대기 20:30 컷오프 규칙 숙지</strong> — 대기 60분을 넘기면 대체 업장으로 즉시 이동</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] The Vessel 12/29 티켓 유형·매진 여부 확인</strong> (플렉스 $15 권장) <span class="text-green-700 font-semibold">[v11]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 르뱅 베이커리 Flatiron점 12/30 영업시간 확인</strong> (대기 25분 배정) <span class="text-green-700 font-semibold">[v11]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 12/30 오후 완충 소멸 대응 숙지</strong> — 빌리지 산책 지연 시 르뱅 포기 및 숙소 휴식 단축 대응 <span class="text-green-700 font-semibold">[v11]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 피터루거 백업 발동 시 대응</strong> — 르뱅 생략 후 유니언스퀘어 마켓 종료 직후 윌리엄스버그 직행 <span class="text-green-700 font-semibold">[v11]</span></span></label>
             </div>
         </div>
 
@@ -471,15 +495,15 @@
                     <div class="backup-item"><strong>센트럴파크 베데스다 분수</strong> <span>2026년 8월~2027년 여름까지 복원 공사로 폐쇄 (여행 기간 중 미개방)</span></div>
                     <div class="backup-item"><strong>브루클린 보태닉 가든 & 프로스펙트 파크</strong> <span>프로스펙트 하이츠, 기존 동선과 40분+ 이동 필요</span></div>
                     <div class="backup-item"><strong>루즈벨트 아일랜드 트램</strong> <span>저렴 전망 스팟($2.90)이지만 결합할 만한 다른 목적지 부재 → <strong>v9에서 12/28 추가됨</strong></span></div>
-                    <div class="backup-item"><strong>The Vessel (허드슨야드)</strong> <span>2021~2024 장기 폐쇄, 2024년 재개장했으나 최상층 여전히 폐쇄</span></div>
+                    <div class="backup-item"><strong>The Vessel (허드슨야드)</strong> <span>2021~2024 장기 폐쇄, 2024년 재개장했으나 최상층 여전히 폐쇄 → <strong>v10에서 12/29 추가됨</strong></span></div>
                 </div>
             </details>
         </div>
 
         <!-- 푸터 -->
         <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
-            <p>뉴욕 여행 준비 대시보드 v9 | 2026-08-11 업데이트</p>
-            <p class="text-xs text-gray-500 mt-2">v9 변경: Day 4(12/28) 저녁 구간에 루즈벨트 아일랜드 트램웨이 왕복 추가(18:30~19:10, 40분) + J.G. Melon 대기 경고 추가 + "대중교통 2시간 초과일은 12/31만"이라는 확정 결론 Day 7에 반영. 예산 변경 0원(트램 요금 OMNY 주간 상한 안에서 흡수).</p>
+            <p>뉴욕 여행 준비 대시보드 v11 | 2026-08-12 업데이트</p>
+            <p class="text-xs text-gray-500 mt-2">v11 변경: Day 2 저녁(FAO Schwarz 15분 추가, Kinokuniya −5분, 브라이언트파크 −10분) + Day 5 오후(The Vessel 40,000원 신규) + Day 6 오후(마켓 15분 앞당김 + 르뱅 베이커리 25분 신규 + 휴식 15분 축소) + 조건부 승인사항 2건(피터루거 백업·완충 소멸) 추가. 예산 변경 0원(Vessel 40,000원이 액티비티 버퍼 40,000원을 차감).</p>
         </div>
 
     </div>
