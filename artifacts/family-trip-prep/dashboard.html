@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴욕 여행 준비 대시보드 v11</title>
+    <title>뉴욕 여행 준비 대시보드 v12</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <style>
@@ -11,6 +11,7 @@
         body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
         .card-shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .warning-box { background-color: #fef3c7; border-left: 4px solid #f59e0b; }
+        .info-box { background-color: #dbeafe; border-left: 4px solid #3b82f6; }
         .badge-approve { background-color: #fee2e2; color: #991b1b; }
         .time-label { font-size: 0.875rem; font-weight: 600; color: #1e40af; min-width: 100px; }
         details { margin-bottom: 1rem; }
@@ -28,6 +29,7 @@
             th, td { padding: 0.5rem; }
             .time-label { font-size: 0.75rem; min-width: 80px; }
             .warning-box { padding: 12px; font-size: 0.9rem; }
+            .info-box { padding: 12px; font-size: 0.9rem; }
             h2 { font-size: 1.25rem; }
             h3 { font-size: 1rem; }
             details summary { font-size: 0.9rem; padding: 0.5rem; }
@@ -44,7 +46,7 @@
             <h1 class="text-3xl font-bold text-gray-800 mb-2">뉴욕 가족 여행 준비 대시보드</h1>
             <p class="text-gray-600">2026-12-25 ~ 2027-01-02 (8박 9일) | 성인 2명(부부)</p>
             <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">D-142 · 2026-08-05 기준 출발까지</span></p>
-            <p class="text-sm text-gray-500 mt-2">v11 업데이트 — 12/26 저녁(FAO Schwarz 추가), 12/29 오후(The Vessel 추가), 12/30 오후(르뱅 베이커리 추가)</p>
+            <p class="text-sm text-gray-500 mt-2">v12 업데이트 — 12/29 저녁(Birdland Jazz Club 대안 추가, 로터리·러시 실패 시 발동)</p>
         </div>
 
         <!-- 우리는 이런 여행자입니다 -->
@@ -170,7 +172,7 @@
 
         <!-- 예산 요약 표 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v11 — The Vessel 40,000원 추가, 소계 무변동)</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v12 — Birdland 조건부 대안 추가, 예산 무변동)</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead class="bg-gray-100 border-b">
@@ -305,6 +307,12 @@
                     <div class="flex gap-2"><span class="time-label">16:05~16:45</span><span><strong>[v10·신규] The Vessel</strong> (20 Hudson Yards, 나선형 구조물, 일몰 시간대) <span class="text-green-700 font-semibold">[v10]</span></span></div>
                     <div class="flex gap-2"><span class="time-label">16:50~18:00</span><span>[캐주얼] 허드슨야드 이른 저녁 (70분)</span></div>
                     <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span>브로드웨이 공연 관람 (티켓 확보 시)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span><strong>(대안)</strong> <strong>Birdland Jazz Club</strong> (315 W 44th St, 헬스키친) — <strong>로터리·러시 둘 다 실패 시만 발동</strong> <span class="text-blue-600 font-semibold">[v12]</span></span></div>
+                </div>
+                <!-- v12 신규: Birdland 조건부 사항 -->
+                <div class="mt-3 pt-3 info-box rounded px-3 py-2 text-sm text-blue-900">
+                    <strong>ℹ️ Birdland Jazz Club 리스크 (v12 조건부 사항):</strong><br>
+                    <span class="text-xs"><strong>예약 불가·선착순이라 좌석이 보장되지 않으며, 만석 시 2순위 Iridium Jazz Club(1650 Broadway, 당일 온라인 예약 가능, $35)으로 전환합니다.</strong> 로터리·러시 오전 10:40 시점에 실패가 확정되면, 당일 전화로 혼잡도를 미리 가늠한 후 필요 시 조기 도착(Vessel 축소)이나 즉시 Iridium 예약 전환이 가능합니다.</span>
                 </div>
             </div>
 
@@ -432,6 +440,9 @@
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 르뱅 베이커리 Flatiron점 12/30 영업시간 확인</strong> (대기 25분 배정) <span class="text-green-700 font-semibold">[v11]</span></span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 12/30 오후 완충 소멸 대응 숙지</strong> — 빌리지 산책 지연 시 르뱅 포기 및 숙소 휴식 단축 대응 <span class="text-green-700 font-semibold">[v11]</span></span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 피터루거 백업 발동 시 대응</strong> — 르뱅 생략 후 유니언스퀘어 마켓 종료 직후 윌리엄스버그 직행 <span class="text-green-700 font-semibold">[v11]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v12] Birdland Jazz Club 12/29 연말 특별 공연·요금 확인</strong> (평시 기준이라 변동 가능성 있음) <span class="text-green-700 font-semibold">[v12]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v12] 12/29 오전 10:40 로터리·러시 실패 확정 후 Birdland 당일 혼잡도 전화 문의</strong> (만석 예상 시 Vessel 축소/Iridium 즉시 전환) <span class="text-green-700 font-semibold">[v12]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v12] Iridium Jazz Club 위치·예약 방법 미리 확인</strong> (Birdland 만석 시 즉시 전환) <span class="text-green-700 font-semibold">[v12]</span></span></label>
             </div>
         </div>
 
@@ -502,8 +513,8 @@
 
         <!-- 푸터 -->
         <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
-            <p>뉴욕 여행 준비 대시보드 v11 | 2026-08-12 업데이트</p>
-            <p class="text-xs text-gray-500 mt-2">v11 변경: Day 2 저녁(FAO Schwarz 15분 추가, Kinokuniya −5분, 브라이언트파크 −10분) + Day 5 오후(The Vessel 40,000원 신규) + Day 6 오후(마켓 15분 앞당김 + 르뱅 베이커리 25분 신규 + 휴식 15분 축소) + 조건부 승인사항 2건(피터루거 백업·완충 소멸) 추가. 예산 변경 0원(Vessel 40,000원이 액티비티 버퍼 40,000원을 차감).</p>
+            <p>뉴욕 여행 준비 대시보드 v12 | 2026-08-12 업데이트</p>
+            <p class="text-xs text-gray-500 mt-2">v12 변경: Day 5 저녁(Birdland Jazz Club 조건부 대안 추가 — 로터리·러시 둘 다 실패 시 발동, 예약 불가·선착순, 2순위 Iridium Jazz Club으로 전환 가능). 예산 변경 0원(Birdland 54,000원이 기존 브로드웨이 320,000원 항목 안에서 흡수, 미집행 266,000원 남음). 기존 조건부 사항 유지(v8: 12/26 오후 여유 0분, v9: J.G. Melon 대기 + "2시간 초과일 1건", v11: 12/30 오후 완충 0분).</p>
         </div>
 
     </div>
