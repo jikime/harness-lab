@@ -1495,6 +1495,336 @@ A-1 Records는 정확히 5분 경계선이라 판단이 갈릴 수 있어 참고
 
 ---
 
+## 23. 실패 대응(Plan B) 전수 감사 — 예약·워크인·날씨·시간지정 티켓 전 항목 점검 (조사 시점: 2026-08-12)
+
+### 23-0. 배경·방법
+
+사용자가 12/29 브로드웨이 실패 대안(Birdland, v12 반영)을 확인한 뒤 "폴백 더 칠 거 없나?"라고 문의했습니다. 브로드웨이 사례처럼 "찾아보니 실제로 빠져 있었다"가 이미 두어 번 반복된 만큼, `00-trip-brief.md`·`02-itinerary-draft.md`(v12)·`04-execution-action-checklist.md` 세 문서를 처음부터 끝까지 다시 훑어 **예약 필수·워크인 전용·날씨 의존·시간 지정 티켓** 성격의 모든 항목을 나열하고, 각각 "문서화된 Plan B가 있는지"를 확인했습니다. `02-itinerary-draft.md`는 이번 감사로 수정하지 않았습니다 — 감사 결과 제시 단계이며, 실제 반영은 사용자 확인 후 itinerary-planner의 몫입니다.
+
+### 23-1. A그룹 — 이미 Plan B가 명확히 문서화됨 (재조사 불필요, 목록만)
+
+| # | 항목 | Plan B 요지 | 근거 위치 |
+|---|---|---|---|
+| A1 | Peter Luger 12/27 예약 실패 | 1단계 당일 워크인 → 2단계(선택) 12/30 재시도 → 3단계 최종 포기(Grimaldi's/Juliana's로 확정) | 02 Day3 메모·T10, 6장, 8장 4번 |
+| A2 | J.G. Melon 12/28 대기 과다 | 대기 상단(75분) 전제로 귀가 시각 유연화, 20:30까지 미호출 시 인근 워크인(Serendipity 3 등)으로 전환 | 02 Day4 메모, 6장, T19 |
+| A3 | Joe's Pizza 12/30 휴무·과밀 | ① 소호 출발 전 확인 시 Lombardi's로 즉시 전환 ② 빌리지 도착 후엔 Bleecker St 슬라이스집 ③ 포장 취식 | 02 Day6 메모, 6장 |
+| A4 | Veselka 12/25 휴무(크리스마스) | Katz's로 대체, 1/2을 Veselka로 스왑 | 02 Day1 메모, 6장 |
+| A5 | 브루클린 브리지 12/27 폭설·결빙 | Chambers St(A/C)→High St 지하철로 DUMBO 직행(안전 사유 한정) | 02 Day3 메모, 6장 |
+| A6 | 루즈벨트 아일랜드 트램 12/28 풍속 초과 | 생략하고 v8 시간표(J.G. Melon 19:00 착석)로 복귀, 취소 비용 0원 | 02 Day4 메모, 6장, T19 |
+| A7 | The Vessel 12/29 강풍·결빙 폐쇄·매진 | 생략하고 v9 시간표(캐주얼 저녁 16:15~17:30)로 복귀, 40,000원 버퍼로 원복 | 02 Day5 메모, 6장, T21 |
+| A8 | QC NY Spa/Governors Island 페리 12/31 미운항 | 스파를 12/30 오전으로 이동(12/30 저녁 백업 규정 무관) | 02 Day7 메모, 6장, 04 체크리스트 |
+| A9 | 귀국편 JFK 라운지(KAL) 골든타임 제한 | Primeclass(1순위)→VIPOne(2순위)→일반 구역 대기 | 04 체크리스트, 01 16·16-5장 |
+| A10 | 12/29 브로드웨이 러시·로터리 실패 | Birdland→Iridium→TKTS 당일→허드슨야드 연장 4단계 | 02 T23, 6장, 22장(이번 감사의 계기가 된 사례) |
+| A11 | 12/30 저녁 슬롯 경합(피터루거 백업 vs 브로드웨이 재도전) | 피터루거 우선, 브로드웨이는 TKTS 당일 전환 | 02 T4·T10, 6장 |
+| A12 | 12/26 굿즈 매장(FAO Schwarz·Kinokuniya·LEGO·Nintendo·Rough Trade) 조기마감·대기 | 잘라내는 순서 사전 고정(Rough Trade→LEGO→5번가), ToR 16:00은 항상 사수 | 02 6장 다수 행, T18·T20 |
+| A13 | Exit9 Gift Emporium 12/25 휴무 | 12/26 아침 또는 1/2로 이월, 손실 0 | 02 Day1 메모, 6장 |
+| A14 | 르뱅 베이커리 12/30 대기·휴무 | 숙소 휴식에서 흡수 → 그래도 넘으면 줄 포기, 1/2 오전 재시도 가능 | 02 6장, T22 |
+| A15 | 자정 이후 타임스퀘어 교통 통제(12/31→1/1) | 지하철 1안 / 01:30 이후 라이드셰어 2안 | 02 Day7 표, 6장, T3 |
+| A16 | 환율 급등·연말 현장가 상승 | 액티비티·식비 버퍼 + 예비비(190만원) | 02 6장 다수 행 |
+| A17 | 1/2 짐 보관 불가 | 러기지 스토리지(20,000원 기반영) | 02 Day9 메모, 6장 |
+
+### 23-2. B그룹 — Plan B가 없거나 불명확함 (진짜 공백, 이번 조사의 핵심)
+
+#### B1. ⚠ 최우선 — Trattoria Dell'Arte(12/31) 예약 자체가 통째로 실패하는 경우
+
+- **왜 공백인가**: `02-itinerary-draft.md` 6장의 유일한 관련 행은 "Trattoria 조망석 미배정 | 볼드롭 관람 실패(디너는 유지) | 예약 시 조망석 조건 확인"이고, `04-execution-action-checklist.md`도 "**조망석 확보 불가하면** 기존 NYE 대안 후보(Aqua, Union Square Cafe 등) 재검토"라고만 되어 있습니다. **두 문서 모두 "조망석을 못 받는 경우"만 다루고, "예약 자체를 아예 못 잡는 경우"(만석·웨이트리스트 마감)는 다루지 않습니다.** 이번 조사에서 Trattoria 공식/Yelp가 "좌석이 빠르게 차고 있다(seats filling up fast)"는 안내를 직접 확인했고, Union Square Cafe도 이미 "현재 예약받는 중(now booking)"으로 확인돼 — **경쟁 예약처들도 마감 시점이 있어, "Trattoria가 안 되면 그때 가서 알아본다"는 전제 자체가 위험**합니다. 볼드롭 조망이 걸린 이번 여행 최대 이벤트인데, 확정된 실행 기한(데드라인)이 없습니다.
+- **재활용 가능한 기존 조사**: `01-research-notes.md` 8장·12-3에 이미 4개 대안이 조사돼 있습니다(전부 볼드롭 조망 없음). **가격·형식 재확인(2026-08-12 기준 웹 재검색)**:
+
+  | 후보 | 위치 | 1인당 예상 비용 | 볼드롭 조망 | 비고 |
+  |---|---|---|---|---|
+  | **One40 Rooftop** | 140 Washington St(WTC 인근) | $200+세금·서비스료 20%(약 $250~260) | 없음 | 다운타운 스카이라인, 창가석 미보장 |
+  | **Aqua New York** | 902 Broadway(플랫아이언) | $226(5코스 테이스팅) | 없음 | 라이브 공연+DJ 카운트다운 |
+  | **Union Square Cafe** | 101 E 19th St | 약 $185~ | 없음 | **2026-08-12 재확인: "현재 예약 접수 중"**, 파인다이닝 평가 높음, 8인까지 예약 가능 |
+  | **Members Only** | 53 W 8th St(그리니치빌리지) | $200(오픈바 포함) | 없음 | 음주 비중 높아 부부 성향과 다소 안 맞음 |
+
+- **제안하는 Plan B(itinerary-planner·사용자 확인 필요)**: **① 트리거를 "조망석 실패"에서 "예약 자체 실패"로 명시적으로 확장**할 것 — 즉 Trattoria가 전화·온라인 어느 경로로도 12/31 좌석을 못 잡으면(조망 여부와 무관하게) 곧바로 2단계로 넘어가는 것으로 규정. **② 실행 데드라인 명시**: 체크리스트의 "최소 4주 전(~11/30까지)" 항목이 이미 있으니, **그 시도가 11/30까지 실패로 확정되면 12/1~12/3 안에 즉시 Union Square Cafe(1순위, 평가·형식 가장 근접) 또는 Aqua New York(2순위, 볼드롭 대신 라이브+카운트다운 프로그램이 있어 "이벤트성"이 Trattoria와 가장 비슷)으로 즉시 예약을 시도**하도록 순서를 못박을 것. **③ 감수해야 할 트레이드오프를 문서에 명시**: 대안 4곳 전부 볼드롭 조망이 없으므로, 이 Plan B가 발동되면 "타임스퀘어 새해 카운트다운을 실내에서 직접 보는" 이번 여행의 핵심 목표 하나가 사라집니다 — 이는 예산·시간 문제가 아니라 **여행의 하이라이트 하나를 잃는 결정**이므로, 사용자가 이 트레이드오프를 사전에 인지하고 있어야 합니다.
+- **확인 필요(신규)**: Union Square Cafe·Aqua New York·One40 Rooftop의 2026-12-31 실제 예약 가능 여부·정확한 가격은 8장 조사(2026-07-27) 시점 정보라 재확인이 필요합니다. 특히 Union Square Cafe는 "현재 예약 중"이 확인된 시점(2026-08-12)이 상대적으로 이르므로, Trattoria보다 먼저 마감될 수 있어 **Trattoria 확정 여부와 무관하게 Union Square Cafe도 지금(8월) 웨이트리스트/알림 신청 정도는 해두는 것을 권장**합니다.
+
+#### B2. Keens Steakhouse(12/26) 예약도 워크인 바 좌석도 모두 실패하는 경우
+
+- **왜 공백인가**: `02-itinerary-draft.md` Day2 표 자체에 "예약 필수(Resy 또는 전화), **바 좌석은 워크인 가능**"이라고 1차 안전판은 있으나, 6장 리스크표 전체(약 30행)에 "Keens 예약·워크인 모두 실패" 행이 없습니다. `04-execution-action-checklist.md` 27번도 "실패 시 대응: **바 좌석 워크인 시도, 그마저 불가하면 인근 대안 재검토**"라고만 되어 있어, Peter Luger(3단계, 업장명·순서 명시)나 Joe's Pizza(Lombardi's로 즉시 전환)와 달리 **"인근 대안"이 구체적으로 어디인지 이름이 없습니다.** 12/26은 Top of the Rock 16:00 지정입장이 걸린 날이라 저녁 시간대를 크게 재설계할 여유가 없는데도, 정작 저녁 식사 자체의 최종 백업이 없습니다.
+- **재활용 가능한 기존 조사**: `01-research-notes.md` 10-3이 "12/26 이틀 연속 스테이크 완화용"으로 **Grand Central Oyster Bar**(89 E 42nd St)를 이미 조사해 뒀으나, **이번 재확인(2026-08-12)에서 이 후보에 결정적 결함을 발견했습니다 — Grand Central Oyster Bar는 토·일요일 휴무입니다.** 12/26이 토요일이므로 **이 후보는 그날 아예 이용할 수 없어 백업으로 쓸 수 없습니다**(10-3 조사 당시엔 요일 문제까지 확인하지 않았음 — 정직하게 정정합니다).
+- **대안으로 새로 확인한 후보**: **Wolfgang's Steakhouse**(10-1에 이미 스테이크 비교 대상으로 조사됨). 이번에 영업시간을 재확인한 결과 **Park Ave점(4 Park Ave, 33rd St)은 토요일 12:00~22:30 영업**으로 확인됐습니다 — Keens(72 W 36th St)에서 남동쪽으로 도보 약 10~15분(또는 지하철 1~2정거장) 거리입니다. **Times Square점(250 W 41st St)** 도 있어 Keens에서 북쪽으로 도보 약 8~10분이며 극장가 쪽이라 저녁 동선(브라이언트 파크→Keens)과의 이탈이 더 적을 수 있습니다. 두 지점 모두 스테이크하우스라 "1끼 = 유명 맛집" 규칙을 그대로 유지할 수 있고, 사전 예약 없이도 워크인 수용 가능성이 상대적으로 높은 대형 매장입니다(다만 연말 성수기 워크인 대기는 확인 필요).
+- **제안하는 Plan B**: **Keens 예약 실패 → 워크인 바 좌석 시도(기존 그대로) → 그마저 20:00까지 안 되면 Wolfgang's Steakhouse Times Square점(250 W 41st St, 도보 8~10분)으로 즉시 전환**을 6장에 신설 행으로 추가할 것을 권장합니다. Grand Central Oyster Bar는 **12/26 백업 후보에서 제외**(토요일 휴무)하되, 평일(12/27 이후) 다른 목적으로 재검토될 여지는 남겨둡니다.
+- **확인 필요(신규)**: Wolfgang's Steakhouse 두 지점의 12/26(토) 연말 성수기 워크인 대기시간, 2인 예상 가격대(피터루거·Keens와 유사한 $150~250 수준으로 추정되나 미확인).
+
+#### B3. 1/1(Day 8) 특별 디너 — 업장 자체가 아직 미정이라 실패 시 대안도 없음
+
+- **왜 공백인가**: `02-itinerary-draft.md` Day8 표는 "특별 디너 — 기념일 파인다이닝/스테이크하우스(2인, 사전 예약 필수) ※ 업장 미정"으로만 되어 있고, `04-execution-action-checklist.md`도 "**아직 업장 미정**... 미확정 상태로 출발 임박 시 워크인 가능한 업장으로 대체 선정"이라고만 되어 있습니다. **다른 항목들(Peter Luger·Trattoria·Keens)은 업장이 확정된 상태에서 "실패 시 무엇으로"를 다루는데, 1/1은 Plan A 자체가 없어 Plan B를 논할 토대가 없습니다.** 신정은 예약이 조기 마감되는 경향이 있다고 체크리스트 자체가 경고하고 있어(항목 24), 이 공백은 시간이 지날수록 악화됩니다.
+- **성격이 다름을 밝힙니다**: 이 항목은 브로드웨이·Trattoria·Keens처럼 "정해진 계획이 실패했을 때의 대안"이 아니라, **"계획 자체를 아직 세우지 않은" 더 근본적인 공백**입니다. 따라서 이번 조사에서 구체적 업장을 확정 제안하지는 않되(그건 사용자 취향 확인이 먼저 필요), **최소한의 안전판을 문서화할 것을 권장**합니다.
+- **참고 가능한 기존 조사**: 12-1이 "「리얼 뉴욕」 가이드북 베스트 레스토랑" 목록(The Modern, Kochi, Flatiron Room, Marea, Monkey Bar, L'Adresse, Ardesia Wine Bar, Mari.ne Handroll, Friedman's)을 참고용으로만 남겨뒀고, 10-1의 Benjamin Steakhouse·Quality Meats도 후보군으로 존재합니다(단, 둘 다 "스테이크하우스 편중" 문제가 있어 8장 7번 권고 — Keens·피터루거와 겹치지 않는 장르 권장 — 와 배치됨).
+- **제안하는 Plan B**: **① 업장을 지금(8월) 확정할 수 없다면, 최소한 "언제까지 확정하지 못하면 워크인 가능한 특정 후보로 넘어간다"는 데드라인과 후보명**을 04 체크리스트에 명시할 것(현재는 "최소 3주 전(~12/4까지)"이라는 예약 데드라인만 있고, 그 예약 자체가 실패했을 때의 2차 데드라인·후보는 없음). **② 워크인 가능한 안전판 후보**로 Keens·피터루거와 겹치지 않는 장르 중, 스테이크가 아닌 파인다이닝·시푸드 계열에서 하나를 사전 지정해 두면(예: 1/1 낮 시간대 여유가 있으므로 당일 오전 전화 재확인 후 확정하는 방식) 최소한 "완전히 빈손"인 상태는 면할 수 있습니다.
+
+#### B4. 전망대 3곳(Top of the Rock·Edge·ESB) — 악천후로 시야가 전혀 없는 경우의 환불·재방문 정책
+
+- **왜 공백인가**: `01-research-notes.md` 15-1·15-4·15-6이 "고층은 지상보다 춥다·바람이 강하다"는 **체감온도·방한** 관점은 상세히 다뤘지만, "**날씨가 나빠 경치가 하나도 안 보이는 날 방문 자체가 의미가 있는지, 환불·재방문이 되는지**"는 어디에도 조사되지 않았습니다. `02-itinerary-draft.md` 8장 19번도 "연말 성수기 지정시간 예매 가능 여부와 실제 가격"만 확인 필요로 남겨져 있고, 날씨-시야 실패는 아예 항목 자체가 없습니다.
+- **이번 조사로 새로 확인한 사실(2026-08-12)**:
+  - **Top of the Rock**: 악천후로 인한 환불은 없으나, **방문 24시간 전까지 요청하면 다른 날짜·시간으로 재발급(reissue)이 가능**합니다(전화 또는 박스오피스에서만 처리, 온라인 셀프 변경 불가). 연중무휴 운영이라 "날씨 때문에 아예 문을 닫는" 경우는 거의 없습니다.
+  - **Edge**: "Sky Assurance Weather Guarantee" 제도가 있어, 시야가 나쁘면 **(옵션1) 그날 그대로 관람하고 Edge Bar 20% 할인 바우처를 받거나 (옵션2) 티켓을 활성화하기 전이라면 현장에서 다른 날짜로 재예약**할 수 있습니다(General/Champagne/Flex/Express 티켓 전부 해당). 강풍·낙뢰 시 야외 데크만 부분 폐쇄되고 실내 유리 전망 구역은 유지됩니다.
+  - **ESB**: 이번 조사에서 별도의 날씨 보장 제도를 확인하지 못했습니다(확인 필요로 유지). 다만 15-6에 따르면 86층에 난방기·실내 갤러리가 있어 완전 폐쇄 가능성은 낮습니다.
+- **판정**: 완전한 공백은 아니었지만(Top of the Rock·Edge는 실제로 재방문/보상 제도가 존재), **이 사실 자체가 `02-itinerary-draft.md`·`04-execution-action-checklist.md` 어디에도 반영돼 있지 않았다는 점에서 B그룹으로 분류**합니다. 특히 **12/26(Top of the Rock)은 그날 하루가 이미 빡빡해(오후 창 여유 0분, checklist-reviewer 조건부 승인 대상) "날씨가 나쁘면 그냥 재방문 예약을 해서 다른 날 다시 온다"는 선택지 자체가 시간표에 들어갈 자리가 없어 보입니다** — 이 경우 사실상 유일한 현실적 대응은 Edge처럼 "그대로 방문하고 보상만 받는다"입니다.
+- **제안하는 Plan B**: 8장에 "전망대 3곳 악천후 시야 확보 실패" 행을 신설하고, **Top of the Rock·Edge는 위 재방문/보상 제도를 활용하되 재방문은 현실적으로 어려우므로 기본 대응은 "그대로 관람 + 보상(있으면) 수령"으로 명시**할 것. ESB는 확인 필요로 남김.
+- **확인 필요(신규)**: ESB의 날씨 보장 제도 유무, Top of the Rock 재발급 시 추가 요금 발생 조건("새 시간대가 더 비싸면 차액 발생" 가능성 확인됨 — 구체 금액 미확인).
+
+#### B5. 전망대 3곳(Edge·Top of the Rock·ESB) 지정시간 티켓 매진 — 그리고 체크리스트에 예매 액션 항목 자체가 없음
+
+- **왜 공백인가**: `04-execution-action-checklist.md`의 "예약·확인 일정표"에는 Trattoria(4주 전)·1/1 디너(3주 전)·Peter Luger(30일 전)·Governors Island 페리(30일 전)·Keens(2주 전)·QC NY Spa(2주 전)·TKTS(1~2주 전)·크리스마스 식당(1~2주 전)·귀국편 라운지(1일 전)까지 총 9개 행이 있지만, **Edge·Top of the Rock·ESB, 이 3개 전망대의 사전 예매 행이 하나도 없습니다.** `02-itinerary-draft.md` 8장 19번이 "연말 성수기 지정시간 예매 가능 여부"를 확인 필요로만 남겨 뒀을 뿐, 언제까지 예매해야 하는지 데드라인도, 매진됐을 때 무엇을 할지도 없습니다.
+- **왜 중요한가**: Edge(12/29)·Top of the Rock(12/26)은 **지정시간 예매 대상**이라 당일 현장 구매가 원천적으로 안 될 수 있고, 특히 12/26(토)·12/29(화) 모두 다른 고정 일정(ToR 16:00 지정입장, 브로드웨이 19:00)과 맞물려 있어 매진 시 대체 시간대를 찾기도 어렵습니다.
+- **제안하는 Plan B**: 체크리스트 "예약·확인 일정표"에 **"최소 2~3주 전, Edge·Top of the Rock·ESB 지정시간 티켓 온라인 사전 구매"** 행을 신설할 것. 실패 시 대응은: **① Edge는 다른 시간대(14:30 전후 ±1~2시간)로 조정 가능한지 확인 → ② 그래도 안 되면 ESB·Top of the Rock 중 하나를 그날 순서 조정으로 흡수 → ③ 최악의 경우 전망대 3곳 중 1곳(우선순위가 가장 낮은 ESB, T9에서 이미 "뺄 수 있는 후보"로 언급됨)을 포기하고 액티비티 예산 130,000원을 다른 곳으로 재배정.**
+
+#### B6. Wollman Rink(12/28) 아이스 스케이팅 — 우천·폭풍 시 폐쇄
+
+- **왜 공백인가**: `01-research-notes.md` 15-3은 추위·체감온도만 다뤘고, `02-itinerary-draft.md` 6장·8장 어디에도 "월먼 링크 폐쇄"에 대한 행이 없습니다. 이번 조사(2026-08-12)로 확인한 바, Wollman Rink는 **"안전하지 않은 날씨 조건으로 폐쇄되면 공식 홈페이지·SNS(@wollmanrink)에 공지하고, 다른 공영 스케이팅 날짜로 안내한다"**는 정책이 있습니다 — 즉 아예 대응 체계가 없는 것은 아니지만, **이 사실도 문서에는 전혀 반영돼 있지 않습니다.**
+- **심각도는 낮음**: 사전 결제·지정시간 예약이 없는 현장 구매형 시설이라(01장 1절 참고) 폐쇄돼도 **금전적 손실이 0원**이고, 대체 활동으로 옮기기도 쉽습니다.
+- **제안하는 Plan B**: 6장에 "월먼 링크 우천·폭풍 폐쇄" 행을 신설하고, 대응은 **① 센트럴파크 산책(90분)을 20~30분 연장하거나 ② 스케이팅 슬롯(16:45~18:15)을 통째로 생략하고 루즈벨트 아일랜드 트램·J.G. Melon 일정을 그만큼 앞당기는 것**으로 명시. 취소 비용 0원.
+
+#### B7. 그리니치빌리지 재즈클럽(12/30, Village Vanguard·Blue Note) — 예약 실패 시 다른 클럽으로 넘어가는 경로 없음
+
+- **왜 공백인가**: `02-itinerary-draft.md` 8장 16번은 "예약 및 **취소 가능 정책** 확인 필수(브로드웨이·피터루거 백업으로 취소될 수 있음)"이라고만 되어 있어, **"이 예약 자체를 잡지 못하면"의 반대 방향은 다루지 않습니다.** 12/30 20:00 슬롯은 이미 두 백업(브로드웨이 재도전·피터루거 백업)의 후보지로 쓰이는 중요한 자리인데, 정작 원래 목적(재즈클럽 관람)이 예약 실패하는 경우의 대안이 없습니다.
+- **이번 조사로 새로 확인한 후보**: **Smalls Jazz Club**과 **Mezzrow**(둘 다 183 W 10th St 인근, 그리니치빌리지 — 서로 길 건너 자매 클럽)가 재즈클럽 슬롯(Village Vanguard·Blue Note와 같은 그리니치빌리지 권역)의 대안이 될 수 있습니다. **예약(Reserve, 평일 $35·주말 $40) 외에 워크인도 받으며(워크인 커버 $25, 주말·연휴엔 쇼 30분 전 도착 권장)**, 두 클럽이 마주보고 있어 한쪽이 만석이면 바로 옆으로 옮길 수 있다는 점이 실행 리스크를 낮춥니다.
+- **판정**: 우선순위는 낮음(핵심 이벤트가 아니고, 재즈클럽 슬롯 자체가 이미 다른 두 백업의 예비 용도로 쓰이는 유동적 자리) — 다만 "예약 실패 시 무엇으로"가 문서에 전혀 없다는 점에서 B그룹으로 분류합니다.
+- **제안하는 Plan B**: Village Vanguard·Blue Note 예약이 안 되면 **Smalls Jazz Club/Mezzrow(워크인 가능, 서로 인접)로 전환**을 6장·8장에 한 줄 추가할 것을 권장.
+
+### 23-3. C그룹 — Plan B가 굳이 필요 없는 항목 (이유와 함께)
+
+| 항목 | 이유 |
+|---|---|
+| **Los Tacos No.1(12/29)** | 첼시 마켓 **내부**의 스탠드형 매장이라, 실패해도 같은 건물 안 다른 스탠드(Doughnuttery, Very Fresh Noodles 등, 9-2에 이미 언급)로 바로 옮기면 그만. 예약 개념이 없고 회전이 빨라 "실패"라는 시나리오 자체가 성립하기 어려움 |
+| **Katz's Delicatessen(1/2)** | 토요일 24시간에 가까운 영업(9-3 확인), 카운터형 대형 매장이라 좌석 부족으로 거절될 가능성이 낮음. 1/2은 종일 자유 일정이라 시간 여유도 충분 |
+| **Veselka(12/25)** | 실패(휴무) 시 대응이 이미 A그룹(Katz's 스왑)으로 문서화돼 있어 별도 조치 불필요 |
+| **12/25·1/1 캐주얼 브런치(이스트빌리지·그리니치빌리지)** | 특정 업장을 지정하지 않은 "베이글·샌드위치" 카테고리라, 한 곳이 안 되면 동네에 대체할 곳이 무수히 많음. Plan B를 명시할 실익이 없음 |
+| **5번가 홀리데이 쇼윈도·브라이언트 파크 윈터 빌리지 등 무료 야외 관광** | 예약·입장료가 없어 "실패"가 성립하지 않음(문 닫으면 그냥 지나감) |
+| **MoMA·9/11 메모리얼·The Met(실내 박물관)** | 연중 안정적으로 운영되고, 지정시간 예매도 통상 여유 있게 풀림. 이번 조사에서 실패 가능성이 낮다고 판단해 범위에서 제외 |
+| **거버너스 아일랜드 페리 자체 날씨 취소** | QC NY Spa 폐쇄 대응(A8, 12/30 오전 이동)이 페리 문제까지 포괄해 이미 커버됨 |
+
+### 23-4. 요약
+
+- **A그룹(이미 Plan B 있음)**: 17건
+- **B그룹(진짜 공백)**: 7건 — **B1(Trattoria 완전 예약실패, 최우선), B2(Keens 예약+워크인 모두 실패), B3(1/1 특별 디너 Plan A 자체 미정), B4(전망대 3곳 악천후 시야 실패 시 정책 미반영), B5(전망대 3곳 매진 대응·예매 데드라인 없음), B6(Wollman Rink 우천 폐쇄, 낮은 심각도), B7(재즈클럽 예약 실패, 낮은 우선순위)**
+- **C그룹(불필요)**: 7건
+
+**우선순위 권고**: B1(Trattoria) > B2(Keens) > B5(전망대 매진·예매 데드라인) > B3(1/1 디너) > B4(전망대 악천후) > B6(Wollman Rink) ≈ B7(재즈클럽). B1·B2는 예약 데드라인이 임박형(각각 11/30·12/26 이전)이라 다른 항목보다 먼저 처리할 것을 권장합니다.
+
+### 23-5. 확인 필요 사항 (23장 관련, 신규)
+
+1. Union Square Cafe·Aqua New York·One40 Rooftop의 2026-12-31 실제 예약 가능 여부·확정 가격(8장 조사가 2026-07-27 시점 정보라 재확인 필요, 특히 Union Square Cafe는 이미 "예약 접수 중"으로 확인돼 조기 마감 가능성 있음).
+2. Wolfgang's Steakhouse Times Square점(250 W 41st St)·Park Ave점(4 Park Ave)의 12/26(토) 연말 성수기 워크인 대기시간·2인 예상 가격대.
+3. ESB(엠파이어스테이트 빌딩)의 악천후 시야 관련 환불·재방문 보장 제도 유무.
+4. Top of the Rock 재발급(reissue) 시 "새 시간대가 더 비싸면 차액 발생" 조건의 구체적 금액·정책.
+5. Smalls Jazz Club·Mezzrow의 12/30(수) 실제 라인업·워크인 커버 최신 가격(조사 시점 스냅샷).
+6. Wollman Rink의 사전 결제/지정시간 예약 필요 여부(현재는 "필요 없음"으로 추정하고 있으나 연말 성수기엔 달라질 수 있음 — 공식 사이트 재확인 권장).
+
+출처: [Trattoria Dell'Arte NYE 공식](https://www.trattoriadellarte.com/new-years-eve-at-trattoria-dell-arte/), [Trattoria Dell'Arte Yelp](https://www.yelp.com/biz/trattoria-dellarte-new-york), [Union Square Cafe NYE — SevenRooms](https://www.sevenrooms.com/experiences/unionsquarecafe/new-year-s-eve-dinner-celebration-5801212348219392), [Union Square Cafe Holiday Happenings](https://www.unionsquarecafe.com/holidays/), [Grand Central Oyster Bar 공식](https://www.oysterbarny.com/), [Grand Central Oyster Bar — happy-hour.nyc](https://happy-hour.nyc/bars-restaurants/grand-central-oyster-bar-restaurant), [Wolfgang's Steakhouse — 지점 목록](https://wolfgangssteakhouse.net/locations), [Wolfgang's Steakhouse Park Ave — OpenTable](https://www.opentable.com/wolfgangs-steak-house-park-avenue), [Wolfgang's Steakhouse Times Square — Yelp](https://www.yelp.com/biz/wolfgangs-steakhouse-new-york-10), [Top of the Rock 이용약관 PDF](https://www.rockefellercenter.com/documents/RC_TermsAndConditions.pdf), [Top of the Rock FAQ — decks-nyc.com](https://decks-nyc.com/top-of-the-rock/top-of-the-rock-faqs/), [Edge NYC 취소 정책](https://www.edgenyc.com/news/edge-nyc-cancellation-policy/), [Edge NYC 이용약관](https://www.edgenyc.com/terms-conditions/), [Wollman Rink 공식 — Plan Your Visit](https://wollmanrinknyc.com/plan/), [Central Park Conservancy — Wollman Rink](https://www.centralparknyc.org/locations/wollman-rink), [Smalls Jazz Club — SmallsLIVE 티켓 안내](https://www.smallslive.com/tickets/), [Smalls Jazz Club — NYC Jazz Guide](https://www.nycjazz.guide/venues/smalls), [Mezzrow — NYC Jazz Guide](https://www.nycjazz.guide/venues/mezzrow) (조사 시점: 2026-08-12, 가격·예약 가능 여부는 변동성이 크므로 방문 임박 시 재확인 필요)
+
+---
+
+## 24. Trattoria 완전 예약 실패 대안 재조사 + 1/1 특별 디너 업장 확정 (조사 시점: 2026-08-13)
+
+### 24-0. 배경
+
+사용자가 두 가지를 요청함. (1) B1(23-2) 대안 4곳(One40 Rooftop·Aqua New York·Union Square Cafe·Members Only)이 전부 볼드롭 조망이 없어 애초에 Trattoria보다 후순위였던 곳들이라는 점을 지적하며, "볼드롭 라인 안쪽에서 보고 싶은 게 핵심"·"부부는 술을 안 마셔 오픈바 중심 업장은 안 맞음"이라는 조건으로 **조망 있는 레스토랑 대안**을 재조사하고, 없다면 **레스토랑이 아닌 형태의 조망 대안**(8~10시간 야외 노숙 제외)을 찾아달라고 요청함. (2) `02-itinerary-draft.md` 8장 7번이 미정으로 남겨둔 **1/1 특별 디너 업장**을 지금 확정하기로 함(미드타운·록펠러 인근, 신정 영업, 비-스테이크하우스, 재즈 가산점, 2인 합산 $200~300대 목표).
+
+### 24-1. 볼드롭 "실제 조망" 레스토랑 재조사 — 결론부터: 이번 예산대($200~350/인)에는 사실상 없음
+
+타임스퀘어 볼드롭이 실제로 보이는 레스토랑·루프탑 패키지를 폭넓게 재검색한 결과(balldrop.com 레스토랑 목록, nycnewyears.com, 각 업장 공식 페이지), **조망이 "명시적으로 보장"되는 곳은 전부 $500/인 이상**이었고, 그 아래 가격대($200~350/인)의 후보는 전부 "조망 미보장" 또는 "타임스퀘어 근처일 뿐 조망 없음"이었다. 조사한 후보 전체:
+
+| 후보 | 위치 | 1인당 가격 | 볼드롭 조망 | 형식 | 비고 |
+|---|---|---|---|---|---|
+| **Rosie O'Grady's** | 42nd St, 타임스퀘어 | $675~745 | **보장** | 5코스 디너 + 프리미엄 오픈바 + 2개 층 댄싱 | 기존 8장에서 이미 예산 초과로 제외한 곳과 동일. 오픈바가 패키지 핵심 |
+| **Brooklyn Diner** | 타임스퀘어 | $500 | **보장** | 다이너 형식 디너 | 기존 8장에서 이미 제외 |
+| **The View (Marriott Marquis 48층, 회전 레스토랑)** | 타임스퀘어 | 약 $455~745(정확한 2026 NYE가 미확인) | 회전식이라 타이밍에 따라 다름(항상 타임스퀘어를 보고 있지는 않음) | 어라카르트 파인다이닝 | 뉴욕 유일 회전 레스토랑이라는 컨셉은 매력적이나 "항상 조망"은 아님, 예산도 초과 |
+| **Applebee's (50th St점)** | 타임스퀘어 | $849+ | **보장**("Amazing View") | 캐주얼 체인 + 오픈바 | 체인 레스토랑에 이 가격은 사실상 "조망값" — 식사 자체의 격은 낮음 |
+| **Olive Garden (타임스퀘어점)** | 타임스퀘어 | $699~800+ (2026 시즌 매진 확인됨) | 실내 조망 아님(별도 야외 관람 구역으로 나가서 보는 방식) + 오픈바 8pm~1am | 이탈리안 뷔페 | 조망이 "창가석"이 아니라 "밖에 나가서 보는" 방식이라 조건과 안 맞고, 이미 매진 |
+| **Bond 45** | 221 W 46th St, 타임스퀘어 바로 옆 | $300(기본) / $700(VIP 조망) | **기본 패키지는 조망 미보장**, VIP 등급($700)만 "타임스퀘어 볼드롭 익스피리언스 VIP 액세스" | 3코스 프리픽스 + 프리미엄 탑셸프 오픈바(기본가에 이미 포함) | 기본가는 예산 근접($300)하나 조망이 없고, 오픈바가 기본 포함이라 "식사 중심" 조건과도 안 맞음. 취소 마감 12/26 |
+| **Patrick's NYC** | 259 W 42nd St | $199~ | **미보장**("대형 인파 예상, 실시간 조망 보장 안 됨") | 뷔페 + 중급 오픈바(7pm~1am) | 가격은 가장 저렴하지만 조망도 없고 오픈바도 기본 포함 |
+
+**핵심 발견 2가지**:
+1. **타임스퀘어 인근 NYE 레스토랑 패키지는 가격대와 무관하게 거의 전부 오픈바가 기본 포함된 구조**다($199짜리 Patrick's부터 $745짜리 Rosie O'Grady's까지 공통). 즉 "오픈바 없는 순수 식사 중심 + 조망"이라는 조합 자체가 이 시장에 거의 존재하지 않는다. Trattoria Dell'Arte($275, 7코스 프리픽스+조망)가 오히려 예외적으로 이 조합을 만족시키는 드문 사례였다는 점이 이번 재조사로 재확인됐다(비교 대상이 늘어날수록 Trattoria의 위치가 더 특별해 보임).
+2. **조망이 실제로 보장되는 곳은 전부 $500 이상**이며, 그 중 가장 저렴한 축(Brooklyn Diner $500)도 여전히 오픈바 중심이다. 사용자가 조망을 포기할 수 없다면, 예산을 $500/인 이상으로 확장하는 수밖에 없다는 것이 이번 조사의 결론이다.
+
+### 24-2. 레스토랑이 아닌 형태 — 호텔 객실 뷰 조사 결과: 예산·조건상 실행 불가
+
+"식당이 아닌 방식"으로 가장 유력한 것은 **타임스퀘어 볼드롭이 보이는 호텔 객실을 하룻밤 예약해 그 안에서 관람**하는 방식이다. 조사 결과:
+
+- **가격대**: 조망이 보장되는 객실은 1박 **$1,200~2,500 이상**(St. Cloud/Knickerbocker 등 프리미엄 호텔은 $1,500~3,000). 이는 2인 목표 예산($200~350/인, 합산 약 $400~700)의 3~7배 수준으로 예산 조건 자체를 크게 벗어남.
+- **Marriott Marquis(대표 사례)**: "Times Square View" 객실 예약이 가능하나 **최소 3박 연속 투숙 조건**, **12/31 당일 체크인(도착) 불가**(그 전에 이미 체크인해 있어야 함) 조건이 붙어 있어, 이미 이스트빌리지 숙소를 8박 예약·결제 완료한 이번 여행 구조와 근본적으로 맞지 않음(별도 호텔에 3박을 추가 결제해야 하는 셈). 게다가 몇 달 전부터 매진되는 경우가 많다고 확인됨.
+- **결론**: 호텔 객실 뷰 방식은 가격과 숙박 조건(3박 최소·기존 숙소와 별개 이중 예약) 두 가지 모두에서 이번 여행 조건에 맞지 않아 **현실적인 대안이 아님**. 8~10시간 노숙형 대기 제외 조건 하에서, 이보다 저렴하면서 조망을 보장하는 "레스토랑도 호텔도 아닌 제3의 형태"(예: 개인 소유 오피스·아파트 임대 등)는 이번 조사 범위에서 찾지 못했음(확인 필요로 남김, 다만 실현 가능성이 낮아 보임).
+
+### 24-3. 종합 판단 및 제안
+
+정직하게 말해, **"$200~350/인 예산 + 볼드롭 실제 조망 + 오픈바 아닌 식사 중심"이라는 세 조건을 동시에 만족하는 곳은 Trattoria Dell'Arte 자신이 사실상 유일**하다는 것이 이번 재조사의 결론이다. 사용자가 선택할 수 있는 현실적인 갈래는 다음 세 가지로 좁혀진다.
+
+1. **Trattoria를 반드시 지킨다** — 예약 실패 확률을 낮추는 데 자원을 집중(11월 초 예약 오픈 즉시 여러 경로로 동시 시도, 웨이팅리스트 등록, 전화 병행 등). 지금 시점(8월)에는 아직 실패가 확정되지 않았으므로 이 방안이 여전히 1순위.
+2. **조망을 포기하지 않는다면 예산을 $500+/인으로 확장** — 이 경우 **Brooklyn Diner($500/인)**가 조사된 후보 중 조망 보장 + 상대적으로 가장 저렴한 옵션. 다만 오픈바 포함 구조는 피할 수 없음(마시지 않아도 요금은 동일하게 냄 — 실질적으로는 "돈 손해"이지 조건 위반은 아니라는 점을 참고).
+3. **오픈바 아닌 식사 중심을 지키려면 조망을 포기** — 기존 8장·23-2의 4개 후보(One40 Rooftop·Aqua New York·Union Square Cafe·Members Only) 중, "오픈바가 아닌" 조건까지 고려하면 우선순위는 **① Union Square Cafe(프리픽스, 오픈바 없음, 파인다이닝 평가 높음) → ② One40 Rooftop(4코스 프리픽스, 다운타운 스카이라인) → ③ Aqua New York(5코스 테이스팅+라이브공연/DJ, 오픈바는 아니나 주류 포함 옵션 있어 재확인 필요) → ④ Members Only(오픈바 패키지라 최우선순위에서 제외, 8장에서도 이미 명시)** 순으로 재정렬을 제안. Bond 45·Patrick's NYC는 이번에 새로 확인했으나 **오픈바가 기본 포함**이라 이 갈래(③)의 조건에는 맞지 않아 후보에서 제외.
+
+**어느 쪽이든, "Trattoria가 안 되면 그때 가서 알아본다"는 전제는 위험**하다는 23-2(B1)의 기존 결론은 이번 재조사로도 그대로 유지된다 — 오히려 대안 자체가 이렇게 제한적이라는 사실이 확인됐으므로, **11/30까지 Trattoria 확정 여부를 지켜보되, 실패가 확정되면 위 1~3 중 어느 갈래로 갈지 사용자가 미리 마음의 순위를 정해두는 편이 12월에 급하게 결정하는 것보다 안전**하다.
+
+### 24-4. 예약 데드라인 정리 (신규 후보 포함)
+
+| 후보 | 예약 오픈/마감 시점(확인된 범위) | 비고 |
+|---|---|---|
+| Trattoria Dell'Arte | 기존 확인대로 11월 초 오픈, ~11/30 데드라인 권장(23-2) | 변동 없음 |
+| Union Square Cafe | 2026-08-12 기준 "이미 예약 접수 중" 확인(23-2) | Trattoria보다 먼저 마감될 수 있어 지금 알림 신청 권장 |
+| Brooklyn Diner | 이번 조사에서 구체적 오픈일 미확인 | **확인 필요** |
+| Bond 45 | 취소 마감 12/26(=예약은 그 이전에 열려 있음을 시사) | 채택하지 않기로 했으나 참고용 |
+| Patrick's NYC | 이번 조사에서 구체적 오픈일 미확인 | **확인 필요**(채택 후보 아님) |
+
+### 24-5. 1/1 특별 디너 후보 (신규 확정 조사)
+
+**조건**: 미드타운·록펠러 인근(Day8 오후 록펠러 트리 재방문과 동선 연결), 신정 영업 확인, 비-스테이크하우스, 재즈 가산점, 부부 취향(편안한 분위기·비음주), 2인 합산 목표 $200~300대(Peter Luger $325~350보다는 낮은 수준).
+
+| 순위 | 후보 | 위치 | 록펠러에서 거리 | 가격(추정) | 신정 영업 | 재즈/음악 | 장단점 |
+|---|---|---|---|---|---|---|---|
+| **1** | **Rainbow Room (Dinner & Dancing)** | 30 Rockefeller Plaza, **65층** | **도보 0분**(록펠러 센터 건물 자체) | **$175/인 프리픽스**(전채+메인+디저트) → 2인 합산 세전 $350, 세금·팁 포함 실지출 약 **$450~470**(약 62만~65만원) | 정규 운영요일이 자료마다 상충(월요일 저녁 공개 운영이라는 자료 vs "평일 저녁 중 선별 운영"이라는 자료)됨 — **1/1(금)이 실제 운영일인지 확인 필요**(최우선 확인 사항) | **있음** — 라이브 밴드 반주로 디너+댄싱(정통 재즈보다는 빅밴드/스탠더드 성격이지만 부부의 "재즈·음악 감상" 취향과 결이 맞음) | 1934년부터 이어진 뉴욕의 상징적 파인다이닝 공간, 기념일 느낌은 세 후보 중 가장 강함. **단점**: ① 예산이 목표($200~300대)를 약 50% 초과, ② 재킷 착용(드레스코드) 필요 — "무리하지 않는 편안한 분위기" 선호와는 다소 배치, ③ 요일 확인 전이라 **1/1에 실제로 열려 있을지 자체가 불확실** |
+| **2** | **The Bar Room at The Modern (MoMA 부속)** | 9 West 53rd St | **도보 3~5분** | 어라카르트(전채 $19~26·메인 $34~48대 추정) → 2인 세금·팁 포함 약 **$220~280**(약 30만~38만원, 와인 없이 추정) | **연중무휴 "daily" 영업시간 공개**(런치 11:30~15:00, 디너 17:00~21:30) — 신정 단축·휴무 가능성은 낮아 보이나 공식 확인은 아님 | 없음(음악 없는 세련된 다이닝) | 미쉐린급 키친(The Modern 본관과 같은 주방)을 상대적으로 캐주얼한 바룸 형태로 즐길 수 있음. 목표 예산에 가장 근접. **예약은 최대 28일 전부터 가능 — 12/4가 1/1 예약이 열리는 시점과 정확히 일치**(기존 체크리스트의 "최소 3주 전(~12/4까지)" 데드라인과 부합, 참고할 만한 발견). 재즈 요소는 없음 |
+| **3** | **Sea Fire Grill (구 Sea Grill 팀 계열 시푸드)** | 158 E 48th St | 도보 약 10분 | $$$$(고가), 정확한 메뉴가 미확인 → 2인 세금·팁 포함 대략 **$250~350대 추정**(확인 필요) | 평시 금요일 11:30~22:30 영업 확인(일요일만 휴무) — **1/1 특별 휴무 여부는 공식 미확인** | 없음 | 시푸드 파인다이닝, "Sea Grill"의 정통성을 이어받은 곳으로 알려짐. 정확한 메뉴 가격·신정 특별시간을 조사에서 확인하지 못해 셋 중 근거가 가장 약함 |
+
+**참고(4순위, 참고용)**: 재즈를 최우선으로 한다면 **Dizzy's Club Coca-Cola**(10 Columbus Circle, Jazz at Lincoln Center 내부)도 고려할 수 있음 — 록펠러에서 도보 약 20~25분(지하철 병행 권장)으로 다소 거리가 있으나, 정통 재즈 세트+식사를 함께 할 수 있는 유일한 후보(1인 커버 $20~45+음식 미니멈 $10). 22-4에서 12/29 저녁 대안으로는 위치·비용 문제로 기각했으나, 1/1은 날짜가 이미 특별 이벤트로 지정돼 있어 "위치 정도는 감수할 만한 스플러지"로 재검토할 여지가 있음. 다만 미드타운·록펠러 동선과는 확실히 분리된 별도 저녁 일정이 됨.
+
+### 24-6. 권고
+
+**Bar Room at The Modern(2순위 표기했으나 사실상 안전한 1순위 실사용 추천)**을 기본으로, **Rainbow Room을 "예산·드레스코드를 감수할 스플러지"로 병행 검토**할 것을 제안한다. 근거:
+
+- Bar Room at The Modern은 록펠러 동선과의 결합도, 신정 영업 가능성, 목표 예산 부합도, 예약 데드라인(12/4)까지 네 가지 조건 모두에서 가장 안전하다. 다만 재즈 요소가 없다는 점이 유일한 아쉬움.
+- Rainbow Room은 "기념일급" 느낌과 재즈·음악 취향 부합도에서 압도적이지만, 예산 초과(약 50%)와 **가장 중요하게는 "1/1에 실제로 여는지" 자체가 불확실**하다는 리스크가 있다. **먼저 전화(212-632-5000) 또는 Resy에서 1/1 실제 예약 가능 여부를 확인한 뒤, 열려 있다면 Rainbow Room을, 안 열려 있거나 예산이 부담스러우면 Bar Room at The Modern을 최종 선택**하는 2단계 접근을 권장한다.
+- Sea Fire Grill은 근거가 상대적으로 약해(메뉴 가격·신정 영업 모두 미확인) 3순위로 남긴다.
+
+### 24-7. 확인 필요 사항 (24장 관련, 신규)
+
+1. Rainbow Room의 1/1(금) 실제 운영 여부 및 예약 가능 시간대(자료 간 상충 — 최우선 확인).
+2. Rainbow Room 재킷 드레스코드의 구체적 기준(넥타이 필수 여부 등)과 남편 정장 재킷 준비 필요성.
+3. The Bar Room at The Modern·Sea Fire Grill의 2026-12-31/2027-01-01 특별 휴무·단축 영업 여부(공식 홈페이지 재확인 필요).
+4. Sea Fire Grill의 정확한 메뉴 가격(이번 조사에서 개별 메뉴가를 확인하지 못함).
+5. Brooklyn Diner·Patrick's NYC의 2026-12-31 예약 오픈 시점(24-1·24-4에서 미확인으로 남음, 다만 채택 우선순위는 낮음).
+6. Dizzy's Club Coca-Cola를 1/1 후보로 실제 검토할지(재즈 우선 시)는 사용자 선호 확인 필요.
+
+출처: [balldrop.com 레스토랑 목록](https://www.balldrop.com/filter-new-years-eve-restaurants), [Rosie O'Grady's NYE 공식](https://nye.rosieogradys.com/), [Brooklyn Diner NYE 공식](https://www.brooklyndiner.com/new-years-eve-in-times-square/), [The View 공식](https://www.theviewnewyorkcity.com/reservations/), [The View Tripadvisor](https://www.tripadvisor.com/Restaurant_Review-g60763-d665237-Reviews-The_View-New_York_City_New_York.html), [Olive Garden NYE 가격 보도 - The Daily Meal](https://www.thedailymeal.com/1480878/times-square-olive-garden-price-new-years/), [Olive Garden NYE 공식 안내 - balldrop.com](https://www.balldrop.com/new-years-eve-olive-garden-nyc-times-square), [Bond 45 NYE 공식](https://www.bond45ny.com/new-years-eve/), [Patrick's NYC NYE - newyears.com](https://www.nye.com/new-years-eve/new-york-city/patricks-nyc-times-square), [Marriott Marquis NYE 공식](https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/new-years-eve/), [Marriott Marquis "Luxe & Lights"](https://marriottmarquistimessquare.com/new-years-eve-all-ages-celebration/), [trip101 - 볼드롭 보이는 호텔](https://trip101.com/article/hotels-with-views-of-the-time-square-ball-drop-nyc), [Rainbow Room 공식](https://www.rainbowroom.com), [Rainbow Room - OpenTable](https://www.opentable.com/r/rainbow-room-dinner-and-dancing-new-york), [Rainbow Room - Resy](https://resy.com/cities/new-york-ny/venues/rainbow-room), [Rainbow Room 재개장 보도 - PRNewswire](https://www.prnewswire.com/news-releases/rainbow-room-opens-once-again-for-dinner-dancing-and-brunch-277736281.html), [The Bar Room at The Modern - OpenTable](https://www.opentable.com/r/the-bar-room-at-the-modern-new-york), [MoMA 다이닝 공식](https://www.moma.org/visit/eating), [The Modern 공식 예약 페이지](https://www.themodernnyc.com/reservations-11/), [Sea Fire Grill 공식](https://theseafiregrill.com/nyc/), [Sea Fire Grill - Yelp](https://www.yelp.com/biz/sea-fire-grill-new-york), [Dizzy's Club - Jazz at Lincoln Center 공식](https://jazz.org/about-us/visit-our-venue/dizzys-club/) (조사 시점: 2026-08-13, 가격·영업시간·예약 가능 여부는 변동성이 크므로 실제 예약 전 재확인 필요)
+
+---
+
+## 25. Trattoria 예약 실패 시 "저녁식사 후 도보로 볼드롭 통제구역 진입" 대안의 실행 가능성 검증 (조사 시점: 2026-08-13)
+
+### 25-0. 배경 및 결론 먼저
+
+사용자가 24장의 조망 대안 재조사 결과("$200~350/인 예산대에서는 조망 보장 레스토랑을 찾지 못함")를 받아들이되, 조건을 정정했습니다 — **"조망은 포기해도 된다. 식당이 통제 구역 근처라서, 저녁식사 후 그 통제 구역 안으로 걸어 들어갈 수만 있으면 된다."** 이번 장은 이 계획 자체의 실행 가능성을 검증했습니다.
+
+**결론(먼저 밝힙니다): 저녁식사를 마친 뒤(20:00~21:00경) 타임스퀘어 볼드롭 관람 구역(펜)에 도보로 신규 진입하는 계획은, 신뢰할 수 있는 계획으로 삼기 어렵습니다.** 여러 공식·준공식 소스가 일관되게 "대부분의 입장 지점이 오후 6시경 이미 마감된다"고 밝히고 있고, 공식 FAQ 성격의 안내조차 "오후 9시 이후 진입은 어렵고 강력히 비권장된다(difficult and strongly discouraged)"고 명시합니다. 이론적으로 100% 불가능하다고 단정할 근거(예: "오후 X시 이후 절대 진입 불가"라는 명문 규정)까지는 찾지 못했지만, **"운이 아주 좋으면 될 수도 있다" 수준이지, 여행의 새해 전야 하이라이트를 걸 만한 계획은 아닙니다.** 아래에 근거를 정리합니다.
+
+### 25-1. NYPD 관람구역(펜) 운영 방식 — 공식/준공식 근거
+
+| 항목 | 확인 내용 | 출처 |
+|---|---|---|
+| 통제 구역 범위(2025-12-31 기준, NYC.gov 공식 PDF) | **서34번가(남)~서59번가(북), 6번가(동)~8번가(서)**로 둘러싸인 구역 전체가 폐쇄 대상 | [nyc.gov 2025 NYE street closures PDF](https://www.nyc.gov/assets/cecm/downloads/pdf/2025-nye-street-closures-info.pdf) |
+| 관람객 입장 지점(펜 입구) | **서45번가, 서49번가, 서52번가, 서56번가**(6번가·8번가 코너), **오후 3시 개방** | 상동, [timessquarenyc.org NYE FAQ](https://www.timessquarenyc.org/nye/nye-faq) |
+| 오후 4시 이후 교통 통제 | 6번가~8번가, 42~57번가 구간은 응급차량 전용으로 전환(일반 차량·상당 부분 보행 통제 강화) | [nyc.gov PDF](https://www.nyc.gov/assets/cecm/downloads/pdf/2025-nye-street-closures-info.pdf) |
+| 브로드웨이/7번가 횡단 | 거리가 폐쇄된 이후로는 브로드웨이/7번가를 가로질러 건널 수 없고, **41·44·47·50·54·57번가에서만 6번가↔8번가 횡단(펜과 무관한 통행)이 가능** | 상동 |
+| 재입장 정책 | **일단 펜에 들어가면 나올 수 없고, 나오면 다시 들어갈 수 없음**("no reentry once a pen becomes filled" / "If you leave your viewing area to dine in a restaurant, you will not be able to return to your spot") | [timessquarenyc.org FAQ](https://www.timessquarenyc.org/nye/nye-faq), [Gothamist — Inside the NYE Times Square Viewing Pens](https://gothamist.com/arts-entertainment/inside-the-nye-times-square-viewing-pens-12-hours-before-midnight) |
+| 펜이 차는 순서 | 가장 남쪽(45번가 인근, 볼에 가까운 쪽)부터 먼저 차고, 북쪽(56번가)이 상대적으로 나중에 참 — 다만 정확한 "몇 시에 어느 펜이 찼다"는 공식 실시간 데이터는 없음(그 해 날씨·인파에 따라 변동) | [belvederehotelnyc.com 가이드](https://www.belvederehotelnyc.com/blog/how-to-watch-the-times-square-ball-drop-an-insiders-guide), [balldrop.com 입장 안내](https://help.balldrop.com/article/uubpr3sa11-times-square-barricades) |
+| 실질적 마감 시각(비공식 요약, 다수 여행 가이드 공통) | "대부분의 입장 지점은 오후 4~6시경 이미 봉쇄된다", "오후 7시~자정 사이 도착하면 오버플로우 구역으로 밀려나거나 아예 못 들어간다" | [6sqft.com](https://www.6sqft.com/what-to-know-about-the-2025-times-square-new-years-eve-ball-drop/), [travelroses.com](https://travelroses.com/how-to-watch-the-ball-drop-in-person-from-times-square-on-new-years-eve/) |
+| 늦은 진입 시도 관련 명시적 경고 | **"오후 9시 이후 타임스퀘어 진입 시도는 어렵고 강력히 비권장된다"** | 복수 여행 가이드 공통 서술(정확한 1차 출처는 특정하지 못함, 다수 소스에서 반복 확인) |
+
+### 25-2. 핵심 판단 — "저녁 8~9시 이후에도 입장 가능한 펜이 남아있는가"
+
+- **가장 늦게까지 여유가 있을 가능성이 있는 펜은 최북단인 56번가 펜**(다음 절에서 다루듯 Trattoria와 가장 가까움)입니다. 이론적으로 "남쪽 펜들이 다 차도 56번가는 상대적으로 늦게까지 받을 수 있다"는 구조 자체는 사실입니다.
+- 그러나 **"오후 6시경 대부분의 입장 지점이 봉쇄된다"는 서술과 "오후 9시 이후는 어렵고 비권장"이라는 서술은 56번가를 포함한 전체 펜에 대한 일반적 진술로 반복 확인**되며, "56번가 펜만은 예외적으로 저녁 8~9시까지 열려 있다"는 것을 뒷받침하는 근거(공식 통계, 실제 방문자의 늦은 시각 성공 사례 등)는 이번 조사에서 찾지 못했습니다. Reddit·Tripadvisor 등에서 "저녁 8~9시에 도착해 실제로 들어갔다"는 구체적 후기도 검색했으나 확인하지 못했습니다.
+- **인파·날씨는 매년 다르기 때문에, 유난히 춥거나 비가 와서 인파가 적은 해라면 56번가 펜이 저녁까지 여유가 있을 가능성 자체를 완전히 배제할 수는 없습니다.** 하지만 이는 "그 해 운이 좋으면"이라는 전제가 붙는 이야기이지, 사전에 계획하고 기대할 수 있는 수준이 아닙니다.
+- **재입장 불가 규정과는 별개의 문제입니다.** 이 계획은 "먼저 들어갔다가 나와서 저녁 먹고 돌아온다"가 아니라 "저녁을 다 먹고 처음으로 들어간다"는 것이므로 재입장 금지 규정 자체에는 저촉되지 않습니다. 다만 그 시점(20:00~21:00)에 신규 입장을 받아주는 펜이 남아있는지가 관건이고, 위 근거들을 종합하면 **그럴 가능성은 낮다고 보는 것이 안전한 판단**입니다.
+
+**종합 결론: "저녁식사 후 볼드롭 통제구역 안으로 걸어 들어간다"는 계획은 실행 가능성이 낮아, 새해 전야의 확정 계획으로 삼기에는 부적합합니다.** 확정 계획으로 쓰려면 최소한 "안 될 가능성이 높다"는 전제 위에서 대체 계획(25-4)을 함께 세워야 합니다.
+
+### 25-3. 만약 정말 가능하다면 — 실제로 어떤 경험이 되는가
+
+- 볼(Ball)은 1 Times Square(브로드웨이/7번가·46번가 코너) 꼭대기에 있습니다. 56번가 펜은 볼에서 약 10개 블록(직선거리 약 800m) 떨어져 있어, **설령 입장에 성공하더라도 볼 자체를 육안으로 또렷이 보기는 어렵고, 초대형 스크린(jumbotron)에 중계되는 화면과 카운트다운·공연을 보는 형태가 중심**이 됩니다. 이는 남쪽 펜들도 정도 차이만 있을 뿐 마찬가지입니다(스크린이 여러 구간에 설치돼 있어 "화면으로 보는" 경험 자체는 어디서나 확보됨).
+- 사운드·현장 분위기(카운트다운 함성, 음악, 자정 색종이 낙하)는 어느 펜에서든 생생하게 체감됩니다. 즉 "라이브로 본다"는 목표에서 **"볼을 육안으로 보는 것"은 애초에 남쪽 펜이 아닌 한 기대하기 어렵고, "그 자리의 함성·에너지·색종이를 체감하는 것"이 핵심 가치**라는 점을 참고하시기 바랍니다.
+
+### 25-4. 카네기홀 인근(Trattoria 위치)에서 도보로 접근 가능한가
+
+- Trattoria Dell'Arte 주소는 **900 7th Ave(56~57번가 사이)**입니다. 25-1의 공식 통제 구역 정보와 대조하면:
+  - 통제 구역 북쪽 경계는 **59번가**, 관람 펜의 마지막 입구는 **56번가** — Trattoria는 이 경계선 바로 안쪽~접경 지점에 위치합니다.
+  - **57번가는 폐쇄 이후에도 6번가↔8번가 보행 횡단이 허용되는 몇 안 되는 지점 중 하나**입니다(41·44·47·50·54·57번가).
+  - 즉 **지리적으로는 Trattoria가 "볼드롭 통제 구역에 가장 가까운 레스토랑" 중 하나가 맞습니다.** 만약 어느 펜이든 늦게까지 여유가 있다면, 그건 지리적으로 가장 가능성이 높은 바로 그 56번가 펜이고, 식당에서 도보 1~2분 거리입니다.
+- **다만 25-2의 결론(마감 가능성이 높음)이 이 지리적 이점을 상쇄합니다.** "가장 가까운 펜"이라는 것과 "그 펜이 저녁까지 열려 있다"는 것은 별개의 문제이고, 후자의 근거가 약합니다.
+
+### 25-5. 진입이 안 될 경우 — 근접 거리에서 소리·분위기라도 느낄 수 있는 대안
+
+이 부분이 사용자의 실제 목표("라이브로 보고 싶다")에 대한 현실적 절충안이 될 수 있습니다.
+
+- **57번가 보행 횡단 지점 활용**: 25-1에서 확인했듯 57번가는 도로 폐쇄 이후에도 6번가↔8번가 보행 횡단이 공식적으로 허용되는 지점입니다. 저녁식사 후 이 지점까지 걸어가면(식당에서 도보 1~2분), **펜 안으로 들어가지 못하더라도 통제 구역 경계선 바로 앞까지는 합법적으로 접근할 수 있을 가능성이 있습니다.**
+- **경계 지점에서 기대할 수 있는 것**: 자정 무렵 함성·음악·PA 방송 소리는 타임스퀘어 특성상 여러 블록 밖까지 크게 들리는 것으로 잘 알려져 있고, 색종이(컨페티) 낙하와 불꽃 조명이 건물 위로 솟아오르는 모습은 건물 사이로 어느 정도 보일 가능성이 있습니다. **다만 볼 자체를 눈으로 보는 것은 건물·인파에 가려 거의 불가능하고, 이는 "화면 중계를 보는" 펜 내부 경험과도 다른, 순수하게 "소리·주변 열기만 체감하는" 수준**이라는 점을 감안해야 합니다.
+- **한계**: 이 접근조차 100% 보장되지는 않습니다. 당일 밤 실시간 인파 상황에 따라 NYPD가 재량으로 57번가 횡단 지점 자체를 더 일찍 폐쇄하거나 인파를 뒤로 밀어낼 수 있고, 이는 사전에 웹 조사로 확인할 수 없는 현장 판단 영역입니다.
+- **장점**: 예약도, 대기도, 별도 비용도 필요 없고, 실패해도 잃는 것이 없습니다(식사 후 숙소로 조기 귀가하는 것과 비교해 "손해"가 없는 선택지). Trattoria 디너(창가 조망은 없더라도 타임스퀘어 지척이라는 위치 자체)와 결합하면, "펜 진입은 못했지만 그 근처에서 분위기는 느꼈다"는 절충 경험을 무리 없이 시도해볼 수 있습니다.
+
+### 25-6. 확인 필요
+
+1. 2026-12-31 기준 실제 스트리트 클로저 공식 안내(nyc.gov)는 통상 12월 중순~말에 그 해 버전이 게시됩니다 — 이번 조사는 **2025-12-31 버전(가장 최근 공개본)을 기준**으로 했으므로, 출발 임박 시 2026년판으로 재확인이 필요합니다(구조는 매년 거의 동일하게 유지되는 경향이나 100% 보장은 아님).
+2. 56번가 펜의 실제 시간대별 혼잡도·마감 시각에 대한 1차 후기(현지인·과거 방문자 실증 기록)는 이번 조사로 확보하지 못했습니다 — 가능하면 NYPD 공식 SNS 또는 현지 뉴스(12/31 당일 실시간 보도)를 통해 재확인 권장.
+3. 57번가 보행 횡단 지점이 저녁 늦게까지(20:00~21:00) 실제로 열려 있는지, 아니면 인파가 몰릴 경우 더 일찍 통제되는지는 확인하지 못했습니다.
+4. 위 정보는 전부 2025-12-31(가장 최근 공식 자료) 및 과거 연도 후기 기반이며, 2026-12-31 당일 NYPD의 실제 운영은 이번 조사로 예측할 수 있는 범위를 벗어납니다.
+
+출처: [NYC.gov 2025 NYE Street Closures 공식 PDF](https://www.nyc.gov/assets/cecm/downloads/pdf/2025-nye-street-closures-info.pdf), [timessquarenyc.org NYE FAQ](https://www.timessquarenyc.org/nye/nye-faq), [Gothamist — Inside The NYE Times Square Viewing Pens, 12 Hours Before Midnight](https://gothamist.com/arts-entertainment/inside-the-nye-times-square-viewing-pens-12-hours-before-midnight), [belvederehotelnyc.com — How to Watch the Times Square Ball Drop: An Insider's Guide](https://www.belvederehotelnyc.com/blog/how-to-watch-the-times-square-ball-drop-an-insiders-guide), [help.balldrop.com — Times Square Barricades Entry Points](https://help.balldrop.com/article/uubpr3sa11-times-square-barricades), [balldrop.com FAQ](https://www.balldrop.com/web/frequently-asked-questions), [6sqft.com — What to know about the Times Square NYE ball drop](https://www.6sqft.com/what-to-know-about-the-2025-times-square-new-years-eve-ball-drop/), [travelroses.com — How to Watch the Ball Drop in Person](https://travelroses.com/how-to-watch-the-ball-drop-in-person-from-times-square-on-new-years-eve/), [nycnewyears.com — Times Square Access Information](https://nycnewyears.com/times-square-access-information/) (조사 시점: 2026-08-13, street closure 세부 사항은 2025-12-31 공식본 기준이며 2026년판 재확인 필요)
+
+### 25-7. 유료 예약제·지정시간 입장 재조사 — 사용자 반박 정보("펜스 안으로 걸어 들어가는 사람들") 검증 (조사 시점: 2026-08-13)
+
+#### 25-7-0. 배경 및 결론 먼저
+
+사용자가 25장의 결론("무료 선착순 관람 펜은 대부분 오후 6시경 마감, 오후 9시 이후 진입 강력히 비권장")에 대해 "블로그·유튜브를 보면 예약시간에 맞춰 펜스 안으로 걸어 들어가는 사람들이 있다"는 실제 목격 정보를 제시했습니다. 25장은 **무료 비지정 일반 관람(공공 펜)만** 조사했고, **유료 예약제·지정시간 입장 옵션은 조사 범위에 없었습니다.** 이번 장은 그 공백을 메우기 위한 재조사입니다.
+
+**결론(먼저 밝힙니다): 사용자의 반박 정보는 타당했습니다.** 유료 벤뉴(레스토랑·바·루프탑·호텔) 티켓을 가진 사람은 무료 일반 관람 펜이 마감된 이후(오후 7~9시대)에도 NYPD가 지정한 별도 체크포인트를 통해 타임스퀘어 통제구역(바리케이드 존) 안으로 정상적으로 입장할 수 있습니다 — 이것이 사용자가 목격한 "예약시간에 맞춰 펜스 안으로 걸어 들어가는 사람들"의 실체로 판단됩니다. **다만 이는 "무료 관람 펜에 유료로 늦게 들어가는 방법"이 아니라, "무료 펜과는 완전히 별개인, 자체 건물(창가석·루프탑·발코니)에서 관람하는 유료 벤뉴 패키지"입니다.** 그리고 이 늦은 입장이 가능한 옵션 중 볼드롭을 실제 육안으로 볼 수 있는("보장된") 상품은 여전히 대부분 $500/인 이상이며, $200~350 예산대에서는 늦은 입장은 가능해도 볼드롭은 실내 스크린 중계로 보는 방식이 대부분이라는 것도 함께 확인했습니다. 즉 **25장의 "무료 펜" 관련 결론은 그대로 유지**되지만, **"유료 옵션이 존재하지 않는다"는 인상을 줄 수 있었던 부분은 이번 장으로 보완·정정**합니다.
+
+#### 25-7-1. balldrop.com이 실제로 파는 것 — 25장에서 명확히 하지 않았던 부분
+
+기존 3~4장·25장이 balldrop.com을 "무료 펜 정보원"으로 일부 인용했으나, 이 사이트가 정확히 무엇을 파는 곳인지는 다루지 않았습니다. 이번에 직접 확인한 결과:
+
+- balldrop.com은 **뉴욕시/타임스퀘어 얼라이언스(무료 행사의 실제 주최측)가 운영하는 공식 사이트가 아니라, 타임스퀘어 일대 레스토랑·바·나이트클럽·호텔의 유료 NYE 패키지를 중개 판매하는 사설 티켓 유통 플랫폼**입니다(전화 212.201.0735, "Ball Drop is the largest producer of New Year's Eve events in Times Square" 자기소개 문구).
+- 무료 관람 펜 자체에 대한 티켓은 팔지 않습니다("no public viewing spaces available for sale" — nycnewyears.com에서도 동일하게 확인). 대신 "Times Square All-Access Pass"(BallDrop Pass, $159~), "Times Square Family Pass"($159~), 개별 레스토랑/바/호텔 패키지(Brooklyn Diner, Dallas BBQ, R Lounge 등)를 판매합니다.
+- **정정**: 25장에서 balldrop.com을 "무료 펜 안내" 성격으로만 취급한 것은 정확하지 않았습니다 — 이 사이트의 본질은 유료 패키지 판매처입니다.
+
+#### 25-7-2. 유료 벤뉴 패키지 — 지정시간 입장이 실제로 존재하는가: 예, 존재함
+
+| 상품 | 가격(1인, 2026 기준·동적가격) | 입장 시각 | 볼드롭 조망 | 비고 |
+|---|---|---|---|---|
+| Times Square Family Pass (balldrop.com) | $159~ | 20:00 시작 | **미보장**("A LIVE VIEW of The Ball Drop is not guaranteed", 스크린 중계) | 최소 2개 벤뉴 순회, "grab bag" 방식(구체 장소는 티켓 수령 후 공개) |
+| Dallas BBQ (241 W 42nd St) | $199~299 | 19:00~20:00 | **미보장**(1층은 라이브 스크린 중계, VIP만 "예약석"으로 안내되나 실제 육안 조망 보장 문구는 없음) | 볼에서 반 블록, 물리 티켓 필수(모바일 불가) |
+| Haven Rooftop (Sanctuary Hotel) | $149~ | 20:00~20:15 도착 권장("smoothest entry") | **미보장**("won't have a direct outdoor view... broadcast live on screens inside") | NYPD 체크포인트(47th St·6th Ave)에서 물리 티켓 제시 후 바리케이드 존 내부 진입 |
+| Elsie Rooftop | 2026 시즌 미오픈(확인 불가) | 20:00 개장 | 등급별 상이 — "Partial View"·"View of the Ball Drop" 티어 존재(유일하게 예산대+조망 가능성이 있어 보이는 사례) | 가격 미확인 |
+| Brooklyn Diner (24장 기 조사) | $500 | **18:30까지**(그 이후 바리케이드 통과 보장 불가) | **보장**(레스토랑 창가) | 입장 데드라인이 무료 펜 마감 시각과 비슷해 "늦은 입장"의 예외 사례는 아님 |
+| R Lounge / Bar 54 / M Social / Marriott Marquis Terrace (24장 기 조사) | $949~1,850+ | 벤뉴별 상이, 대체로 20:00~21:00까지 도착 권장("no later than 8 PM") | **보장**(실내 통유리·야외 테라스) | 가장 비싼 대신 늦은 입장+조망 보장을 동시에 만족 |
+
+이번 재조사로 확인된 핵심 문장(nycnewyears.com): **"Regardless of admittance time to your party, make sure to enter the Times Square area at your designated venue entry point no later than 8 PM."** 즉 유료 티켓 소지자는 무료 일반 펜이 마감된 이후(오후 7~9시대)에도 **NYPD가 지정한 별도 체크포인트**를 통해 통제구역 안으로 입장할 수 있습니다. 나무위키·한국어 후기에서도 동일한 구조가 확인됩니다: "저녁시간이면 동서남북으로 몇 블럭 밖에서부터 바리케이드로 막히며, **관련 티켓 구매자가 아니면 입장 자체를 할 수 없습니다**"(holafly.com 가이드) — 반대로 말하면 티켓 구매자는 입장이 가능하다는 뜻입니다. **이것이 25장이 놓친 부분이자, 사용자가 목격한 영상·후기와 정확히 일치하는 메커니즘으로 판단됩니다.**
+
+#### 25-7-3. 레스토랑·벤뉴 패키지 — "자체 건물 관람"인지 "공식 펜으로 인도"인지 구분
+
+이번에 조사한 모든 유료 패키지(Family Pass, Dallas BBQ, Haven Rooftop, Elsie Rooftop, Brooklyn Diner, R Lounge, Bar 54, M Social, Marriott Marquis 등)는 **예외 없이 "자체 건물 내부(창가석·루프탑·발코니 등)"에서 관람하는 방식**이며, 티켓을 가지고 무료 공식 관람 펜(NYPD pen)으로 인도해주는 상품은 이번 조사에서 하나도 발견하지 못했습니다. "유료로 공식 펜에 들어간다"는 개념 자체가 시장에 존재하지 않는 것으로 판단됩니다(뉴욕시·타임스퀘어 얼라이언스가 무료 펜을 직접 운영하며 이를 유료화하지 않음 — 25장 기존 결론과 일치).
+
+즉 사용자가 영상에서 본 "펜스 안으로 걸어 들어가는" 장면은, 무료 공식 관람 펜에 들어가는 것이 아니라 **바리케이드로 둘러싸인 "타임스퀘어 통제구역"(street closure zone) 경계를, 자신이 티켓을 가진 벤뉴 건물로 걸어 들어가기 위해 통과하는 장면**일 가능성이 매우 높습니다. "바리케이드(통제구역 경계)"와 "관람 펜(무료 관람 전용 구역)"은 서로 다른 개념이며, 이 구분은 25장의 기존 결론과 여전히 일치합니다.
+
+#### 25-7-4. $200~350 예산대에 맞는 옵션이 있는가
+
+**늦은 입장(저녁 7~8시대) 자체는 예산 안에서 가능**합니다 — Times Square Family Pass($159~), Dallas BBQ($199~299), Haven Rooftop($149~) 모두 이 예산대에 들어오고 저녁 시간대 입장이 명시돼 있습니다. **그러나 이들 전부 볼드롭 "육안 조망"은 보장하지 않으며 실내 스크린 중계가 중심**입니다. 유일하게 예산대와 조망 가능성을 동시에 시사하는 후보는 **Elsie Rooftop**("Partial View"·"View of the Ball Drop" 등급 구분 존재)이지만, 2026-08-13 현재 2026 시즌 티켓이 아직 오픈되지 않아 등급별 정확한 가격을 확인하지 못했습니다(확인 필요).
+
+**결과적으로 24장의 결론("$200~350대에서 조망이 보장되는 곳은 사실상 없음, Trattoria Dell'Arte가 유일")은 이번 재조사로도 뒤집히지 않습니다.** 다만 Elsie Rooftop만 예외 가능성이 있는 채로 남아 추가 확인 대상입니다.
+
+#### 25-7-5. 종합 정정 — 25장 결론 업데이트
+
+- **정정되는 부분**: "오후 9시 이후 진입은 강력히 비권장된다"는 서술은 **사전 티켓이 없는 무료 일반 관람객**에게만 해당하는 것으로 명확히 해야 합니다. **유료 벤뉴 티켓 소지자는 오후 7~9시대에도 지정된 체크포인트를 통해 정상적으로 통제구역에 입장할 수 있습니다.** 사용자의 반박 정보는 타당했고, 25장이 이 구분("무료 펜 vs 유료 벤뉴")을 명확히 하지 않은 채 "진입이 어렵다"고만 서술한 것이 혼동의 원인이었습니다.
+- **유지되는 부분**:
+  1. 무료 선착순 일반 펜은 여전히 오후 4~6시경 마감되고, 티켓 없이 늦게 도착해 그 무료 펜에 새로 들어가는 것은 여전히 비권장(25장 원 결론 그대로 유지).
+  2. 유료 레스토랑·벤뉴 패키지는 "공식 펜으로 인도"하는 게 아니라 "자체 건물에서 관람"하는 방식이라는 점(24장·25-4 결론과 일치, 25-7-3에서 재확인).
+  3. $200~350 예산대에서 "육안 볼드롭 조망이 보장"되는 옵션은 이번 재조사로도 실질적으로 찾지 못함(Elsie Rooftop만 예외 가능성, 확인 필요).
+  4. Trattoria Dell'Arte가 이 예산대에서 여전히 가장 근거가 탄탄한 선택이라는 24장 결론도 유지됨.
+
+#### 25-7-6. 확인 필요
+
+1. Elsie Rooftop 2026 시즌 "View of the Ball Drop" 등급의 실제 가격·정확한 조망 정도(부분 조망인지 전체 조망인지) — 2026-08-13 현재 티켓 미오픈으로 확인 불가.
+2. Haven Rooftop·Dallas BBQ·Family Pass 등 "스크린 중계형" 옵션이 부부가 원하는 "라이브로 봤다"는 체감을 충족시킬지는 순전히 주관적 판단 영역이라 조사로 답할 수 없음 — 사용자 판단 필요.
+3. 이번에 조사한 유료 벤뉴 체크포인트(예: Haven Rooftop의 47th St·6th Ave)는 대부분 42~48번가 권역에 몰려 있어, Trattoria Dell'Arte(56~57번가, 카네기홀 인근)와는 지리적으로 다소 거리가 있음 — Trattoria 인근(55~59번가 권역)에 같은 방식(늦은 입장 가능한 유료 벤뉴)의 옵션이 있는지는 이번 조사에서 별도로 찾지 못함(확인 필요).
+4. 2026 시즌(2026-12-31) 기준 가격·입장 정책은 예약 오픈 임박 시(통상 10~11월) 변동 가능성이 크므로 재확인 필요.
+
+출처: [nycnewyears.com — Free Street vs Paid Venue Options](https://nycnewyears.com/times-square-ball-drop-tickets/), [balldrop.com — Times Square Viewing Area](https://www.balldrop.com/times-square-viewing-area), [balldrop.com — Times Square Family Pass](https://www.balldrop.com/times-square-family-pass), [balldrop.com — Times Square All-Access Pass](https://www.balldrop.com/times-square-all-access-pass), [balldrop.com — Brooklyn Diner NYC](https://www.balldrop.com/new-years-eve-brooklyn-diner-nyc-times-square), [brooklyndiner.com — New Year's Eve](https://www.brooklyndiner.com/new-years-eve-in-times-square/), [nycnewyears.com — Dallas BBQ](https://nycnewyears.com/new-years-eve-at-dallas-bbq/), [nye.com — Dallas BBQ](https://www.nye.com/new-years-eve/new-york-city/dallas-bbq-nyc-times-square), [balldrop.com — R Lounge](https://www.balldrop.com/new-years-eve-r-lounge-at-two-times-square-restaurant-nyc), [nycnewyears.com — R Lounge](https://nycnewyears.com/new-years-eve-r-lounge-times-square/), [nycnewyears.com — Haven Rooftop](https://nycnewyears.com/new-years-eve-at-haven-rooftop-times-square/), [nycnewyears.com — Elsie Rooftop](https://nycnewyears.com/new-years-eve-at-elsie-rooftop/), [nycnewyears.com — M Social Hotel](https://nycnewyears.com/m-social-hotel-times-square-new-years-eve/), [nycnewyears.com — Times Square Access Information](https://nycnewyears.com/times-square-access-information/), [Marriott Marquis NYE 공식](https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/new-years-eve/), [holafly.com — 타임스퀘어 카운트다운 가이드](https://esim.holafly.com/ko/travel-tips/times-square-new-years-eve-countdown/) (조사 시점: 2026-08-13, 가격·티켓 오픈 여부는 변동성이 크므로 예약 임박 시 재확인 필요. Elsie Rooftop 등 일부는 2026 시즌 티켓이 아직 오픈되지 않아 가격 미확인)
+
+---
+
 ## 다음 단계 안내
 
 **⚠ [2026-08-11, 최우선 공지] 20장을 반드시 먼저 확인하세요.** 14장·16장(귀국편 라운지 조사) 전체가 전제하는 "아시아나 JFK 출발 = 터미널 1"은 여러 독립 소스로 재확인해 여전히 최선의 근거를 갖고 있으나, **JFK 터미널 1 건물 자체가 "New Terminal One" 신축 공사로 대체되는 중이며 이미 최소 1개 항공사(터키항공)의 이전이 확정**되어 있음을 발견했습니다. 즉 14장·16장의 라운지 정보(KAL·Primeclass·Turkish·Air France·Lufthansa·VIPOne)는 **"현재 기준 유효, 그러나 여행 당일까지 그대로 유지된다는 보장은 없는 잠정 정보"**로 취급해야 합니다. 대한항공·아시아나의 New Terminal One 이전 여부·시점은 확인하지 못했고, 항공권(e-티켓)에 터미널이 아직 확정 표기되지 않았을 가능성도 있어 **사용자가 출발 임박 시(늦어도 온라인 체크인 시점) 직접 재확인이 필요**합니다. 세부는 20-1~20-6.
@@ -1538,3 +1868,11 @@ itinerary-planner는 본 문서를 입력으로 하되, 숙소 최종 선택·�
 **[업데이트 2026-08-11, 추가] 21장(동선 전체 감사 + "거의 공짜로" 붙일 수 있는 후보 최종 재점검)을 신설함.** 사용자가 "1~9일차 동선이 잘 짜였는지, 그 안에서 더 넣을 만한 게 있는지"를 요청하되 **다이커하이츠·브로드웨이 시도 축소처럼 기존 확정 사항을 희생하는 안은 명시적으로 제외**하고 "도보 5분 이내로 붙는 것"만 다루도록 범위를 한정했습니다. 핵심 요지: (1) **동선 자체는 대체로 견고합니다** — 9일 중 명백한 백트래킹은 **Day4(J.G. Melon 재북상)·Day6(재즈클럽 재방문) 2건뿐**이고, 둘 다 이미 확정된 예약·업장 위치가 원인이라 동선 재설계가 아니라 방문지를 바꿔야 해소되는 성격입니다(이번 범위에서는 개선 불가). "하루 한 지역을 훑고 다음 날 다른 지역으로" 넘어가는 큰 틀은 9일 모두 유지되고 있습니다(21-1). (2) **진짜로 놓친 후보는 2개뿐**입니다 — **FAO Schwarz**(12/26, 록펠러센터 구내, Nintendo NY·Rough Trade·LEGO·Top of the Rock과 같은 블록, 도보 0~2분, 매장 단독 Funko Pop·Jellycat 확인됨)와 **The Vessel**(12/29, Edge와 같은 광장, 도보 1~2분, $10~15·30~60분 소요, 2024년 안전그물 설치 후 재개장). 둘 다 12장(기각 목록)·13장(미채택 판단)에 "검토 후 뺐다"는 기록이 없어 **단순 누락**으로 판단됩니다. (3) 그 외 검토한 후보(Academy Records EV·Toy Tokyo·Strawberry Fields는 도보 5분 기준 초과, Rapha·Generation Records·MUJI SoHo·One World Observatory·MUJI Cooper Square는 이미 명시적으로 검토·기각/조건부 반영됨, Whitney Museum은 도보 0분이나 12/29 화요일 휴관, Staten Island Ferry는 도보 0분이나 왕복 60~90분 소요)는 모두 제외 사유가 명확합니다. A-1 Records(정확히 도보 5분)는 경계선 참고용으로 남겼습니다. **`02-itinerary-draft.md`는 이번에도 수정하지 않았습니다** — 실제 반영은 사용자 확인 후 itinerary-planner의 몫입니다. 세부는 21-1~21-3.
 
 **[업데이트 2026-08-12, 추가] 22장(12/29 브로드웨이 러시/로터리 실패 시 19:00~21:45 저녁 대안)을 신설함.** 사용자가 "브로드웨이 실패 시 그 시간에 뭘 할지"를 문의해 확인한 결과, 12/29 저녁(19:00~21:45)이 "공연 확보 시(선택)"로만 채워져 있고 실패 시 대체 활동이 문서에 없었던 실제 공백이었습니다. 로터리·러시 결과가 오전(08:30~10:40)에 나오므로 즉흥 대응이 아니라 미리 계획된 대안으로 대체 가능하다는 점을 전제로 조사했습니다. **핵심 요지**: (1) **1순위 Birdland Jazz Club**(315 W 44th St, 타임스퀘어에서 도보 5~7분·허드슨야드에서 도보 12~15분, $20 미니멈/세트, 예약 불필요·선착순) — 비용·재즈 취향 부합도가 가장 높으나 좋은 자리는 보장되지 않음. (2) **2순위 Iridium Jazz Club**(1650 Broadway, 타임스퀘어 한복판 도보 4~5분, $35 커버+음료 미니멈) — 오전에 실패를 확인한 즉시 당일 온라인 예약이 가능해 좌석 확정성은 더 높으나 비용이 더 높고 종료 시각이 22:00 귀가와 빠듯하게 맞물림. (3) **3순위(별도 조사·예약 불필요한 기본값)**: TKTS Duffy Square 부스가 화요일(12/29) 저녁 14:00~20:00 운영돼 원래 19:00 타임스퀘어 도착 시점에도 그날 저녁 다른 공연 할인 티켓을 즉석구매할 수 있다는 점(단 성공 보장은 없음), 또는 허드슨야드 저녁 식사(16:50~18:00)를 19:00~19:30까지 여유있게 연장하고 조기 귀가하는 안(실행 리스크 최소). Dizzy's Club(컬럼버스 서클)은 위치·비용 부담으로 기각. **`02-itinerary-draft.md`는 이 조사로 수정하지 않았으며, 최종 선택·시간 배치는 사용자 확인 후 itinerary-planner의 몫입니다.** 세부는 22-1~22-6.
+
+**[업데이트 2026-08-12, 추가] 23장(실패 대응·Plan B 전수 감사)을 신설함.** 사용자가 22장(Birdland) 반영 직후 "폴백 더 칠 거 없나?"라고 문의해, `00-trip-brief.md`·`02-itinerary-draft.md`(v12)·`04-execution-action-checklist.md` 전체를 훑어 예약 필수·워크인 전용·날씨 의존·시간 지정 티켓 성격의 모든 항목에 대해 Plan B 존재 여부를 A(이미 있음, 17건)/B(진짜 공백, 7건)/C(불필요, 7건)로 분류했습니다. **핵심 요지 — B그룹(진짜 공백) 7건**: **(1) 최우선 — Trattoria Dell'Arte(12/31) "조망석 미배정"만 다뤄지고 "예약 자체를 아예 못 잡는 경우"는 어디에도 없음.** 기존 8장·12-3의 대안 4곳(One40 Rooftop·Aqua New York·Union Square Cafe·Members Only, 전부 볼드롭 조망 없음)을 재활용 가능하나, 트리거를 "조망석 실패"에서 "예약 자체 실패"로 확장하고 11/30 데드라인을 명시할 것을 제안. **(2) Keens Steakhouse(12/26)** 예약·워크인 바 좌석이 모두 실패할 경우의 구체적 대체 업장이 없음 — 기존에 검토됐던 Grand Central Oyster Bar는 **재확인 결과 토요일(=12/26) 휴무라 이번엔 쓸 수 없다는 결함을 새로 발견**했고, 대신 Wolfgang's Steakhouse(Times Square점, 도보 8~10분, 토요일 영업 확인)를 새 후보로 제시. **(3) 1/1 특별 디너**는 업장 자체가 미정이라 Plan B를 논할 토대가 없는 더 근본적인 공백. **(4) 전망대 3곳(Edge·Top of the Rock·ESB)의 악천후 시야 실패 시 환불·재방문 정책**이 문서에 반영돼 있지 않았음(Edge는 Sky Assurance 제도, Top of the Rock은 24시간 전 재발급 제도가 실제로 존재함을 새로 확인) — ESB는 여전히 확인 필요. **(5) 전망대 3곳 지정시간 티켓 매진 대응이 없고, 체크리스트에 이 3곳의 사전 예매 액션 항목 자체가 아예 빠져 있음.** **(6) Wollman Rink(12/28) 우천·폭풍 폐쇄**는 논의된 적이 없음(심각도는 낮음 — 사전 결제가 없어 취소 비용 0원). **(7) 그리니치빌리지 재즈클럽(12/30) 예약 실패 시 대체 클럽**이 없음 — Smalls Jazz Club/Mezzrow(워크인 가능, 서로 인접)를 새 후보로 제시. **A그룹(이미 Plan B 있음) 17건은 재조사 없이 목록만 확인**했고(피터루거·J.G. Melon·Joe's Pizza·브루클린 브리지·트램·The Vessel·QC NY Spa·귀국편 라운지·12/29 브로드웨이 등), **C그룹(불필요) 7건**은 Los Tacos No.1·Katz's처럼 대체가 쉽거나 예약 개념이 없는 항목입니다. `02-itinerary-draft.md`는 이번 감사로 수정하지 않았습니다 — 감사 결과 제시 단계이며, 실제 반영은 사용자 확인 후 itinerary-planner의 몫입니다. 세부는 23-0~23-5.
+
+**[업데이트 2026-08-13, 추가] 25장(Trattoria 예약 실패 시 "저녁식사 후 볼드롭 통제구역 도보 진입" 대안의 실행 가능성 검증)을 신설함.** 사용자가 24장 결과를 받아들이되 조건을 정정("조망은 포기해도 되니, 저녁식사 후 통제구역 안으로 걸어 들어갈 수만 있으면 된다")해 검증했습니다. **결론(핵심): 이 계획은 신뢰할 수 있는 계획으로 삼기 어렵습니다.** NYC.gov 공식 스트리트 클로저 안내·타임스퀘어 공식 FAQ·복수 여행 가이드가 일관되게 "대부분의 관람구역(펜) 입장 지점이 오후 4~6시경 이미 봉쇄되고, 오후 9시 이후 진입은 어렵고 강력히 비권장된다"고 명시합니다 — 저녁식사가 끝나는 20:00~21:00경엔 신규 입장 가능한 펜이 남아있을 가능성이 낮습니다("절대 불가"라는 명문 규정은 못 찾았으나 "운이 좋으면"수준). 다만 **지리적으로는 Trattoria(900 7th Ave, 56~57번가)가 통제구역 최북단 경계(59번가)·마지막 관람 펜 입구(56번가)·폐쇄 후에도 보행 횡단이 허용되는 57번가 지점에 모두 인접해, "볼드롭 구역에 가장 가까운 레스토랑" 중 하나인 것은 맞습니다.** 이에 따라 "펜 진입"이 아닌 대안으로 **저녁식사 후 57번가 보행 횡단 지점까지 걸어가 통제구역 경계 바로 앞에서 함성·음악·색종이 낙하 등 분위기를 체감하는 절충안**(예약·비용·실패 리스크 없음, 볼 자체를 육안으로 보는 것은 기대 난망)을 제시했습니다. `02-itinerary-draft.md`는 이 조사로 수정하지 않았으며, 최종 판단은 사용자 확인 후 진행 필요. 세부는 25-0~25-6.
+
+**[업데이트 2026-08-13, 추가] 25-7(유료 예약제·지정시간 입장 재조사 — 사용자 반박 정보 검증)을 신설함.** 사용자가 "블로그·유튜브를 보면 예약시간에 맞춰 펜스 안으로 걸어 들어가는 사람들이 있다"며 25장의 "오후 9시 이후 진입 강력히 비권장" 결론에 반박 정보를 제시해, 무료 선착순 펜과는 별개인 유료 예약제·지정시간 입장 옵션을 재조사했습니다. **핵심 결론: 사용자의 반박은 타당했습니다.** 유료 벤뉴(레스토랑·바·루프탑·호텔) 티켓 소지자는 무료 일반 펜이 마감된 이후(오후 7~9시대)에도 NYPD 지정 체크포인트를 통해 통제구역에 정상 입장할 수 있음을 확인(nycnewyears.com: "regardless of admittance time... enter... no later than 8 PM"). **다만 이는 "무료 펜에 유료로 늦게 들어가는 것"이 아니라 "무료 펜과 완전히 별개인, 자체 건물에서 관람하는 유료 패키지"**이며(25-7-3), 이 늦은 입장이 가능한 옵션 중 볼드롭 육안 조망이 "보장"되는 것은 여전히 대부분 $500/인 이상(24장 결론과 일치)입니다. $200~350 예산대(Family Pass $159~, Dallas BBQ $199~299, Haven Rooftop $149~)는 늦은 입장은 가능하나 볼드롭은 실내 스크린 중계가 중심이라 육안 조망까지는 보장하지 못합니다(Elsie Rooftop만 등급별 조망 옵션이 있어 보이나 2026 시즌 티켓 미오픈으로 가격 미확인, 확인 필요). balldrop.com은 뉴욕시 공식 주최측이 아니라 이런 유료 패키지를 중개 판매하는 사설 티켓 플랫폼임도 이번에 새로 확인했습니다(25-7-1, 25장 서술 정정). 결과적으로 **25장의 "무료 펜" 관련 결론(오후 4~6시 마감, 비권장)은 그대로 유지되지만 "유료 옵션 부재" 인상을 줄 수 있었던 부분은 이 장으로 보완**했고, **24장의 "$200~350대 조망 보장 없음, Trattoria가 유일" 결론도 뒤집히지 않았습니다.** `02-itinerary-draft.md`는 이 조사로 수정하지 않았으며, 최종 판단은 사용자 확인 후 진행 필요. 세부는 25-7-0~25-7-6.
+
+**[업데이트 2026-08-13, 추가] 24장(Trattoria 완전 예약 실패 대안 재조사 + 1/1 특별 디너 확정 조사)을 신설함.** (1) 사용자가 "볼드롭 조망 없는 대안은 의미가 약하다·부부는 술을 안 마셔 오픈바 중심 업장은 안 맞는다"는 조건으로 재요청해, 조망 있는 레스토랑 대안을 폭넓게 재조사했습니다. **결과: $200~350/인 예산대에서 볼드롭이 실제로 "보장"되는 레스토랑은 이번 조사 범위에서 찾지 못했습니다.** 조망이 보장되는 곳은 전부 $500/인 이상(Brooklyn Diner $500, Rosie O'Grady's $675~745, Applebee's 50th St점 $849 등)이었고, 그 가격대조차 예외 없이 오픈바가 기본 포함된 구조였습니다. "레스토랑이 아닌 형태"로 검토한 **호텔 객실 뷰(Marriott Marquis 등)도 1박 $1,200~2,500+에 최소 3박 연속 투숙 조건**이 붙어 있어 이미 결제 완료한 8박 숙소 구조와 근본적으로 맞지 않아 실행 불가로 판정했습니다. **결론적으로 "예산+조망+비오픈바" 세 조건을 동시에 만족하는 곳은 Trattoria Dell'Arte 자신이 사실상 유일**하다는 점이 재확인됐습니다. 이에 따라 사용자가 미리 갈래를 정해둘 것을 제안합니다: ① Trattoria 예약 성공에 자원을 집중 ② 조망을 포기 못하면 예산을 $500+/인으로 확장(Brooklyn Diner가 그중 최저가) ③ 오픈바 아닌 식사 중심을 지키려면 조망 포기(기존 4개 대안을 오픈바 여부로 재정렬 — Union Square Cafe 최우선, Members Only는 오픈바 패키지라 최후순위). 11/30 데드라인 전제는 23-2(B1)와 동일하게 유지됩니다. (2) **1/1 특별 디너는 The Bar Room at The Modern(MoMA 부속, 록펠러 도보 3~5분, 목표 예산 부합, 연중무휴 영업시간 공개, 예약은 최대 28일 전=12/4부터 가능해 기존 체크리스트 데드라인과 정확히 일치)을 안전한 기본 추천**으로 제시하고, **Rainbow Room(록펠러 센터 65층, $175/인 프리픽스+라이브 밴드 디너&댄싱)을 재즈·기념일 취향에 가장 잘 맞는 "예산 초과·드레스코드 감수 스플러지" 옵션으로 병행 제안**했습니다. 단 Rainbow Room은 **1/1(금)이 실제 공개 운영일인지 자체가 자료 간 상충으로 불확실**해 최우선 확인이 필요합니다. Sea Fire Grill(구 Sea Grill 계열 시푸드)은 3순위로, 메뉴 가격·신정 영업 모두 미확인 상태로 근거가 가장 약합니다. `02-itinerary-draft.md`는 이 조사로 수정하지 않았으며, 최종 선택은 사용자 확인 후 itinerary-planner의 몫입니다. 세부는 24-0~24-7.
