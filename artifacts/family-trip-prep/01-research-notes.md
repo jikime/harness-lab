@@ -1825,6 +1825,143 @@ A-1 Records는 정확히 5분 경계선이라 판단이 갈릴 수 있어 참고
 
 ---
 
+## 26. "레스토랑 자체 바리케이드/전용 옥외 관람 구역" 방식 — 다른 후보 재조사 (조사 시점: 2026-08-13)
+
+### 26-0. 배경
+
+사용자가 Trattoria Dell'Arte 공식 페이지("a specially barricaded area in front of the restaurant, providing you with an optimal view of the pandemonium below")를 직접 확인하고, 이것이 (1) 무료 공공 관람 펜, (2) 24장이 조사한 "실내 창가석 조망"과 다른 **제3의 방식(레스토랑 자체 옥외 바리케이드 구역)**이라는 점을 지적했습니다. "이런 가게가 더 있을 텐데 24장 재조사 때 못 찾은 것 아니냐"는 지적에 따라, 이번 장은 **이 구체적인 형태를 특정해서** 재조사했습니다.
+
+### 26-1. 재조사 결과 — "자체 바리케이드/전용 옥외 구역" 방식을 실제로 쓰는 곳들
+
+검색어를 "restaurant own barricaded area Times Square NYE", "private viewing area New Year's Eve restaurant Times Square", "exclusive outdoor viewing NYE dinner package" 등으로 바꿔가며 재검색하고, balldrop.com 레스토랑 전체 목록·nycnewyears.com 카테고리 페이지를 훑은 결과, **이 방식(레스토랑이 건물 앞 보도·도로 일부를 자체적으로 바리케이드 쳐서 손님 전용 구역으로 제공)을 명시적으로 쓰는 곳이 Trattoria 외에도 실제로 더 있었습니다.**
+
+| 후보 | 1인당 가격(2026 기준) | "자체 구역" 관련 정확한 문구 | 오픈바 | 비고 |
+|---|---|---|---|---|
+| **Trattoria Dell'Arte** | **$275** | "a specially barricaded area in front of the restaurant, providing you with an optimal view of the pandemonium below" | **없음**(음료 별도) | 기존 채택 후보. $200~350 예산대 유일 |
+| **Rosie O'Grady's** | $675 (얼리버드 $540) | "**Cordoned off View of the Ball Drop**" / "an exclusive, cordoned-off sidewalk where guests can step out just before midnight" | **있음**(5시간 프리미엄 오픈바, 필수 포함) | Trattoria와 **동일한 메커니즘**(자체 바리케이드/코든 구역)이지만 가격이 2배 이상, 오픈바 강제 포함이라 24장에서 이미 기각한 조건과 동일하게 배치 |
+| **Olive Garden(타임스퀘어점)** | $699~800+(2026 매진) | "**exclusive outdoor viewing area** access for ball drop" / "step outside to watch the Times Square ball drop at midnight" | **있음**(5시간 오픈바 필수) | 역시 동일 메커니즘이나 가격·오픈바 조건 모두 24장 기각 사유 그대로 |
+| **Applebee's(50th St·42nd St)** | $729~1,250(동적가격, 50th St는 2026 매진) | "all guests will be **escorted outside** for a live view of the ball drop" — 단 "**subject to security conditions on the evening of the event — No refund or credit will be provided if the view is unavailable**"라는 명시적 비보장 단서가 붙음 | **있음**(오픈바 필수) | Trattoria처럼 "우리 구역"이라고 명시하지 않고 "당일 보안 상황에 따라 조망이 안 보장될 수 있다"고 스스로 밝힘 — Trattoria보다 조망 확실성이 낮은 셈 |
+| **Chicken Guy!** | $449(동적가격) | "witness the magic of the Times Square Ball Drop live **from the street**" | **있음**(8pm~1am) | "자체 바리케이드 구역"이라는 명시적 표현은 없고 "길거리에서"라는 표현뿐이라 Trattoria만큼 구체적이지 않음. $350 예산 살짝 초과 |
+| **Havana Central** | $229(2026 매진) | 조망 방식 없음 — "**no direct view of the ball drop**, broadcast in the restaurant on TVs" | 있음(3시간 오픈바) | 예산대는 맞지만 애초에 옥외 관람 구역 자체가 없음(TV 중계만) — 이번 재검색에서 유일하게 발견한 예산대 내 후보였으나 조건 불일치로 제외 |
+| **Yard House** | $159 | 옥외 구역 언급 없음, "High-definition screens throughout ensure you don't miss the ball drop moment" + "**A LIVE VIEW of The Ball Drop is not guaranteed**"(명시적 비보장 문구) | 있음 | 예산대는 맞지만 조망 자체를 사이트가 스스로 보장하지 않는다고 명시 |
+| **The View(Marriott Marquis 48층 회전 레스토랑)** | 2026 NYE는 **호텔 투숙객 전용 파티**로 전환(공식 예약 페이지에 일반 레스토랑 NYE 패키지 정보 없음) | 해당 없음(회전식 실내 다이닝, 옥외 구역 개념 자체가 없음) | 확인 필요 | 24장의 "회전 레스토랑이라 조망이 일정하지 않다"는 판단에 더해, **2026년은 호텔 투숙객 전용으로 전환돼 순수 레스토랑 예약으로는 애초에 접근 불가**하다는 새 사실을 확인 |
+| **Bond 45(VIP $700)** | $700 | "VIP Access to the Times Square Ball Drop Experience"라고만 되어 있고, 공식 페이지에 "barricaded"·"outdoor"·"private" 등 구체적 단어가 전혀 없음(에스코트 방식만 언급) | 있음(기본가부터 포함) | 24장에서 이미 "조망 방식 불명확"으로 판단했는데, 이번 공식 페이지 직접 확인으로도 구체적 메커니즘을 확인하지 못함 — 불확실성이 그대로 유지됨 |
+
+### 26-2. 핵심 발견 — "자체 바리케이드 구역" 방식은 시장에 실제로 존재하지만, 전부 두 가지 조건 중 하나 이상을 어김
+
+1. **이 방식 자체는 드물지 않습니다.** Trattoria·Rosie O'Grady's·Olive Garden 세 곳이 표현은 다르지만("barricaded area" / "cordoned off" / "exclusive outdoor viewing area") 사실상 동일한 메커니즘(레스토랑이 건물 앞 보도 일부를 손님 전용으로 확보)을 쓰고 있음이 이번 재조사로 확인됐습니다. 사용자의 "더 있을 것 같다"는 지적은 **메커니즘의 존재 여부에 대해서는 맞았습니다.**
+2. **그러나 $200~350 예산대 안에서 이 방식을 쓰는 곳은 여전히 Trattoria가 유일합니다.** 같은 메커니즘을 쓰는 다른 두 곳(Rosie O'Grady's $675~745, Olive Garden $699~800+)은 전부 Trattoria보다 2.5배 이상 비싸고, 예외 없이 오픈바가 필수 포함됩니다 — 이는 24장이 이미 확인한 "조망 보장 레스토랑은 전부 $500+이고 오픈바 포함"이라는 패턴과 정확히 일치합니다.
+3. **Applebee's·Chicken Guy·Bond 45는 "자체 구역"이라는 확실성 면에서 Trattoria보다 못합니다.** Applebee's는 스스로 "당일 보안 상황에 따라 조망이 안 보장될 수 있고 환불도 안 된다"고 명시하고, Chicken Guy·Bond 45는 아예 "바리케이드/전용 구역"이라는 구체적 표현 자체가 없어 실제로 그런 구역이 있는지조차 이번 조사로 확인하지 못했습니다. **Trattoria의 "specially barricaded area in front of the restaurant"라는 문구는 이번에 비교한 후보들 중 가장 구체적이고 확정적인 조망 보장 문구였습니다.**
+4. **Havana Central·Yard House처럼 예산대($200~350) 안에 들어오는 후보는 있었지만, 둘 다 조망 자체가 없거나(TV 중계) 비보장을 스스로 명시**하고 있어 애초에 "조망 있는 대안"이라는 조건을 만족하지 못합니다.
+
+### 26-3. 24장·25장 결론에 대한 영향 — 결론은 바뀌지 않되, 근거가 더 두터워짐
+
+- **24장의 "$200~350/인 예산대에는 조망 보장 레스토랑이 Trattoria 외에 없다"는 결론은 이번 재조사로도 그대로 유지됩니다.** 다만 이번 조사로 "왜 없는지"에 대한 근거가 하나 더 늘었습니다 — 같은 메커니즘(자체 바리케이드 구역)을 쓰는 경쟁 상품이 실제로 존재하지만, 하나같이 오픈바 필수 포함 + $500 이상 가격대로 몰려 있다는 점이 이번에 구체적으로 확인됐습니다.
+- **Trattoria가 예약에 실패해도 "동일한 방식(자체 바리케이드 구역)"의 대안은 여전히 없습니다.** Rosie O'Grady's·Olive Garden이 같은 방식을 쓰지만 이미 24장에서 "예산 2배+오픈바 강제"라는 이유로 3번 갈래(②)의 대안으로 이미 반영돼 있던 후보들이라, **이번 재조사가 새로운 대안을 추가하지는 못했습니다.** 다만 Olive Garden은 2026 시즌 이미 매진 확인, Rosie O'Grady's는 얼리버드가는 $540로 확인돼 24장 표의 $675~745보다는 낮은 진입가가 있다는 점이 새로 확인된 세부사항입니다(그래도 Trattoria의 2배 수준).
+- **정정: Applebee's의 조망 방식이 24장 기재보다 더 불확실하다는 점을 이번에 새로 확인했습니다.** 24장 24-1표는 Applebee's를 "보장(Amazing View)"으로 기재했는데, 이번에 공식 페이지를 직접 열어보니 **"당일 보안 상황에 따라 다르고, 조망이 안 보이면 환불도 안 된다"는 단서가 명시**돼 있었습니다. Applebee's는 애초에 예산 밖($729+)이라 채택 후보가 아니었으므로 실질적 영향은 없으나, 24장의 "보장"이라는 표기는 다소 과장이었다는 점을 정정합니다.
+- **결과적으로 24장 24-3의 세 갈래(① Trattoria 사수, ② 예산 $500+로 확장, ③ 오픈바 없는 식사 중심 유지·조망 포기) 중 어느 것도 바뀌지 않습니다.** "Trattoria 실패해도 이제 같은 방식의 저렴한 대안이 있다"는 결론은 **나오지 않았습니다** — 오히려 "이 방식을 쓰는 곳은 원래 소수이고, 그 소수가 전부 고가+오픈바 구조로 수렴한다"는 패턴이 재확인됐을 뿐입니다.
+
+### 26-4. Trattoria 시작 시각 확정
+
+공식 페이지(trattoriadellarte.com/new-years-eve-at-trattoria-dell-arte/)를 직접 열어 원문을 확인한 결과:
+
+> "**Time: 7:00 PM onwards**"
+> "$275 per person (excluding beverages, tax, and gratuity)"
+
+**"7:00 PM onwards"는 예약(seating) 시작 시각으로 명시돼 있습니다** — "저녁 7시부터 영업"이라는 일반적인 영업시간 안내가 아니라, NYE 특별 디너 이벤트 자체의 시작 시각(seating time)으로 페이지에 표기돼 있습니다. 참고로 비교 대상 중 Rosie O'Grady's는 "doors open at 8pm", Applebee's(50th St)는 "party starts at 7pm", Chicken Guy는 "8:00PM" 시작으로, 업장마다 시작 시각이 제각각이라 Trattoria만의 특이사항은 아닙니다.
+
+**`02-itinerary-draft.md`가 Trattoria를 20:00(8시)으로 잡아 둔 것은 공식 시작 시각(7:00 PM)보다 1시간 늦습니다.** 두 가지로 해석할 수 있습니다: (1) 실제 예약 시각을 7시가 아닌 8시 슬롯으로 별도 지정했을 가능성(레스토랑이 여러 seating 타임을 운영할 수 있음, 이번 조사로는 8시 슬롯 존재 여부를 확인하지 못함), 또는 (2) 단순히 초안 작성 시점의 착오일 가능성. **이 문서(01-research-notes.md)는 사실관계만 정리하고 `02-itinerary-draft.md`는 이번 지시에 따라 수정하지 않으므로, 8시 vs 7시 불일치는 itinerary-planner가 확인·정정할 사항으로 남깁니다.**
+
+### 26-5. 확인 필요 사항 (26장 관련, 신규)
+
+1. **[최우선]** Trattoria Dell'Arte 예약 시 실제 seating이 7:00 PM 단일 슬롯인지, 8:00 PM 등 다른 슬롯도 존재하는지 — 예약 오픈(11월 초) 시점에 직접 확인 필요. `02-itinerary-draft.md`의 20:00 표기와의 불일치 해소 필요.
+2. Rosie O'Grady's 얼리버드 $540 티어의 정확한 조건(선착순 수량, 마감 시점)은 이번 조사로 확인하지 못함.
+3. Bond 45 VIP($700) 패키지의 "VIP Access to the Times Square Ball Drop Experience"가 실내인지 옥외 자체 구역인지, 이번 조사로도 끝내 확인하지 못함(공식 페이지에 명시 없음) — 채택 후보가 아니므로 우선순위는 낮음.
+4. The View(Marriott Marquis)가 2026년 "호텔 투숙객 전용 파티"로 전환된 것이 매년 반복되는 정책인지, 아니면 2026년 한정(40주년 기념 등)인지는 확인하지 못함 — 어차피 채택 후보가 아니므로 참고용.
+
+출처: [Trattoria Dell'Arte NYE 공식](https://www.trattoriadellarte.com/new-years-eve-at-trattoria-dell-arte/), [Rosie O'Grady's NYE 공식](https://nye.rosieogradys.com/), [Olive Garden NYE — nycnewyears.com](https://nycnewyears.com/new-years-eve-at-olive-garden-times-square/), [Brooklyn Diner NYE 공식](https://www.brooklyndiner.com/new-years-eve-in-times-square/), [Bond 45 NYE 공식](https://www.bond45ny.com/new-years-eve/), [The View 공식 예약 페이지](https://www.theviewnewyorkcity.com/reservations/), [Marriott Marquis NYE 공식](https://www.marriott.com/en-us/hotels/nycmq-new-york-marriott-marquis/overview/new-years-eve/), [Applebee's 50th St — nycnewyears.com](https://nycnewyears.com/new-years-eve-at-applebees-times-square-50/), [Applebee's 42nd St — balldrop.com](https://www.balldrop.com/new-years-eve-applebees-times-square), [Applebee's 42nd St 보도 — Vice](https://www.vice.com/en/article/applebees-times-square-new-years-eve-price/), [Chicken Guy — balldrop.com](https://www.balldrop.com/new-years-eve-chicken-guy-times-square-nyc), [Havana Central 공식](https://www.havanacentral.com/event/new-years-eve-fiesta/), [Yard House — nycnewyears.com](https://nycnewyears.com/new-years-eve-at-yard-house-times-square-nyc/), [balldrop.com 레스토랑 필터 목록](https://www.balldrop.com/filter-new-years-eve-restaurants), [nycnewyears.com Times Square 볼드롭 조망 카테고리](https://nycnewyears.com/category/times-square-view-of-the-balldrop/) (조사 시점: 2026-08-13, 가격·매진 여부·시작 시각은 변동성이 크므로 예약 임박 시 재확인 필요)
+
+---
+
+## 27. 연말연시(12/25~1/2) 재즈 특별 이벤트 조사 — 참고용, 일정 반영 아님 (조사 시점: 2026-08-13)
+
+### 27-0. 배경 및 결론 먼저
+
+사용자가 "찰리 파커 재즈 페스티벌"을 문의했으나 그 행사는 2026년 8월(여름 한정)로 이번 여행(12/25~1/2)과 무관함을 이미 확인했습니다. 이번 장은 그와 별개로 **실제로 12/25~1/2 기간에 열리는 재즈 행사·공연**을 조사한 결과입니다. **본 장은 순수 참고용 정보 제공이 목적이며, `02-itinerary-draft.md`의 확정 일정(12/29 브로드웨이 실패 시 Birdland/Iridium, 12/30 그리니치빌리지 재즈클럽 업장 미정)을 이 조사로 바꾸지 않았습니다.**
+
+**결론(먼저 밝힙니다)**: 뉴욕의 주요 재즈클럽(Village Vanguard·Blue Note·Smoke·Jazz at Lincoln Center/Dizzy's Club)은 하나같이 **매년 반복되는 연말연시 전통 프로그램**(연례 새해전야 런, 홀리데이 레지던시, 페스티벌 등)을 갖고 있어 패턴 자체는 매우 신뢰할 만합니다. 다만 **조사 시점(2026-08-13) 기준으로 검색·색인되는 정보 대부분은 "직전 사이클"(2025년 12월~2026년 1월, 이미 지나간 시즌)의 라인업**이고, 이번 여행이 해당하는 **2026년 12월~2027년 1월 시즌의 구체적 출연진·가격은 아직 공식 발표되지 않은 것으로 보입니다**(재즈클럽들은 통상 출발 2~3개월 전인 9~11월경 12월 캘린더를 공개하는 경향). 따라서 아래 정보는 **"매년 반복되는 패턴을 근거로 한 강한 참고 자료"**이지 "이번 여행 날짜에 확정된 라인업"이 아니라는 점을 분명히 해 둡니다 — 출발 임박 시(10~11월경) 각 공식 사이트에서 반드시 재확인이 필요합니다.
+
+### 27-1. Village Vanguard — Chris Potter Quartet 연례 새해전야 런 (12/30 그리니치빌리지 슬롯의 가장 유력한 후보)
+
+- **위치**: 178 7th Ave S, 그리니치빌리지 — 기존 23-2(B7)에서 12/30 재즈클럽 슬롯의 두 후보(Village Vanguard·Blue Note) 중 하나로 이미 언급된 바로 그 업장입니다.
+- **직전 사이클(2025-12-31) 확인 내용**: 색소포니스트 Chris Potter의 쿼텟(Chris Potter·색소폰, Craig Taborn·피아노, Scott Colley·베이스, Marcus Gilmore·드럼)이 새해전야 공연을 가졌습니다. 관련 SNS 게시물에서 이를 "**그들의 연례 새해전야 런(their annual New Year's Eve run)**"이라고 표현하고 있어, **단발성이 아니라 매년 반복되는 고정 전통**임을 시사합니다.
+- **가격**: 공식 페이지에서 NYE 당일 구체 가격은 확인하지 못했으나(확인 필요), Village Vanguard의 평상시 커버차지는 통상 **$25~50 수준(음료 1잔 별도 미니멈 포함)**으로 알려져 있고, NYE는 이보다 높게 책정되는 경우가 일반적입니다.
+- **12/30 슬롯 관련성**: "연례 새해전야 런"이라는 표현이 단일 밤이 아니라 12/31 전후 며칠에 걸친 런을 시사할 가능성이 있어, **직전 사이클처럼 12/30에도 같은 아티스트(또는 그 주 헤드라이너)가 출연할 가능성**이 있습니다. 다만 이번 조사로 정확한 날짜별 라인업(예: 12/26~12/31 몇 일간 출연했는지)까지는 확인하지 못했습니다(확인 필요).
+- **판정**: 2026-12-30·31 구체 라인업은 아직 미공개이나, "그리니치빌리지 소재 + 연례 전통 + 12/30~31에 걸쳐 있을 가능성" 세 조건을 모두 만족하는 가장 유력한 참고 후보입니다.
+
+### 27-2. Blue Note — Chris Botti 홀리데이 레지던시 (21년 연속 전통, 12/25~1/2 전체를 관통)
+
+- **위치**: 131 W 3rd St, 그리니치빌리지 — Village Vanguard와 마찬가지로 12/30 슬롯 후보지에 해당합니다.
+- **확인 내용**: 트럼페터 Chris Botti가 **2005년부터 매년 12월 Blue Note에 정착하는 "연례 홀리데이 레지던시"**를 이어오고 있습니다(직전 시즌 기준 21주년). 통상 **12월 중순부터 1월 초까지 약 4주간, 매일 2회(주 28일간 총 56회 공연) 전체를 채우는 규모**로, **크리스마스와 새해전야를 모두 포함하는 기간**입니다 — 이는 이번 여행 기간(12/25~1/2) 전체와 사실상 겹칩니다. WSJ가 그를 "빅애플의 12월 명물(a December institution)"이라 부를 정도로 확고히 자리잡은 연례 행사입니다.
+- **NYE 별도 프로그램**: 직전 사이클에는 "A Black & White New Year's Eve Celebration"이라는 이름의 12/31 전용 이벤트(도어 오픈 8pm, 행사 시작 9pm)도 별도로 확인됐습니다 — 이것이 Botti 레지던시의 NYE 회차인지, 별도 프로그램인지는 이번 조사로 명확히 구분하지 못했습니다(확인 필요).
+- **가격**: 이번 조사에서 2026-27 시즌 구체 가격을 확인하지 못했습니다(확인 필요) — Botti급 헤드라이너는 통상 Vanguard보다 높은 가격대로 알려져 있습니다.
+- **판정**: **20년 넘게 한 번도 끊기지 않은 전통이라는 점에서, 27장에서 조사한 모든 후보 중 "이번 여행 기간에 실제로 열릴 가능성"이 가장 높은 항목**입니다. 다만 정확한 12/30 그날 밤 라인업(Botti 본인인지, 게스트 아티스트인지)은 시즌 캘린더가 나와야 확인 가능합니다.
+
+### 27-3. Smoke Jazz & Supper Club — 콜트레인 페스티벌 "Countdown" 시리즈 (참고 정보, 그리니치빌리지 아님)
+
+- **위치**: 2751 Broadway(106th St 인근), 어퍼웨스트사이드 — **그리니치빌리지가 아니며 숙소(이스트빌리지)·기존 동선 어디와도 가깝지 않아** 12/30 슬롯 후보로는 부적합합니다(Dizzy's Club과 유사하게 도보 20분 이상권). 다만 발견된 정보가 매우 구체적이고 재즈+연말 조합의 완성도가 높아 순수 참고용으로 남겨둡니다.
+- **직전 사이클(13th Annual "Countdown 2026", 2025-12-10~2026-01-04) 확인 내용**: 5주에 걸쳐 매주 다른 헤드라이너가 존 콜트레인에게 헌정하는 공연을 진행. 이번 여행 날짜와 대응하는 구간(직전 사이클 기준)은 다음과 같았습니다.
+  - 12/24~25: Eddie Henderson with Vincent Herring Quintet feat. George Cables
+  - 12/26~27: Steve Turre with Vincent Herring Quintet
+  - 12/28: Steve Davis with Vincent Herring Quintet
+  - 12/29~30: Sarah Hanahan with Vincent Herring Quintet feat. Eric Scott Reed
+  - **12/31(새해전야)**: **Jazzmeia Horn & Smoke Jazz Club All-Stars**(Jazzmeia Horn·보컬, Vincent Herring·알토색소폰, Cyrus Chestnut·피아노, Johnathan Blake·드럼) — 두 세팅: 7:00pm(4코스 디너+공연 1회, **$250+세금/팁**), 9:30pm(4코스 디너+공연 2회+자정 샴페인 축배, **$350+세금/팁**)
+  - 1/1~4: Eric Alexander & Vincent Herring Quintet feat. Eric Scott Reed
+- **14th Annual "Countdown 2027"(이번 여행에 해당하는 시즌) 발표 여부**: 2026-08-13 현재 미발표로 확인됩니다. 13년 넘게 이어진 연례 행사라 재개최 가능성은 매우 높으나(확인 필요), 통상 9~10월경 발표되는 경향입니다.
+- **판정**: 위치상 채택 후보는 아니지만, "12/29~30에 걸쳐 헤드라이너가 배정되고 12/31에 별도 디너+쇼 패키지가 있다"는 구조 자체는 그리니치빌리지 클럽들의 운영 패턴을 유추하는 데 참고할 만합니다.
+
+### 27-4. Birdland / Iridium — 12/29 브로드웨이 대안 슬롯 참고 (기존 확정 계획, 신규 라인업 미확인)
+
+- 기존 T22(22장)에서 이미 12/29 브로드웨이 러시/로터리 실패 시 1순위 Birdland(315 W 44th St)·2순위 Iridium(1650 Broadway)으로 확정돼 있습니다. 이번 조사에서 두 업장의 **2026년 12월 구체 출연진**을 찾으려 시도했으나, 양쪽 모두 공개 캘린더에 해당 시점 정보가 아직 게시되지 않은 상태였습니다(확인 필요, 기존 22장의 요금·운영시간 정보는 그대로 유효).
+- 새로 확인된 것은 없으므로 기존 계획(Birdland→Iridium→TKTS 당일 재시도→허드슨야드 연장)은 변경 없이 유지됩니다.
+
+### 27-5. Jazz at Lincoln Center / Dizzy's Club Coca-Cola — 연말 프로그램 (참고용, 도보 20분+ 부적합 기존 결론 유지)
+
+- **위치**: 10 Columbus Circle — 기존 11-1·22-4에서 "숙소·기존 동선 어디와도 도보 20분 이상"이라는 이유로 이미 기각된 위치입니다. 이번 조사도 이 결론을 바꾸지 않습니다 — **아래는 순수 참고 정보이며 일정에 넣자는 제안이 아닙니다.**
+- **직전 사이클 확인 내용**: JALC는 매년 12월 "거의 매일" 공연이 있는 홀리데이 프로그램을 운영하며, JLCO(Jazz at Lincoln Center Orchestra)의 "Big Band Holidays" 연장 공연도 매년 포함됩니다. Dizzy's Club은 베이시스트 **Carlos Henriquez의 노넷(9인조)이 매년 연말 레지던시**를 갖습니다 — 직전 사이클 기준 12/26~27(7pm·9pm), 12/28(5pm·7:30pm), 12/29~30(7pm·9pm), **12/31 새해전야 특별 공연(7:30pm·11:00pm, 자정 샴페인 축배 포함)**으로, 그의 앨범 "A Nuyorican Tale"을 중심으로 한 아프로-카리브해 색채의 재즈를 연주합니다. 컬럼버스 서클 전망과 함께하는 구성입니다.
+- **가격 참고(기존 22-4 재인용)**: 티켓 약 $96~ + 세트당 $25 F&B 미니멈. NYE 전용 패키지 가격은 이번 조사로 별도 확인하지 못했습니다.
+- **판정**: 내용만 보면 이번 조사 전체에서 "재즈 성격이 가장 진하고, 거의 여행 기간 내내 걸쳐 있는" 프로그램이지만, 위치 문제로 기존 결론(부적합)을 유지합니다. 만약 부부가 위치 불편을 감수하고서라도 "재즈에 올인하는 저녁 하나"를 특별히 원한다면, 이번 조사 범위 내에서는 Dizzy's Club의 Carlos Henriquez NYE 공연이 콘텐츠 면에서 가장 강력한 후보라는 점만 참고로 남깁니다(반영 여부는 전적으로 사용자 선택 사항).
+
+### 27-6. 새해 첫날(1/1) 낮 재즈 브런치 — 확인된 것 없음
+
+- Village Vanguard·Blue Note·Smoke·Birdland·Iridium·Dizzy's Club 어디에서도 **1/1 낮 시간대(브런치대) 전용 재즈 이벤트**를 확인하지 못했습니다. 클럽들의 새해 관련 프로그램은 전부 12/31 밤(자정 카운트다운 포함) 공연이거나, 1/1 저녁부터 재개되는 통상 야간 세트(예: Smoke의 경우 직전 사이클 기준 1/1~4 Eric Alexander & Vincent Herring Quintet, 저녁 세트)였습니다.
+- 참고할 만한 유일한 정기 프로그램은 **Blue Note의 상시 "Sunday Jazz Brunch" 시리즈**(정오~오후, 라이브 재즈 + 브런치 메뉴, 매주 일요일 1:00pm·3:30pm 두 세팅 운영)입니다. 다만 **2027년 1월 1일은 금요일**이라 이 정기 일요일 시리즈에 해당하지 않습니다 — 그날 특별히 브런치 세트를 여는지는 확인하지 못했습니다.
+- **판정**: 사용자가 언급한 "낮 시간대 부담 없는 재즈 브런치"에 정확히 부합하는 이벤트는 이번 조사로 찾지 못했습니다. 1/1이 이미 캐주얼 저녁으로 다운그레이드된 상태이므로, 낮 시간대에 무리해서 특정 재즈 이벤트를 넣기보다는 기존 계획(자유 일정)을 유지하고, 저녁에 앞서 언급된 업장들 중 하나에 즉흥적으로 들르는 정도가 현실적입니다(확인 필요 목록에 재조사 대상으로 남겨둠).
+
+### 27-7. 종합 정리 (참고용 표)
+
+| 클럽 | 위치·동선 | 12/29 관련성 | 12/30 관련성 | 12/31 NYE | 1/1 | 2026-27 시즌 확정 여부 |
+|---|---|---|---|---|---|---|
+| **Village Vanguard** | 그리니치빌리지(적합) | — | **유력 후보**(Chris Potter Quartet 연례 런 가능성) | 연례 새해전야 런 확인(직전 사이클) | 미확인 | **미발표**(패턴상 반복 유력) |
+| **Blue Note** | 그리니치빌리지(적합) | — | **유력 후보**(Chris Botti 레지던시 21년 전통) | Black & White NYE Celebration(직전 사이클) | Sunday Brunch는 요일 불일치 | **미발표**(20년 넘게 무중단이라 반복 신뢰도 최고) |
+| **Smoke Jazz & Supper Club** | UWS(부적합, 참고용) | — | Sarah Hanahan Quintet(직전 사이클, 참고) | Jazzmeia Horn $250~350 디너쇼(직전 사이클) | 저녁 세트만 재개 | **미발표**(14th Annual "Countdown 2027") |
+| **Birdland** | 극장가(기존 확정 후보) | **기존 1순위**(라인업 미확인) | — | 미확인 | 미확인 | 미확인 |
+| **Iridium** | 타임스퀘어(기존 확정 후보) | **기존 2순위**(라인업 미확인) | — | 미확인 | 미확인 | 미확인 |
+| **Dizzy's Club(JALC)** | 컬럼버스서클(부적합, 참고용) | — | — | Carlos Henriquez Nonet NYE(직전 사이클, 참고) | 미확인 | **미발표**(패턴상 반복 유력) |
+
+### 27-8. 확인 필요 사항 (27장 관련, 신규)
+
+1. Village Vanguard의 2026년 12월 실제 캘린더(특히 12/29~31 라인업)와 NYE 정확한 가격 — 통상 9~11월경 공개.
+2. Blue Note의 2026년 12월 Chris Botti 레지던시 실제 일정·가격, 그리고 "Black & White NYE Celebration"이 레지던시와 별도 이벤트인지 여부.
+3. Smoke Jazz & Supper Club "14th Annual Coltrane Festival(Countdown 2027)" 공식 발표 여부(예상 9~10월) — 위치상 채택 후보는 아니나 참고용 재확인.
+4. Birdland·Iridium의 2026년 12월 실제 출연진(기존 22장 계획의 가격·운영시간은 평시 기준이라 연말 특별 프로그램으로 대체될 가능성 있음).
+5. Jazz at Lincoln Center/Dizzy's Club의 2026-27 홀리데이 시즌 보도자료(예상 10월경) 및 Carlos Henriquez 노넷 재출연 여부.
+6. 1/1 낮 시간대 재즈 브런치성 이벤트 — 이번 조사로 확인된 것이 없어, 출발 임박 시 각 클럽 SNS·jazznearyou.com 등에서 재조사 권장.
+
+출처: [Village Vanguard 공식 — NYE 2026 with Chris Potter Quartet](https://villagevanguard.com/event/new-years-eve-2026-with-chris-potter-quartet), [Village Vanguard 공식 FAQ](https://villagevanguard.com/faq), [Chris Potter 공식 Facebook — 연례 NYE 런 언급](https://www.facebook.com/chrispottermusic/), [Chris Botti Blue Note 홀리데이 레지던시 — amNY](https://www.amny.com/entertainment/music/jazz-trumpeter-chris-botti-holiday-residency-blue-note-greenwich-village/), [Chris Botti Blue Note 레지던시 — Relix](https://relix.com/blogs/exposed/detail/chris-botti-kicks-off-annual-holiday-residency-at-blue-note-jazz-club-a-gallery/), [Blue Note 공식 — Black & White NYE Celebration](https://thebluenote.com/event/ablack-white-new-years-eve-celebration/), [Blue Note 공식 — Shows](https://www.bluenotejazz.com/nyc/shows/), [Smoke Jazz Club — 13th Annual Coltrane Festival 라인업, BroadwayWorld](https://www.broadwayworld.com/article/Smoke-Jazz-Club-Unveils-December-2025-Lineup-Including-The-13th-Annual-Coltrane-Festival-and-More-20251029), [Smoke Jazz Club — Countdown 2026 상세, HotHouse Jazz](https://www.hothousejazz.com/blog_detail/COUNTDOWN-2026-COLTRANE-FESTIVAL), [Jazz at Lincoln Center 26-27 시즌 개요](https://jazz.org/concerts-events/26-27-season-concerts/), [Dizzy's Club NYE — Carlos Henriquez Nonet 보도자료 정보(2025 사이클), Jazz at Lincoln Center Press](https://press.jazz.org/press/2025/10/ring-in-the-holidays-at-jazz-at-lincoln-center/), [Dizzy's Club NYE 티켓 페이지 예시](https://ticketing.jazz.org/19970) (조사 시점: 2026-08-13. **주의**: 위 라인업·가격 정보 대부분은 2025년 12월~2026년 1월 "직전 사이클" 기준이며, 이번 여행이 해당하는 2026년 12월~2027년 1월 시즌 정보는 대부분 아직 미발표 상태입니다. 매년 반복되는 연례 전통이라는 점에서 참고 가치는 높으나, 출발 임박 시(10~11월경) 반드시 공식 사이트에서 재확인이 필요합니다.)
+
+---
+
 ## 다음 단계 안내
 
 **⚠ [2026-08-11, 최우선 공지] 20장을 반드시 먼저 확인하세요.** 14장·16장(귀국편 라운지 조사) 전체가 전제하는 "아시아나 JFK 출발 = 터미널 1"은 여러 독립 소스로 재확인해 여전히 최선의 근거를 갖고 있으나, **JFK 터미널 1 건물 자체가 "New Terminal One" 신축 공사로 대체되는 중이며 이미 최소 1개 항공사(터키항공)의 이전이 확정**되어 있음을 발견했습니다. 즉 14장·16장의 라운지 정보(KAL·Primeclass·Turkish·Air France·Lufthansa·VIPOne)는 **"현재 기준 유효, 그러나 여행 당일까지 그대로 유지된다는 보장은 없는 잠정 정보"**로 취급해야 합니다. 대한항공·아시아나의 New Terminal One 이전 여부·시점은 확인하지 못했고, 항공권(e-티켓)에 터미널이 아직 확정 표기되지 않았을 가능성도 있어 **사용자가 출발 임박 시(늦어도 온라인 체크인 시점) 직접 재확인이 필요**합니다. 세부는 20-1~20-6.
@@ -1876,3 +2013,5 @@ itinerary-planner는 본 문서를 입력으로 하되, 숙소 최종 선택·�
 **[업데이트 2026-08-13, 추가] 25-7(유료 예약제·지정시간 입장 재조사 — 사용자 반박 정보 검증)을 신설함.** 사용자가 "블로그·유튜브를 보면 예약시간에 맞춰 펜스 안으로 걸어 들어가는 사람들이 있다"며 25장의 "오후 9시 이후 진입 강력히 비권장" 결론에 반박 정보를 제시해, 무료 선착순 펜과는 별개인 유료 예약제·지정시간 입장 옵션을 재조사했습니다. **핵심 결론: 사용자의 반박은 타당했습니다.** 유료 벤뉴(레스토랑·바·루프탑·호텔) 티켓 소지자는 무료 일반 펜이 마감된 이후(오후 7~9시대)에도 NYPD 지정 체크포인트를 통해 통제구역에 정상 입장할 수 있음을 확인(nycnewyears.com: "regardless of admittance time... enter... no later than 8 PM"). **다만 이는 "무료 펜에 유료로 늦게 들어가는 것"이 아니라 "무료 펜과 완전히 별개인, 자체 건물에서 관람하는 유료 패키지"**이며(25-7-3), 이 늦은 입장이 가능한 옵션 중 볼드롭 육안 조망이 "보장"되는 것은 여전히 대부분 $500/인 이상(24장 결론과 일치)입니다. $200~350 예산대(Family Pass $159~, Dallas BBQ $199~299, Haven Rooftop $149~)는 늦은 입장은 가능하나 볼드롭은 실내 스크린 중계가 중심이라 육안 조망까지는 보장하지 못합니다(Elsie Rooftop만 등급별 조망 옵션이 있어 보이나 2026 시즌 티켓 미오픈으로 가격 미확인, 확인 필요). balldrop.com은 뉴욕시 공식 주최측이 아니라 이런 유료 패키지를 중개 판매하는 사설 티켓 플랫폼임도 이번에 새로 확인했습니다(25-7-1, 25장 서술 정정). 결과적으로 **25장의 "무료 펜" 관련 결론(오후 4~6시 마감, 비권장)은 그대로 유지되지만 "유료 옵션 부재" 인상을 줄 수 있었던 부분은 이 장으로 보완**했고, **24장의 "$200~350대 조망 보장 없음, Trattoria가 유일" 결론도 뒤집히지 않았습니다.** `02-itinerary-draft.md`는 이 조사로 수정하지 않았으며, 최종 판단은 사용자 확인 후 진행 필요. 세부는 25-7-0~25-7-6.
 
 **[업데이트 2026-08-13, 추가] 24장(Trattoria 완전 예약 실패 대안 재조사 + 1/1 특별 디너 확정 조사)을 신설함.** (1) 사용자가 "볼드롭 조망 없는 대안은 의미가 약하다·부부는 술을 안 마셔 오픈바 중심 업장은 안 맞는다"는 조건으로 재요청해, 조망 있는 레스토랑 대안을 폭넓게 재조사했습니다. **결과: $200~350/인 예산대에서 볼드롭이 실제로 "보장"되는 레스토랑은 이번 조사 범위에서 찾지 못했습니다.** 조망이 보장되는 곳은 전부 $500/인 이상(Brooklyn Diner $500, Rosie O'Grady's $675~745, Applebee's 50th St점 $849 등)이었고, 그 가격대조차 예외 없이 오픈바가 기본 포함된 구조였습니다. "레스토랑이 아닌 형태"로 검토한 **호텔 객실 뷰(Marriott Marquis 등)도 1박 $1,200~2,500+에 최소 3박 연속 투숙 조건**이 붙어 있어 이미 결제 완료한 8박 숙소 구조와 근본적으로 맞지 않아 실행 불가로 판정했습니다. **결론적으로 "예산+조망+비오픈바" 세 조건을 동시에 만족하는 곳은 Trattoria Dell'Arte 자신이 사실상 유일**하다는 점이 재확인됐습니다. 이에 따라 사용자가 미리 갈래를 정해둘 것을 제안합니다: ① Trattoria 예약 성공에 자원을 집중 ② 조망을 포기 못하면 예산을 $500+/인으로 확장(Brooklyn Diner가 그중 최저가) ③ 오픈바 아닌 식사 중심을 지키려면 조망 포기(기존 4개 대안을 오픈바 여부로 재정렬 — Union Square Cafe 최우선, Members Only는 오픈바 패키지라 최후순위). 11/30 데드라인 전제는 23-2(B1)와 동일하게 유지됩니다. (2) **1/1 특별 디너는 The Bar Room at The Modern(MoMA 부속, 록펠러 도보 3~5분, 목표 예산 부합, 연중무휴 영업시간 공개, 예약은 최대 28일 전=12/4부터 가능해 기존 체크리스트 데드라인과 정확히 일치)을 안전한 기본 추천**으로 제시하고, **Rainbow Room(록펠러 센터 65층, $175/인 프리픽스+라이브 밴드 디너&댄싱)을 재즈·기념일 취향에 가장 잘 맞는 "예산 초과·드레스코드 감수 스플러지" 옵션으로 병행 제안**했습니다. 단 Rainbow Room은 **1/1(금)이 실제 공개 운영일인지 자체가 자료 간 상충으로 불확실**해 최우선 확인이 필요합니다. Sea Fire Grill(구 Sea Grill 계열 시푸드)은 3순위로, 메뉴 가격·신정 영업 모두 미확인 상태로 근거가 가장 약합니다. `02-itinerary-draft.md`는 이 조사로 수정하지 않았으며, 최종 선택은 사용자 확인 후 itinerary-planner의 몫입니다. 세부는 24-0~24-7.
+
+**[업데이트 2026-08-13, 추가] 26장("레스토랑 자체 바리케이드/전용 옥외 관람 구역" 방식 — 다른 후보 재조사)을 신설함.** 사용자가 Trattoria Dell'Arte 공식 페이지의 "a specially barricaded area in front of the restaurant"라는 구체적 문구를 근거로 "이런 방식을 쓰는 곳이 더 있을 텐데 24장 재조사 때 놓친 것 아니냐"고 지적해, **이 구체적 메커니즘(레스토랑이 건물 앞 도로·보도를 자체 바리케이드로 손님 전용 구역화)을 특정해서** 재검색하고, 24장이 이미 조사했던 5곳(Brooklyn Diner·Rosie O'Grady's·Applebee's·Bond 45·The View)의 공식 페이지를 이번엔 직접 WebFetch로 원문 확인했습니다. **핵심 결론: 사용자의 지적은 부분적으로 맞았습니다** — Rosie O'Grady's("Cordoned off View of the Ball Drop"·"exclusive, cordoned-off sidewalk")와 Olive Garden("exclusive outdoor viewing area")이 Trattoria와 사실상 동일한 메커니즘을 쓰고 있음을 이번에 명확한 문구로 확인했습니다. **그러나 $200~350/인 예산대 안에서는 이번에도 Trattoria가 유일합니다** — 같은 방식을 쓰는 두 곳 모두 $675~800+로 Trattoria의 2.5배 이상이고 오픈바가 필수 포함이라, 24장이 이미 파악한 "조망 보장은 전부 $500+·오픈바 포함" 패턴을 벗어나지 못했습니다. 추가로 검토한 예산대 내 후보(Havana Central $229, Yard House $159, Chicken Guy $449)는 조망 자체가 없거나(TV 중계) 비보장을 스스로 명시하고 있어 조건에 맞지 않았습니다. **부수적 정정 2건**: (1) Applebee's의 조망은 24장이 "보장"으로 기재했으나 공식 페이지엔 "당일 보안 상황에 따라 다르고 안 보여도 환불 없음"이라는 단서가 있어 실제로는 더 불확실합니다(채택 후보가 아니라 실질 영향은 없음). (2) The View는 2026 NYE에 호텔 투숙객 전용 파티로 전환돼 애초에 레스토랑 단독 예약이 불가능함을 새로 확인했습니다. **Trattoria 시작 시각도 공식 페이지에서 재확인한 결과 "7:00 PM onwards"는 NYE 특별 디너 자체의 예약 시작 시각으로 명시돼 있어, `02-itinerary-draft.md`의 20:00 표기와 1시간 차이가 있다는 점을 확인했습니다(원인은 8시 별도 슬롯 존재 가능성 또는 초안 착오 — 미확정, itinerary-planner 확인 필요).** `02-itinerary-draft.md`는 이번 조사로 수정하지 않았습니다. 세부는 26-0~26-5.
