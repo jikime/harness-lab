@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴욕 여행 준비 대시보드 v15</title>
+    <title>뉴욕 여행 준비 대시보드 v16</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <style>
@@ -45,8 +45,8 @@
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
             <h1 class="text-3xl font-bold text-gray-800 mb-2">뉴욕 가족 여행 준비 대시보드</h1>
             <p class="text-gray-600">2026-12-25 ~ 2027-01-02 (8박 9일) | 성인 2명(부부)</p>
-            <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">D-129 · 2026-08-18 기준 출발까지</span></p>
-            <p class="text-sm text-gray-500 mt-2">v15 업데이트 — 1/1 아침 CPRC New Year's Day 5K 추가 + 12/31 Trattoria 완전 실패 시 Midnight Run 폴백 교체 + 4가지 새로운 조건부 경고(수면 부족, 대중교통 2시간 초과일 2건, 격식 정찬 0회, 5K와 Midnight Run 동시 불가)</p>
+            <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">D-129 · 2026-08-20 기준 출발까지</span></p>
+            <p class="text-sm text-gray-500 mt-2">v16 업데이트 — 12/31 Trattoria 삭제, Midnight Run 기본 계획 승격(Trattoria 예약은 아예 하지 않음) + 1/1 아침 CPRC 5K 자동 해제(T29 규정 발동, ~11:30 늦잠·완전 회복으로 복구) + 예산 변경(새해 전야 900,000→300,000원, 미배분 690,000→1,290,000원) + 6가지 v16 조건부 사항 추가</p>
         </div>
 
         <!-- 우리는 이런 여행자입니다 -->
@@ -69,7 +69,6 @@
                             <li>✓ 12/27: 9/11 메모리얼 → 로어맨해튼 도보 → 브루클린 브리지 횡단</li>
                             <li>✓ 12/28: 센트럴파크 남하 산책(90분)</li>
                             <li>✓ 12/29: 하이라인 산책</li>
-                            <li>✓ <strong>1/1: 아침 CPRC New Year's Day 5K(신규)</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -173,7 +172,7 @@
 
         <!-- 예산 요약 표 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v15 — 아침 5K + Midnight Run 폴백 추가, 예산 무변동)</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v16 — Trattoria 삭제·Midnight Run 기본화·예산 재배분)</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead class="bg-gray-100 border-b">
@@ -186,26 +185,26 @@
                     <tbody>
                         <tr class="border-b"><td class="px-3 py-2">항공권</td><td class="text-right px-3 py-2 font-semibold">2,800,000원</td><td class="text-right px-3 py-2 text-gray-600">18.7%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">숙소(8박)</td><td class="text-right px-3 py-2 font-semibold">2,480,000원</td><td class="text-right px-3 py-2 text-gray-600">16.5%</td></tr>
-                        <tr class="border-b"><td class="px-3 py-2">식비(유명·캐주얼·간식)</td><td class="text-right px-3 py-2 font-semibold">2,565,000원</td><td class="text-right px-3 py-2 text-gray-600">17.1%</td></tr>
+                        <tr class="border-b"><td class="px-3 py-2">식비(유명·캐주얼·간식)</td><td class="text-right px-3 py-2 font-semibold">2,905,000원</td><td class="text-right px-3 py-2 text-gray-600">19.4%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">액티비티(전망대·공연)</td><td class="text-right px-3 py-2 font-semibold">1,750,000원</td><td class="text-right px-3 py-2 text-gray-600">11.7%</td></tr>
-                        <tr class="border-b"><td class="px-3 py-2">새해 전야(Trattoria)</td><td class="text-right px-3 py-2 font-semibold">900,000원</td><td class="text-right px-3 py-2 text-gray-600">6.0%</td></tr>
+                        <tr class="border-b"><td class="px-3 py-2">새해 전야(캐주얼+Midnight Run)</td><td class="text-right px-3 py-2 font-semibold">300,000원</td><td class="text-right px-3 py-2 text-gray-600">2.0%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">이동(공항·시내)</td><td class="text-right px-3 py-2 font-semibold">800,000원</td><td class="text-right px-3 py-2 text-gray-600">5.3%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">쇼핑·기념품</td><td class="text-right px-3 py-2 font-semibold">695,000원</td><td class="text-right px-3 py-2 text-gray-600">4.6%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">브로드웨이 러시</td><td class="text-right px-3 py-2 font-semibold">320,000원</td><td class="text-right px-3 py-2 text-gray-600">2.1%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">보험</td><td class="text-right px-3 py-2 font-semibold">100,000원</td><td class="text-right px-3 py-2 text-gray-600">0.7%</td></tr>
                         <tr class="bg-blue-50 border-b"><td class="px-3 py-2 font-bold">예비비</td><td class="text-right px-3 py-2 font-bold text-blue-600">1,900,000원</td><td class="text-right px-3 py-2 text-blue-600">12.7%</td></tr>
-                        <tr class="bg-green-50"><td class="px-3 py-2 font-bold">미배분(여유)</td><td class="text-right px-3 py-2 font-bold text-green-600">690,000원</td><td class="text-right px-3 py-2 text-green-600">4.6%</td></tr>
+                        <tr class="bg-green-50"><td class="px-3 py-2 font-bold">미배분(여유)</td><td class="text-right px-3 py-2 font-bold text-green-600">1,290,000원</td><td class="text-right px-3 py-2 text-green-600">8.6%</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600"><strong>총 예산:</strong> <span class="text-lg font-bold text-blue-600">15,000,000원</span> | 예비비+미배분: 2,590,000원(17.3%)</p>
+                <p class="text-sm text-gray-600"><strong>총 예산:</strong> <span class="text-lg font-bold text-blue-600">15,000,000원</span> | 예비비+미배분: 3,190,000원(21.3%)</p>
             </div>
         </div>
 
         <!-- 예산 차트 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 항목별 비중 (식비·쇼핑·액티비티 중심)</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 항목별 비중 (식비·액티비티·새해전야 중심)</h2>
             <div class="w-full" style="max-width: 500px; margin: 0 auto; min-height: 300px;">
                 <canvas id="budgetChart"></canvas>
             </div>
@@ -337,12 +336,7 @@
                 <!-- v14 신규: Blue Note 경고 -->
                 <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
                     <strong>⚠️ Blue Note 재즈클럽 예산 부족 가능성 (v14 조건부 사항 1):</strong><br>
-                    <span class="text-xs"><strong>예산 140,000원은 2인 약 $105에 해당하는데, Vanguard 평시 커버 상단($50/인) + 음료 미니멈만 적용해도 2인 약 $130(≈173,000원)으로 이미 초과됩니다.</strong> Chris Botti 급 헤드라이너는 통상 더 높은 가격대입니다. 차액 조달 순서: 액티비티 버퍼(230,000) → 미배분 여유(690,000) → 예비비(1,900,000) → Smalls/Mezzrow(평시 기준)로 전환 가능합니다.</span>
-                </div>
-                <!-- v14 신규: Trattoria만 격식있는 정찬 -->
-                <div class="mt-2 pt-2 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
-                    <strong>⚠️ 이 여행의 격식 있는 정찬은 12/31 Trattoria 하나뿐 (v14 조건부 사항 2):</strong><br>
-                    <span class="text-xs"><strong>v13에서 1/1 "특별 디너"를 캐주얼 저녁(60,000원)으로 다운그레이드했으므로, 이제 유일한 정찬 경험은 12/31 Trattoria입니다.</strong> Trattoria 예약 실패 시 대안 Union Square Cafe는 볼드롭 조망이 보장되지 않습니다.</span>
+                    <span class="text-xs"><strong>예산 140,000원은 2인 약 $105에 해당하는데, Vanguard 평시 커버 상단($50/인) + 음료 미니멈만 적용해도 2인 약 $130(≈173,000원)으로 이미 초과됩니다.</strong> Chris Botti 급 헤드라이너는 통상 더 높은 가격대입니다. 차액 조달 순서: 액티비티 버퍼(230,000) → 미배분 여유(1,290,000) → 예비비(1,900,000) → Smalls/Mezzrow(평시 기준)로 전환 가능합니다.</span>
                 </div>
                 <!-- 조건부 사항 1: 피터루거 백업 경고 -->
                 <div class="mt-2 pt-2 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
@@ -359,49 +353,59 @@
             <!-- Day 7 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-purple-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야</h3><p class="text-sm text-purple-600 font-semibold">⚠️ Trattoria가 유일한 정찬 (Midnight Run 폴백 가능)</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야 · Midnight Run 기본 계획</h3><p class="text-sm text-purple-600 font-semibold">⚠️ Trattoria 삭제됨, Midnight Run이 확정 기본 계획</p></div>
                     <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">특별</span>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">주간</span><span>자유 활동 및 개인 쇼핑</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:15~18:10</span><span>숙소 휴식·드레스업 (115분, v14 기준)</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:00~00:30</span><span><strong>[유일한 정찬] Trattoria Dell'Arte</strong> (카네기홀 인근, 7코스 $275/인, 볼드롭 조망 가능) <span class="text-red-600 font-semibold">[v14]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">자정</span><span>새해 맞이 (실내·샴페인 토스트)</span></div>
+                    <div class="flex gap-2"><span class="time-label">09:30~10:20</span><span>QC NY Spa 도착·준비</span></div>
+                    <div class="flex gap-2"><span class="time-label">11:30~15:00</span><span><strong>QC NY Spa</strong> (32 E 32nd St, 패키지 서비스)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:00~15:35</span><span>페리 → East River 복귀 (약 35분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:35~16:15</span><span>페리 승강장 → 숙소 (도보 약 40분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">16:15~18:30</span><span><strong>숙소 휴식·캐주얼 복장 준비</strong> (135분, v16: 드레스업 불필요)</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:30~19:30</span><span><strong>[캐주얼] 이스트빌리지 저녁 끼니</strong> (워크인, 예약 불가)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:30~22:30</span><span>숙소 복귀·대기·방한 레이어링 준비(3시간, 새해 준비)</span></div>
+                    <div class="flex gap-2"><span class="time-label">22:30~23:15</span><span>숙소 출발 → 센트럴파크 Naumburg Bandshell 도착 (약 45분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">23:15~자정</span><span>Naumburg Bandshell 도착·집결</span></div>
+                    <div class="flex gap-2"><span class="time-label">자정</span><span><strong>NYRR Midnight Run 스타트</strong> (4마일/약 6.4km)</span></div>
+                    <div class="flex gap-2"><span class="time-label">자정~01:00</span><span>레이스 진행</span></div>
+                    <div class="flex gap-2"><span class="time-label">01:00~01:20</span><span>레이스 완주·불꽃놀이 관람(약 20분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">01:20~01:40</span><span>Naumburg Bandshell → 센트럴파크 출구</span></div>
+                    <div class="flex gap-2"><span class="time-label">01:40~02:25</span><span>센트럴파크 → 숙소 (도보·지하철 약 45분)</span></div>
                 </div>
-                <!-- v14 신규: 버퍼 축소 경고 -->
+                <!-- v16 신규: 6가지 조건부 사항 -->
                 <div class="mt-3 pt-3 border-t border-purple-200 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ 12/31 숙소 휴식·드레스업 버퍼 축소 (v14 조건부 사항 3):</strong><br>
-                    <span class="text-xs"><strong>Trattoria 착석이 20:00→19:00으로 정정되면서 버퍼가 175분(2시간 55분)→115분(1시간 55분)으로 60분 단축되었습니다.</strong> 12/31은 9일 중 대중교통 이동이 2시간을 초과하는 날이므로, 이 날 유일한 완충이 대폭 축소된 점을 인지하세요.</span>
+                    <strong>⚠️ v16 조건부 사항 1 — 격식 있는 정찬이 이 여행에 한 번도 없음:</strong><br>
+                    <span class="text-xs"><strong>12/31 Trattoria(유일한 정찬)가 삭제되고, 1/1도 캐주얼 저녁이므로 전체 9일 중 형식 있는 식사 경험이 0회입니다.</strong> v13에서 1/1 "특별 디너"를 이미 캐주얼로 다운그레이드했으므로, 이것이 최종 상태입니다.</span>
                 </div>
-                <!-- v14 신규: Trattoria 착석 미확정 -->
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ Trattoria 착석 19:00은 확정 정보 아님 (v14 조건부 사항 4):</strong><br>
-                    <span class="text-xs"><strong>공식 페이지 원문에서 "Time: 7:00 PM onwards(19:00부터)"를 확인했으나, 레스토랑이 여러 시팅 타임을 운영할 수 있고 8시 슬롯 존재 여부는 이번 조사로 확인하지 못했습니다.</strong> 예약 확정 시 실제 시팅 시각을 반드시 재확인하세요.</span>
+                    <strong>⚠️ v16 조건부 사항 2 — 볼드롭 조망이라는 원래 목표가 상실됨:</strong><br>
+                    <span class="text-xs"><strong>Trattoria는 한정된 실내 좌석에서 빌딩 밖 야경을 보는 구조였으나, Midnight Run은 야외 레이스이므로 "센트럴파크 야경과 불꽃·새해맞이" 경험입니다.</strong> 목표(볼드롭 조망)와 대체 경험(Midnight Run 참가)은 서로 다른 활동입니다. 볼드롭은 이제 이 여행에서 보장되지 않습니다.</span>
                 </div>
-                <!-- v15 신규: Midnight Run 폴백 -->
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ Trattoria 완전 예약 실패 시 폴백 (v15 조건부 사항 1):</strong><br>
-                    <span class="text-xs"><strong>Trattoria 좌석 자체를 못 잡으면 → 「캐주얼 저녁(18:30~19:30) + 자정 센트럴파크 NYRR Midnight Run 참가 또는 관람」으로 교체됩니다.</strong> 이 폴백이 발동되면 이 여행의 유일한 격식 있는 정찬이 0회로 확정됩니다(v15 조건부 사항 3). 단, 1/1 아침 CPRC 5K와는 동시 실행 불가이므로(아래 Day 8 참고), 둘 다 발동되면 5K를 포기해야 합니다(v15 조건부 사항 4).</span>
+                    <strong>⚠️ v16 조건부 사항 3 — 부부 중 최소 1인이 자정에 4마일을 완주해야 하며, 손목밴드 없이는 핵심 구역 입장 불가:</strong><br>
+                    <span class="text-xs"><strong>핵심 구역(72번가 체크포인트 안쪽·Naumburg Bandshell·불꽃놀이)에는 ① 배번을 단 등록 러너와 ② 그 러너가 받아 건네는 손목밴드를 가진 동반 게스트 1인만 입장 가능합니다.</strong> 즉 부부 중 누가 등록해서 실제로 4마일을 뛸지는 아직 미정입니다. <strong>최우선 확인 사항</strong>입니다.</span>
                 </div>
-                <!-- 기존 참고 -->
-                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-xs text-purple-900">
-                    <strong>참고:</strong> 본 여행 9일 중 <strong>대중교통 이동이 2시간을 초과하는 날은 12/31(Day 7)과 1/1(Day 8) 2일입니다</strong> (루즈벨트 아일랜드 트램은 왕복 관광 체험으로 분류되어 Day 4 이동 합계 제외됨, v9 확정). v15에서 Day 8 아침 5K 추가로 Day 8이 최대 초과일(145~150분)이 되었습니다.
+                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
+                    <strong>⚠️ v16 조건부 사항 4 — 12/31 이동시간 약 152분, 2시간 초과 32분(9일 중 최대), 귀가 02:25:</strong><br>
+                    <span class="text-xs"><strong>이동 구성: 페리 복귀 35 + 페리승강장→숙소 40 + 숙소→센트럴파크 45 + 센트럴파크→숙소 45 = 약 152분(= 2시간 32분 초과).</strong> 자정 후 센트럴파크에 가는 것 자체가 이 여행에서 가장 오래 걸리는 이동이며, 귀가가 새벽 02:25이므로 다음 날(1/1) 수면이 제약됩니다.</span>
+                </div>
+                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
+                    <strong>⚠️ v16 조건부 사항 5 — 2025년 낙뢰로 레이스가 전면 취소된 전례 있음, 새로운 폴백 체인은 설계하지 않음:</strong><br>
+                    <span class="text-xs"><strong>직전 해(2025년)의 NYRR Midnight Run이 낙뢰로 인해 레이스와 불꽃놀이가 모두 취소된 사례가 있습니다.</strong> 대응 방침: 취소되면 숙소 인근에서 캐주얼하게 새해를 맞습니다. 새 폴백 체인을 만들지 않는 이유는 Midnight Run이 이제 "폴백"이 아니라 "기본 계획"이기 때문입니다.</span>
+                </div>
+                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900">
+                    <strong>⚠️ v16 조건부 사항 6 — 미배분 1,290,000원은 단순 안전 마진이 아니라 두 차례 지출을 포기한 결과:</strong><br>
+                    <span class="text-xs"><strong>미배분 여유가 690,000에서 1,290,000으로 증가한 것은 Trattoria 삭제로 600,000원이 포기됐기 때문입니다.</strong> 이는 v13의 1/1 특별 디너 다운그레이드(340,000원 포기) + v16 Trattoria 삭제(600,000원 포기)의 누적 결과입니다. 즉 단순히 "남은 돈"이 아니라 "포기된 경험의 대가"입니다.</span>
                 </div>
             </div>
 
             <!-- Day 8 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-blue-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">💕 Day 8 — 01/01(금) 새해 첫날 · 아침 5K + 회복일</h3><p class="text-sm text-blue-600 font-semibold">⚠️ 수면 5시간~5시간15분 · 대중교통 2시간 초과</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">💕 Day 8 — 01/01(금) 새해 첫날 · 늦잠·완전 회복</h3><p class="text-sm text-blue-600 font-semibold">⚠️ v16: 아침 CPRC 5K 자동 해제됨</p></div>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">07:30~08:00</span><span><strong>[v15·신규] 기상·러닝 복장 착용·수분 보충</strong> — 전날 02:15~02:30 취침, 실제 수면 약 5시간~5시간15분 <span class="text-red-600 font-semibold">[v15]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">08:00~08:45</span><span><strong>[v15·신규] 숙소 → 센트럴파크 Loeb Boathouse</strong> (도보 및 지하철 약 45분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">08:45~09:00</span><span><strong>[v15·신규] 집결·현장 확인·워밍업</strong> (사전 온라인 등록 필요)</span></div>
-                    <div class="flex gap-2"><span class="time-label">09:00~10:00</span><span><strong>[v15·신규] CPRC New Year's Day 5K</strong> (무료, 참가 또는 관람) — ⚠️ <strong>2027년 실제 개최 미확인</strong> <span class="text-blue-600 font-semibold">[v15]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">10:00~10:15</span><span><strong>[v15·신규] 정리·수분 보충·귀가 준비</strong></span></div>
-                    <div class="flex gap-2"><span class="time-label">10:15~11:00</span><span><strong>[v15·신규] Loeb Boathouse → 숙소</strong> (도보 및 지하철 약 45분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">11:00~12:00</span><span><strong>[v15·신규] 숙소 샤워·환복·휴식</strong> (이날 남은 유일한 "회복" 구간)</span></div>
+                    <div class="flex gap-2"><span class="time-label">~11:30</span><span><strong>늦잠·완전 회복</strong> (전날 새벽 02:25 귀가 반영, 아침 일정 없음)</span></div>
                     <div class="flex gap-2"><span class="time-label">12:00~13:30</span><span><strong>[캐주얼] 이스트빌리지·그리니치 빌리지 브런치</strong> (신정 영업 사전 확인 필요)</span></div>
                     <div class="flex gap-2"><span class="time-label">13:45~14:15</span><span>숙소 → 센트럴파크 남단 (지하철 약 30분)</span></div>
                     <div class="flex gap-2"><span class="time-label">14:30~16:15</span><span>센트럴파크 남단 산책 — The Pond, Gapstow Bridge, Sheep Meadow</span></div>
@@ -410,25 +414,10 @@
                     <div class="flex gap-2"><span class="time-label">18:30~21:00</span><span><strong>[캐주얼] 미드타운 인근 캐주얼 저녁</strong> (예약 없이 워크인)</span></div>
                     <div class="flex gap-2"><span class="time-label">21:15~21:50</span><span>미드타운 → 숙소 (지하철 약 25~30분)</span></div>
                 </div>
-                <!-- v15 신규: 수면 부족 경고 -->
-                <div class="mt-3 pt-3 border-t border-blue-200 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900 mb-2">
-                    <strong>⚠️ 1/1이 더 이상 순수 회복일이 아님 (v15 조건부 사항 1):</strong><br>
-                    <span class="text-xs"><strong>전날 자정 카운트다운 이후 실제 수면은 약 5시간~5시간15분입니다.</strong> 조사노트 추정치(5.5~6.5시간)보다 30~60분 짧으므로, 아침 5K 참가 시 수면 부족 상태입니다. 체력이 있다면 무난하지만, 회복일을 넣은 설계 취지와는 배치됩니다.</span>
-                </div>
-                <!-- v15 신규: 대중교통 2시간 초과 경고 -->
-                <div class="mt-2 pt-2 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900 mb-2">
-                    <strong>⚠️ Day 8이 9일 중 최대 대중교통 초과일 (v15 조건부 사항 2):</strong><br>
-                    <span class="text-xs"><strong>대중교통 이동이 2시간을 초과하는 날이 12/31(Day 7, 128~138분)에서 1건 늘어나 2건(12/31·1/1)이 되었습니다. 최대 초과일은 Day 7이 아니라 Day 8(1/1, 145~150분, 25~30분 초과)입니다.</strong> 오전 5K 왕복(약 90분)이 추가된 결과이며, 나머지 오후 일정은 무변동입니다.</span>
-                </div>
-                <!-- v15 신규: 격식 정찬 0회 경고 -->
-                <div class="mt-2 pt-2 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900 mb-2">
-                    <strong>⚠️ Midnight Run 폴백 발동 시 격식 있는 정찬 0회 (v15 조건부 사항 3):</strong><br>
-                    <span class="text-xs"><strong>12/31 Midnight Run 폴백이 발동되면 이 여행의 격식 있는 정찬이 0회로 확정됩니다.</strong> v13에서 1/1 특별 디너를 이미 캐주얼로 다운그레이드한 상태이므로, Trattoria 실패까지 겹치면 유일한 정찬 경험이 사라집니다. 차선 후보(Union Square Cafe 등)로 되돌릴 수 있으나, 마음이 바뀌면 8월 웨이팅리스트 등록이 필요합니다.</span>
-                </div>
-                <!-- v15 신규: 5K와 Midnight Run 동시 불가 경고 -->
-                <div class="mt-2 pt-2 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900">
-                    <strong>⚠️ 1/1 아침 5K와 12/31 자정 Midnight Run은 동시 실행 불가 (v15 조건부 사항 4):</strong><br>
-                    <span class="text-xs"><strong>둘 다 발동되면 5K를 포기하고 Day 8 오전을 원래 상태(07:30부터 늦잠·완전 회복)로 되돌려야 합니다.</strong> Midnight Run 폴백이 결정되는 시점(11/30, Trattoria 실패 확정)에 동시에 5K 참가 여부도 결정해야 합니다. 5K만 취소하면 비용 0원입니다.</span>
+                <!-- v16 신규: 아침 CPRC 5K 해제 설명 -->
+                <div class="mt-3 pt-3 border-t border-blue-200 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900">
+                    <strong>ℹ️ v16 — CPRC New Year's Day 5K 자동 해제 (T29 규정 발동):</strong><br>
+                    <span class="text-xs">v15에서 추가된 1/1 아침 CPRC 5K(09:00~10:00)는 <strong>v15 설계 당시 "Midnight Run이 폴백일 때만 해제"하도록 규정</strong>했습니다. v16에서 Midnight Run이 기본 계획으로 승격됐으므로 <strong>그 규정(T29 (c))이 자동 발동되어 아침 일정이 해제</strong>됩니다. 따라서 1/1은 v14의 상태인 <strong>"~11:30 늦잠·완전 회복"</strong>으로 복구됩니다. 12:00 이후 오후 일정은 v15와 동일합니다.</span>
                 </div>
             </div>
 
@@ -462,10 +451,6 @@
                 <div class="flex items-center justify-between p-3 bg-green-50 rounded border border-green-200">
                     <div><h4 class="font-semibold text-gray-800">숙소(8박)</h4><p class="text-sm text-gray-600">331 E 8th St, East Village (L선 도보 거리)</p></div>
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-green-600">2,480,000원</span><span class="inline-block bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded">결제완료</span></div>
-                </div>
-                <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
-                    <div><h4 class="font-semibold text-gray-800">Trattoria Dell'Arte (12/31)</h4><p class="text-sm text-gray-600">900 7th Ave, 카네기홀 인근 | $275/인, 7코스</p></div>
-                    <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">900,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
                 </div>
                 <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
                     <div><h4 class="font-semibold text-gray-800">Blue Note (12/30)</h4><p class="text-sm text-gray-600">131 W 3rd St, 그리니치빌리지 | Chris Botti 홀리데이 레지던시</p></div>
@@ -506,9 +491,9 @@
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 피터루거 백업 발동 시 대응</strong> — 르뱅 생략 후 유니언스퀘어 마켓 종료 직후 윌리엄스버그 직행 <span class="text-green-700 font-semibold">[v11]</span></span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v12] Birdland Jazz Club 12/29 연말 특별 공연·요금 확인</strong> (평시 기준이라 변동 가능성 있음) <span class="text-green-700 font-semibold">[v12]</span></span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v14] Blue Note 12/30 예약 확정 및 가격 재확인</strong> (Chris Botti 헤드라이너, 예산 조정 가능성) <span class="text-green-700 font-semibold">[v14]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v14] Trattoria 예약 시 12/31 착석 시각 19:00 확인 필요</strong> (공식 페이지 "7:00 PM onwards" 기준, 8시 슬롯 가능성 확인) <span class="text-green-700 font-semibold">[v14]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v15] CPRC New Year's Day 5K 1/1 개최 여부 확인</strong> (직전 사이클 2026-01-01만 확인, 2027년 미확정) <span class="text-green-700 font-semibold">[v15]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v15] Midnight Run 폴백 시 1/1 5K 동시 실행 여부 결정</strong> (11/30 Trattoria 실패 확정 시점에 함께 결정) <span class="text-green-700 font-semibold">[v15]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v16] NYRR Midnight Run 12/31 등록 확인 (부부 중 누가 등록할지 결정)</strong> <span class="text-purple-700 font-semibold">[v16]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v16] Midnight Run 손목밴드 배치 규칙 숙지</strong> — 등록 1인이 손목밴드 1개, 동반자가 2개 사용 (핵심 구역 입장 전제) <span class="text-purple-700 font-semibold">[v16]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v16] 12/31 방한 레이어링 준비</strong> — 자정 센트럴파크(약 영하 3~5도), Midnight Run 완주 후 저체온증 대비 <span class="text-purple-700 font-semibold">[v16]</span></span></label>
             </div>
         </div>
 
@@ -550,7 +535,7 @@
                 <div class="p-4 pt-2">
                     <div class="backup-item"><strong>One40 Rooftop</strong> <span>목표 예산에 부합하나 창가석 미보장, 볼드롭 조망 없음</span></div>
                     <div class="backup-item"><strong>Aqua New York</strong> <span>목표 예산 근처, 볼드롭 조망 없음</span></div>
-                    <div class="backup-item"><strong>Union Square Cafe</strong> <span>목표 예산에 부합하나 2026 페이지 미게시, 세부 가격 미확정 — Trattoria 실패 시 v15 폴백의 차선 후보</span></div>
+                    <div class="backup-item"><strong>Union Square Cafe</strong> <span>목표 예산에 부합하나 2026 페이지 미게시, 세부 가격 미확정 — v13 Trattoria 실패 시 차선 대안(현재는 v16 Midnight Run으로 교체)</span></div>
                     <div class="backup-item"><strong>Members Only</strong> <span>오픈바 포함으로 음주 비중 높음, 음주 미선호자에게 부적합</span></div>
                     <div class="backup-item"><strong>Brooklyn Diner · Rosie O'Grady's</strong> <span>목표 예산 초과 ($455~$745/인), 가격 우위 불리</span></div>
                 </div>
@@ -573,16 +558,15 @@
                     <div class="backup-item"><strong>브루클린 보태닉 가든 & 프로스펙트 파크</strong> <span>프로스펙트 하이츠, 기존 동선과 40분+ 이동 필요</span></div>
                     <div class="backup-item"><strong>루즈벨트 아일랜드 트램</strong> <span>저렴 전망 스팟($2.90)이지만 결합할 만한 다른 목적지 부재 → <strong>v9에서 12/28 추가됨</strong></span></div>
                     <div class="backup-item"><strong>The Vessel (허드슨야드)</strong> <span>2021~2024 장기 폐쇄, 2024년 재개장했으나 최상층 여전히 폐쇄 → <strong>v10에서 12/29 추가됨</strong></span></div>
-                    <div class="backup-item"><strong>CPRC New Year's Day 5K</strong> <span>직전 사이클 2026-01-01 확인, 2027년 미확정 → <strong>v15에서 1/1 추가됨</strong></span></div>
-                    <div class="backup-item"><strong>NYRR Midnight Run</strong> <span>센트럴파크 자정 러닝·불꽃놀이, 참가 또는 무료 관람 → <strong>v15에서 12/31 Trattoria 완전 실패 폴백</strong></span></div>
+                    <div class="backup-item"><strong>NYRR Midnight Run</strong> <span>센트럴파크 자정 러닝·불꽃놀이, 참가 또는 무료 관람 → <strong>v16에서 12/31 기본 계획</strong></span></div>
                 </div>
             </details>
         </div>
 
         <!-- 푸터 -->
         <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
-            <p>뉴욕 여행 준비 대시보드 v15 | 2026-08-19 업데이트</p>
-            <p class="text-xs text-gray-500 mt-2">v15 변경: 1/1 아침 CPRC New Year's Day 5K 추가(무료 참가, 개최 미확인) + 12/31 Trattoria 완전 예약 실패 시 Midnight Run 폴백 교체(Union Square Cafe → 캐주얼 저녁 + 센트럴파크 불꽃·레이스) + 4가지 조건부 경고(1/1 수면 5시간~5시간15분, 대중교통 2시간 초과일 2건으로 증가·Day 8이 최대, Midnight Run 폴백 시 격식 정찬 0회, 5K와 Midnight Run 동시 불가). 예산 v14와 동일(총 15,000,000원). 기존 조건부 사항 유지(v8: 12/26 오후 여유 0분, v9: J.G. Melon 대기, v11: 12/30 오후 완충 0분, v12: Birdland 예약 불가·선착순, v14: Blue Note·Trattoria 착석·버퍼 축소).</p>
+            <p>뉴욕 여행 준비 대시보드 v16 | 2026-08-20 업데이트</p>
+            <p class="text-xs text-gray-500 mt-2">v16 변경: 12/31 Trattoria 완전 삭제·Midnight Run을 기본 계획으로 승격(폴백이 아님, 예약 아예 하지 않음) + 1/1 아침 CPRC New Year's Day 5K 자동 해제(T29 규정 발동, ~11:30 늦잠·완전 회복으로 복구) + 예산 변경(새해 전야 900,000→300,000원, 미배분 690,000→1,290,000원) + 6가지 v16 조건부 사항(격식 정찬 0회, 볼드롭 상실, 손목밴드·등록 미정, 이동 2시간 32분 초과·귀가 02:25, 낙뢰 취소 전례, 미배분은 포기 결과) + v14 "12/31 버퍼 축소"·"Trattoria 착석 미확정" 조건 2개 제거. 기존 조건 유지(v8: 12/26 오후 0분, v9: J.G. Melon 대기, v11: 12/30 오후 0분, v12: Birdland 선착순, v14: Blue Note 예산).</p>
         </div>
 
     </div>
@@ -592,9 +576,9 @@
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['식비(17.1%)', '액티비티(11.7%)', '예비비(12.7%)', '항공(18.7%)', '숙소(16.5%)', '새해전야(6%)', '이동(5.3%)', '쇼핑(4.6%)', '브로드웨이(2.1%)', '보험(0.7%)', '미배분(4.6%)'],
+                labels: ['식비(19.4%)', '액티비티(11.7%)', '예비비(12.7%)', '항공(18.7%)', '숙소(16.5%)', '새해전야(2%)', '이동(5.3%)', '쇼핑(4.6%)', '브로드웨이(2.1%)', '보험(0.7%)', '미배분(8.6%)'],
                 datasets: [{
-                    data: [2565, 1750, 1900, 2800, 2480, 900, 800, 695, 320, 100, 690],
+                    data: [2905, 1750, 1900, 2800, 2480, 300, 800, 695, 320, 100, 1290],
                     backgroundColor: ['#f59e0b', '#8b5cf6', '#84cc16', '#3b82f6', '#10b981', '#ec4899', '#06b6d4', '#f97316', '#14b8a6', '#6366f1', '#6b7280'],
                     borderColor: '#ffffff',
                     borderWidth: 2
