@@ -9,7 +9,7 @@
 - 웹 공유용 산출물: `dashboard-artifact.html` → https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e (v19 반영 완료, 비공개 — 공유하려면 페이지 우측 상단 Share 메뉴)
 - 실행 보조 산출물: `04-execution-action-checklist.md` (예약·확인 액션 분리, v10 — v19까지 반영 완료)
 - 승인 상태: 사람 승인 필요 (항공권·숙소는 결제 완료 / QC NY Spa 예약, Peter Luger Resy 시도, Blue Note 12/30 예약(가격 재확인 필요), **NYRR Midnight Run은 남편이 이미 실등록·실결제 완료($74.02) — 아내 손목밴드 수령 확인만 남음**, **[v19 신규] 1/1 Amtrak 뉴욕↔보스턴 왕복 예약(최소 60~90일 전) 및 실제 요금 확인**, 항공 스케줄 최종 확인은 사람 승인·확인 대기. **Trattoria Dell'Arte는 v16에서 완전히 기각돼 더 이상 예약 대상 아님. 나이아가라 폭포는 v19에서 최종 기각.**)
-- **진행 중**: "편집 가능 + DB 연결" 대시보드 요청은 Artifact `artifact`(라이브 문서) 캐퍼빌리티로 구현 가능함을 확인했으나, 사용자 동의에 따라 **현재 일정 내용이 안정화된 이후로 착수를 보류** — 스코프는 "메모 입력 + 예산 항목 추가/삭제"로 방향만 확인된 상태.
+- **편집 가능 대시보드**: `dashboard-live.html` → https://claude.ai/code/artifact/f1266676-b0f9-4a81-9d78-9abfea0e287e (Artifact `artifact` 라이브 문서 캐퍼빌리티, 2026-08-20 최초 발행) — 재량 예산 9,720,000원을 표로 시딩하고 부부가 직접 항목을 추가/삭제·금액과 메모를 고칠 수 있음. **`dashboard.html`/`dashboard-artifact.html`(T05·T06) 자동 재생성 파이프라인과는 완전히 분리** — 일정이 바뀌어도 이 페이지는 자동으로 다시 발행하지 않음(그러면 부부가 쌓아 둔 편집 내용이 사라짐). 상세 규칙은 `family-trip-prep-orchestrator` SKILL.md의 "`dashboard-live.html`" 절 참고.
 
 ## 산출물 지도
 
@@ -21,6 +21,7 @@
 | `03-checklist-review.md` | 준비물 체크리스트 + 예산·동선 검토 | checklist-reviewer(v13+v14는 오케스트레이터가 세션 한도 반복 실패로 직접 수행, v15~v19는 Edit 도구 추가 후 checklist-reviewer가 정상 수행) | dashboard-builder | current (v9~v17+v18+v19 스코프 조건부 승인) | 사용 가능(8장 71~73번 "superseded" 표기 누락은 비차단 권고사항으로 기록만 됨) | `02-itinerary-draft.md` |
 | `dashboard.html` | 최종 HTML 여행 대시보드(TailwindCSS/Chart.js CDN, 저장소·로컬 미리보기용) | dashboard-builder | 사용자 | current (v19 반영 재생성 완료, 조건부 사항 전부 노출 확인) | 사람 승인 필요(QC Spa·Peter Luger Resy·Blue Note 예약, **Amtrak 뉴욕↔보스턴 왕복 예약**, 항공 스케줄 확인 — Trattoria·나이아가라는 더 이상 대상 아님, Midnight Run은 등록·결제 완료) | 위 네 파일 |
 | `dashboard-artifact.html` | `dashboard.html`의 자체완결 쌍둥이본(CDN 없음, 폰트 내장) — Artifact 웹 발행 전용 | Orchestrator (dashboard.html 데이터를 옮겨 담음) | 사용자(웹 링크로 확인) | current (v19 반영, URL: a139c73b-b86f-4dc2-a61a-edd55bd58d1e) | 사람 승인 필요(동일) | `dashboard.html` |
+| `dashboard-live.html` | 재량 예산·메모 편집용 라이브 문서(Artifact `artifact` 캐퍼빌리티) — 부부가 직접 항목 추가/삭제·수정 | Orchestrator (v19 재량 예산 9,720,000원으로 최초 시딩, 2026-08-20) | 사용자(웹에서 직접 편집) | current — **단, T03~T07 자동 파이프라인 대상 아님**, 저장소 파일은 최초 시드 스냅샷일 뿐 실제 편집 내용과 자연히 갈라짐(URL: f1266676-b0f9-4a81-9d78-9abfea0e287e) | 해당 없음(사용자가 자유롭게 편집) | `dashboard-artifact.html`의 v19 예산 수치 |
 | `04-execution-action-checklist.md` | 예약·확인 실행 체크리스트(Peter Luger, Keens, QC NY Spa, TKTS, 항공·숙소 확인, 귀국편 라운지, Blue Note, NYRR Midnight Run, Amtrak 보스턴) | Codex 보조 검토 → Orchestrator(v5 라운지 재정정, v7 v14+v15 반영, v8 v16 반영, v9 Midnight Run 등록 완료 반영, v10 Amtrak 예약 행 신설) | 사용자/오케스트레이터 | current (v10 — Midnight Run 등록 완료 표시, Amtrak 왕복 예약 행 신규, v18 버스투어 대안은 폴백으로 메모) | 사람 승인 필요(실제 예약·결제는 사용자 직접 실행, 특히 라운지·Amtrak은 현장/오픈 시점 재확인 필수) | `README.md`, `02-itinerary-draft.md`, `03-checklist-review.md`, `01-research-notes.md`(14·16·27·28·30~35장), 공식 페이지 확인 |
 
 상태 값: `미생성`(아직 실행 전) / `current`(최신 입력 반영) / `stale`(앞 단계가 바뀌어 재검토 필요) / `needs-review`(사람 확인 필요) / `archived`(이전 실행 보관).

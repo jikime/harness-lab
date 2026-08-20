@@ -1,0 +1,592 @@
+<title>뉴욕 여행 가계부</title>
+<style>
+  :root {
+    --paper: #F6F3EC;
+    --surface: #FFFFFF;
+    --surface-2: #EFEAE0;
+    --ink: #1E2A3D;
+    --ink-soft: #5B6478;
+    --ink-faint: #8A8F9E;
+    --accent: #B07F1F;
+    --accent-soft: #E8D7B0;
+    --line: #DED6C3;
+    --danger: #A23B2E;
+    --danger-soft: #F3E1DC;
+    --good: #3E6B4F;
+    --good-soft: #DEE9E0;
+    --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+    --shadow: 0 1px 2px rgba(30, 42, 61, 0.06), 0 8px 24px -12px rgba(30, 42, 61, 0.18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #10141F;
+      --surface: #171C29;
+      --surface-2: #1E2433;
+      --ink: #EDE8DB;
+      --ink-soft: #A2A9BE;
+      --ink-faint: #6C7488;
+      --accent: #D9A54B;
+      --accent-soft: #3A2F1C;
+      --line: #2B3244;
+      --danger: #E08874;
+      --danger-soft: #3A2420;
+      --good: #7FB894;
+      --good-soft: #1E2E24;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -14px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #10141F;
+    --surface: #171C29;
+    --surface-2: #1E2433;
+    --ink: #EDE8DB;
+    --ink-soft: #A2A9BE;
+    --ink-faint: #6C7488;
+    --accent: #D9A54B;
+    --accent-soft: #3A2F1C;
+    --line: #2B3244;
+    --danger: #E08874;
+    --danger-soft: #3A2420;
+    --good: #7FB894;
+    --good-soft: #1E2E24;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px -14px rgba(0, 0, 0, 0.6);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 5vw, 3.5rem) 4rem;
+  }
+
+  a { color: var(--accent); }
+
+  .wrap { max-width: 76rem; margin: 0 auto; }
+
+  header.masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  header.masthead .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  header.masthead h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3.4vw, 2.35rem);
+    font-weight: 600;
+    margin: 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  header.masthead .dday {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-align: right;
+  }
+  header.masthead .dday strong {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .baseline-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1.5rem 0 2.25rem;
+    box-shadow: var(--shadow);
+  }
+  .baseline-strip .cell {
+    background: var(--surface);
+    padding: 0.85rem 1.1rem;
+  }
+  .baseline-strip .lbl {
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.03em;
+  }
+  .baseline-strip .val {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 0.15rem;
+  }
+  .baseline-strip .val.accent { color: var(--accent); }
+
+  .lede {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 62ch;
+    margin: 0 0 2rem;
+  }
+  .lede strong { color: var(--ink); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1.4rem 1.5rem 1.6rem;
+  }
+  .card > h2 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem;
+  }
+  .card > .sub {
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    margin: 0 0 1.1rem;
+  }
+
+  .table-scroll { overflow-x: auto; }
+  table.ledger { width: 100%; border-collapse: collapse; min-width: 30rem; }
+  table.ledger thead th {
+    text-align: left;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 600;
+    padding: 0 0.5rem 0.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  table.ledger thead th.num { text-align: right; }
+  table.ledger tbody td {
+    padding: 0.55rem 0.5rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  table.ledger tbody tr:last-child td { border-bottom: none; }
+  .cat {
+    display: block;
+    font-weight: 500;
+    outline: none;
+    border-radius: 4px;
+    padding: 0.15rem 0.3rem;
+    margin: -0.15rem -0.3rem;
+  }
+  .cat:focus { background: var(--surface-2); box-shadow: 0 0 0 2px var(--accent-soft); }
+  .memo-note {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.83rem;
+    outline: none;
+    border-radius: 4px;
+    padding: 0.15rem 0.3rem;
+    margin: -0.15rem -0.3rem;
+    min-height: 1.2em;
+  }
+  .memo-note:focus { background: var(--surface-2); box-shadow: 0 0 0 2px var(--accent-soft); color: var(--ink); }
+  .memo-note:empty::before {
+    content: attr(data-placeholder);
+    color: var(--ink-faint);
+  }
+  td.amt-cell { text-align: right; white-space: nowrap; }
+  .amt-input {
+    width: 6.5rem;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 0.92rem;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 0.25rem 0.4rem;
+  }
+  .amt-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: var(--surface-2);
+  }
+  td.del-cell { text-align: center; width: 2rem; }
+  .del-btn {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--ink-faint);
+    font-size: 1.05rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem 0.4rem;
+    border-radius: 6px;
+  }
+  .del-btn:hover { background: var(--danger-soft); color: var(--danger); }
+
+  .add-btn {
+    appearance: none;
+    border: 1px dashed var(--line);
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.9rem;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .add-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  .ledger-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+  .ledger-total .lbl { font-size: 0.85rem; color: var(--ink-soft); }
+  .ledger-total .val {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .ledger-total .diff {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    margin-left: 0.5rem;
+  }
+  .ledger-total .diff.over { color: var(--danger); }
+  .ledger-total .diff.under { color: var(--good); }
+
+  .memo-cards { display: flex; flex-direction: column; gap: 0.75rem; }
+  .memo-card {
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.75rem 0.85rem 0.6rem;
+    position: relative;
+  }
+  .memo-card .memo-text {
+    font-size: 0.88rem;
+    outline: none;
+    min-height: 2.4em;
+    white-space: pre-wrap;
+  }
+  .memo-card .memo-text:empty::before {
+    content: "메모를 적어 주세요";
+    color: var(--ink-faint);
+  }
+  .memo-card .memo-text:focus { outline: none; }
+  .memo-card .row-foot {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.4rem;
+  }
+
+  .readonly-badge {
+    display: none;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--danger);
+    background: var(--danger-soft);
+    border-radius: 999px;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1.25rem;
+    width: fit-content;
+  }
+  .readonly-badge.show { display: flex; }
+
+  footer.foot {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    justify-content: space-between;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+  <div class="readonly-badge" id="readonlyBadge">🔒 보기 전용 — 이 화면에서의 변경 사항은 저장되지 않습니다</div>
+
+  <header class="masthead">
+    <div>
+      <span class="eyebrow">New York · 2026.12.25 — 2027.01.03</span>
+      <h1>뉴욕 여행 가계부</h1>
+    </div>
+    <div class="dday">
+      D-127 · 2026-08-20 기준
+      <strong>재량 예산 항목 자유 편집</strong>
+    </div>
+  </header>
+
+  <p class="lede">항공권·숙소는 이미 결제를 마쳐 고정 지출입니다. 아래는 <strong>남은 재량 예산</strong>과 <strong>자유 메모</strong>를 담는 곳입니다 — 하네스가 자동으로 다시 만드는 공식 대시보드와 달리, 이 페이지는 부부가 직접 항목을 더하고 지우며 계속 고쳐 쓰는 용도입니다.</p>
+
+  <div class="baseline-strip">
+    <div class="cell">
+      <div class="lbl">총 여행 예산</div>
+      <div class="val">15,000,000원</div>
+    </div>
+    <div class="cell">
+      <div class="lbl">항공권 (결제 완료)</div>
+      <div class="val">2,800,000원</div>
+    </div>
+    <div class="cell">
+      <div class="lbl">숙소 (결제 완료)</div>
+      <div class="val">2,480,000원</div>
+    </div>
+    <div class="cell">
+      <div class="lbl">재량 예산 (아래 표)</div>
+      <div class="val accent">9,720,000원</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <h2>재량 예산 항목</h2>
+      <p class="sub">칸을 눌러 이름·메모·금액을 바로 고치세요. 항목을 더하거나 지워도 됩니다.</p>
+      <div class="table-scroll">
+        <table class="ledger">
+          <thead>
+            <tr>
+              <th>항목</th>
+              <th>메모</th>
+              <th class="num">금액(원)</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="ledgerBody">
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">식비 (18끼)</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="2505000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">새해 전야 (캐주얼+Midnight Run)</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모">등록·결제 완료(v17)</span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="180000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">액티비티·관람·투어(보스턴 Amtrak 포함)</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모">Amtrak 요금 확정되면 여기서 조정</span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="2150000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">공항·짐 보관</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="320000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">시내 이동</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="480000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">브로드웨이</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="320000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">쇼핑·기념품</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="695000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">보험</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="100000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">예비비</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="1900000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+            <tr class="ledger-item">
+              <td><span class="cat" contenteditable="true" spellcheck="false">미배분 완충</span></td>
+              <td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모">v13~v19 누적 절감분</span></td>
+              <td class="amt-cell"><input type="number" class="amt-input" value="1070000" step="1000" min="0"></td>
+              <td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="add-btn" type="button" id="addRowBtn">+ 항목 추가</button>
+      <div class="ledger-total">
+        <span class="lbl">재량 예산 항목 합계</span>
+        <span>
+          <span class="val" id="ledgerTotal">9,720,000원</span><span class="diff" id="ledgerDiff"></span>
+        </span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>자유 메모</h2>
+      <p class="sub">생각날 때마다 적어두는 곳입니다.</p>
+      <div class="memo-cards" id="memoCards">
+        <div class="memo-card">
+          <div class="memo-text" contenteditable="true" spellcheck="false">Amtrak 요금 확정되면 이 페이지에서 재량 예산 재조정하기</div>
+          <div class="row-foot"><button class="del-btn" type="button" title="메모 삭제" aria-label="메모 삭제">×</button></div>
+        </div>
+        <div class="memo-card">
+          <div class="memo-text" contenteditable="true" spellcheck="false">Midnight Run 손목밴드 — 아내분 동반 게스트용 수령 확인</div>
+          <div class="row-foot"><button class="del-btn" type="button" title="메모 삭제" aria-label="메모 삭제">×</button></div>
+        </div>
+        <div class="memo-card">
+          <div class="memo-text" contenteditable="true" spellcheck="false">귀국 후: 피터루거 영수증 정리, 라운지 이용 후기 남기기</div>
+          <div class="row-foot"><button class="del-btn" type="button" title="메모 삭제" aria-label="메모 삭제">×</button></div>
+        </div>
+      </div>
+      <button class="add-btn" type="button" id="addMemoBtn">+ 메모 추가</button>
+    </section>
+  </div>
+
+  <footer class="foot">
+    <span>공식 최신 일정·예산은 <a href="https://claude.ai/code/artifact/a139c73b-b86f-4dc2-a61a-edd55bd58d1e" target="_blank" rel="noopener">뉴욕 여행 대시보드</a>에서 확인하세요 (자동 하네스가 매 회차 갱신).</span>
+    <span>이 가계부는 수동으로 남깁니다 — 하네스가 자동으로 덮어쓰지 않습니다.</span>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var fmt = new Intl.NumberFormat('ko-KR');
+    var ledgerBody = document.getElementById('ledgerBody');
+    var totalEl = document.getElementById('ledgerTotal');
+    var diffEl = document.getElementById('ledgerDiff');
+    var BASELINE = 9720000;
+
+    function recompute() {
+      var sum = 0;
+      ledgerBody.querySelectorAll('.amt-input').forEach(function (input) {
+        var v = parseFloat(input.value);
+        if (!isNaN(v)) sum += v;
+      });
+      totalEl.textContent = fmt.format(sum) + '원';
+      var diff = sum - BASELINE;
+      if (diff === 0) {
+        diffEl.textContent = '';
+        diffEl.className = 'diff';
+      } else if (diff > 0) {
+        diffEl.textContent = '(+' + fmt.format(diff) + ' 초과)';
+        diffEl.className = 'diff over';
+      } else {
+        diffEl.textContent = '(' + fmt.format(diff) + ' 여유)';
+        diffEl.className = 'diff under';
+      }
+    }
+
+    function rowTemplate() {
+      var tr = document.createElement('tr');
+      tr.className = 'ledger-item';
+      tr.innerHTML =
+        '<td><span class="cat" contenteditable="true" spellcheck="false"></span></td>' +
+        '<td><span class="memo-note" contenteditable="true" spellcheck="false" data-placeholder="메모"></span></td>' +
+        '<td class="amt-cell"><input type="number" class="amt-input" value="0" step="1000" min="0"></td>' +
+        '<td class="del-cell"><button class="del-btn" type="button" title="항목 삭제" aria-label="항목 삭제">×</button></td>';
+      return tr;
+    }
+
+    document.getElementById('addRowBtn').addEventListener('click', function () {
+      var tr = rowTemplate();
+      ledgerBody.appendChild(tr);
+      recompute();
+      var cat = tr.querySelector('.cat');
+      if (cat) cat.focus();
+    });
+
+    ledgerBody.addEventListener('click', function (e) {
+      var btn = e.target.closest('.del-btn');
+      if (!btn) return;
+      var row = btn.closest('tr');
+      if (row) row.remove();
+      recompute();
+    });
+
+    ledgerBody.addEventListener('input', function (e) {
+      if (e.target.classList.contains('amt-input')) recompute();
+    });
+
+    var memoCards = document.getElementById('memoCards');
+
+    function memoTemplate() {
+      var card = document.createElement('div');
+      card.className = 'memo-card';
+      card.innerHTML =
+        '<div class="memo-text" contenteditable="true" spellcheck="false"></div>' +
+        '<div class="row-foot"><button class="del-btn" type="button" title="메모 삭제" aria-label="메모 삭제">×</button></div>';
+      return card;
+    }
+
+    document.getElementById('addMemoBtn').addEventListener('click', function () {
+      var card = memoTemplate();
+      memoCards.appendChild(card);
+      var text = card.querySelector('.memo-text');
+      if (text) text.focus();
+    });
+
+    memoCards.addEventListener('click', function (e) {
+      var btn = e.target.closest('.del-btn');
+      if (!btn) return;
+      var card = btn.closest('.memo-card');
+      if (card) card.remove();
+    });
+
+    document.addEventListener('claude:edit', recompute);
+
+    var badge = document.getElementById('readonlyBadge');
+    document.addEventListener('claude:sync-off', function () {
+      badge.classList.add('show');
+    });
+
+    recompute();
+  })();
+</script>
