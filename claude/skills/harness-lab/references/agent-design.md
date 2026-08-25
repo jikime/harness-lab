@@ -181,6 +181,18 @@ model: sonnet   # 필수. 역할별로 고른다 → haiku=정적·추출·분�
 
 특정 작업 매뉴얼을 반드시 따라야 하면 Agent 본문과 Orchestrator의 Task 설명에 적는다. `skills` frontmatter는 직접 Subagent로 호출할 때의 보조 설정으로만 사용하고, Agent Team teammate 실행의 필수 전달 수단으로 보지 않는다.
 
+### 팀 모드에서 Agent가 Skill을 따르게 하는 법
+
+`skills` frontmatter가 teammate 실행에서 보장되지 않으므로, 팀 모드에서는 Skill을 **명시적 지시로 전달**한다. 다음 세 가지 중 하나를 쓰되, 재사용 Skill이면 (1), 짧은 전용 절차면 (3)을 우선한다.
+
+| 방식 | 구현 | 쓰는 경우 |
+| --- | --- | --- |
+| 경로 지시(권장) | `TeamCreate` prompt나 `TaskCreate` 설명에 "`.claude/skills/{name}/SKILL.md`를 Read한 뒤 그 절차를 따르라"고 명시 | 재사용 Skill, 절차가 길어 파일로 유지해야 할 때 |
+| Agent 본문 참조 | Agent `.md` 본문에 "이 역할은 `{skill}` 절차를 따른다"를 적고, Orchestrator가 Task에서 다시 상기 | 그 Agent 전용 매뉴얼 |
+| 인라인 | 짧은 절차(수십 줄)를 Task 설명에 직접 넣음 | 한 번만 쓰는 짧은 절차 |
+
+핵심은 "Agent가 알아서 Skill을 찾겠지"라고 가정하지 않는 것이다. 팀원은 깨끗한 컨텍스트로 시작하므로, 따라야 할 Skill의 **경로와 "읽고 따르라"는 지시**가 prompt나 Task에 없으면 그 절차는 실행되지 않는다.
+
 ## 팀 패턴
 
 | 패턴 | 쓰기 좋은 경우 | Agent Team 적용 방식 |
