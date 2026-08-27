@@ -40,7 +40,8 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 | T04-checklist-review | checklist-reviewer | `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-draft.md` | `artifacts/family-trip-prep/03-checklist-review.md` | T03 | 예산 재검산·동선 검토 완료, 이슈 심각도 판정 | 시작, 차단, 완료 |
 | T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인, **직전 검토가 조건부 승인이면 그 조건이 산출물에 실제로 반영됨(아래 T05 조건 이행 확인)** | 시작, 차단, 완료 |
 | T06-artifact-sync | Orchestrator (dashboard-builder에게 위임하지 않음) | `dashboard.html`(갱신된 최종본) | `artifacts/family-trip-prep/dashboard-artifact.html` + Artifact 웹 발행/갱신 | T05 | `dashboard-artifact.html`의 데이터가 `dashboard.html`과 일치, 기존 Artifact URL이 있으면 그 URL로 갱신(새 URL 발급 방지) | 시작, 차단, 완료 |
-| T07-record-close | Orchestrator | 이번 회차에 바뀐 모든 산출물 | `artifacts/family-trip-prep/README.md`, `artifacts/family-trip-prep/improvement-log.md` | T06(대시보드까지 간 회차) 또는 실제로 수행한 마지막 단계 | 이번 회차가 두 파일에 모두 기록됨(아래 T07 완료 기준) | 시작, 차단, 완료 |
+| T06b-notion-sync | Orchestrator (서브에이전트에게 위임하지 않음) | `02-itinerary-draft.md`·`03-checklist-review.md` 최신 데이터 | 노션 "뉴욕 여행 — 한장 정리" 페이지 | T06 | 노션 페이지의 예산 표·일자별 일정·조건부 사항 콜아웃이 최신 데이터와 일치, 제목·상단 안내문의 버전 표기 갱신 | 시작, 차단, 완료 |
+| T07-record-close | Orchestrator | 이번 회차에 바뀐 모든 산출물 | `artifacts/family-trip-prep/README.md`, `artifacts/family-trip-prep/improvement-log.md` | T06b(대시보드·노션까지 간 회차) 또는 실제로 수행한 마지막 단계 | 이번 회차가 두 파일에 모두 기록됨(아래 T07 완료 기준) | 시작, 차단, 완료 |
 
 T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Task를 재등록한다(최대 2회, `T03-itinerary-revision-N`).
 
@@ -60,6 +61,17 @@ T04 결과가 **조건부 승인**이면(예: "이 리스크를 대시보드에 
 
 **T06을 Orchestrator가 직접 맡는 이유**: `Artifact` 발행 도구는 최상위 대화(Orchestrator)에만 있고 Task 서브에이전트에는 없다. `dashboard.html`은 TailwindCSS/Chart.js를 CDN으로 불러오는데, Artifact 게시 환경은 외부 CDN 요청을 막는 CSP를 쓰기 때문에 그대로 발행하면 스타일·차트가 깨진다. 그래서 CDN 없이 완전히 자체완결된 쌍둥이 파일(`dashboard-artifact.html`, 폰트까지 데이터 URI로 내장)을 별도로 유지한다.
 
+### T06b-notion-sync — 노션 "한장 정리" 페이지도 매 회차 자동 갱신(2026-08-27 신설)
+
+사용자가 데이터베이스 4개로 나뉜 기존 노션 페이지("일정표")가 편집하기 불편하다고 해서, 예산·예약·일정·체크리스트를 한 페이지에 담은 노션 페이지 **"뉴욕 여행 — 한장 정리"** 를 신설했다(2026-08-26). 이후 사용자가 명시적으로 "노션도 업데이트해줘"라고 요청할 때만 갱신했는데, **매번 요청해야 하는 방식은 결국 잊히기 쉽다** — 실제로 v22 회차에서 대시보드는 자동으로 갱신됐지만 노션은 사용자가 따로 요청할 때까지 v21 상태로 남아 있었다. 그래서 이 페이지도 **`dashboard-artifact.html`과 동급으로, 매 회차 자동 동기화 대상**으로 승격했다.
+
+- **페이지 ID/URL은 `README.md`에 기록**한다(dashboard-artifact.html의 Artifact URL을 기록하는 방식과 동일). 처음 만들 때만 신규 생성하고, 이후에는 항상 이 URL로 `notion-update-page`를 호출해 같은 페이지를 갱신한다(새 페이지를 또 만들지 않는다).
+- **갱신 대상**: 페이지 제목의 버전 표기, 상단 안내문의 "vNN 기준(날짜 갱신) 스냅샷" 줄, 상단 콜아웃의 "확인 필요 N건" 목록, 예산 배분 표, 예약 상태 체크리스트, 바뀐 날짜의 일자별 일정 토글, 준비 체크리스트 항목. `dashboard-artifact.html`을 만들 때 이미 정리한 "이번 회차에 뭐가 바뀌었는가" 목록을 그대로 재사용하면 된다 — 별도로 다시 분석할 필요 없음.
+- **⚠ 노션 마크다운 문법 주의(2026-08-27 실제로 두 번 실패하고 알아낸 것)**: `<callout>`·토글처럼 "여는 태그 + 자식" 구조인 블록은 **여는 태그 줄에는 속성만 두고, 본문 텍스트는 반드시 다음 줄부터 탭으로 들여써서 시작**해야 한다. `<callout icon="⚠️">본문 텍스트...`처럼 태그와 텍스트를 같은 줄에 쓰면 태그가 그대로 이스케이프된 리터럴 텍스트로 렌더링되고 뒤에 낙동강 오리알 같은 `</callout>`이 별도 문단으로 남는다.
+- **⚠⚠ `replace_content`(페이지 전체 재작성) 금지, 반드시 `update_content`(search-replace)만 사용할 것.** 이 페이지는 사용자가 여행 준비 중 체크박스를 직접 켜고 끄며 쓰는 실사용 문서다(예약 상태·일자별 체크리스트). `replace_content`로 페이지를 통째로 다시 쓰면 **사용자가 이미 체크해 둔 항목까지 전부 초기화**된다 — 이건 `dashboard-live.html`을 자동 파이프라인에서 애초에 제외한 것과 똑같은 이유의 위험이다. 다행히 이 페이지는 `dashboard-live.html`과 달리 **"매 회차 데이터를 다시 채우는" 성격이라 자동 동기화 자체는 안전**하지만, 그 동기화 방법이 `update_content`로 **바뀐 부분만 정확히 짚어 교체하는 것**이어야 안전하다는 뜻이다 — 안 바뀐 체크박스·토글은 건드리지 않고 그대로 둔다.
+- **`dashboard-live.html`과는 무관하다** — 그 파일은 뷰어가 직접 편집하는 라이브 문서라 자동 재발행하면 편집 내용이 사라지므로 파이프라인에서 의도적으로 제외돼 있다(아래 절 참고). 반면 "한장 정리" 노션 페이지는 `dashboard.html`과 성격이 같은 **"매 회차 통째로 다시 채우는" 스냅샷**이라 자동 동기화가 안전하다.
+- 기존 데이터베이스 4개짜리 "일정표" 페이지는 건드리지 않는다(사용자가 삭제를 요청하지 않는 한 그대로 둔다).
+
 ### `dashboard-live.html` — T06과는 별개의 편집 가능 대시보드(2026-08-20 신설)
 
 사용자가 "대시보드를 편집 가능하게, DB에 연결하고 싶다"고 요청해 신설한 세 번째 산출물. `artifacts/family-trip-prep/dashboard-live.html`을 Artifact `capabilities: {artifact: {}}`(라이브 문서)로 발행해, 뷰어의 클릭·타이핑이 그대로 저장·동기화되는 재량 예산 표 + 자유 메모 카드를 제공한다(항목 추가/삭제, 금액·메모 수정). URL: https://claude.ai/code/artifact/f1266676-b0f9-4a81-9d78-9abfea0e287e
@@ -77,7 +89,7 @@ T04 결과가 **조건부 승인**이면(예: "이 리스크를 대시보드에 
 1. 사용자 요청에서 목적지, 날짜, 가족 구성(인원·나이), 예산, 제약을 확인한다. 부족하면 질문하고 추측하지 않는다.
 2. `artifacts/family-trip-prep/00-trip-brief.md`에 정리해 저장한다.
 3. `TeamCreate`로 4개 역할을 팀원으로 구성한다(모델 정책은 위 표를 그대로 팀 생성 지시에 반영한다).
-4. `TaskCreate`로 T01-T07을 등록한다(T06·T07은 Orchestrator가 직접 수행하는 단계지만, 빠뜨리지 않도록 Task로도 등록한다).
+4. `TaskCreate`로 T01-T07을 등록한다(T06·T06b·T07은 Orchestrator가 직접 수행하는 단계지만, 빠뜨리지 않도록 Task로도 등록한다).
 5. 각 팀원은 자기 Task를 시작·차단·완료 시 `TaskUpdate`로 갱신한다.
 6. Orchestrator는 `TaskGet`으로 지연·차단·의존 관계 막힘을 확인한다.
 7. 팀원은 발견·충돌·완료를 `SendMessage`로 공유한다. checklist-reviewer가 중요 이상 이슈를 찾으면 itinerary-planner에게 수정 요청 메시지를 보낸다.
@@ -85,9 +97,10 @@ T04 결과가 **조건부 승인**이면(예: "이 리스크를 대시보드에 
 9. Orchestrator는 모든 산출물을 읽고 누락·충돌·승인 필요 지점을 정리한다.
 10. `dashboard.html`을 최종 산출물로 삼는다. 이때 직전 T04가 조건부 승인이었으면 위 "T05 조건 이행 확인"을 수행한다.
 11. **Artifact 동기화(T06, Orchestrator 직접 수행)**: `artifacts/family-trip-prep/dashboard-artifact.html`이 아직 없으면 `dashboard.html`을 CDN 없는 자체완결 버전으로 새로 만들어 저장한다(폰트는 data URI로 내장, 디자인은 처음 한 번만 공들여 만들고 이후에는 데이터만 갱신). 이미 있으면 `dashboard.html`과 같은 값으로 데이터 부분만 옮겨 적는다(레이아웃·CSS·폰트는 그대로 둔다). 그 다음 `Artifact` 도구로 발행한다 — `README.md`에 기록된 기존 Artifact URL이 있으면 그 `url`을 지정해 같은 링크를 유지하고, 없으면 새로 발행한 뒤 URL을 `README.md`에 기록한다.
-12. **기록 종료(T07, Orchestrator 직접 수행)**: 아래 "기록 종료(T07)" 절차대로 `README.md`와 `improvement-log.md`를 갱신한다. **이 단계를 끝내기 전에는 회차를 완료로 보고하지 않는다.**
-13. `TeamDelete`로 팀을 정리한다.
-14. 항공권/숙소 예약, 결제처럼 사람 승인이 필요한 항목이 있으면 아래 "승인 요청" 형식으로 멈추고 사용자에게 확인을 요청한다. 승인 전에는 실제 예약·결제를 진행하지 않는다.
+12. **노션 동기화(T06b, Orchestrator 직접 수행)**: 위 "T06b-notion-sync" 절 지시대로 노션 "한장 정리" 페이지를 이번 회차 데이터로 갱신한다. 페이지가 아직 없으면(최초 실행) 새로 만들고 URL을 `README.md`에 기록하며, 있으면 항상 같은 URL로 갱신한다.
+13. **기록 종료(T07, Orchestrator 직접 수행)**: 아래 "기록 종료(T07)" 절차대로 `README.md`와 `improvement-log.md`를 갱신한다. **이 단계를 끝내기 전에는 회차를 완료로 보고하지 않는다.**
+14. `TeamDelete`로 팀을 정리한다.
+15. 항공권/숙소 예약, 결제처럼 사람 승인이 필요한 항목이 있으면 아래 "승인 요청" 형식으로 멈추고 사용자에게 확인을 요청한다. 승인 전에는 실제 예약·결제를 진행하지 않는다.
 
 ## 승인 요청 형식
 
@@ -122,6 +135,6 @@ T04 결과가 **조건부 승인**이면(예: "이 리스크를 대시보드에 
    - 날짜, 바뀐 점, 실패했던 케이스, 다음 실행에서 고칠 후보
    - 하네스 자체를 고쳤으면 저장소 루트 `CLAUDE.md`의 "하네스 변경 이력" 표에도 남긴다(산출물만 바뀐 회차는 여기 적지 않는다)
 
-**완료 기준**: `README.md`의 "부분 재실행 기록" 표 마지막 행과 `improvement-log.md` 마지막 행이 **모두 이번 회차를 가리킨다.** 헤더의 버전 표기만 바꾸고 표에 행을 추가하지 않는 것은 완료가 아니다.
+**완료 기준**: `README.md`의 "부분 재실행 기록" 표 마지막 행과 `improvement-log.md` 마지막 행이 **모두 이번 회차를 가리킨다.** 헤더의 버전 표기만 바꾸고 표에 행을 추가하지 않는 것은 완료가 아니다. **이번 회차가 T03(일정 변경)까지 실행됐다면, T06b(노션 동기화)가 완료됐는지도 함께 확인한다** — 노션 페이지가 대시보드보다 뒤처진 채로 회차를 닫지 않는다.
 
 **왜 정식 단계인가**: 2026-07-30 v7·v8 두 회차는 산출물·검토·발행이 모두 정상이었는데 이 기록만 빠진 채 커밋됐다(README 헤더의 버전 표기만 v8로 바뀌어 있어 더 알아채기 어려웠다). 기록 갱신이 T01~T06 어디에도 속하지 않은 "마무리 관행"으로만 존재했던 것이 원인이라, 번호가 붙은 단계로 승격했다. 사용자 요청이 연달아 들어오는 회차에서 특히 빠지기 쉬우므로, 다음 요청을 받기 전에 먼저 닫는다.
