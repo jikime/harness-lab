@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴욕 여행 준비 대시보드 v19</title>
+    <title>뉴욕 여행 준비 대시보드 v22</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <style>
@@ -44,9 +44,9 @@
         <!-- 헤더 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
             <h1 class="text-3xl font-bold text-gray-800 mb-2">뉴욕 가족 여행 준비 대시보드</h1>
-            <p class="text-gray-600">2026-12-25 ~ 2027-01-02 (8박 9일) | 성인 2명(부부)</p>
-            <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">D-129 · 2026-08-20 기준 출발까지</span></p>
-            <p class="text-sm text-gray-500 mt-2">v19 업데이트 — 12/31 Midnight Run 등록자 확정(남편, 등록비 약 98,450원 실결제 완료) + 1/1 전면 재작성(나이아가라 기각, Amtrak 보스턴 당일치기 최종 채택) + 예산 변경(새해 전야 300,000→180,000원, 액티비티 1,750,000→2,150,000원, 미배분 1,290,000→1,070,000원) + v17·v18·v19 통합 검토 조건부 승인 + 기존 v8·v9·v11·v12·v14·v16 조건부 사항 모두 유지</p>
+            <p class="text-gray-600">2026-12-25 ~ 2027-01-03 (9일) | 성인 2명(부부)</p>
+            <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">v22 · 2026-08-27 기준 출발까지</span></p>
+            <p class="text-sm text-gray-500 mt-2">v22 업데이트 — 1/1(Day 8) 오전 블록만 교체: MoMA 재방문(v21) → 구겐하임 미술관 첫 방문. 예산 무변동(액티비티 2,140,000·미배분 1,080,000 유지). 이동시간 감소(99분→88분). v21 및 기존 v8~v20 조건부 사항 모두 유지 + v22 신규 조건부 사항 4건 추가(구겐하임 개관 확신 중간~높음·공원 도보 실측 미완·포기 순서 확정).</p>
         </div>
 
         <!-- 우리는 이런 여행자입니다 -->
@@ -67,8 +67,8 @@
                             <li>✓ <strong>도보 이동 적극 활용</strong> — 주요 동선을 걷기로 설계</li>
                             <li>✓ 12/25: Tompkins Sq Park → St. Marks → Astor Pl 산책</li>
                             <li>✓ 12/27: 9/11 메모리얼 → 로어맨해튼 도보 → 브루클린 브리지 횡단</li>
-                            <li>✓ 12/28: 센트럴파크 남하 산책(90분)</li>
-                            <li>✓ 12/29: 하이라인 산책</li>
+                            <li>✓ 12/28: 보스턴 프리덤 트레일 도보</li>
+                            <li>✓ 1/1: 센트럴파크 산책 + 스케이팅</li>
                         </ul>
                     </div>
                 </div>
@@ -87,9 +87,10 @@
                             <li>✓ 12/25: Veselka (우크라이나 전설)</li>
                             <li>✓ 12/26: Keens Steakhouse</li>
                             <li>✓ 12/27: Peter Luger (현금 필수)</li>
-                            <li>✓ 12/28: J.G. Melon (UES 명물)</li>
+                            <li>✓ 12/28: Quincy Market 점심 + 이스트빌리지 저녁</li>
                             <li>✓ 12/29: Los Tacos No.1</li>
                             <li>✓ 12/30: Joe's Pizza</li>
+                            <li>✓ 1/1: J.G. Melon (UES 명물)</li>
                             <li>✓ 1/2: Katz's</li>
                         </ul>
                     </div>
@@ -150,8 +151,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <div class="bg-white rounded-lg card-shadow p-4">
                 <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">기간</h3>
-                <p class="text-2xl font-bold text-gray-800">8박 9일</p>
-                <p class="text-xs text-gray-600">12/25~01/02</p>
+                <p class="text-2xl font-bold text-gray-800">9일</p>
+                <p class="text-xs text-gray-600">12/25~01/03</p>
             </div>
             <div class="bg-white rounded-lg card-shadow p-4">
                 <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">인원</h3>
@@ -172,7 +173,7 @@
 
         <!-- 예산 요약 표 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v19 — v17 Midnight Run 등록 확정 + v19 보스턴 Amtrak 최종 채택)</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v22 — 1/1 구겐하임으로 교체, 예산 무변동)</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead class="bg-gray-100 border-b">
@@ -186,19 +187,19 @@
                         <tr class="border-b"><td class="px-3 py-2">항공권</td><td class="text-right px-3 py-2 font-semibold">2,800,000원</td><td class="text-right px-3 py-2 text-gray-600">18.7%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">숙소(8박)</td><td class="text-right px-3 py-2 font-semibold">2,480,000원</td><td class="text-right px-3 py-2 text-gray-600">16.5%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">식비(유명·캐주얼·간식)</td><td class="text-right px-3 py-2 font-semibold">2,505,000원</td><td class="text-right px-3 py-2 text-gray-600">16.7%</td></tr>
-                        <tr class="border-b"><td class="px-3 py-2">액티비티(전망대·공연·투어)</td><td class="text-right px-3 py-2 font-semibold">2,150,000원</td><td class="text-right px-3 py-2 text-gray-600">14.3%</td></tr>
+                        <tr class="border-b"><td class="px-3 py-2">액티비티(전망대·공연·투어)</td><td class="text-right px-3 py-2 font-semibold">2,140,000원</td><td class="text-right px-3 py-2 text-gray-600">14.3%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">새해 전야(캐주얼+Midnight Run)</td><td class="text-right px-3 py-2 font-semibold">180,000원</td><td class="text-right px-3 py-2 text-gray-600">1.2%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">이동(공항·시내)</td><td class="text-right px-3 py-2 font-semibold">800,000원</td><td class="text-right px-3 py-2 text-gray-600">5.3%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">쇼핑·기념품</td><td class="text-right px-3 py-2 font-semibold">695,000원</td><td class="text-right px-3 py-2 text-gray-600">4.6%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">브로드웨이 러시</td><td class="text-right px-3 py-2 font-semibold">320,000원</td><td class="text-right px-3 py-2 text-gray-600">2.1%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">보험</td><td class="text-right px-3 py-2 font-semibold">100,000원</td><td class="text-right px-3 py-2 text-gray-600">0.7%</td></tr>
                         <tr class="bg-blue-50 border-b"><td class="px-3 py-2 font-bold">예비비</td><td class="text-right px-3 py-2 font-bold text-blue-600">1,900,000원</td><td class="text-right px-3 py-2 text-blue-600">12.7%</td></tr>
-                        <tr class="bg-green-50"><td class="px-3 py-2 font-bold">미배분(여유)</td><td class="text-right px-3 py-2 font-bold text-green-600">1,070,000원</td><td class="text-right px-3 py-2 text-green-600">7.1%</td></tr>
+                        <tr class="bg-green-50"><td class="px-3 py-2 font-bold">미배분(여유)</td><td class="text-right px-3 py-2 font-bold text-green-600">1,080,000원</td><td class="text-right px-3 py-2 text-green-600">7.2%</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600"><strong>총 예산:</strong> <span class="text-lg font-bold text-blue-600">15,000,000원</span> | 예비비+미배분: 2,970,000원(19.8%)</p>
+                <p class="text-sm text-gray-600"><strong>총 예산:</strong> <span class="text-lg font-bold text-blue-600">15,000,000원</span> | 예비비+미배분: 2,980,000원(19.9%)</p>
             </div>
         </div>
 
@@ -245,9 +246,9 @@
                     <div class="flex gap-2"><span class="time-label">15:30~15:45</span><span><strong>Rough Trade</strong> (30 Rock 콩코스, 재즈 LP, v8 확정)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:45~16:00</span><span>Top of the Rock 입장 대기(15분)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:00~17:30</span><span><strong>Top of the Rock 전망대</strong> (지정시간 예매)</span></div>
-                    <div class="flex gap-2"><span class="time-label">17:30~17:45</span><span><strong>[v10·신규] FAO Schwarz</strong>(30 Rockefeller Plaza · 한정판 Funko Pop·Jellycat) <span class="text-green-700 font-semibold">[v10]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">18:00~18:30</span><span><strong>Kinokuniya</strong> (1073 6th Ave, 귀멸의 칼날·스미스키) <span class="text-green-700 font-semibold">[v10]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">18:30~19:00</span><span>브라이언트 파크 윈터 빌리지 (30분) <span class="text-green-700 font-semibold">[v10]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">17:30~17:45</span><span><strong>FAO Schwarz</strong>(30 Rockefeller Plaza · 한정판 Funko Pop·Jellycat)</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:00~18:30</span><span><strong>Kinokuniya</strong> (1073 6th Ave, 귀멸의 칼날·스미스키)</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:30~19:00</span><span>브라이언트 파크 윈터 빌리지 (30분)</span></div>
                     <div class="flex gap-2"><span class="time-label">19:15~21:00</span><span><strong>[유명] Keens Steakhouse</strong> (머튼찹, 예약 필수)</span></div>
                 </div>
                 <div class="mt-3 pt-3 border-t border-orange-200 bg-orange-50 px-3 py-2 rounded text-xs text-orange-900">
@@ -269,28 +270,42 @@
                     <div class="flex gap-2"><span class="time-label">15:30~17:15</span><span>DUMBO (Washington St·브리지파크·일몰·야경)</span></div>
                     <div class="flex gap-2"><span class="time-label">18:00~19:45</span><span><strong>[유명] Peter Luger Steak House</strong> (Steak for Two) — <strong>현금($325~350) 필수</strong></span></div>
                 </div>
+                <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-xs text-red-900">
+                    <strong>⚠️ v21 신규 조건부 사항:</strong> 내일 Day 4 기상 04:40을 대비해 저녁 워터프론트 이동은 도보 대신 지하철 사용 권고. 피로 누적을 고려하면 당일 저녁 빨리 돌아가는 것이 중요합니다.
+                </div>
             </div>
 
-            <!-- Day 4 -->
-            <div class="bg-white rounded-lg card-shadow p-5 mb-4">
+            <!-- Day 4 — v21 새로운 내용: 보스턴 Amtrak 당일치기 -->
+            <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-teal-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">⛸️ Day 4 — 12/28(월) 업타운</h3><p class="text-sm text-gray-600">The Met + 센트럴파크 + 스케이팅 + 루즈벨트 트램 + J.G. Melon</p></div>
-                    <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded">현금 필수</span>
+                    <div><h3 class="text-lg font-bold text-gray-800">🚆 Day 4 — 12/28(월) 보스턴 Amtrak 당일치기 (v21)</h3><p class="text-sm text-teal-600 font-semibold">⚠️ 17시간 35분·수면 5.5~6시간·Amtrak 요금 미확정</p></div>
+                    <span class="inline-block bg-teal-100 text-teal-800 text-xs font-semibold px-2 py-1 rounded">장거리</span>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">11:15~14:00</span><span>메트로폴리탄 미술관 (2시간 45분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">14:00~15:00</span><span>점심 (The Met 인근)</span></div>
-                    <div class="flex gap-2"><span class="time-label">15:00~16:30</span><span>센트럴파크 남하 산책 (90분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:45~18:15</span><span>월먼 링크 아이스 스케이팅 (90분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">18:15~18:30</span><span>월먼 링크 → 트램 승강장(2nd Ave & E 60th St) 도보 15분</span></div>
-                    <div class="flex gap-2"><span class="time-label">18:30~19:10</span><span><strong>루즈벨트 아일랜드 트램웨이 왕복</strong> (이스트강·퀸즈보로 브리지 조망, 야간)</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:10~19:30</span><span>트램 승강장 → J.G. Melon 도보 20분</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:30~20:45</span><span><strong>[유명] J.G. Melon</strong> (UES 버거, 예약 불가·현금 $90·대기 10~75분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">21:00~21:30</span><span>숙소 귀가</span></div>
+                    <div class="flex gap-2"><span class="time-label">04:40</span><span><strong>기상</strong> (전날 12/27 피터루거 저녁 귀가 20:25 기준)</span></div>
+                    <div class="flex gap-2"><span class="time-label">05:10</span><span>숙소 출발 (택시/Uber → Penn Station)</span></div>
+                    <div class="flex gap-2"><span class="time-label">05:44</span><span><strong>Amtrak 66번 Northeast Regional 출발</strong> (Penn Station)</span></div>
+                    <div class="flex gap-2"><span class="time-label">10:05</span><span><strong>보스턴 South Station 도착</strong></span></div>
+                    <div class="flex gap-2"><span class="time-label">10:35~12:35</span><span><strong>Freedom Trail</strong> (역사적 산책로, 120분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">12:35~13:35</span><span><strong>Quincy Market 점심</strong> (자비 부담, 약 60분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">13:35~14:50</span><span><strong>자유시간</strong> (75분) — 추가 둘러보기 또는 휴식</span></div>
+                    <div class="flex gap-2"><span class="time-label">14:50~15:15</span><span>South Station 도착 및 귀환 열차 탑승 확인</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:15</span><span><strong>Amtrak 175번 Northeast Regional 출발</strong> (South Station)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:52</span><span><strong>뉴욕 Penn Station 도착</strong></span></div>
+                    <div class="flex gap-2"><span class="time-label">20:30~21:45</span><span><strong>[캐주얼] 이스트빌리지 저녁 식사</strong> (귀환 후 근처 워크인)</span></div>
+                    <div class="flex gap-2"><span class="time-label">22:15</span><span><strong>취침</strong></span></div>
                 </div>
-                <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-sm text-red-900">
-                    <strong>⚠️ J.G. Melon 대기 경고:</strong><br>
-                    <span class="text-xs">대기가 길어지면(최대 75분) 귀가가 22:00 이후로 밀릴 수 있습니다. 이 경우 <strong>20:30을 넘기면 즉시 인근 대체 업장(Serendipity 3 등)으로 전환하는 것이 더 안전합니다</strong>.</span>
+                <div class="mt-3 pt-3 border-t border-teal-200 bg-teal-50 px-3 py-2 rounded text-sm text-teal-900 mb-2">
+                    <strong>⚠️ v21 조건부 사항 1 — 하루 17시간35분·수면 5.5~6시간(B안 확정):</strong><br>
+                    <span class="text-xs"><strong>04:40 기상 ~ 22:15 취침 = 17시간 35분 연속 활동. 수면은 전날(12/27) 밤 22:00~23:00 취침(추정) ~ 04:40 기상 = 약 5.5~6시간.</strong> 이는 "9~10시간"이라는 초기 낙관치를 배제한 B안입니다. 보스턴 체류는 5시간 10분(10:05~15:15)이며, 왕복 이동에 약 9시간(538분) 소요됩니다. v18(단체버스투어 06:30 출발 기준 수면 2시간15분~30분)보다는 크게 개선되었지만, v19(Amtrak 09:05 출발 기준 수면 약 5시간~5시간15분) 대비로는 약 30~45분 개선에 그치며, 여전히 "완화"일 뿐 "해소"는 아닙니다.</span>
+                </div>
+                <div class="mt-2 pt-2 bg-teal-50 px-3 py-2 rounded text-sm text-teal-900 mb-2">
+                    <strong>⚠️ v21 조건부 사항 2 — Amtrak 66번/175번 실제 요금 미확정:</strong><br>
+                    <span class="text-xs"><strong>편명(Northeast Regional 66·175번) 및 시각(05:44·15:15 출발)은 확정되었으나, 실제 왕복 요금 상단이 배정액(400,000원)을 약 78,800원 초과할 수 있습니다.</strong> 초과 시 조달 순서: ① NER 세이버 등급 재검색 → ② 미배분 여유(1,080,000) → ③ 예비비(1,900,000) → 흡수 가능. 최악의 경우도 충분한 여유가 있습니다.</span>
+                </div>
+                <div class="mt-2 pt-2 bg-teal-50 px-3 py-2 rounded text-sm text-teal-900">
+                    <strong>ℹ️ v21 참고사항 — 보스턴 체류 구성:</strong><br>
+                    <span class="text-xs"><strong>Freedom Trail(역사 산책로, 120분) + Quincy Market 점심(60분) + 자유시간(75분) = 255분(약 4시간 15분).</strong> 나머지 55분은 이동 및 대기입니다. 하버드 스퀘어 방문은 지하철 왕복 약 1시간 추가 필요하므로 이번 버전에 포함되지 않았습니다.</span>
                 </div>
             </div>
 
@@ -304,10 +319,10 @@
                     <div class="flex gap-2"><span class="time-label">11:15~12:00</span><span>하이라인 산책</span></div>
                     <div class="flex gap-2"><span class="time-label">12:15~14:00</span><span>Edge at Hudson Yards 전망대 (105분)</span></div>
                     <div class="flex gap-2"><span class="time-label">14:00~14:45</span><span><strong>[유명] Los Tacos No.1</strong> (첼시 마켓 내, 타코)</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:05~16:45</span><span><strong>[v10·신규] The Vessel</strong> (20 Hudson Yards, 나선형 구조물, 일몰 시간대) <span class="text-green-700 font-semibold">[v10]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">16:05~16:45</span><span><strong>The Vessel</strong> (20 Hudson Yards, 나선형 구조물, 일몰 시간대)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:50~18:00</span><span>[캐주얼] 허드슨야드 이른 저녁 (70분)</span></div>
                     <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span>브로드웨이 공연 관람 (티켓 확보 시)</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span><strong>(대안)</strong> <strong>Birdland Jazz Club</strong> (315 W 44th St, 헬스키친) — <strong>로터리·러시 둘 다 실패 시만 발동</strong> <span class="text-blue-600 font-semibold">[v12]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span><strong>(대안)</strong> <strong>Birdland Jazz Club</strong> (315 W 44th St, 헬스키친) — <strong>로터리·러시 둘 다 실패 시만 발동</strong></span></div>
                 </div>
                 <!-- v12 신규: Birdland 조건부 사항 -->
                 <div class="mt-3 pt-3 info-box rounded px-3 py-2 text-sm text-blue-900">
@@ -327,33 +342,33 @@
                     <div class="flex gap-2"><span class="time-label">14:50~15:15</span><span>그리니치 빌리지 산책 (전반)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:15~15:45</span><span><strong>Village Revival Records</strong> (재즈 LP)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:45~16:00</span><span>그리니치 빌리지 산책 (후반)</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:00~17:00</span><span>유니언 스퀘어 홀리데이 마켓 (도보 15분 + 체류 45분) <span class="text-green-700 font-semibold">[v11]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">17:05~17:30</span><span><strong>[v11·신규] 르뱅 베이커리 Flatiron점</strong> (2 W 18th St, 한정판 쿠키, 대기 포함) <span class="text-green-700 font-semibold">[v11]</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">17:50~18:15</span><span>숙소 복귀·휴식 (25분, 기존 40분 → 축소) <span class="text-green-700 font-semibold">[v11]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">16:00~17:00</span><span>유니언 스퀘어 홀리데이 마켓 (도보 15분 + 체류 45분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">17:05~17:30</span><span><strong>르뱅 베이커리 Flatiron점</strong> (2 W 18th St, 한정판 쿠키, 대기 포함)</span></div>
+                    <div class="flex gap-2"><span class="time-label">17:50~18:15</span><span>숙소 복귀·휴식 (25분)</span></div>
                     <div class="flex gap-2"><span class="time-label">18:15~19:30</span><span>[캐주얼] 이스트빌리지 이른 저녁</span></div>
-                    <div class="flex gap-2"><span class="time-label">20:00~22:30</span><span><strong>[v14 확정] Blue Note</strong> (131 W 3rd St, 그리니치빌리지 · Chris Botti 홀리데이 레지던시, 예약 필수) <span class="text-red-600 font-semibold">[v14]</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">20:00~22:30</span><span><strong>Blue Note</strong> (131 W 3rd St, 그리니치빌리지 · Chris Botti 홀리데이 레지던시, 예약 필수)</span></div>
                 </div>
                 <!-- v14 신규: Blue Note 경고 -->
                 <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
                     <strong>⚠️ Blue Note 재즈클럽 예산 부족 가능성 (v14 조건부 사항 1):</strong><br>
-                    <span class="text-xs"><strong>예산 140,000원은 2인 약 $105에 해당하는데, Vanguard 평시 커버 상단($50/인) + 음료 미니멈만 적용해도 2인 약 $130(≈173,000원)으로 이미 초과됩니다.</strong> Chris Botti 급 헤드라이너는 통상 더 높은 가격대입니다. 차액 조달 순서: 액티비티 버퍼(230,000) → 미배분 여유(1,070,000) → 예비비(1,900,000) → Smalls/Mezzrow(평시 기준)로 전환 가능합니다.</span>
+                    <span class="text-xs"><strong>예산 140,000원은 2인 약 $105에 해당하는데, Vanguard 평시 커버 상단($50/인) + 음료 미니멈만 적용해도 2인 약 $130(≈173,000원)으로 이미 초과됩니다.</strong> Chris Botti 급 헤드라이너는 통상 더 높은 가격대입니다. 차액 조달 순서: 액티비티 버퍼 → 미배분 여유(1,080,000) → 예비비(1,900,000) → Smalls/Mezzrow(평시 기준)로 전환 가능합니다.</span>
                 </div>
                 <!-- 조건부 사항 1: 피터루거 백업 경고 -->
                 <div class="mt-2 pt-2 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
                     <strong>⚠️ 피터루거 백업 시나리오 (v11 조건부 사항 3):</strong><br>
-                    <span class="text-xs">12/30 저녁이 피터루거 백업으로 전환될 경우(12/27 실패 확정 시), <strong>르뱅 베이커리를 생략하고 유니언스퀘어 마켓 종료(17:15) 직후 곧바로 윌리엄스버그로 직행</strong>해야 합니다(숙소 미경유). T10 2단계 "18:00 착석 가능"은 더 이상 유효하지 않습니다(v11 기준 17:50 귀가 시 15~20분 지각 예상).</span>
+                    <span class="text-xs">12/30 저녁이 피터루거 백업으로 전환될 경우(12/27 실패 확정 시), <strong>르뱅 베이커리를 생략하고 유니언스퀘어 마켓 종료(17:15) 직후 곧바로 윌리엄스버그로 직행</strong>해야 합니다(숙소 미경유). T10 2단계 "18:00 착석 가능"은 더 이상 유효하지 않습니다.</span>
                 </div>
                 <!-- 조건부 사항 2: 완충 시간 소멸 경고 -->
                 <div class="mt-2 pt-2 bg-red-50 px-3 py-2 rounded text-sm text-red-900">
                     <strong>⚠️ 12/30 오후 완충 시간 소멸 (v11 조건부 사항 4):</strong><br>
-                    <span class="text-xs"><strong>16:00~16:15의 유일한 완충 시간(15분)이 르뱅 베이커리 삽입으로 소멸했습니다.</strong> 이는 12/26 오후 창(여유 0분)과 동일한 수준의 구조적 리스크입니다. 빌리지 산책이 정시에 끝나지 않으면 지연이 곧바로 숙소 휴식에서 흡수됩니다.</span>
+                    <span class="text-xs"><strong>16:00~16:15의 유일한 완충 시간(15분)이 르뱅 베이커리 삽입으로 소멸했습니다.</strong> 이는 12/26 오후 창(여유 0분)과 동일한 수준의 구조적 리스크입니다.</span>
                 </div>
             </div>
 
             <!-- Day 7 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-purple-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야 · Midnight Run 등록자 확정</h3><p class="text-sm text-purple-600 font-semibold">⚠️ v17: 남편 등록 완료, 예산 300,000→180,000원</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야 · Midnight Run</h3><p class="text-sm text-purple-600 font-semibold">⚠️ v17: 남편 등록 완료</p></div>
                     <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">특별</span>
                 </div>
                 <div class="space-y-1 text-sm">
@@ -361,8 +376,8 @@
                     <div class="flex gap-2"><span class="time-label">11:30~15:00</span><span><strong>QC NY Spa</strong> (32 E 32nd St, 패키지 서비스)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:00~15:35</span><span>페리 → East River 복귀 (약 35분)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:35~16:15</span><span>페리 승강장 → 숙소 (도보 약 40분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:15~18:30</span><span><strong>숙소 휴식·캐주얼 복장 준비</strong> (135분, v16: 드레스업 불필요)</span></div>
-                    <div class="flex gap-2"><span class="time-label">18:30~19:30</span><span><strong>[캐주얼] 이스트빌리지 저녁 끼니</strong> (워크인, 예약 불가)</span></div>
+                    <div class="flex gap-2"><span class="time-label">16:15~18:30</span><span><strong>숙소 휴식·캐주얼 복장 준비</strong> (135분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:30~19:30</span><span><strong>[캐주얼] 이스트빌리지 저녁 끼니</strong> (워크인)</span></div>
                     <div class="flex gap-2"><span class="time-label">19:30~22:30</span><span>숙소 복귀·대기·방한 레이어링 준비(3시간, 새해 준비)</span></div>
                     <div class="flex gap-2"><span class="time-label">22:30~23:15</span><span>숙소 출발 → 센트럴파크 Naumburg Bandshell 도착 (약 45분)</span></div>
                     <div class="flex gap-2"><span class="time-label">23:15~자정</span><span>Naumburg Bandshell 도착·집결</span></div>
@@ -375,72 +390,80 @@
                 <!-- v17 신규: 등록자 확정 + 결제 완료 -->
                 <div class="mt-3 pt-3 border-t border-purple-200 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
                     <strong>✅ v17 조건부 사항 1 — 등록자 확정 완료 (2026-08-20 실결제):</strong><br>
-                    <span class="text-xs"><strong>남편이 NYRR Midnight Run에 실제 등록 및 결제(약 98,450원/$74.02)를 완료했습니다.</strong> 아내는 남편의 손목밴드(배번 러너 1개) 외에 동반 게스트용 손목밴드(2개)를 받아야 핵심 구역(Naumburg Bandshell·불꽃놀이) 입장이 가능합니다. <strong>"되돌리기 비용 0원"이라는 원칙이 처음으로 깨진 항목입니다.</strong></span>
+                    <span class="text-xs"><strong>남편이 NYRR Midnight Run에 실제 등록 및 결제(약 98,450원)를 완료했습니다.</strong> 아내는 동반 게스트용 손목밴드를 별도로 수령해야 합니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ v17 조건부 사항 2 — 기상 취소 시 환불 정책 최우선 확인:</strong><br>
-                    <span class="text-xs"><strong>낙뢰·극한 날씨 등으로 경기가 취소되면 등록비($74.02)의 환불 또는 다음 해 이월 정책을 출발 전에 반드시 확인할 것.</strong> 2025년에 낙뢰로 NYRR Midnight Run이 전면 취소된 전례가 있습니다(v16 조건부 사항 5 참고).</span>
+                    <strong>⚠️ v17 조건부 사항 2 — 기상 취소 시 환불 정책:</strong><br>
+                    <span class="text-xs"><strong>낙뢰·극한 날씨 등으로 경기 취소 시 환불 또는 다음 해 이월 정책을 확인할 것.</strong> 2025년 낙뢰 취소 전례가 있습니다.</span>
                 </div>
                 <!-- 기존 v16 조건부 사항들 -->
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ v16 조건부 사항 1 — 격식 있는 정찬이 이 여행에 한 번도 없음:</strong><br>
-                    <span class="text-xs"><strong>12/31 Trattoria(유일한 정찬)가 삭제되고, 1/1도 캐주얼 저녁이므로 전체 9일 중 형식 있는 식사 경험이 0회입니다.</strong> v13에서 1/1 "특별 디너"를 이미 캐주얼로 다운그레이드했으므로, 이것이 최종 상태입니다.</span>
+                    <strong>⚠️ v16 조건부 사항 1 — 격식 정찬이 0회:</strong><br>
+                    <span class="text-xs">이 여행에는 형식 있는 정찬이 한 번도 없습니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ v16 조건부 사항 2 — 볼드롭 조망이라는 원래 목표가 상실됨:</strong><br>
-                    <span class="text-xs"><strong>Trattoria는 한정된 실내 좌석에서 빌딩 밖 야경을 보는 구조였으나, Midnight Run은 야외 레이스이므로 "센트럴파크 야경과 불꽃·새해맞이" 경험입니다.</strong> 목표(볼드롭 조망)와 대체 경험(Midnight Run 참가)은 서로 다른 활동입니다. 볼드롭은 이제 이 여행에서 보장되지 않습니다.</span>
+                    <strong>⚠️ v16 조건부 사항 2 — 볼드롭 조망 상실:</strong><br>
+                    <span class="text-xs">Midnight Run은 야외 레이스이므로 "센트럴파크 야경과 불꽃·새해맞이" 경험이며, 이는 원래 목표(볼드롭 조망)와 다릅니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ v16 조건부 사항 3 — 12/31 이동시간 약 152분, 2시간 초과 32분(9일 중 최대), 귀가 02:25:</strong><br>
-                    <span class="text-xs"><strong>이동 구성: 페리 복귀 35 + 페리승강장→숙소 40 + 숙소→센트럴파크 45 + 센트럴파크→숙소 45 = 약 152분(= 2시간 32분 초과).</strong> 자정 후 센트럴파크에 가는 것 자체가 이 여행에서 가장 오래 걸리는 이동이며, 귀가가 새벽 02:25이므로 다음 날(1/1) 수면이 제약됩니다.</span>
+                    <strong>⚠️ v16 조건부 사항 3 — 12/31 이동 약 152분·귀가 02:25:</strong><br>
+                    <span class="text-xs">자정 후 센트럴파크 왕복이 이 여행 최장 이동이며, 귀가가 새벽 02:25이므로 다음 날 수면이 제약됩니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ v16 조건부 사항 4 — 2025년 낙뢰로 레이스가 전면 취소된 전례 있음:</strong><br>
-                    <span class="text-xs"><strong>직전 해(2025년)의 NYRR Midnight Run이 낙뢰로 인해 레이스와 불꽃놀이가 모두 취소된 사례가 있습니다.</strong> 대응 방침: 취소되면 숙소 인근에서 캐주얼하게 새해를 맞습니다. 새 폴백 체인을 만들지 않는 이유는 Midnight Run이 이제 "폴백"이 아니라 "기본 계획"이기 때문입니다.</span>
+                    <strong>⚠️ v16 조건부 사항 4 — 낙뢰 취소 전례:</strong><br>
+                    <span class="text-xs">2025년 NYRR Midnight Run이 낙뢰로 전면 취소된 전례가 있습니다. 취소 시 숙소 인근에서 캐주얼하게 새해를 맞습니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900">
                     <strong>⚠️ v16 조건부 사항 5 — 미배분 여유의 구성:</strong><br>
-                    <span class="text-xs"><strong>v19 미배분 1,070,000원은 단순 안전 마진이 아니라 v13·v16 두 차례 지출 포기의 누적 결과입니다.</strong> v13의 1/1 특별 디너 다운그레이드(340,000원 포기) + v16 Trattoria 삭제(600,000원 포기) + v17 Midnight Run 1인 확정(+120,000원 반납) + v19 보스턴 Amtrak으로 일부 흡수 = 1,070,000원. 즉 단순히 "남은 돈"이 아니라 "포기된 경험의 대가"입니다.</span>
+                    <span class="text-xs">v21 미배분 1,080,000원은 단순 안전 마진이 아니라 여러 지출 포기의 누적 결과입니다(1/1 특별 디너 다운그레이드 + Trattoria 삭제 + Midnight Run 확정).</span>
                 </div>
             </div>
 
-            <!-- Day 8 — v19 새로운 일정 -->
-            <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-blue-400">
+            <!-- Day 8 — v22 새로운 내용: 구겐하임 미술관 -->
+            <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-green-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🚆 Day 8 — 01/01(금) 새해 첫날 · 보스턴 Amtrak 당일치기 (v19)</h3><p class="text-sm text-blue-600 font-semibold">⚠️ v19: 수면 약 5~5.25시간, 자기주도 이동·요금 미확정</p></div>
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded">야외활동</span>
+                    <div><h3 class="text-lg font-bold text-gray-800">🎨 Day 8 — 01/01(금) 새해 첫날 · 업타운 + 구겐하임 미술관 (v22)</h3><p class="text-sm text-green-600 font-semibold">⚠️ v22: 구겐하임 첫 방문·개관 확신 중간~높음·도보 실측 미완</p></div>
+                    <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded">회복일</span>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">08:00~08:30</span><span><strong>기상 및 숙소 출발</strong> (12/31 새벽 02:25 귀가 반영, 취침 02:45~03:00, 약 5시간 수면)</span></div>
-                    <div class="flex gap-2"><span class="time-label">08:30~08:50</span><span>숙소 → Penn Station (택시/Uber, 약 20분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">08:50~09:05</span><span>Penn Station 도착 및 승차 확인</span></div>
-                    <div class="flex gap-2"><span class="time-label">09:05</span><span><strong>Amtrak 뉴욕→보스턴 열차 출발</strong> (Northeast Regional 또는 Acela, 요금 미확정)</span></div>
-                    <div class="flex gap-2"><span class="time-label">12:40</span><span><strong>보스턴 South Station 도착</strong></span></div>
-                    <div class="flex gap-2"><span class="time-label">13:00~15:00</span><span><strong>Freedom Trail</strong> (역사적 산책로, 120분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">15:00~16:00</span><span><strong>Quincy Market 점심</strong> (자비 부담, 약 60분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:00~16:30</span><span>자유시간 (30분) — 추가 둘러보기 또는 휴식</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:30~17:00</span><span>South Station 도착 및 귀환 열차 확인</span></div>
-                    <div class="flex gap-2"><span class="time-label">17:00</span><span><strong>Amtrak 보스턴→뉴욕 열차 출발</strong> (귀환 시간)</span></div>
-                    <div class="flex gap-2"><span class="time-label">20:35~21:20</span><span>Penn Station 도착 (약 20:35~21:20 예상 도착)</span></div>
-                    <div class="flex gap-2"><span class="time-label">21:15~22:00</span><span><strong>[캐주얼] 미드타운 또는 이스트빌리지 저녁 식사</strong> (귀환 열차 안 또는 도착 직후)</span></div>
-                    <div class="flex gap-2"><span class="time-label">22:00~</span><span>숙소 귀가</span></div>
+                    <div class="flex gap-2"><span class="time-label">09:30~10:00</span><span>아침 커피 (느슨한 시작)</span></div>
+                    <div class="flex gap-2"><span class="time-label">10:00~10:35</span><span>숙소 여유 (35분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">10:35~11:15</span><span><strong>구겐하임 미술관 이동</strong> (40분 — 6호선 Astor Pl → 86th St + 도보)</span></div>
+                    <div class="flex gap-2"><span class="time-label">11:15~13:15</span><span><strong>구겐하임 미술관 관람</strong> (2시간, 첫 방문, 1/1 신정 개방 확인 필수)</span></div>
+                    <div class="flex gap-2"><span class="time-label">13:15~14:15</span><span><strong>어퍼이스트사이드 점심</strong> (매디슨 애비뉴 88~92가)</span></div>
+                    <div class="flex gap-2"><span class="time-label">14:15~14:40</span><span><strong>구겐하임 → 90번가 Engineers' Gate 진입 → 센트럴파크 남하 도보</strong> (25분, 지하철 아님)</span></div>
+                    <div class="flex gap-2"><span class="time-label">14:40~15:00</span><span>센트럴파크 여유 (20분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:00~17:00</span><span>센트럴파크 남하 산책 + 월먼 링크 접근</span></div>
+                    <div class="flex gap-2"><span class="time-label">17:00~18:15</span><span>월먼 링크 아이스 스케이팅 (75분, 신정 공휴일 할증 $40/인 가능성)</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:15~18:40</span><span>월먼 링크 → 트램 승강장(2nd Ave & E 60th St) 도보 25분</span></div>
+                    <div class="flex gap-2"><span class="time-label">18:40~19:20</span><span><strong>루즈벨트 아일랜드 트램웨이 왕복</strong> (40분, 이스트강·퀸즈보로 브리지 조망, 저녁)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:20~19:40</span><span>트램 승강장 → J.G. Melon 도보 20분</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:40~21:00</span><span><strong>[유명] J.G. Melon</strong> (UES 버거, 신정 영업 확인 필수, 현금 $90, 대기 예상)</span></div>
+                    <div class="flex gap-2"><span class="time-label">21:00~21:30</span><span>숙소 귀가</span></div>
                 </div>
-                <!-- v19 신규 조건부 사항들 -->
-                <div class="mt-3 pt-3 border-t border-blue-200 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900 mb-2">
-                    <strong>⚠️ v19 조건부 사항 1 — 수면 약 5시간~5시간15분 — "완화"이지 "해소"가 아님:</strong><br>
-                    <span class="text-xs"><strong>12/31 새벽 02:45~03:00 취침 → 08:00 기상 = 약 5시간~5시간15분.</strong> v18(버스투어 06:30 출발 기준 2시간15분~2시간30분)에서 약 2시간45분 개선되었지만, 이는 "완화"일 뿐 "해소"가 아닙니다. v15에서 사용자가 CPRC 5K(수면 약 4시간30분)를 "흡수처가 없다"며 폐기한 기준선을 겨우 넘긴 수준입니다. 자정에 4마일을 뛴 다음 날 왕복 7~8시간을 이동해 다른 도시를 반나절 도는 구조와 회복일 0일이라는 사실은 여전히 변하지 않았습니다.</span>
+
+                <!-- v22 신규 조건부 사항 1 — 완충 칸 소멸 -->
+                <div class="mt-3 pt-3 border-t border-green-200 bg-green-50 px-3 py-2 rounded text-sm text-green-900 mb-2">
+                    <strong>⚠️ v22 조건부 사항 1 — 완충 칸 소멸·포기 순서 확정:</strong><br>
+                    <span class="text-xs"><strong>v21까지 MoMA는 "포기해도 콘텐츠가 통째로 사라지지 않는 유일한 항목"이었으나(12/26에 이미 방문), 구겐하임은 1/1이 처음이자 마지막 방문입니다.</strong> 만약 이날 시간이 부족해지면 포기 순서는 ① 트램(40분) → ② 월먼 링크(75분) → ③ 점심 단축(60분) → ④ 관람 1.5시간으로 축소(순서대로) 입니다. 구겐하임·J.G. Melon·센트럴파크는 최대한 보호하되, 예상치 못한 지연 시 이 순서를 따릅니다.</span>
                 </div>
-                <div class="mt-2 pt-2 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900 mb-2">
-                    <strong>⚠️ v19 조건부 사항 2 — Amtrak 실제 요금 미확정 — 09:05편이 Acela면 예산 초과 가능:</strong><br>
-                    <span class="text-xs"><strong>배정액 400,000원(2인, 안전 마진)은 유지되나, 09:05편이 Acela 비즈니스급이면 실제 요금이 최대 +770,000원까지 초과될 수 있습니다.</strong> 코치 세이버 기준 예상 절감액은 86,000~246,000원이나 확정이 아닙니다. 초과 시 조달 순서: ① 같은 시간대 NER로 변경 → ② 08:00대 NER로 하향 → ③ 미배분 여유(1,070,000) → ④ 예비비(1,900,000) → 흡수 가능. 최악(Acela 상단 880달러) 시에도 배정액의 약 3배 여유로 대응 가능합니다.</span>
+
+                <!-- v22 신규 조건부 사항 2 — 구겐하임 개관 확신 수준 -->
+                <div class="mt-2 pt-2 bg-green-50 px-3 py-2 rounded text-sm text-green-900 mb-2">
+                    <strong>⚠️ v22 조건부 사항 2 — 구겐하임 개관 확신 수준·운영시간 재확인 필수:</strong><br>
+                    <span class="text-xs"><strong>The Met처럼 "휴관 확인됨(확신 매우 높음)"이 아니라 "개관 추정(확신 중간~높음)"입니다.</strong> 2026-27 시즌 정확한 홀리데이 시간표가 아직 미발표입니다. 출발 임박 시(11~12월) guggenheim.org에서 1/1 운영시간을 반드시 재확인하세요. 만약 변경되었다면 v21의 MoMA 백업 방안(또는 다른 박물관)을 즉시 재검토해야 합니다.</span>
                 </div>
-                <div class="mt-2 pt-2 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900 mb-2">
-                    <strong>⚠️ v19 조건부 사항 3 — 자기주도 이동 — 가이드 없음:</strong><br>
-                    <span class="text-xs"><strong>Freedom Trail·Quincy Market은 도보권이므로 별 문제가 없으나, 하버드/케임브리지는 South Station에서 지하철 왕복 약 1시간 추가 필요하므로 이번 여행에 포함 여부가 유동적입니다.</strong> 수면 부족 상태에서 자기주도로 환승·귀환 열차 시각을 관리해야 합니다.</span>
+
+                <!-- v22 신규 조건부 사항 3 — 공원 도보 실측 미완 -->
+                <div class="mt-2 pt-2 bg-green-50 px-3 py-2 rounded text-sm text-green-900 mb-2">
+                    <strong>⚠️ v22 조건부 사항 3 — 공원 진입 도보 25분은 실측 미완:</strong><br>
+                    <span class="text-xs"><strong>구겐하임 → 90번가 Engineers' Gate 진입 → 센트럴파크 남하 도보 경로(25분)의 정확한 도보 시간과 경로가 확정되지 않았습니다.</strong> 한파·강풍 시 도보 대신 지하철(86번가↔59번가) 대체 시 약 98분(지하철 10분 + 이동 25분 + 대기 등)으로 늘어날 수 있습니다. 기상 상황에 따라 현장에서 유연하게 판단하되, 월먼 링크 스케이팅(17:00 이후)은 반드시 보호하세요.</span>
                 </div>
-                <div class="mt-2 pt-2 bg-blue-50 px-3 py-2 rounded text-sm text-blue-900">
-                    <strong>ℹ️ v19 조건부 사항 4 — 나이아가라는 최종 기각됨:</strong><br>
-                    <span class="text-xs"><strong>겨울 콘텐츠 빈약·레이크 이펙트 스노 결항 리스크·부정적 후기 등을 고려해 사용자가 최종 제외 결정했습니다.</strong> 보스턴만 채택되어 1/1은 미국 동부 당일치기 투어로 확정되었습니다.</span>
+
+                <!-- v22 신규 조건부 사항 4 — MoMA 재결제 조건 제거 -->
+                <div class="mt-2 pt-2 bg-green-50 px-3 py-2 rounded text-sm text-green-900">
+                    <strong>ℹ️ v22 조건부 사항 4 — [제거] MoMA 재방문 재결제 조건:</strong><br>
+                    <span class="text-xs"><strong>v21의 "MoMA 재방문 입장료 재결제 정책 미확인" 조건은 v22에서 자동 소멸합니다.</strong> 구겐하임은 첫 방문이므로 입장료 재결제 이슈 자체가 없기 때문입니다. 구겐하임의 1/1 신정 개관 여부 확인(조건 2)이 이제 핵심입니다.</span>
                 </div>
             </div>
 
@@ -451,13 +474,13 @@
                     <span class="inline-block bg-red-100 text-red-800 text-xs font-semibold px-2 py-1 rounded">귀국</span>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">09:00~12:50</span><span>마지막 쇼핑 (유니언스퀘어·이스트빌리지, Exit9 재방문 기회)</span></div>
+                    <div class="flex gap-2"><span class="time-label">09:00~12:50</span><span>마지막 쇼핑 (유니언스퀘어·이스트빌리지)</span></div>
                     <div class="flex gap-2"><span class="time-label">13:00~17:00</span><span>체크아웃·준비</span></div>
                     <div class="flex gap-2"><span class="time-label">17:30~</span><span>공항 이동 (JFK, 약 75분)</span></div>
                     <div class="flex gap-2"><span class="time-label">21:30~</span><span>탑승 준비 (01/03 새벽 00:30 출발)</span></div>
                 </div>
                 <div class="mt-3 p-3 bg-orange-50 border border-orange-200 rounded text-sm text-orange-900">
-                    <strong>💺 라운지 검토(불확실)</strong>: JFK 터미널1 대한항공(KAL) 라운지, "더라운지" 앱에서 21:30부터 예약은 가능(2026-08-05 확인). 하지만 <strong>대한항공 자사 탑승 골든타임(약 20:30 이후)엔 외부 이용객 입장을 제한하는 정책이 실제로 보고됨(2026-08-11 재조사)</strong> — 하필 부부 이용 시간대(21:30 이후)와 겹쳐 당일 현장에서 거부될 가능성이 있음. 앱 예약은 시도하되, Primeclass·Turkish Airlines 라운지나 공항 내 카페·식당 대기를 플랜B로 준비할 것. 신한카드 SOL트래블(도라에몽)로 본인 1인 무료 가능성(전월실적 30만원 조건 재확인 필요), 배우자는 유료(약 66,000원 추정).
+                    <strong>💺 라운지 검토(불확실)</strong>: JFK 터미널1 대한항공 라운지, 앱에서 21:30부터 예약 가능. 하지만 대한항공 자사 탑승 골든타임에 외부 이용객 입장 제한 가능성 있음 — 플랜B 준비(카페·식당 대기 등).
                 </div>
             </div>
 
@@ -492,8 +515,12 @@
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 150,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
                 </div>
                 <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
-                    <div><h4 class="font-semibold text-gray-800">Amtrak 뉴욕↔보스턴 (1/1)</h4><p class="text-sm text-gray-600">Northeast Regional (또는 Acela) | 09:05 출발, 17:00 귀환</p></div>
+                    <div><h4 class="font-semibold text-gray-800">Amtrak 뉴욕↔보스턴 (12/28)</h4><p class="text-sm text-gray-600">Northeast Regional 66·175번 | 05:44 출발, 15:15 귀환 (v21 확정)</p></div>
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 400,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
+                    <div><h4 class="font-semibold text-gray-800">구겐하임 미술관 (1/1)</h4><p class="text-sm text-gray-600">1071 5th Ave (89th St) | 신정 개관 확인 필수</p></div>
+                    <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 70,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
                 </div>
             </div>
         </div>
@@ -503,102 +530,32 @@
             <h2 class="text-xl font-bold text-gray-800 mb-4">준비 체크리스트 (주요 항목)</h2>
             <div class="space-y-2">
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">여권·ESTA — 유효기간 2027-01 이후</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>현금 환전 ($500+)</strong> — Peter Luger($330~350) + J.G. Melon($90) 포함</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>현금 환전 ($500+)</strong> — Peter Luger($325~350) + J.G. Melon($90) 포함</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">신용카드 2장 이상 준비</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">Resy 계정 생성 — Peter Luger·Keens 예약</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>Top of the Rock 온라인 예매</strong> — 12/26 16:00 지정시간 확보</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">방한용품 — 아우터·기모·목도리·장갑·방수부츠</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>12/26 절단 우선순위 숙지</strong> — Rough Trade→LEGO→5번가 순서 사전 확인</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">FAO Schwarz·Kinokuniya·Nintendo·LEGO 12/26 영업시간 확인 (출발 1주 전) <span class="text-green-700 font-semibold">[v10]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v10] 12/28 루즈벨트 아일랜드 트램 운항 상태 확인</strong> (당일 아침 RIOC 공지 확인)</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v10] J.G. Melon 대기 20:30 컷오프 규칙 숙지</strong> — 대기 60분을 넘기면 대체 업장으로 즉시 이동</span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] The Vessel 12/29 티켓 유형·매진 여부 확인</strong> (플렉스 $15 권장) <span class="text-green-700 font-semibold">[v11]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 르뱅 베이커리 Flatiron점 12/30 영업시간 확인</strong> (대기 25분 배정) <span class="text-green-700 font-semibold">[v11]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 12/30 오후 완충 소멸 대응 숙지</strong> — 빌리지 산책 지연 시 르뱅 포기 및 숙소 휴식 단축 대응 <span class="text-green-700 font-semibold">[v11]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v11] 피터루거 백업 발동 시 대응</strong> — 르뱅 생략 후 유니언스퀘어 마켓 종료 직후 윌리엄스버그 직행 <span class="text-green-700 font-semibold">[v11]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v12] Birdland Jazz Club 12/29 연말 특별 공연·요금 확인</strong> (평시 기준이라 변동 가능성 있음) <span class="text-green-700 font-semibold">[v12]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v14] Blue Note 12/30 예약 확정 및 가격 재확인</strong> (Chris Botti 헤드라이너, 예산 조정 가능성) <span class="text-green-700 font-semibold">[v14]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v17] NYRR Midnight Run 배번 수령 시 동반 게스트(아내)용 손목밴드 함께 수령 확인</strong> <span class="text-purple-700 font-semibold">[v17]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v17] 낙뢰 등 기상 취소 시 등록비($74.02) 환불·이월 정책 확인</strong> — 2025년 전례 있음 <span class="text-purple-700 font-semibold">[v17]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v19] Amtrak 뉴욕↔보스턴 정확한 시각표(09:05·17:00편명 확정) 재검색</strong> (예매 오픈 10~11월) <span class="text-blue-700 font-semibold">[v19]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v19] 실제 Amtrak 요금 확인, 09:05편이 Acela인지 NER인지 확정</strong> (요금 불일치 시 조달 절차 발동) <span class="text-blue-700 font-semibold">[v19]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v19] South Station↔하버드 스퀘어 정확한 소요시간·노선 확인</strong> (하버드 포함 여부 결정 전제) <span class="text-blue-700 font-semibold">[v19]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v19] "Night Owl Fares" 적용 여부 확인</strong> (적용되면 08:00 이전으로 수정 필요) <span class="text-blue-700 font-semibold">[v19]</span></span></label>
-                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v16] 12/31 방한 레이어링 준비</strong> — 자정 센트럴파크(약 영하 3~5도), Midnight Run 완주 후 저체온증 대비 <span class="text-purple-700 font-semibold">[v16]</span></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v21 신규] 12/28 보스턴 Amtrak 66·175번 실제 편명·시각 재확인</strong> (편명 확정, 요금 미확정)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v21 신규] 12/28 보스턴 당일치기 수면 약 5.5~6시간 대비</strong> (12/31 귀가 02:25, 12/28 기상 04:40)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v22 신규] 1/1 구겐하임 미술관 신정 개관 + 운영시간 확인</strong> (guggenheim.org, 출발 임박 시 재확인 필수)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v22 신규] 1/1 구겐하임→센트럴파크 도보 경로 확정</strong> (90번가 Engineers' Gate 진입, 한파·강풍 시 지하철 98분 대체안 검토)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v22 신규] 1/1 포기 순서 숙지</strong> — 트램(40분) → 월먼 링크(75분) → 점심 단축 → 관람 1.5시간 축소 (순서대로)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v21 신규] 1/1 J.G. Melon 신정 영업 + 월먼 링크 공휴일 할증($40/인) 확인</strong></span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v20 조건] 12/27 저녁 워터프론트 도보 대신 지하철 사용</strong> (다음 날 04:40 기상 대비)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">FAO Schwarz·Kinokuniya·Nintendo·LEGO 12/26 영업시간 확인</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">1/1 루즈벨트 아일랜드 트램 운항 상태 확인</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">J.G. Melon 대기 20:30 컷오프 규칙 숙지</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">Blue Note 12/30 예약 확정 및 가격 재확인</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">NYRR Midnight Run 배번 수령 시 동반 게스트 손목밴드 확인</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">낙뢰 취소 시 등록비 환불·이월 정책 확인 (2025년 전례)</span></label>
             </div>
-        </div>
-
-        <!-- 검토했지만 선택하지 않은 후보 -->
-        <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">검토했지만 선택하지 않은 후보 (백업용 참고자료)</h2>
-            <p class="text-sm text-gray-600 mb-6">현지에서 마음이 바뀌거나 예약이 실패했을 때 참고할 수 있도록, 검토했으나 최종 채택하지 않은 후보들을 정리했습니다. 각 항목은 이름과 선택하지 않은 이유만 간결하게 표기합니다.</p>
-
-            <!-- 맛집 후보 -->
-            <details class="bg-gray-50 rounded-lg">
-                <summary>🍽️ 맛집 후보 (미선택)</summary>
-                <div class="p-4 pt-2">
-                    <div class="backup-item"><strong>Wolfgang's Steakhouse</strong> <span>한국인 사이 평가 혼재 (0스타 리뷰 vs 긍정 후기), Keens가 더 일관되게 긍정적</span></div>
-                    <div class="backup-item"><strong>Benjamin Steakhouse</strong> <span>한국인 사이 인지도 및 후기 부족, 근거 미흡</span></div>
-                    <div class="backup-item"><strong>Quality Meats</strong> <span>한국어 소스 미확인, 인지도 없음</span></div>
-                    <div class="backup-item"><strong>Grand Central Oyster Bar</strong> <span>12/26 스테이크 다양성 대안으로 제안했으나 미채택, 필요 시 참고</span></div>
-                    <div class="backup-item"><strong>Lombardi's Pizza</strong> <span>12/30 대안 후보, 역사성은 있으나 한국인 만족도 근거 약함</span></div>
-                    <div class="backup-item"><strong>Veselka (1/2 후보1)</strong> <span>한국어 직접 방문 후기 부족, Katz's가 더 강한 근거</span></div>
-                    <div class="backup-item"><strong>가이드북 미드타운 리스트</strong> <span>The Modern·Kochi·Marea·Monkey Bar 등, 개별 검증 미실시</span></div>
-                </div>
-            </details>
-
-            <!-- 쇼핑·수집 후보 -->
-            <details class="bg-gray-50 rounded-lg">
-                <summary>🛍️ 쇼핑·수집 후보 (미선택)</summary>
-                <div class="p-4 pt-2">
-                    <div class="backup-item"><strong>스미스키</strong> <span>한국이 20~30% 더 저렴, 뉴욕에서 사지 않기 권장</span></div>
-                    <div class="backup-item"><strong>건프라</strong> <span>한국이 더 저렴, 구매 권장 안 함</span></div>
-                    <div class="backup-item"><strong>귀멸의 칼날 넨도로이드</strong> <span>한국이 50% 이상 저렴, 뉴욕 구매 비추천</span></div>
-                    <div class="backup-item"><strong>레고 NYC스카이라인/밀레니엄팔콘</strong> <span>일부 제품 제외 대부분 한국이 저렴 또는 단종</span></div>
-                    <div class="backup-item"><strong>플레이모빌</strong> <span>뉴욕 한정 세트 미확인, 검증 필요</span></div>
-                    <div class="backup-item"><strong>자전거 용품 (Rapha/NYC Velo)</strong> <span>확실한 가격 우위 근거 부족, 참고만 제공</span></div>
-                </div>
-            </details>
-
-            <!-- 새해 전야 후보 -->
-            <details class="bg-gray-50 rounded-lg">
-                <summary>🎆 새해 전야 후보 (미선택)</summary>
-                <div class="p-4 pt-2">
-                    <div class="backup-item"><strong>One40 Rooftop</strong> <span>목표 예산에 부합하나 창가석 미보장, 볼드롭 조망 없음</span></div>
-                    <div class="backup-item"><strong>Aqua New York</strong> <span>목표 예산 근처, 볼드롭 조망 없음</span></div>
-                    <div class="backup-item"><strong>Union Square Cafe</strong> <span>목표 예산에 부합하나 2026 페이지 미게시, 세부 가격 미확정 — v13 Trattoria 실패 시 차선 대안(현재는 v16 Midnight Run으로 교체)</span></div>
-                    <div class="backup-item"><strong>Members Only</strong> <span>오픈바 포함으로 음주 비중 높음, 음주 미선호자에게 부적합</span></div>
-                    <div class="backup-item"><strong>Brooklyn Diner · Rosie O'Grady's</strong> <span>목표 예산 초과 ($455~$745/인), 가격 우위 불리</span></div>
-                </div>
-            </details>
-
-            <!-- 관광명소 후보 -->
-            <details class="bg-gray-50 rounded-lg">
-                <summary>🗽 관광명소 후보 (미선택, 총 12곳)</summary>
-                <div class="p-4 pt-2">
-                    <div class="backup-item"><strong>자유의 여신상 & 엘리스 아일랜드</strong> <span>배터리 파크 왕복 페리 $27/인, 입장 $21/인 추가 필요, 현재 일정상 시간 미확보</span></div>
-                    <div class="backup-item"><strong>원 월드 전망대</strong> <span>Edge·Top of the Rock·ESB 3곳 이미 포함, 4번째 전망대로 중복 높음</span></div>
-                    <div class="backup-item"><strong>아메리칸 자연사박물관</strong> <span>조사 노트 전체에 언급 없음, 애초 후보 아님</span></div>
-                    <div class="backup-item"><strong>휘트니 미술관</strong> <span>하이라인 남단 바로 옆이나 12/29는 화요일 휴관 (동선 겹침)</span></div>
-                    <div class="backup-item"><strong>구겐하임 미술관</strong> <span>뮤지엄 마일(업타운)에 있으나 Day4 이미 가득 찼음</span></div>
-                    <div class="backup-item"><strong>브루클린 뮤지엄</strong> <span>프로스펙트 하이츠, 기존 브루클린 동선(DUMBO/윌리엄스버그)과 40분 이상 이동</span></div>
-                    <div class="backup-item"><strong>코니 아일랜드</strong> <span>겨울철(10월 말~3월) 놀이기구 전부 휴업, 방문 가치 크게 감소</span></div>
-                    <div class="backup-item"><strong>양키 스타디움 투어</strong> <span>브롱스, 기존 모든 일정과 별개 지역, 새로운 반나절 필요</span></div>
-                    <div class="backup-item"><strong>스태튼 아일랜드 페리</strong> <span>자유의 여신상 상륙 불가 (약 450m 거리 통과만), 무료지만 별도 목적지 필요</span></div>
-                    <div class="backup-item"><strong>센트럴파크 베데스다 분수</strong> <span>2026년 8월~2027년 여름까지 복원 공사로 폐쇄 (여행 기간 중 미개방)</span></div>
-                    <div class="backup-item"><strong>브루클린 보태닉 가든 & 프로스펙트 파크</strong> <span>프로스펙트 하이츠, 기존 동선과 40분+ 이동 필요</span></div>
-                    <div class="backup-item"><strong>루즈벨트 아일랜드 트램</strong> <span>저렴 전망 스팟($2.90)이지만 결합할 만한 다른 목적지 부재 → <strong>v9에서 12/28 추가됨</strong></span></div>
-                    <div class="backup-item"><strong>The Vessel (허드슨야드)</strong> <span>2021~2024 장기 폐쇄, 2024년 재개장했으나 최상층 여전히 폐쇄 → <strong>v10에서 12/29 추가됨</strong></span></div>
-                    <div class="backup-item"><strong>NYRR Midnight Run</strong> <span>센트럴파크 자정 러닝·불꽃놀이, 참가 또는 무료 관람 → <strong>v16에서 12/31 기본 계획</strong></span></div>
-                    <div class="backup-item"><strong>보스턴 당일치기</strong> <span>나이아가라 기각(겨울 콘텐츠 저하, 레이크 이펙트 스노 리스크) 후 Amtrak 보스턴 투어 채택 → <strong>v19에서 1/1 최종 채택</strong></span></div>
-                </div>
-            </details>
         </div>
 
         <!-- 푸터 -->
         <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
-            <p>뉴욕 여행 준비 대시보드 v19 | 2026-08-20 업데이트</p>
-            <p class="text-xs text-gray-500 mt-2">v19 변경: 12/31 Midnight Run 등록자 확정(남편, 약 98,450원 실결제) + 1/1 전면 재작성(나이아가라 최종 기각, Amtrak 보스턴 당일치기 최종 채택) + 예산 변경(새해 전야 300,000→180,000원, 액티비티 1,750,000→2,150,000원, 미배분 1,290,000→1,070,000원) + v17·v18·v19 통합 검토 조건부 승인 완료 + 기존 v8·v9·v11·v12·v14·v16 조건부 사항 모두 유지. v19 신규 4가지 조건부 사항(수면 완화·Amtrak 요금 미확정·자기주도 이동·나이아가라 기각) 추가.</p>
+            <p>뉴욕 여행 준비 대시보드 v22 | 2026-08-27 업데이트</p>
+            <p class="text-xs text-gray-500 mt-2">v22 변경사항: 1/1(Day 8) 오전 블록만 교체 — MoMA 재방문(v21) → 구겐하임 미술관 첫 방문 (10:35~11:15 이동 40분 추가, 11:15~13:15 관람). 예산 무변동(식비 2,505,000·액티비티 2,140,000·새해전야 180,000·미배분 1,080,000·총 15,000,000 유지). 이동시간 감소(99분→88분). v21 및 기존 v8~v20 조건부 사항 모두 유지 + v22 신규 조건부 사항 4건 추가: (1) 완충 칸 소멸·포기 순서 확정, (2) 구겐하임 개관 확신 중간~높음·guggenheim.org 재확인 필수, (3) 공원 도보 25분 실측 미완·한파·강풍 시 지하철 98분 대체안, (4) [제거] MoMA 재결제 조건 자동 소멸.</p>
         </div>
 
     </div>
@@ -608,9 +565,9 @@
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['식비(16.7%)', '액티비티(14.3%)', '예비비(12.7%)', '항공(18.7%)', '숙소(16.5%)', '이동(5.3%)', '쇼핑(4.6%)', '브로드웨이(2.1%)', '새해전야(1.2%)', '보험(0.7%)', '미배분(7.1%)'],
+                labels: ['식비(16.7%)', '액티비티(14.3%)', '예비비(12.7%)', '항공(18.7%)', '숙소(16.5%)', '이동(5.3%)', '쇼핑(4.6%)', '브로드웨이(2.1%)', '새해전야(1.2%)', '보험(0.7%)', '미배분(7.2%)'],
                 datasets: [{
-                    data: [2505, 2150, 1900, 2800, 2480, 800, 695, 320, 180, 100, 1070],
+                    data: [2505, 2140, 1900, 2800, 2480, 800, 695, 320, 180, 100, 1080],
                     backgroundColor: ['#f59e0b', '#8b5cf6', '#84cc16', '#3b82f6', '#10b981', '#06b6d4', '#f97316', '#14b8a6', '#ec4899', '#6366f1', '#6b7280'],
                     borderColor: '#ffffff',
                     borderWidth: 2
