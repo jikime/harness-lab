@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뉴욕 여행 준비 대시보드 v23</title>
+    <!-- 경고 배지: 🔒 고정 시각(예약·지정입장, 절대 못 미룸) / ⏱ 여유 0분 전환구간(늦으면 뒤가 밀림) / ❓ 미확정 가정(개관시각 등, 시간 고정 아님) -->
+    <!-- v23: 사용자 요청으로 line-item 단위 경고 배지 추가(2026-08-28) -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
     <style>
@@ -239,17 +242,17 @@
                 </div>
                 <div class="space-y-1 text-sm">
                     <div class="flex gap-2"><span class="time-label">09:00~10:00</span><span>베이글 브런치 (Tompkins Square Bagels)</span></div>
-                    <div class="flex gap-2"><span class="time-label">11:00~13:00</span><span><strong>MoMA 관람 + MoMA Design Store</strong> (2시간, 한국어 해설은 Bloomberg Connects 무료 오디오가이드 기본 채택)</span></div>
+                    <div class="flex gap-2"><span class="time-label">11:00~13:00</span><span><strong>MoMA 관람 + MoMA Design Store</strong> (2시간, 한국어 해설은 Bloomberg Connects 무료 오디오가이드 기본 채택) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 13:00 정시 퇴장 필수 — 늦으면 오후 전부 밀림</span></span></div>
                     <div class="flex gap-2"><span class="time-label">13:00~13:30</span><span>커피·간식 (30분)</span></div>
                     <div class="flex gap-2"><span class="time-label">13:30~15:05</span><span><strong>5번가 쇼윈도 → 세인트패트릭 성당 → LEGO Store(20분) → 크리스마스 트리</strong> (95분)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:05~15:30</span><span><strong>Nintendo New York</strong> (10 Rock, 2층 포켓몬, v8 확정)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:30~15:45</span><span><strong>Rough Trade</strong> (30 Rock 콩코스, 재즈 LP, v8 확정)</span></div>
                     <div class="flex gap-2"><span class="time-label">15:45~16:00</span><span>Top of the Rock 입장 대기(15분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">16:00~17:30</span><span><strong>Top of the Rock 전망대</strong> (지정시간 예매)</span></div>
+                    <div class="flex gap-2"><span class="time-label">16:00~17:30</span><span><strong>Top of the Rock 전망대</strong> (지정시간 예매) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 지정입장 고정 — 절대 사수</span></span></div>
                     <div class="flex gap-2"><span class="time-label">17:30~17:45</span><span><strong>FAO Schwarz</strong>(30 Rockefeller Plaza · 한정판 Funko Pop·Jellycat)</span></div>
                     <div class="flex gap-2"><span class="time-label">18:00~18:30</span><span><strong>Kinokuniya</strong> (1073 6th Ave, 귀멸의 칼날·스미스키)</span></div>
                     <div class="flex gap-2"><span class="time-label">18:30~19:00</span><span>브라이언트 파크 윈터 빌리지 (30분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:15~21:00</span><span><strong>[유명] Keens Steakhouse</strong> (머튼찹, 예약 필수)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:15~21:00</span><span><strong>[유명] Keens Steakhouse</strong> (머튼찹, 예약 필수) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 예약 고정 — 접속 여유 7분뿐</span></span></div>
                 </div>
                 <div class="mt-3 pt-3 border-t border-orange-200 bg-orange-50 px-3 py-2 rounded text-xs text-orange-900">
                     <strong>13:00~16:00 = 180분 정확히:</strong> 커피 30 + 5번가 95 + Nintendo 25 + Rough Trade 15 + 입장대기 15<br>
@@ -284,13 +287,13 @@
                 <div class="space-y-1 text-sm">
                     <div class="flex gap-2"><span class="time-label">04:40</span><span><strong>기상</strong> (전날 12/27 피터루거 저녁 귀가 20:25 기준)</span></div>
                     <div class="flex gap-2"><span class="time-label">05:10</span><span>숙소 출발 (택시/Uber → Penn Station)</span></div>
-                    <div class="flex gap-2"><span class="time-label">05:44</span><span><strong>Amtrak 66번 Northeast Regional 출발</strong> (Penn Station)</span></div>
+                    <div class="flex gap-2"><span class="time-label">05:44</span><span><strong>Amtrak 66번 Northeast Regional 출발</strong> (Penn Station) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 고정 출발 — 놓치면 당일 보스턴 무산</span></span></div>
                     <div class="flex gap-2"><span class="time-label">10:05</span><span><strong>보스턴 South Station 도착</strong></span></div>
                     <div class="flex gap-2"><span class="time-label">10:35~12:35</span><span><strong>Freedom Trail</strong> (역사적 산책로, 120분)</span></div>
                     <div class="flex gap-2"><span class="time-label">12:35~13:35</span><span><strong>Quincy Market 점심</strong> (자비 부담, 약 60분)</span></div>
                     <div class="flex gap-2"><span class="time-label">13:35~14:50</span><span><strong>자유시간</strong> (75분) — 추가 둘러보기 또는 휴식</span></div>
                     <div class="flex gap-2"><span class="time-label">14:50~15:15</span><span>South Station 도착 및 귀환 열차 탑승 확인</span></div>
-                    <div class="flex gap-2"><span class="time-label">15:15</span><span><strong>Amtrak 175번 Northeast Regional 출발</strong> (South Station)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:15</span><span><strong>Amtrak 175번 Northeast Regional 출발</strong> (South Station) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 고정 출발</span></span></div>
                     <div class="flex gap-2"><span class="time-label">19:52</span><span><strong>뉴욕 Penn Station 도착</strong></span></div>
                     <div class="flex gap-2"><span class="time-label">20:30~21:45</span><span><strong>[캐주얼] 이스트빌리지 저녁 식사</strong> (귀환 후 근처 워크인)</span></div>
                     <div class="flex gap-2"><span class="time-label">22:15</span><span><strong>취침</strong></span></div>
@@ -320,11 +323,11 @@
                     <div class="flex gap-2"><span class="time-label">10:00~10:40</span><span>박스오피스 러시 티켓 구매 시도 (최대 40분, 상한 — 매진·판매종료 확정 시 조기 이탈)</span></div>
                     <div class="flex gap-2"><span class="time-label">10:50~11:15</span><span>첼시 마켓으로 이동</span></div>
                     <div class="flex gap-2"><span class="time-label">11:30~12:45</span><span><strong>[유명] Los Tacos No.1</strong> (첼시 마켓 내, 타코)</span></div>
-                    <div class="flex gap-2"><span class="time-label">13:00~14:10</span><span>하이라인 북행 산책 (70분, 목표 시간 — v23 순버퍼 15분 확보)</span></div>
-                    <div class="flex gap-2"><span class="time-label">14:30~16:00</span><span><strong>Edge at Hudson Yards 전망대</strong> (90분, 지정입장 14:30)</span></div>
+                    <div class="flex gap-2"><span class="time-label">13:00~14:10</span><span>하이라인 북행 산책 (70분, 목표 시간 — v23 순버퍼 15분 확보) <span class="inline-block bg-orange-100 text-orange-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">⏱ 70분 엄수 — 75분 쓰면 순버퍼 10분으로 감소</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">14:30~16:00</span><span><strong>Edge at Hudson Yards 전망대</strong> (90분, 지정입장 14:30) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 지정입장 — 지각 유예 정책 미확인</span></span></div>
                     <div class="flex gap-2"><span class="time-label">16:05~16:45</span><span><strong>The Vessel</strong> (20 Hudson Yards, 나선형 구조물, 일몰 시간대)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:50~18:00</span><span>[캐주얼] 허드슨야드 이른 저녁 (70분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span>브로드웨이 공연 관람 (확보 시)</span></div>
+                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span>브로드웨이 공연 관람 (확보 시) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 커튼 고정</span></span></div>
                     <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span><strong>(대안)</strong> <strong>Birdland Jazz Club</strong> (315 W 44th St, 헬스키친) — <strong>로터리·러시 둘 다 실패 시만 발동</strong></span></div>
                     <div class="flex gap-2"><span class="time-label">22:00~22:30</span><span>숙소 귀가</span></div>
                 </div>
@@ -436,7 +439,7 @@
                     <div class="flex gap-2"><span class="time-label">09:30~10:00</span><span>아침 커피 (느슨한 시작)</span></div>
                     <div class="flex gap-2"><span class="time-label">10:00~10:35</span><span>숙소 여유 (35분)</span></div>
                     <div class="flex gap-2"><span class="time-label">10:35~11:15</span><span><strong>구겐하임 미술관 이동</strong> (40분 — 6호선 Astor Pl → 86th St + 도보)</span></div>
-                    <div class="flex gap-2"><span class="time-label">11:15~13:15</span><span><strong>구겐하임 미술관 관람</strong> (2시간, 첫 방문, 1/1 신정 개방 확인 필수, 한국어 해설은 동일하게 Bloomberg Connects 무료 오디오가이드 — 현장에서 언어 목록 재확인 권장)</span></div>
+                    <div class="flex gap-2"><span class="time-label">11:15~13:15</span><span><strong>구겐하임 미술관 관람</strong> (2시간, 첫 방문, 1/1 신정 개방 확인 필수, 한국어 해설은 동일하게 Bloomberg Connects 무료 오디오가이드 — 현장에서 언어 목록 재확인 권장) <span class="inline-block bg-yellow-100 text-yellow-800 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">❓ 개관 시각 미확정(가정)</span></span></div>
                     <div class="flex gap-2"><span class="time-label">13:15~14:15</span><span><strong>어퍼이스트사이드 점심</strong> (매디슨 애비뉴 88~92가)</span></div>
                     <div class="flex gap-2"><span class="time-label">14:15~14:40</span><span><strong>구겐하임 → 90번가 Engineers' Gate 진입 → 센트럴파크 남하 도보</strong> (25분, 지하철 아님)</span></div>
                     <div class="flex gap-2"><span class="time-label">14:40~15:00</span><span>센트럴파크 여유 (20분)</span></div>

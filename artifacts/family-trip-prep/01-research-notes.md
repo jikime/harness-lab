@@ -3205,3 +3205,91 @@ itinerary-planner는 본 문서를 입력으로 하되, 숙소 최종 선택·�
 7. 구겐하임 공식 페이지(guggenheim.org) 접근이 이번 조사에서 403으로 차단돼 1/1 개관시간·PWYW 조건을 1차 소스로 확인하지 못함 — 출발 임박 시 재확인 권장
 
 - 출처: [MoMA — UNIQLO Friday Nights](https://www.moma.org/calendar/events/10253), [MoMA — Tickets, discounts, and free admission](https://visit.moma.org/select/uniqlo), [MoMA 홀리데이 안내 보도자료(PDF)](http://press.moma.org/wp-content/press-archives/news/Holiday.Release.FinalLetter.pdf), [Guggenheim — Saturday on the House 보도자료](https://www.guggenheim.org/press-release/guggenheim-presents-saturday-on-the-house-sponsored-by-the-macallan), [Whitney Museum 공식 X(트위터) 홀리데이 시간 안내](https://x.com/whitneymuseum/status/1738224906083410035), [Whitney — Plan your visit](https://whitney.org/visit), [Brooklyn Museum — First Saturdays 2026 시즌 재개 보도자료](https://www.brooklynmuseum.org/press/first-saturdays-2026), [nyc.gov DCLA — Free and Suggested Admission](https://www.nyc.gov/site/dcla/resources/free-and-suggested-admission.page), [NYC for FREE — Free Museums](https://www.nycforfree.co/free-museums), [Trinity Church NYC — 2025-26 Music Season](https://trinitychurchnyc.org/stories-news/trinity-church-202526-music), [Saint Thomas Church — A Festival of Nine Lessons and Carols](https://www.saintthomaschurch.org/events/second-2026-a-festival-of-nine-lessons-and-carols/), [St. Patrick's Cathedral — A City Singing at Christmas](https://saintpatrickscathedral.org/events/45th-annual-a-city-singing-at-christmas-concert), [doNYC — Free Live Jazz Jam & Open Mic (Sugar Mouse)](https://donyc.com/events/weekly/tue/free-live-jazz-jam-open-mic-every-tuesday-tickets), [Sugar Mouse NYC 공식](https://www.sugarmousenyc.com/), [Lincoln Center — David Rubenstein Atrium](https://www.lincolncenter.org/venue/atrium/v/about), [NBC New York — AMNH Kwanzaa](https://www.nbcnewyork.com/video/on-air/as-seen-on/american-museum-of-natural-history-celebrates-kwanzaa/2247101/), [newyorktickets.com — New York in December](https://www.newyorktickets.com/travel-guide/best-time-to-visit/new-york-in-december/) (조사 시점: 2026-08-27, 대부분 2차 소스 기반 — 확신 수준은 각 항목에 개별 표기, 출발 임박 시 공식 페이지 재확인 강력 권장)
+
+---
+
+## 43장. CityPASS(citypass.com) 콤보 티켓이 개별 배정액(6곳·2인 630,000원)보다 실제로 싼지 검증
+
+**[신설 2026-08-28]** 오케스트레이터 요청으로 trip-researcher가 조사함. `02-itinerary-draft.md`는 이 조사로 **건드리지 않았음**(오케스트레이터 지시 — 사용자 확인 후 별도 반영). 대상 6곳: Top of the Rock(12/26), MoMA(12/26), Edge at Hudson Yards(12/29), 9/11 메모리얼(**날짜 확인 결과 12/27, Day 3 — 아래 43-1-1**), 구겐하임(1/1), 엠파이어스테이트빌딩(1/2).
+
+### 43-0. 결론 선요약 (본문 근거는 아래 43-3~43-6)
+
+**추천하지 않음 — 이 6곳·이 시간대 조합에서는 CityPASS 어떤 상품을 써도 절감이 아니라 오히려 소폭 손해(약 3,000~12,000원, 2인 기준)이거나 잘해야 본전입니다.** 유일하게 "돈이 남는" 시나리오(약 6~7만원 절감)는 우리가 **일부러 선택한 저녁·일몰 전망대 시간대를 포기해야** 성립하는데, 이는 00-trip-brief.md가 명시한 "야경 시간대" 취지 자체를 훼손합니다. 아래에서 숫자로 보입니다.
+
+### 43-1. 상품 구성·가격·유효기간 (확인됨/확신 높음, citypass.com 공식 페이지 직접 확인, 조사 시점 2026-08-28)
+
+| 상품 | 성인가(1인) | 구성 | 유효기간 | 우리 6곳 포함 여부 |
+|---|---|---|---|---|
+| **New York C3** | **$114**(정가 대비 $187.27, "최대 39% 할인" 마케팅 문구) | 10개 명소 중 **3개 선택** | **첫 사용일 포함 9일 연속**, 미개시 티켓은 구매 후 1년 내 사용 개시 | ToR·ESB·9/11·Edge·MoMA·구겐하임 **전부 선택지에 있음**(10개 중 6개가 우리가 원하는 곳) |
+| **New York C-All** | **$254**(정가 대비 $424.27) — ⚠ 3자 사이트(bestnewyorkpass.com)는 $239로 표기, **공식 페이지($254)와 불일치 — 확인 필요, 공식값을 채택** | 10개 명소 **전부** | 9일 연속(동일) | 6곳 전부 포함(나머지 4곳은 우리가 안 쓰는 Statue of Liberty·AMNH·Circle Line·Intrepid) |
+| **New York CityPASS**(표준 5매) | **$164**(정가 대비 미확인) | **고정 2개**(ESB, AMNH) + **6개 중 3개 선택**(ToR·9/11·Statue of Liberty·Circle Line·Intrepid·구겐하임) | 9일 연속(동일) | **Edge·MoMA는 아예 선택지에 없음**(C3/C-All에만 있음). ToR·9/11·구겐하임은 "3개 선택" 안에서 전부 고를 수 있고, ESB는 고정 포함. AMNH는 강제 포함(우리 일정에 없음, 미사용) |
+
+**43-1-1. [확인] 9/11 메모리얼 날짜 — 12/27(Day 3), 확인됨/확신 높음.** `02-itinerary-draft.md` 351~357행을 직접 읽어 확인. 09:30 숙소 브런치 → 10:30~11:00 이동 → **11:00~13:15 9/11 메모리얼 & 뮤지엄(180 Greenwich St)** → 이후 로어맨해튼 도보·브루클린 브리지 횡단·DUMBO·피터루거로 이어지는 Day 3 동선의 첫 블록입니다. 브리핑 문서의 "날짜 확인 필요"는 이번 조사로 해소됨.
+
+**43-1-2. [확인] 우리가 실제로 배정한 6곳의 방문 시각·성격 (`02-itinerary-draft.md` 직접 확인, 확신 높음)**
+
+| 명소 | 날짜 | 배정 시각 | 성격 |
+|---|---|---|---|
+| MoMA | 12/26 | 11:00~13:00대 | 오전, 일몰 무관 |
+| **Top of the Rock** | 12/26 | **16:00 지정입장** (그날 일몰 약 16:32) | **일몰 직전~황혼 시간대** — 정확히 "야경 시간대"를 노린 배치 |
+| 9/11 메모리얼 | 12/27 | 11:00~13:15 | 오전~정오, 일몰 무관 |
+| Edge | 12/29 | 14:30~16:00 지정입장 (그날 일몰 약 16:35) | 일몰 이전 낮 시간대 |
+| 구겐하임 | 1/1 | 11:15~13:15대 | 오전, 일몰 무관 |
+| **엠파이어스테이트빌딩** | 1/2 | **16:30~18:00**, 표에 "**일몰~야경 시간대**"로 명시 | **일몰 직전~야간** — Top of the Rock과 동일한 의도 |
+
+### 43-2. ⚠ 핵심 함정 — CityPASS 종류에 따라 "일몰 시간대"가 아예 빠집니다 (확인됨/확신 높음, citypass.com·CityPASS 고객지원 공식 문서 직접 확인)
+
+- **New York C3·New York C-All 두 상품 모두 Top of the Rock·엠파이어스테이트빌딩 입장을 "Non-Sunset Hours"(일몰 시간대 제외)로 명시**합니다. 공식 표기: *"General Admission During Non-Sunset Hours"* (media.citypass.com C3 상세 페이지, C-All 공식 가격 페이지 양쪽에서 동일하게 확인).
+- **CityPASS 공식 고객지원 문서가 이를 직접 대조해 확정**합니다 — *"Top of the Rock admission included with New York C3 tickets and New York C-All tickets gives you general admission to the viewing terraces during **non-sunset hours**. This **does not apply to New York CityPASS tickets**, which **include sunset hours**."* (ESB도 동일한 문구로 별도 문서에 명시). 즉 **셋 중 표준 "New York CityPASS"(5매, $164)만 일몰 시간대가 기본 포함**되고, **C3·C-All은 일몰 시간대를 별도 "업그레이드"로 사야 합니다.**
+- **업그레이드는 citypass.com에서 사전 구매가 불가능하고, My CityPASS 앱으로 예약할 때 또는 현장 키오스크에서만 가능** — *"you can purchase your sunset upgrade when making your reservation in the My CityPASS app... Upgrades are not available through citypass.com, but you can purchase them onsite when you arrive."* **⚠ 업그레이드 금액은 이번 조사로 확인하지 못했습니다(확인 필요)** — 공식 페이지·고객지원 문서 어디에도 구체 금액이 없었고, 검색으로도 찾지 못함.
+- **우리 배정과의 충돌**: 12/26 Top of the Rock(16:00, 일몰 16:32 직전)과 1/2 ESB(16:30~18:00, "일몰~야경"으로 명시)는 **둘 다 정확히 이 "일몰 시간대"를 노린 배치**입니다. **C3나 C-All을 쓰면 이 두 곳 모두 기본 포함 범위 밖**이라, ① 현장에서 금액 미상의 업그레이드를 추가로 내거나, ② 포기하고 실제로는 대낮 시간대에 다시 입장해야 합니다 — 둘 다 이 여행에서 이미 확정한 "야경 시간대" 의도를 훼손합니다.
+
+### 43-3. 실제 금액 비교 — 마케팅 "39% 할인"이 아니라 최종 결제액 기준 (환율 1,330원, 이 문서 기존 관행과 동일)
+
+**전제**: 개별 배정 6곳·2인 합계는 630,000원(= $473.68)이며, 각 항목의 1인 환산가는 ESB $48.87 · ToR $45.11 · Edge $45.11 · MoMA $30.08(공식가 $30과 일치, 확인됨) · 구겐하임 $30.08(공식가 $30과 일치, 확인됨) · 9/11메모리얼 $37.59 입니다(2인 배정액 ÷2 ÷1,330으로 역산, 43-1-2 시각과 결합해 계산).
+
+**시나리오 A. 일몰 시간대를 그대로 지키면서 C3를 최대한 활용 (현실적 시나리오)**
+일몰 제한이 없는 3곳(Edge·9/11·MoMA 또는 구겐하임 중 1곳=$30.08)만 C3에 담고, ToR·ESB·나머지 미술관 1곳은 그대로 개별 구매.
+- C3로 담는 3곳의 개별가 합: $45.11(Edge) + $37.59(9/11) + $30.08(미술관 1곳) = **$112.78/인**
+- C3 가격: **$114/인** (+ 프로세싱비 별도, 43-6 참고) → **C3가 개별가 합보다 이미 $1.22/인 더 비쌉니다.**
+- 2인 기준: C3 지출 약 228,000~232,000원(프로세싱비 포함 가정) vs 그 3곳 개별가 합 300,000~301,000원 정도 차이가 아니라 — **정확히는 C3 2인분 $228 → 303,240원이, 담은 3곳의 개별 정가 합 2인분 $225.56 → 300,000원보다 3,240원 더 비쌉니다.**
+- 나머지 3곳(ToR·ESB·미술관 1곳) 개별가 2인 합: 120,000 + 130,000 + 80,000 = 330,000원(무변동)
+- **총 지출: 약 633,240원(+ 프로세싱비 포함 시 최대 약 638,560원) vs 개별 전량 구매 630,000원 → 3,240~8,560원 더 비쌉니다.**
+
+**시나리오 B. 표준 New York CityPASS(5매, $164) — 일몰 시간대 기본 포함이라 함정 자체는 피함**
+ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(ESB·ToR·9/11·구겐하임)을 일몰 제한 없이 담을 수 있습니다. 단 AMNH가 강제 포함(우리 일정에 없음)이고 Edge·MoMA는 애초에 선택지에 없어 별도 구매해야 합니다.
+- 담기는 4곳의 개별가 합(1인): $48.87+$45.11+$37.59+$30.08 = **$161.65**
+- CityPASS 가격: **$164/인** → **이미 $2.35/인 더 비쌉니다**(우리가 안 쓰는 AMNH 티켓 한 장이 "덤"으로 딸려오지만, 일정에 없어 실사용 가치 0).
+- 2인 기준: CityPASS 지출 328,000~332,000원(프로세싱비 포함 가정) vs 4곳 개별가 합 430,000원... **이 부분은 반대로 CityPASS가 더 쌉니다(약 98,000~102,000원 낮음)** — 정정: $164×2=$328=436,240원, 개별가 합 2인 $161.65×2=$323.30=430,000원이므로 **CityPASS가 6,240원 더 비쌉니다**(프로세싱비 제외 기준). 프로세싱비 포함 시 최대 약 11,560원 더 비쌉니다.
+- 여기에 Edge+MoMA는 어차피 개별 구매(200,000원, 무변동)
+- **총 지출: 약 636,240~641,560원 vs 개별 전량 구매 630,000원 → 6,240~11,560원 더 비쌉니다.** (게다가 못 쓰는 AMNH 티켓 1쌍이 남습니다.)
+
+**시나리오 C. (참고용, 채택 불가) 일몰 제한을 무시하고 C3에 가장 비싼 3곳(ESB+ToR+Edge)을 담는 이론상 최댓값**
+- 개별가 합(1인): $48.87+$45.11+$45.11 = $139.09, C3 $114 → **$25.09/인 절감**, 2인 약 66,700원 절감
+- **그러나 이 조합은 43-2의 "Non-Sunset Hours" 제한에 정면으로 걸립니다** — ESB·ToR 둘 다 우리가 일부러 고른 일몰 시간대를 포기하거나, 금액 미상의 현장 업그레이드를 추가로 내야만 실현됩니다. 업그레이드비가 확인되지 않아 이 66,700원이 실제로 남는지조차 검증 불가능합니다(확인 필요).
+
+**43-3 종합**: **일몰 시간대를 유지하는 두 현실적 시나리오(A·B) 모두 개별 구매보다 3,240~11,560원 더 비쌉니다.** 유일하게 이득이 나는 시나리오(C)는 이 여행에서 이미 확정한 "저녁 야경" 의도와 충돌하고, 그 이득조차 미확인 업그레이드비 때문에 숫자로 보장되지 않습니다.
+
+### 43-4. 프로세싱비·기타 비용 (가정/확인 필요)
+
+- CityPASS 공식 비교 페이지에 **"Processing fees of $2 per ticket apply to all options"** 라는 문구가 있으나, **이것이 "티켓 1장당"인지 "패스 1개당"인지 문구만으로는 모호합니다.** 43-3 계산에서는 보수적으로 "패스 1개당 $2"로 가정해 상한값을 잡았습니다 — **실제로 "선택한 명소 개수당 $2"라면(C3는 3장, 표준 CityPASS는 5장) 프로세싱비가 인당 최대 $6~10까지 늘어 43-3의 손해 폭이 더 커질 수 있습니다.** 확인 필요.
+
+### 43-5. 매진·예약 리스크 (확인 필요, 확신 낮음)
+
+- ToR·ESB·Edge 모두 **My CityPASS 앱을 통한 지정시간 예약이 필수**라는 점은 공식 문서로 확인됨(확신 높음). **다만 CityPASS 보유자 예약분이 일반 개별 구매자와 같은 재고 풀을 쓰는지, 별도 할당 물량인지는 이번 조사로 확인하지 못했습니다.** 연말연시(12/26~1/2) 성수기 특성상 어느 쪽이든 인기 슬롯(특히 12/31 인근, 저녁 슬롯)은 조기 마감 가능성이 있다는 것은 일반론 수준으로만 말할 수 있고, **"CityPASS 쪽이 개별 구매보다 매진 위험이 더 크다"는 근거는 찾지 못했습니다** — 근거 부재를 그대로 "위험 없음"으로 해석하지는 않습니다(확인 필요로 유지).
+
+### 43-6. 결론 및 권고
+
+- **채택 권고하지 않음.** 우리가 이미 확정한 6곳·6개 시각 조합 기준으로, CityPASS(C3든 표준 5매든)는 절감이 아니라 **2인 기준 약 3,000~12,000원의 소폭 손해**를 냅니다. 유일한 절감 경로(약 6.7만원)는 Top of the Rock·ESB의 "야경 시간대" 배치라는 이 일정의 핵심 의도를 버려야 성립하며, 그마저 미확인 업그레이드비 때문에 실제 절감액을 확정할 수 없습니다.
+- **유효기간 자체는 문제가 되지 않습니다** — 12/26(ToR·MoMA 첫 사용)부터 1/2(ESB 마지막 사용)까지는 달력상 8일 구간으로, "9일 연속" 유효기간 안에 여유 있게 들어갑니다. 사용자가 우려했던 "유효기간이 짧아 애초에 못 쓸" 상황은 아니었습니다(확인됨/확신 높음).
+- 즉 **이번 조합은 "돈이 안 남는다"이지 "아예 못 쓴다"는 아닙니다** — 다만 돈도 안 남고, 일몰 시간대라는 함정까지 있어 실익이 없다는 것이 결론입니다.
+
+### 43-7. 확인 필요 사항 종합
+
+1. C3·C-All의 Top of the Rock·ESB "일몰 시간대 업그레이드" 정확한 금액 — 공식 페이지 미공개, My CityPASS 앱 또는 현장 키오스크에서만 확인 가능
+2. 프로세싱비 "$2 per ticket"이 패스 1개당인지 선택 명소 개수당인지
+3. New York C-All 공식가($254)와 3자 사이트(bestnewyorkpass.com, $239) 간 불일치 — 어느 쪽이 최신인지
+4. CityPASS 보유자용 지정시간 예약 물량이 개별 구매자와 같은 풀인지, 별도 할당인지(연말 성수기 매진 위험 비교의 근거)
+5. 표준 New York CityPASS($164)의 "정가 대비 할인율" 기준 정가 — C3·C-All처럼 공식 페이지에 명시된 값을 이번 조사에서 찾지 못함
+
+- 출처: [Official New York C3 by CityPASS](https://www.citypass.com/new-york-c3), [2026-2027 New York C3 — CityPASS Media Room](https://media.citypass.com/travel-trade/new-york-citypass-c3), [New York CityPASS / C3 / C-All 비교 공식 페이지](https://www.citypass.com/new-york-comparison), [New York C-All 공식 가격 페이지](https://www.citypass.com/new-york-c-all), [New York CityPASS(표준 5매) 공식 페이지](https://www.citypass.com/new-york), [CityPASS 고객지원 — Top of the Rock 업그레이드 안내](https://support.citypass.com/hc/en-us/articles/46869776387988-How-do-I-upgrade-my-Top-of-the-Rock-ticket-with-New-York-CITY-PASS-tickets-or-New-York-C3-CITY-PASS-tickets), [CityPASS 고객지원 — Empire State Building 업그레이드 안내](https://support.citypass.com/hc/en-us/articles/21455362688020-How-do-I-upgrade-my-Empire-State-Building-ticket-with-New-York-CITY-PASS-tickets-or-New-York-C3-CITY-PASS-tickets), [bestnewyorkpass.com — C-All 참고가(3자, 공식가와 불일치)](https://www.bestnewyorkpass.com/en/c-all-pass/), `02-itinerary-draft.md` 351~357행(9/11 메모리얼 날짜)·Day 2/5/9 표(ToR·Edge·ESB 배정 시각) 직접 확인 (조사 시점: 2026-08-28, CityPASS 가격·구조는 공식 1차 소스 기준 확신 높음, 업그레이드 금액·매진 위험은 확인 필요)
