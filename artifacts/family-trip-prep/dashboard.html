@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>뉴욕 여행 준비 대시보드 v23</title>
+    <title>뉴욕 여행 준비 대시보드 v24</title>
     <!-- 경고 배지: 🔒 고정 시각(예약·지정입장, 절대 못 미룸) / ⏱ 여유 0분 전환구간(늦으면 뒤가 밀림) / ❓ 미확정 가정(개관시각 등, 시간 고정 아님) -->
-    <!-- v23: 사용자 요청으로 line-item 단위 경고 배지 추가(2026-08-28) -->
+    <!-- v24: 12/29 브로드웨이 삭제·Birdland 확정, 12/31 QC NY Spa 삭제·The Met 신설, 조건부 사항 4건 -->
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
@@ -48,8 +48,8 @@
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
             <h1 class="text-3xl font-bold text-gray-800 mb-2">뉴욕 가족 여행 준비 대시보드</h1>
             <p class="text-gray-600">2026-12-25 ~ 2027-01-03 (9일) | 성인 2명(부부)</p>
-            <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">v23 · 2026-08-27 기준 출발까지</span></p>
-            <p class="text-sm text-gray-500 mt-2">v23 업데이트 — 12/29(Day 5) 두 곳만 정정: 하이라인 블록 13:00~14:10 명시(70분, 순버퍼 15분 복원), 브로드웨이 러시 티켓 "최대 40분(상한)" 규정 추가. 예산 완전 무변동(15,000,000원), 이동 시간 합계 무변동. 나머지 8일 전부 무변동. v22 및 기존 v8~v22 모든 조건부 사항 유지 + v23 신규 조건 1건: 12/29 순버퍼 15분은 하이라인 14:10 정시 퇴장 시에만 성립(Edge 지정입장 지각 유예 정책 미확인).</p>
+            <p class="mt-2"><span class="inline-block bg-blue-700 text-white text-sm font-bold px-3 py-1 rounded">v24 · 2026-08-31 기준 출발까지</span></p>
+            <p class="text-sm text-gray-500 mt-2">v24 업데이트 — 12/29(Day 5) 전면 개정: 브로드웨이 로터리·러시 오전 3행 삭제, 하루 시작 08:30 → 10:00 (10:00~11:00 숙소 여유), 저녁 Birdland Jazz Club 확정 (19:00~21:45). 12/31(Day 7) 전면 개정: QC NY Spa 5행 삭제, The Met 신설 (10:30~11:10 이동, 11:15~14:15 관람 3시간, 14:15~15:05 숍·카페, 15:05~15:45 복귀, 15:45~16:15 여유). 16:15 이후는 무변동. 예산: 액티비티 2,140,000 → 1,820,000, 브로드웨이 320,000 → 재즈 라이브(Birdland) 200,000, 미배분 여유 1,080,000 → 1,520,000. 총액 15,000,000원 무변동. 조건부 사항 4건 신규 반영 (Birdland·The Met·12/31 낮 활동강도·브로드웨이 관람 가능성).</p>
         </div>
 
         <!-- 우리는 이런 여행자입니다 -->
@@ -176,7 +176,7 @@
 
         <!-- 예산 요약 표 -->
         <div class="bg-white rounded-lg card-shadow p-6 mb-6">
-            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v23 — 12/29 시간 정정만, 예산 무변동)</h2>
+            <h2 class="text-xl font-bold text-gray-800 mb-4">예산 배분 (v24 — 브로드웨이 삭제, Birdland·The Met 신설)</h2>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
                     <thead class="bg-gray-100 border-b">
@@ -190,19 +190,19 @@
                         <tr class="border-b"><td class="px-3 py-2">항공권</td><td class="text-right px-3 py-2 font-semibold">2,800,000원</td><td class="text-right px-3 py-2 text-gray-600">18.7%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">숙소(8박)</td><td class="text-right px-3 py-2 font-semibold">2,480,000원</td><td class="text-right px-3 py-2 text-gray-600">16.5%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">식비(유명·캐주얼·간식)</td><td class="text-right px-3 py-2 font-semibold">2,505,000원</td><td class="text-right px-3 py-2 text-gray-600">16.7%</td></tr>
-                        <tr class="border-b"><td class="px-3 py-2">액티비티(전망대·공연·투어)</td><td class="text-right px-3 py-2 font-semibold">2,140,000원</td><td class="text-right px-3 py-2 text-gray-600">14.3%</td></tr>
+                        <tr class="border-b"><td class="px-3 py-2">액티비티(전망대·공연·투어)</td><td class="text-right px-3 py-2 font-semibold">1,820,000원</td><td class="text-right px-3 py-2 text-gray-600">12.1%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">새해 전야(캐주얼+Midnight Run)</td><td class="text-right px-3 py-2 font-semibold">180,000원</td><td class="text-right px-3 py-2 text-gray-600">1.2%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">이동(공항·시내)</td><td class="text-right px-3 py-2 font-semibold">800,000원</td><td class="text-right px-3 py-2 text-gray-600">5.3%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">쇼핑·기념품</td><td class="text-right px-3 py-2 font-semibold">695,000원</td><td class="text-right px-3 py-2 text-gray-600">4.6%</td></tr>
-                        <tr class="border-b"><td class="px-3 py-2">브로드웨이 러시</td><td class="text-right px-3 py-2 font-semibold">320,000원</td><td class="text-right px-3 py-2 text-gray-600">2.1%</td></tr>
+                        <tr class="border-b"><td class="px-3 py-2">재즈 라이브(12/29 Birdland)</td><td class="text-right px-3 py-2 font-semibold">200,000원</td><td class="text-right px-3 py-2 text-gray-600">1.3%</td></tr>
                         <tr class="border-b"><td class="px-3 py-2">보험</td><td class="text-right px-3 py-2 font-semibold">100,000원</td><td class="text-right px-3 py-2 text-gray-600">0.7%</td></tr>
                         <tr class="bg-blue-50 border-b"><td class="px-3 py-2 font-bold">예비비</td><td class="text-right px-3 py-2 font-bold text-blue-600">1,900,000원</td><td class="text-right px-3 py-2 text-blue-600">12.7%</td></tr>
-                        <tr class="bg-green-50"><td class="px-3 py-2 font-bold">미배분(여유)</td><td class="text-right px-3 py-2 font-bold text-green-600">1,080,000원</td><td class="text-right px-3 py-2 text-green-600">7.2%</td></tr>
+                        <tr class="bg-green-50"><td class="px-3 py-2 font-bold">미배분(여유)</td><td class="text-right px-3 py-2 font-bold text-green-600">1,520,000원</td><td class="text-right px-3 py-2 text-green-600">10.1%</td></tr>
                     </tbody>
                 </table>
             </div>
             <div class="mt-4 pt-4 border-t border-gray-200">
-                <p class="text-sm text-gray-600"><strong>총 예산:</strong> <span class="text-lg font-bold text-blue-600">15,000,000원</span> | 예비비+미배분: 2,980,000원(19.9%)</p>
+                <p class="text-sm text-gray-600"><strong>총 예산:</strong> <span class="text-lg font-bold text-blue-600">15,000,000원</span> | 예비비+미배분: 3,420,000원(22.8%)</p>
             </div>
         </div>
 
@@ -304,7 +304,7 @@
                 </div>
                 <div class="mt-2 pt-2 bg-teal-50 px-3 py-2 rounded text-sm text-teal-900 mb-2">
                     <strong>⚠️ v21 조건부 사항 2 — Amtrak 66번/175번 실제 요금 미확정:</strong><br>
-                    <span class="text-xs"><strong>편명(Northeast Regional 66·175번) 및 시각(05:44·15:15 출발)은 확정되었으나, 실제 왕복 요금 상단이 배정액(400,000원)을 약 78,800원 초과할 수 있습니다.</strong> 초과 시 조달 순서: ① NER 세이버 등급 재검색 → ② 미배분 여유(1,080,000) → ③ 예비비(1,900,000) → 흡수 가능. 최악의 경우도 충분한 여유가 있습니다.</span>
+                    <span class="text-xs"><strong>편명(Northeast Regional 66·175번) 및 시각(05:44·15:15 출발)은 확정되었으나, 실제 왕복 요금 상단이 배정액(400,000원)을 약 78,800원 초과할 수 있습니다.</strong> 초과 시 조달 순서: ① NER 세이버 등급 재검색 → ② 미배분 여유(1,520,000) → ③ 예비비(1,900,000) → 흡수 가능. 최악의 경우도 충분한 여유가 있습니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-teal-50 px-3 py-2 rounded text-sm text-teal-900">
                     <strong>ℹ️ v21 참고사항 — 보스턴 체류 구성:</strong><br>
@@ -312,32 +312,33 @@
                 </div>
             </div>
 
-            <!-- Day 5 — v23 수정본 -->
+            <!-- Day 5 — v24 전면 개정 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-amber-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🎭 Day 5 — 12/29(화) 웨스트사이드</h3><p class="text-sm text-amber-600 font-semibold">⚠️ v23: 하이라인 14:10 정시 퇴장 시에만 순버퍼 15분 성립</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">🎭 Day 5 — 12/29(화) 웨스트사이드 & Birdland Jazz Club</h3><p class="text-sm text-amber-600 font-semibold">⚠️ v24: 브로드웨이 삭제, Birdland 확정, 순버퍼 15분</p></div>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">08:30~09:00</span><span>로터리 당첨 확인</span></div>
-                    <div class="flex gap-2"><span class="time-label">09:15~09:50</span><span>숙소 → 박스오피스 이동</span></div>
-                    <div class="flex gap-2"><span class="time-label">10:00~10:40</span><span>박스오피스 러시 티켓 구매 시도 (최대 40분, 상한 — 매진·판매종료 확정 시 조기 이탈)</span></div>
-                    <div class="flex gap-2"><span class="time-label">10:50~11:15</span><span>첼시 마켓으로 이동</span></div>
+                    <div class="flex gap-2"><span class="time-label">10:00~11:00</span><span>숙소 여유(느슨한 아침)</span></div>
+                    <div class="flex gap-2"><span class="time-label">11:00~11:25</span><span>숙소 → 첼시 마켓 이동</span></div>
                     <div class="flex gap-2"><span class="time-label">11:30~12:45</span><span><strong>[유명] Los Tacos No.1</strong> (첼시 마켓 내, 타코)</span></div>
                     <div class="flex gap-2"><span class="time-label">13:00~14:10</span><span>하이라인 북행 산책 (70분, 목표 시간 — v23 순버퍼 15분 확보) <span class="inline-block bg-orange-100 text-orange-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">⏱ 70분 엄수 — 75분 쓰면 순버퍼 10분으로 감소</span></span></div>
                     <div class="flex gap-2"><span class="time-label">14:30~16:00</span><span><strong>Edge at Hudson Yards 전망대</strong> (90분, 지정입장 14:30) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 지정입장 — 지각 유예 정책 미확인</span></span></div>
                     <div class="flex gap-2"><span class="time-label">16:05~16:45</span><span><strong>The Vessel</strong> (20 Hudson Yards, 나선형 구조물, 일몰 시간대)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:50~18:00</span><span>[캐주얼] 허드슨야드 이른 저녁 (70분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span>브로드웨이 공연 관람 (확보 시) <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 커튼 고정</span></span></div>
-                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span><strong>(대안)</strong> <strong>Birdland Jazz Club</strong> (315 W 44th St, 헬스키친) — <strong>로터리·러시 둘 다 실패 시만 발동</strong></span></div>
+                    <div class="flex gap-2"><span class="time-label">19:00~21:45</span><span><strong>Birdland Jazz Club</strong> (315 W 44th St, 헬스키친) — TicketWeb 사전 티켓 구매 필수 <span class="inline-block bg-red-100 text-red-700 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">🔒 확정 공연</span></span></div>
                     <div class="flex gap-2"><span class="time-label">22:00~22:30</span><span>숙소 귀가</span></div>
                 </div>
-                <!-- v23 신규 조건부 사항 -->
+                <!-- v24 조건부 사항 -->
                 <div class="mt-3 pt-3 border-t border-amber-200 bg-amber-50 px-3 py-2 rounded text-sm text-amber-900 mb-2">
-                    <strong>⚠️ v23 신규 조건부 사항:</strong><br>
-                    <span class="text-xs"><strong>12/29 순버퍼 15분은 하이라인을 실제로 14:10에 나왔을 때만 성립합니다(상한 75분까지 쓰면 다시 10분으로 줄어듦). Edge 지정입장의 지각 유예 정책은 여전히 미확인 상태입니다.</strong> 현장에서 하이라인 진행 상황을 수시로 확인하고, 14:10을 넘길 것 같으면 즉시 Edge로 조기 이탈하세요. Edge 입장 후 대기 시간 없이 전망대를 시작합니다.</span>
+                    <strong>⚠️ v24 조건부 사항 1 — Birdland 요금 미확정·환불불가:</strong><br>
+                    <span class="text-xs"><strong>TicketWeb 사전 티켓 구매가 필수이며 전 판매 환불 불가(ALL TICKET SALES ARE FINAL)입니다. 2026-12-29 실제 요금·라인업은 10~11월 캘린더 공개 전까지 미공개이며, 배정액 200,000원은 확정가가 아닌 추정 상단입니다(2025년 동일 요일 실측 1인 $60~70대 기준).</strong> 초과 시 미배분 여유(1,520,000원) 또는 예비비에서 조달합니다.</span>
+                </div>
+                <div class="mt-2 pt-2 bg-amber-50 px-3 py-2 rounded text-sm text-amber-900 mb-2">
+                    <strong>⚠️ v24 신규 정보 — 브로드웨이 관람 가능성 완전 소멸:</strong><br>
+                    <span class="text-xs"><strong>이번 개정으로 이 여행에서 브로드웨이 공연을 볼 가능성이 완전히 0이 되었습니다(로터리·러시·12/30 재도전·TKTS 네 경로 모두 소멸).</strong> 사용자가 재즈를 우선해 명시적으로 확정한 트레이드오프입니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-amber-50 px-3 py-2 rounded text-xs text-amber-900">
-                    <strong>ℹ️ 브로드웨이 러시 티켓 규정:</strong> 로터리 및 러시 상황에 따라 티켓이 매진되거나 판매가 종료될 수 있습니다. 이 경우 40분을 기다리지 말고 곧바로 첼시 마켓 또는 숙소로 조기 이탈하여 다음 일정을 진행하세요. 시간 리스크를 최소화합니다.
+                    <strong>ℹ️ 하이라인 14:10 정시 퇴장 확인:</strong> 순버퍼 15분이 성립하는 조건입니다. Edge 지정입장(14:30)에 늦으면 현장에서 Edge로 조기 이탈하세요.
                 </div>
             </div>
 
@@ -361,7 +362,7 @@
                 <!-- v14 신규: Blue Note 경고 -->
                 <div class="mt-3 pt-3 border-t border-red-200 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
                     <strong>⚠️ Blue Note 재즈클럽 예산 부족 가능성 (v14 조건부 사항 1):</strong><br>
-                    <span class="text-xs"><strong>예산 140,000원은 2인 약 $105에 해당하는데, Vanguard 평시 커버 상단($50/인) + 음료 미니멈만 적용해도 2인 약 $130(≈173,000원)으로 이미 초과됩니다.</strong> Chris Botti 급 헤드라이너는 통상 더 높은 가격대입니다. 차액 조달 순서: 액티비티 버퍼 → 미배분 여유(1,080,000) → 예비비(1,900,000) → Smalls/Mezzrow(평시 기준)로 전환 가능합니다.</span>
+                    <span class="text-xs"><strong>예산 140,000원은 2인 약 $105에 해당하는데, Vanguard 평시 커버 상단($50/인) + 음료 미니멈만 적용해도 2인 약 $130(≈173,000원)으로 이미 초과됩니다.</strong> Chris Botti 급 헤드라이너는 통상 더 높은 가격대입니다. 차액 조달 순서: 액티비티 버퍼 → 미배분 여유(1,520,000) → 예비비(1,900,000) → Smalls/Mezzrow(평시 기준)로 전환 가능합니다.</span>
                 </div>
                 <!-- 조건부 사항 1: 피터루거 백업 경고 -->
                 <div class="mt-2 pt-2 bg-red-50 px-3 py-2 rounded text-sm text-red-900 mb-2">
@@ -375,17 +376,18 @@
                 </div>
             </div>
 
-            <!-- Day 7 -->
+            <!-- Day 7 — v24 전면 개정 -->
             <div class="bg-white rounded-lg card-shadow p-5 mb-4 border-l-4 border-purple-400">
                 <div class="flex items-start justify-between mb-3">
-                    <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야 · Midnight Run</h3><p class="text-sm text-purple-600 font-semibold">⚠️ v17: 남편 등록 완료</p></div>
+                    <div><h3 class="text-lg font-bold text-gray-800">🎆 Day 7 — 12/31(목) 새해 전야 · Midnight Run & The Met 관람</h3><p class="text-sm text-purple-600 font-semibold">⚠️ v24: The Met 신설, 낮 활동강도 상승</p></div>
                     <span class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">특별</span>
                 </div>
                 <div class="space-y-1 text-sm">
-                    <div class="flex gap-2"><span class="time-label">09:30~10:20</span><span>QC NY Spa 도착·준비</span></div>
-                    <div class="flex gap-2"><span class="time-label">11:30~15:00</span><span><strong>QC NY Spa</strong> (32 E 32nd St, 패키지 서비스)</span></div>
-                    <div class="flex gap-2"><span class="time-label">15:00~15:35</span><span>페리 → East River 복귀 (약 35분)</span></div>
-                    <div class="flex gap-2"><span class="time-label">15:35~16:15</span><span>페리 승강장 → 숙소 (도보 약 40분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">10:30~11:10</span><span>숙소 → The Met (이동, 40분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">11:15~14:15</span><span><strong>The Met 관람</strong> (3시간, 1/1 처음 방문) <span class="inline-block bg-yellow-100 text-yellow-800 text-[10px] font-bold px-1.5 py-0.5 rounded align-middle">❓ 운영시간 추정(10:00~17:00, 공식 확인 실패로 2차 소스)</span></span></div>
+                    <div class="flex gap-2"><span class="time-label">14:15~15:05</span><span><strong>뮤지엄숍 · The Met 카페</strong> (50분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:05~15:45</span><span>The Met → 숙소 복귀 (40분)</span></div>
+                    <div class="flex gap-2"><span class="time-label">15:45~16:15</span><span>여유 & 정리 (30분)</span></div>
                     <div class="flex gap-2"><span class="time-label">16:15~18:30</span><span><strong>숙소 휴식·캐주얼 복장 준비</strong> (135분)</span></div>
                     <div class="flex gap-2"><span class="time-label">18:30~19:30</span><span><strong>[캐주얼] 이스트빌리지 저녁 끼니</strong> (워크인)</span></div>
                     <div class="flex gap-2"><span class="time-label">19:30~22:30</span><span>숙소 복귀·대기·방한 레이어링 준비(3시간, 새해 준비)</span></div>
@@ -397,16 +399,24 @@
                     <div class="flex gap-2"><span class="time-label">01:20~01:40</span><span>Naumburg Bandshell → 센트럴파크 출구</span></div>
                     <div class="flex gap-2"><span class="time-label">01:40~02:25</span><span>센트럴파크 → 숙소 (도보·지하철 약 45분)</span></div>
                 </div>
-                <!-- v17 신규: 등록자 확정 + 결제 완료 -->
+                <!-- v24 신규 조건부 사항 2·3 -->
                 <div class="mt-3 pt-3 border-t border-purple-200 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
+                    <strong>⚠️ v24 조건부 사항 2 — The Met 12/31 운영시간이 "추정":</strong><br>
+                    <span class="text-xs"><strong>The Met 12/31 운영시간(10:00~17:00)이 "추정"이며 공식 사이트 접속 실패로 2차 소스 근거뿐입니다.</strong> 이 여행에서 처음이자 마지막 방문이므로 포기하면 대체 불가입니다. 출발 임박 시(11~12월) metmuseum.org에서 정확한 운영시간을 재확인하세요.</span>
+                </div>
+                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
+                    <strong>⚠️ v24 조건부 사항 3 — 12/31 낮 활동 강도 상승:</strong><br>
+                    <span class="text-xs"><strong>12/31 낮 활동이 스파(휴식 210분)에서 The Met(관람 3시간+왕복 80분)으로 바뀌어, 자정 4마일 레이스 당일의 낮 활동 강도가 올라갑니다.</strong> 다만 레이스 전 여유 버퍼 315분(16:15~22:30)은 그대로 유지되므로 회복 가능합니다.</span>
+                </div>
+                <!-- 기존 v17~v16 조건부 사항들 -->
+                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
                     <strong>✅ v17 조건부 사항 1 — 등록자 확정 완료 (2026-08-20 실결제):</strong><br>
                     <span class="text-xs"><strong>남편이 NYRR Midnight Run에 실제 등록 및 결제(약 98,450원)를 완료했습니다.</strong> 아내는 동반 게스트용 손목밴드를 별도로 수령해야 합니다.</span>
                 </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
                     <strong>⚠️ v17 조건부 사항 2 — 기상 취소 시 환불 정책:</strong><br>
-                    <span class="text-xs"><strong>낙뢰·극한 날씨 등으로 경기 취소 시 환불 또는 다음 해 이월 정책을 확인할 것.</strong> 2025년 낙뢰 취소 전례가 있습니다.</span>
+                    <span class="text-xs"><strong>낙뢰·극한 날씨 등으로 경기 취소 시 환불 또는 다음 해 이월 정책을 확인할 것.</strong> 2025년 낙뢰 취소 전례가 있습니다. 취소 시 숙소 인근에서 캐주얼하게 새해를 맞습니다(v16 조건부 사항 4).</span>
                 </div>
-                <!-- 기존 v16 조건부 사항들 -->
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
                     <strong>⚠️ v16 조건부 사항 1 — 격식 정찬이 0회:</strong><br>
                     <span class="text-xs">이 여행에는 형식 있는 정찬이 한 번도 없습니다.</span>
@@ -419,13 +429,9 @@
                     <strong>⚠️ v16 조건부 사항 3 — 12/31 이동 약 152분·귀가 02:25:</strong><br>
                     <span class="text-xs">자정 후 센트럴파크 왕복이 이 여행 최장 이동이며, 귀가가 새벽 02:25이므로 다음 날 수면이 제약됩니다.</span>
                 </div>
-                <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900 mb-2">
-                    <strong>⚠️ v16 조건부 사항 4 — 낙뢰 취소 전례:</strong><br>
-                    <span class="text-xs">2025년 NYRR Midnight Run이 낙뢰로 전면 취소된 전례가 있습니다. 취소 시 숙소 인근에서 캐주얼하게 새해를 맞습니다.</span>
-                </div>
                 <div class="mt-2 pt-2 bg-purple-50 px-3 py-2 rounded text-sm text-purple-900">
                     <strong>⚠️ v16 조건부 사항 5 — 미배분 여유의 구성:</strong><br>
-                    <span class="text-xs">v21 미배분 1,080,000원은 단순 안전 마진이 아니라 여러 지출 포기의 누적 결과입니다(1/1 특별 디너 다운그레이드 + Trattoria 삭제 + Midnight Run 확정).</span>
+                    <span class="text-xs">v24 미배분 1,520,000원은 단순 안전 마진이 아니라 여러 지출 포기의 누적 결과입니다(브로드웨이 삭제 320,000 + QC NY Spa 삭제 400,000 - Birdland 재예산 120,000 - The Met 신규 80,000 = 순 440,000 증가).</span>
                 </div>
             </div>
 
@@ -467,7 +473,7 @@
                 <!-- v22 신규 조건부 사항 3 — 공원 도보 실측 미완 -->
                 <div class="mt-2 pt-2 bg-green-50 px-3 py-2 rounded text-sm text-green-900 mb-2">
                     <strong>⚠️ v22 조건부 사항 3 — 공원 진입 도보 25분은 실측 미완:</strong><br>
-                    <span class="text-xs"><strong>구겐하임 → 90번가 Engineers' Gate 진입 → 센트럴파크 남하 도보 경로(25분)의 정확한 도보 시간과 경로가 확정되지 않았습니다.</strong> 한파·강풍 시 도보 대신 지하철(86번가↔59번가) 대체 시 약 98분(지하철 10분 + 이동 25분 + 대기 등)으로 늘어날 수 있습니다. 기상 상황에 따라 현장에서 유연하게 판단하되, 월먼 링크 스케이팅(17:00 이후)은 반드시 보호하세요.</span>
+                    <span class="text-xs"><strong>구겐하임(89가) → 센트럴파크 90가 진입 → Bethesda Terrace(72가) 도보 약 25분은 조사노트 38-8에서 "정확한 도보 시간은 실측하지 않았다"고 명시했습니다.</strong> 30분을 넘으면 뒤의 여유 20분에서 먼저 흡수되고, 그래도 넘으면 산책 90분을 그만큼 줄입니다. 한파·강풍 시 도보 대신 지하철(86번가↔59번가) 대체 시 약 98분으로 늘어날 수 있습니다. 기상 상황에 따라 현장에서 유연하게 판단하되, 월먼 링크 스케이팅(17:00 이후)은 반드시 보호하세요.</span>
                 </div>
 
                 <!-- v22 신규 조건부 사항 4 — MoMA 재결제 조건 제거 -->
@@ -509,6 +515,10 @@
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-green-600">2,480,000원</span><span class="inline-block bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded">결제완료</span></div>
                 </div>
                 <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
+                    <div><h4 class="font-semibold text-gray-800">Birdland Jazz Club (12/29)</h4><p class="text-sm text-gray-600">315 W 44th St, 헬스키친 | TicketWeb 사전 티켓 구매 필수</p></div>
+                    <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 200,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
                     <div><h4 class="font-semibold text-gray-800">Blue Note (12/30)</h4><p class="text-sm text-gray-600">131 W 3rd St, 그리니치빌리지 | Chris Botti 홀리데이 레지던시</p></div>
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 140,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
                 </div>
@@ -529,6 +539,10 @@
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 400,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
                 </div>
                 <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
+                    <div><h4 class="font-semibold text-gray-800">The Met (12/31)</h4><p class="text-sm text-gray-600">1000 5th Ave (82nd St) | 신정 운영시간 확인 필수, 12/31 가능 여부 재확인</p></div>
+                    <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 80,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
+                </div>
+                <div class="flex items-center justify-between p-3 bg-yellow-50 rounded border border-yellow-200">
                     <div><h4 class="font-semibold text-gray-800">구겐하임 미술관 (1/1)</h4><p class="text-sm text-gray-600">1071 5th Ave (89th St) | 신정 개관 확인 필수</p></div>
                     <div class="flex items-center gap-2"><span class="text-lg font-bold text-orange-600">약 70,000원</span><span class="badge-approve text-xs font-semibold px-2 py-1 rounded">사람 승인 필요</span></div>
                 </div>
@@ -546,6 +560,8 @@
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>Top of the Rock 온라인 예매</strong> — 12/26 16:00 지정시간 확보</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700">방한용품 — 아우터·기모·목도리·장갑·방수부츠</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>12/26 절단 우선순위 숙지</strong> — Rough Trade→LEGO→5번가 순서 사전 확인</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v24 신규] 12/29 Birdland TicketWeb 티켓 구매 시간 확인</strong> — 10~11월 캘린더 공개 즉시 구매 (전 판매 환불 불가)</span></label>
+                <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v24 신규] 12/31 The Met 운영시간 재확인</strong> — 11~12월 metmuseum.org에서 신정 운영시간 최종 확인</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v21 신규] 12/28 보스턴 Amtrak 66·175번 실제 편명·시각 재확인</strong> (편명 확정, 요금 미확정)</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v21 신규] 12/28 보스턴 당일치기 수면 약 5.5~6시간 대비</strong> (12/31 귀가 02:25, 12/28 기상 04:40)</span></label>
                 <label class="flex items-start gap-3 p-2 cursor-pointer"><input type="checkbox" class="mt-1 w-4 h-4 text-blue-600 rounded"><span class="text-sm text-gray-700"><strong>[v22 신규] 1/1 구겐하임 미술관 신정 개관 + 운영시간 확인</strong> (guggenheim.org, 출발 임박 시 재확인 필수)</span></label>
@@ -566,8 +582,8 @@
 
         <!-- 푸터 -->
         <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
-            <p>뉴욕 여행 준비 대시보드 v23 | 2026-08-27 업데이트</p>
-            <p class="text-xs text-gray-500 mt-2">v23 변경사항: 12/29(Day 5) 두 곳만 정정 — 하이라인 블록 13:00~14:10 명시(70분, 목표 시간·순버퍼 15분 복원), 브로드웨이 러시 티켓 "최대 40분(상한)" 규정 추가. 예산 완전 무변동(항공 2,800,000·숙소 2,480,000·식비 2,505,000·액티비티 2,140,000·새해전야 180,000·이동 800,000·쇼핑 695,000·브로드웨이 320,000·보험 100,000·예비비 1,900,000·미배분 1,080,000·총 15,000,000). 이동 시간 합계 무변동. 나머지 8일 전부 무변동. v22 및 기존 v8~v22 모든 조건부 사항 유지 + v23 신규 조건 1건(12/29 순버퍼 15분은 하이라인 14:10 정시 퇴장 시에만 성립, Edge 지정입장 지각 유예 미확인).</p>
+            <p>뉴욕 여행 준비 대시보드 v24 | 2026-08-31 업데이트</p>
+            <p class="text-xs text-gray-500 mt-2">v24 변경사항: 12/29(Day 5) 전면 개정 — 브로드웨이 로터리·러시 오전 3행 삭제, 하루 시작 08:30 → 10:00(10:00~11:00 숙소 여유), 저녁 Birdland Jazz Club 확정(19:00~21:45). 12/31(Day 7) 전면 개정 — QC NY Spa 5행 삭제, The Met 신설(10:30~11:10 이동, 11:15~14:15 관람 3시간, 14:15~15:05 숍·카페, 15:05~15:45 복귀, 15:45~16:15 여유). 16:15 이후는 무변동. 예산: 액티비티 2,140,000 → 1,820,000, 브로드웨이 320,000 → 재즈 라이브(Birdland) 200,000, 미배분 여유 1,080,000 → 1,520,000. 총액 15,000,000원 무변동. 조건부 사항 4건 신규 반영 (Birdland 요금·환불불가, The Met 운영시간 추정, 12/31 낮 활동강도, 브로드웨이 관람 가능성 0).</p>
         </div>
 
     </div>
@@ -577,9 +593,9 @@
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['식비(16.7%)', '액티비티(14.3%)', '예비비(12.7%)', '항공(18.7%)', '숙소(16.5%)', '이동(5.3%)', '쇼핑(4.6%)', '브로드웨이(2.1%)', '새해전야(1.2%)', '보험(0.7%)', '미배분(7.2%)'],
+                labels: ['식비(16.7%)', '액티비티(12.1%)', '예비비(12.7%)', '항공(18.7%)', '숙소(16.5%)', '이동(5.3%)', '쇼핑(4.6%)', '재즈 라이브(1.3%)', '새해전야(1.2%)', '보험(0.7%)', '미배분(10.1%)'],
                 datasets: [{
-                    data: [2505, 2140, 1900, 2800, 2480, 800, 695, 320, 180, 100, 1080],
+                    data: [2505, 1820, 1900, 2800, 2480, 800, 695, 200, 180, 100, 1520],
                     backgroundColor: ['#f59e0b', '#8b5cf6', '#84cc16', '#3b82f6', '#10b981', '#06b6d4', '#f97316', '#14b8a6', '#ec4899', '#6366f1', '#6b7280'],
                     borderColor: '#ffffff',
                     borderWidth: 2
