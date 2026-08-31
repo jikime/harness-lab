@@ -3462,3 +3462,64 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 **후보 A(1/2 오전, ESB 포기)를 1순위로 권고합니다.** 세 후보 중 유일하게 (1) 시간대 제약이 없고(Met·Guggenheim 모두 무관한 별도 날), (2) 예산이 순감하며, (3) 포기하는 콘텐츠(ESB)가 이미 12/26 Top of the Rock과 성격이 겹치는 "대체 가능한" 항목이기 때문입니다. 다만 **"9일 안에 The Met과 구겐하임을 둘 다, 무리 없이 넣는 것은 불가능하다"는 판정을 낙관적으로 뒤집지는 않습니다** — 후보 A조차 유니언스퀘어 마지막 쇼핑을 사실상 포기하고, 이미 타이트한 마지막 날의 20:20 공항 이동 앞에서 안전마진을 깎는 대가를 그대로 치릅니다. 후보 B·C는 각각 "일몰 야경 콘텐츠 상실", "낮 스파 데이트 컨셉 소멸"이라는 이 여행이 이미 공들여 설계한 요소를 정면으로 깨야 해서 후순위로 둡니다. 최종 선택은 사용자의 우선순위(마지막 날의 여유 vs 야경 뷰 vs 스파 경험) 판단이 필요하며, `02-itinerary-draft.md` 반영은 itinerary-planner의 몫입니다.
 
 - 출처: [Wonderfulmuseums — The Met Museum Hours](https://www.wonderfulmuseums.com/museum/the-met-museum-hours/), [Wonderfulmuseums — Metropolitan Museum of Art Holiday Hours](https://www.wonderfulmuseums.com/museum/metropolitan-museum-of-art-holiday-hours/), [Newyorktickets — The Metropolitan Museum of Art Opening Hours](https://www.newyorktickets.com/the-metropolitan-museum-of-art/timings-opening-hours/), [Hyperallergic — Met Museum Raises Admission Fee to $30](https://hyperallergic.com/met-museum-raises-admission-fee/), [Artvisitguide — Met Museum Tickets 2026](https://www.artvisitguide.com/met-museum-tickets-guide/), [Rome2Rio — Guggenheim to Met distance](https://www.rome2rio.com/s/Solomon-R-Guggenheim-Museum/Metropolitan-Museum-of-Art), [Waleshotel — Museum Mile NYC Guide](https://waleshotel.com/museum-mile-fifth-avenue-guide/), [Tripadvisor — QC Spa New York](https://www.tripadvisor.com/AttractionProductReview-g60763-d24042472-QC_Spa_New_York_Luxury_Wellness_on_Governors_Island-New_York_City_New_York.html), [GetYourGuide — QC NY Spa on Governors Island](https://www.getyourguide.com/new-york-city-l59/qc-ny-luxury-spa-on-governors-island-t462372/), [QC Spa New York 공식 — Admissions, Hours & Prices](https://www.qcny.com/admissions-prices), [마이리얼트립 — 조희성 가이드 프로필](https://b2b.myrealtrip.com/guides/3450), [WAUG — [비비투어] 현역 작가와 함께하는 뉴욕 메트로폴리탄 미술관 큐레이터 투어](https://www.waug.com/ko/activities/137372), [마이리얼트립 — 시티트립 메트로폴리탄 도슨트](https://www.myrealtrip.com/offers/100145), [마이리얼트립 — 미술관도슨트 입장권선택](https://www.myrealtrip.com/offers/110627), [brunch — 메트폴리탄 미술관 도슨트 투어는 수준이하였다](https://brunch.co.kr/@sisabizone/250), 본 문서 36-1·38-5·40-4·43-1~43-3(The Met 신정 휴관·구겐하임 위치·12/31 스케줄·전망대 가격 기존 확인), `02-itinerary-draft.md` Day 2·Day 7·Day 9 표 직접 확인 (조사 시점: 2026-08-28. 공식 metmuseum.org는 두 차례 HTTP 429로 직접 접속 실패해 전 항목이 2차 소스 근거임을 명시. QC NY Spa 가격은 이번에 신규 확인한 시세이며 기존 예약 금액과의 일치 여부는 확인 필요.)
+
+---
+
+## 46장. 월먼 링크(Wollman Rink) 1/1 실제 요금 검증 — 공휴일 할증(prime) 적용 여부와 2인 최종 결제 예상액 (조사 시점: 2026-08-31)
+
+**배경**: 사용자가 "스케이팅 재밌겠는데 가격이 사악하면 안 할 거야"라고 확인 요청. 현재 `02-itinerary-draft.md`에는 1/1(금, 신정) 16:45~18:15 월먼 링크가 배정돼 있고 예산 2인 120,000원(공휴일 할증 $40/인 가능성 + 스케이트 대여 별도 약 $12+세)으로 잡혀 있으나, 이는 14장(최초 조사, 2026-07-27)의 2차 소스 기반 추정치이며 2026-27 시즌 확정가는 아니었습니다. 이번 조사는 centralparknyc.org·wollmanrinknyc.com 계열 소스에서 성인 입장료 티어, 스케이트·락커 부대비용, 신정 공휴일 할증 여부를 재확인합니다. **`02-itinerary-draft.md`는 이번 조사로 수정하지 않았습니다** — 반영 여부는 사용자 확인 후 별도 진행합니다.
+
+### 46-0. 결론 선요약
+
+- **성인 입장료는 off-peak $16 / peak $28 / prime(공휴일·성수기) $40의 3단 요금제로 확인됩니다(확신 높음, Central Park Conservancy 계열 사이트 centralpark.org와 복수 2차 소스 일치).** 다만 어느 날짜가 정확히 어느 티어인지 보여주는 공개 캘린더는 확보하지 못했습니다 — 실제 공식 예매 사이트(tickets.wollmanrinknyc.com)는 이번 접속에서 대기열 시스템(queue-it, "freeskate2026" 이벤트)으로 리다이렉트돼 날짜별 실가격 확인에 실패했습니다.
+- **신정(1/1)이 "prime" 공휴일 할증 대상이라는 명시적 1차 확인은 얻지 못했지만(확인 필요), 간접 근거는 일관되게 그 방향을 가리킵니다.** 여러 2차 소스가 "holiday = prime $40 티어"로 명시적으로 등치하고, 신정은 미국 주요 공휴일이므로 45장(The Met)·기존 문서에서도 신정을 정기휴관·특수취급일로 다뤄온 전례와 일치합니다. **기존 문서의 "공휴일 할증 가능성" 전제는 유지하는 것이 합리적입니다.**
+- **2인 실제 결제 예상액(성인 admission $40 prime 2인 + 스케이트 대여 $12×2인, 락커 제외, 세금 8.875% 별도 부과 가정): 약 $113.23 → 약 150,000원(환율 1,330원 적용, 45장과 동일한 관행으로 5천원 단위 반올림).**
+- **기존 배정액 120,000원 대비 약 30,000~30,600원(약 25~26%) 초과할 가능성이 높습니다.** 락커(옵션, 1인 $8 추정)까지 2개 대여하면 총액이 약 175,000원까지 올라가 초과폭이 약 55,000원으로 커집니다. 반대로 만약 신정이 실제로는 peak($28) 티어에 그친다면 총액은 약 115,000원으로 기존 배정액과 거의 일치합니다(오차 범위 내). 즉 **"사악한 수준까지는 아니지만, 최선의 경우를 가정한 기존 배정액보다는 확실히 더 든다"**는 것이 이번 조사의 결론입니다.
+
+### 46-1. 성인 입장료 3단 티어 (확신: 높음, 신정 해당 여부는 확신 중간)
+
+| 티어 | 성인 가격 | 적용 시점(일반 서술) |
+|---|---|---|
+| Off-peak | $16 | 평일 비혼잡 시간대(주로 평일 낮) |
+| Peak | $28 | 평일 저녁·주말 전반 |
+| Prime(홀리데이) | $40 | 공휴일·성수기 특별 시점 |
+
+- 위 3단 가격은 [Central Park Conservancy 공식 계열 사이트 centralpark.org](https://centralpark.org/wollman-rink/)에서 "Adults: $16 (off peak), $28 (peak), $40 (prime)"으로 명시적으로 확인됩니다. 동일한 세 숫자가 helpnewyork.com, mychristmasinnewyork.com(2025년 기준으로는 $15/$27/$37로 약간 낮게 인용 — 시즌마다 소폭 인상되는 것으로 추정) 등 복수의 독립 2차 소스에서도 반복 확인돼 신뢰도가 높습니다.
+- **정확한 티어-날짜 매핑표(캘린더)는 확보하지 못했습니다.** 공식 예매 사이트 `tickets.wollmanrinknyc.com`은 이번 접속에서 `wollmanrinknyc.queue-it.net`이라는 대기열(virtual waiting room) 페이지로 302 리다이렉트됐고, 이벤트명이 `freeskate2026`으로 표시돼 특정 프로모션·고수요 이벤트에 대한 대기열로 추정됩니다. 날짜별 실시간 가격은 이 대기열을 통과해야 확인 가능해 이번 조사(WebFetch/WebSearch)로는 열람하지 못했습니다.
+- **"holiday = prime $40"이라는 등치 자체는 여러 소스가 명시적으로 서술**합니다(예: HelpNewYork.com "Holiday/Prime" 병기, mychristmasinnewyork.com "holidays 약 $38"). 신정은 미국의 대표적 공휴일이므로 이 등치를 적용하면 prime 티어 적용이 유력합니다. 다만 "신정 저녁 시간대가 요일 기준으로도 이미 peak에 해당해 공휴일 할증이 중복 적용되지 않을 가능성"까지 배제하지는 못했습니다(확인 필요).
+
+### 46-2. 스케이트 대여료·락커료 (확신: 높음/중간)
+
+- **스케이트 대여**: [wollmanrinknyc.com/plan/](https://wollmanrinknyc.com/plan/) 공식 페이지에서 "$12 + tax"로 명시 확인(확신 높음). 유아 사이즈 8부터 남성 14까지 대여 가능. 스케이트 보조기(skate aid, 유아·초보용 보행 보조기구)는 별도 $25.
+- **락커 대여**: centralpark.org 기준 $8로 확인되나, 다른 2차 소스(Tripadvisor 이용자 후기 등)는 $7 또는 "$10 대여 후 자물쇠 반납 시 $6.75 환급" 등 서로 다른 숫자를 제시해 **정확한 현재가는 확인 필요**입니다. 락커는 선택 사항(옷·소지품을 직접 소지하거나 동반자가 지키는 방식으로 대체 가능)이라 기본 예상액 계산에서는 제외하고, 필요 시 추가되는 옵션 비용으로 별도 표기합니다.
+
+### 46-3. 판매세 적용 방식 (확신: 중간 — 세전/세후 표기 관행 자체는 확인 미흡)
+
+- 사용자 안내대로 뉴욕주+시 결합 판매세 8.875%가 일반적으로 적용됩니다. wollmanrinknyc.com/plan/이 스케이트 대여료를 "$12 **+ tax**"로 명시한 것으로 볼 때, 공식 표기 관행은 **세전 가격을 게시하고 결제 시 세금을 추가하는 방식**으로 보입니다. 입장료($16/$28/$40) 페이지들은 "+tax" 표기 없이 게시돼 있으나, 스케이트 대여와 동일한 표기 관행을 따를 가능성이 높다고 보고 이번 계산은 **입장료+대여료 합산 후 세금 추가**로 가정했습니다. **이 가정 자체(입장료가 세전가인지 이미 세후 포함가인지)는 확인 필요**하며, 만약 $40이 이미 세금 포함가라면 아래 총액에서 세금분(약 $8~9)이 이중 계산된 것이므로 실제 총액은 그만큼 낮아질 수 있습니다.
+
+### 46-4. 2인 최종 결제 예상액 시나리오별 계산 (조사 시점 환율 1,330원/USD 적용)
+
+| 시나리오 | 성인 입장료(2인) | 스케이트 대여(2인) | 소계 | 세금 8.875% | 세후 총액(USD) | 원화 환산 | 기존 배정액(120,000원) 대비 |
+|---|---|---|---|---|---|---|---|
+| **A. Prime $40 적용(가장 유력, 권고 기준)** | $80.00 | $24.00 | $104.00 | $9.23 | **$113.23** | **약 150,000원** | **약 +30,000원 초과(약 25%↑)** |
+| B. Peak $28 적용(공휴일 할증이 요일 기준과 중복 없이 적용 안 될 경우) | $56.00 | $24.00 | $80.00 | $7.10 | $87.10 | 약 115,000원 | 약 −5,000원(예산 이내, 오차범위) |
+| A + 락커 2개(옵션, $8×2 추정) | $80.00 | $24.00+락커 $16.00 | $120.00 | $10.65 | $130.65 | 약 175,000원 | 약 +55,000원 초과(약 46%↑) |
+
+- 계산 근거: A 시나리오 = $40×2(입장) + $12×2(대여) = $104, ×1.08875 = $113.23 → ×1,330원 = 150,596원 → 5천원 단위 반올림(45장과 동일 관행) → **150,000원**.
+- **결론적으로 "사악하다"고 부를 정도의 급격한 초과는 아니지만(시나리오 A 기준 초과폭은 약 25%, 절대액으로는 약 3만원), 기존 배정액 120,000원은 낙관적 시나리오(B, peak 적용)를 사실상 최소선으로 잡은 값이었고, 신정이 실제로 prime 티어에 해당한다면 예산을 초과할 가능성이 더 높습니다.** 락커까지 2개 빌리면 초과폭이 55,000원 수준으로 커지므로, 락커 없이 겉옷을 직접 소지하는 방식을 권장합니다.
+
+### 46-5. 사전 온라인 예약 필요 여부
+
+- 복수 소스가 "**타임드 엔트리(timed arrival) 티켓**을 온라인 사전 구매할 수 있고, 지정 시각 기준 앞뒤 30분 이내 입장 가능"하다고 설명합니다. **강제적인 필수 예약이라기보다는 "사전 구매 강력 권장" 구조**로 보이며, 특히 크리스마스~신정 연휴 주간은 주말·공휴일 날짜가 매진되는 경우가 있다는 서술이 반복적으로 확인됩니다(확신 중간).
+- **예약 오픈 시점(시즌 전체 티켓이 언제부터 판매 시작되는지)은 이번 조사로 확인하지 못했습니다(확인 필요)** — 공식 예매 페이지가 대기열(queue-it)로 막혀 있어 시즌 오픈 공지·판매 시작일을 직접 확인하지 못했습니다. 2025-26시즌은 10/25(토) 개장으로 확인된 바 있어(14장), 2026-27시즌도 유사하게 10월 말 개장 후 온라인 판매가 함께 시작될 가능성이 높으나 추정입니다.
+- **권고**: 신정 방문을 확정할 경우, 시즌 개장 직후(추정 2026년 10월 말~11월) 공식 예매 사이트에서 1/1 특정 시간대 실가격을 직접 조회해 46-4의 시나리오 A/B 중 어느 쪽인지 확정하고, 매진 리스크를 감안해 조기 예약을 권장합니다.
+
+### 46-6. 확인 필요 사항 종합
+
+1. 신정(1/1)이 실제로 "prime $40" 티어에 해당하는지, 공식 예매 사이트의 날짜별 캘린더에서 1차 확인 필요(대기열로 인해 이번 조사에서 미확인).
+2. 입장료 게시 가격($16/$28/$40)이 세전가인지 이미 세금 포함가인지 — wollmanrinknyc.com/plan/의 "+tax" 표기가 대여료에만 붙어 있어 입장료도 동일 관행인지 확인 필요.
+3. 락커 대여료 정확한 현재가($7/$8/$10 중 상충) — 이번 조사로 확정하지 못함.
+4. 2026-27 시즌 온라인 예매 오픈 시점(정확한 날짜) — 대기열 차단으로 미확인.
+5. 신정 주간(12/31~1/2)의 실제 매진 이력·혼잡도 — 조기 예약 필요성 판단에 참고.
+
+- 출처: [Central Park Conservancy — Wollman Rink](https://centralpark.org/wollman-rink/), [wollmanrinknyc.com — Plan Your Visit](https://wollmanrinknyc.com/plan/), [tickets.wollmanrinknyc.com](https://tickets.wollmanrinknyc.com/2515/2554)(접속 시 대기열 페이지로 리다이렉트, 날짜별 실가격 미확인), [NYC Parks — Ice Skating Rinks: Wollman Rink](https://www.nycgovparks.org/facilities/iceskating/5), [Centralpark.com — Ice Skating Season 2025-2026](https://www.centralpark.com/things-to-do/sports/ice-skating/), [HelpNewYork.com — NYC Ice Skating 2025: Price & Rink Comparison Guide](https://helpnewyork.com/nyc-ice-skating-rinks-price-comparison/), [MyChristmasInNewYork.com — Wollman Ice Rink Central Park NYC 2025 Winter Skating Guide](https://mychristmasinnewyork.com/wollman-ice-rink-central-park-nyc/), [Mommy Poppins — An Insider's Guide to Ice Skating at Wollman Rink](https://mommypoppins.com/new-york-city-kids/outdoors/guide-ice-skating-wollman-rink-central-park-kids-families), [Tripadvisor — Wollman Rink Lockers 토론](https://www.tripadvisor.com/ShowTopic-g60763-i5-k3252787-Wollman_Rink_Lockers-New_York_City_New_York.html), [Viator — NYC Central Park Ice Skating Tickets at Wollman Rink](https://www.viator.com/tours/New-York-City/NYC-Central-Park-Ice-Skating-Tickets-at-Wollman-Rink/d687-15081P604)(접속 시 HTTP 403으로 날짜별 가격 미확인), 본 문서 14장(월먼 링크 최초 조사, 기존 배정액 120,000원 근거), `02-itinerary-draft.md` 1/1 16:45~18:15 배정(직접 확인, 이번 조사로 수정하지 않음) (조사 시점: 2026-08-31. 공식 예매 사이트가 대기열로 막혀 날짜별 실가격·세전세후 여부 등 핵심 항목 일부가 1차 확인 아닌 2차 소스 추정에 머무름 — 시즌 개장 후 재확인 강력 권장.)
