@@ -36,7 +36,7 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 | --- | --- | --- | --- | --- | --- | --- |
 | T01-input | Orchestrator | 사용자 요청 | `artifacts/family-trip-prep/00-trip-brief.md` | 없음 | 목적지, 날짜, 가족 구성, 예산, 제약이 정리됨 | 작성 완료 |
 | T02-research | trip-researcher | `00-trip-brief.md` | `artifacts/family-trip-prep/01-research-notes.md` | T01 | 항공권·숙소 후보 각 2개 이상, 출처 포함 | 시작, 차단, 완료 |
-| T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md`, (있으면) 직전 `03-checklist-review.md` | `artifacts/family-trip-prep/02-itinerary-draft.md` | T02, **미검토 버전 확인(아래 T03 진입 검사)** | 예산 항목 합산과 표시 합계 일치 | 시작, 차단, 완료 |
+| T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md`, (있으면) 직전 `03-checklist-review.md` | `artifacts/family-trip-prep/02-itinerary-draft.md`(이력 원본) + **`02-itinerary-current.md`(현행 스냅샷, 2026-09-02 신설)** | T02, **미검토 버전 확인(아래 T03 진입 검사)** | 예산 항목 합산과 표시 합계 일치, **두 파일의 현행 값 일치** | 시작, 차단, 완료 |
 | T04-checklist-review | checklist-reviewer | `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-draft.md` | `artifacts/family-trip-prep/03-checklist-review.md` | T03 | 예산 재검산·동선 검토 완료, 이슈 심각도 판정 | 시작, 차단, 완료 |
 | T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인, **직전 검토가 조건부 승인이면 그 조건이 산출물에 실제로 반영됨(아래 T05 조건 이행 확인)** | 시작, 차단, 완료 |
 | T06-artifact-sync | Orchestrator (dashboard-builder에게 위임하지 않음) | `dashboard.html`(갱신된 최종본) | `artifacts/family-trip-prep/dashboard-artifact.html` + Artifact 웹 발행/갱신 | T05 | `dashboard-artifact.html`의 데이터가 `dashboard.html`과 일치, 기존 Artifact URL이 있으면 그 URL로 갱신(새 URL 발급 방지). **본문(day-card·예산표)뿐 아니라 메타 요소(헤더 배지·D-day·`<title>`·하단 버전 로그·요약 리스크표처럼 본문 갱신 시 자연히 손대지 않는 별도 섹션)도 이전 버전 번호·날짜 문자열이 남아있는지 grep으로 스캔(2026-08-20·08-28·08-31 세 차례 방치 발견 이후 정식 반영, T06b 절 참고)** | 시작, 차단, 완료 |
@@ -54,6 +54,14 @@ T03을 시작하기 전에 **직전 버전이 T04 검토를 받았는지** 확�
 - 어느 쪽이든 `README.md`에 미검토 구간이 있었다는 사실을 남긴다.
 
 이 검사가 없으면 요청이 연달아 들어올 때 T04를 건너뛰고 T03만 반복하는 흐름이 생긴다(2026-07-30 v7이 실제로 그랬다).
+
+### 현행 스냅샷 `02-itinerary-current.md` — 이력 원본과의 이중 유지(2026-09-02 신설)
+
+`02-itinerary-draft.md`는 "과거 장을 소급 수정하지 않고 새 장으로만 갱신"하는 이력 무결성 설계라 v28 시점 8,541줄·2MB가 되었고, reviewer가 "매 라운드 원문 전수 대조가 비현실적"이라고 보고했다. 실제로 폐기된 A안(09:05 열차) 서술이 현행 1-A 식사표·2-4 액티비티표·3장 대조표에 v21부터 v28까지 남아 있었는데도 "30차 전체 일관성 감사"가 놓쳤다. 그래서 **현행 표만 담은 스냅샷 파일을 별도로 두고 planner가 매 회차 둘 다 갱신**하며, reviewer는 스냅샷을 기준으로 전수 대조하고 원본과의 일치를 확인한다. dashboard-builder·T06·T06b도 이 스냅샷을 1차 입력으로 쓴다. **Orchestrator는 T03 완료 판정 전에 두 파일의 헤더 버전이 같은지, 이번 회차 바뀐 표가 양쪽에 다 들어갔는지 grep으로 확인한다.**
+
+### 회차 진입 시 "가정" 값 산술 검증(2026-09-02 신설)
+
+브리프·일정표에 "(가정)"으로 남아 있는 값은 회차마다 그냥 넘기지 말고, **확정값과 산술 대조가 가능한 것은 그 자리에서 계산**한다. "한국 08:30 출발 → 뉴욕 13:00 도착(가정)"은 비행 14.5시간·시차 14시간을 대입하면 10:00이 나오는데, 30회차 동안 "확인 필요"로만 남아 도착일 오후 3시간이 비어 있었다. 마찬가지로 "부족 가능성 높음" 같은 방향성 경고는 실가 조사로 금액을 확정한다(Blue Note 배정액이 실가의 1/3인 채 여덟 회차 유지). **가정이 여러 회차 살아남았다는 것 자체가 신호**다 — 회차 시작 시 `(가정)` grep 결과를 한 번 훑는다.
 
 ### T05 조건 이행 확인 — "조건부 승인"의 조건은 승인의 일부다
 
