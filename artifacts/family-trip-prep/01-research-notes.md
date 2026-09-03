@@ -4191,3 +4191,36 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 6. 뮤지엄샵 15% 할인의 적용 범위(전 품목 여부·특별전 도록 제외 여부).
 
 출처(52장): [현대백화점 — The Met Pass 공식 안내](https://www.ehyundai.com/newPortal/CS/theMetPass.do), [현대백화점 — VIP 혜택](https://www.ehyundai.com/mobile/card/vip/view_main.do), [현대백화점 앱 The Met Pass 상세](https://hdeapp.ehyundai.com/metmuseum/view/ABF/F01/001/detail), [The Metropolitan Museum of Art — Plan Your Visit](https://www.metmuseum.org/plan-your-visit), [The Met Fifth Avenue(한국어)](https://www.metmuseum.org/ko/plan-your-visit/met-fifth-avenue), [Hyperallergic — Met Museum Raises Admission Fee to $30](https://hyperallergic.com/met-museum-raises-admission-fee/), [파이낸셜뉴스 — 현대백화점 고객이면 뉴욕 메트로폴리탄 미술관 무료 입장](https://news.zum.com/articles/99233109/), [마일모아 — The MET 2인 무료 입장+라운지 액세스(현대백화점 앱 회원)](https://www.milemoa.com/bbs/board/11997503) (조사 시점: 2026-09-03. 리뉴얼판 세부 조건은 공식 페이지 본문에 미게시 상태라 2차 소스 근거이며, 출발 임박 시 앱에서 직접 재확인 필요.)
+
+---
+
+## 53장. NYRR Midnight Run 배번 수령 방식 — "공원 현장 수령"이라는 전제가 틀렸음 (조사 시점 2026-09-03)
+
+**배경**: 45차 감사에서 항공편·열차·이벤트가 실재하는지 확인하던 중, `04-execution-action-checklist.md`가 v17부터 "배번 수령은 레이스 시작 10분 후 마감"이라고 적어 온 것을 NYRR 공식 이벤트 페이지(events.nyrr.org/nyrr-midnight-run)와 대조함.
+
+### 53-1. 확인된 사실 (NYRR 공식 페이지 직접 확인, 확신 높음)
+
+- **"There will be no bib pickup at Central Park on Race Day. You must pickup your race materials at the _RUN_CENTER in advance."** — 공원(레이스 현장)에서는 배번을 **받을 수 없다.**
+- 수령 장소: **NYRR _RUN_CENTER featuring the New Balance Run Hub, 320 West 57th Street**(8·9번가 사이, Columbus Circle 도보권).
+- Race day(12/31) 마지막 수령: **오후 10:00**. 그 이전 며칠간도 RUNCENTER 영업시간 내 수령 가능(통상 레이스 1주 전부터 패킷 배부 — 정확한 개시일은 출발 임박 재확인).
+- **동반 게스트(+1) 손목밴드는 배번 수령 시 함께 나온다**: "All participants will get a wristband for their +1 guest to spectate in the park." → 아내는 수령하러 갈 필요 없음, 남편이 받아서 전달.
+- 12/31 저녁 18:00~22:00 RUNCENTER에서 뉴이어 파티(참고).
+
+### 53-2. 우리 일정에 대한 영향
+
+- v17~v33 일정표·04 체크리스트는 **배번을 레이스 현장(Naumburg Bandshell)에서 집결 시각(23:15~23:45)에 받는다**고 전제했다. 실제로는 그 방식이 존재하지 않는다.
+- 320 W 57th St는 **12/26(미드타운 날) MoMA(11 W 53rd)에서 도보 4~5블록**, 12/29(허드슨야드·첼시) 동선에서도 멀지 않다.
+- **권장: 12/26 또는 12/29에 미리 수령**(그날 RUNCENTER가 이미 패킷을 배부 중인지 확인). 불가 시 12/31 16:15~18:15 블록에 남편 단독 왕복(6호선 → A/C/B/D 59 St–Columbus Circle + 도보 5분, 왕복 약 60~75분 — 이 블록의 여유 버퍼로 흡수).
+- 예산·시각표 총량 무변동(12/31 16:15~18:30 여유 버퍼를 이 왕복으로 라벨 변경).
+
+### 53-3. 확인 필요
+
+1. RUNCENTER가 Midnight Run 패킷을 며칠 전부터 배부하는지(12/26·12/29 수령 가능 여부).
+2. RUNCENTER 12/26·12/29 영업시간(연말 단축 가능성).
+3. 배번에 이름·등록번호가 사전 인쇄되는지, 현장에서 확인용 신분증·등록 이메일이 필요한지.
+
+출처(53장): [NYRR Midnight Run 공식 이벤트 페이지](https://events.nyrr.org/nyrr-midnight-run), [NYRR RUNCENTER 안내](https://www.nyrr.org), [centralpark.com — NYRR Midnight Run and Fireworks](https://www.centralpark.com/events/nyrr-midnight-run-and-fireworks/), [ahotu.com — NYRR Midnight Run 31 Dec 2026](https://www.ahotu.com/event/nyrr-midnight-run) (조사 시점 2026-09-03. 패킷 배부 개시일·RUNCENTER 연말 영업시간은 미확인.)
+
+### 53-4. [사용자 제보] 스태튼아일랜드 페리 — 이미 12/30 대체안으로 반영돼 있음
+
+사용자가 "자유의여신상을 무료로 볼 수 있는 Staten Island행 페리 왕복" 후기를 언급. **13-7에 이미 조사돼 있고, `02-itinerary-current.md` Day 6 실행 메모에 「매진·결항 시 대체: 무료 스태튼아일랜드 페리 왕복(약 50분, 갑판에서 여신상 통과)」로 반영돼 있음.** 12/30 오전에 유료 리버티 아일랜드 페리(섬 상륙·근접 조망)를 이미 하므로 같은 날 SI 페리를 별도로 끼우는 것은 조망이 중복되고 960분 일정에 여유가 없어 권장하지 않음. 단 리버티 아일랜드 페리가 매진·결항이면 SI 페리가 그 자리를 그대로 메운다(무료라 70,000원 미집행).
