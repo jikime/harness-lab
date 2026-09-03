@@ -4122,3 +4122,70 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 6. 숙소 → W 10th St, Katz's → Bowery 등 **구간 실측 도보·지하철 시간**(본 장 추정치 ±5분).
 
 출처(51장 종합): [Yelp — Supreme 190 Bowery](https://www.yelp.com/biz/supreme-new-york), [nyctourism.com — Supreme](https://www.nyctourism.com/shopping/supreme1/), [soleretriever — Ultimate Supreme Buyers Guide](https://www.soleretriever.com/news/articles/ultimate-guide-to-supreme-where-to-buy-online-in-store-releases), [Tripadvisor — Supreme 리뷰(줄서기/예약)](https://www.tripadvisor.com/ShowUserReviews-g60763-d209845-r632635962-Supreme-New_York_City_New_York.html), [Hypebeast — Stüssy NY Chapter 재개장](https://hypebeast.com/2025/2/stussy-new-york-chapter-flagship-store-reopening-info), [Time Out — Stüssy Nolita flagship](https://www.timeout.com/newyork/news/streetwear-brand-stussy-just-opened-a-new-flagship-store-in-nolita-022425), [stussy.com — New York Chapter](https://www.stussy.com/blogs/chapters/stussy-new-york), [Yelp — A1 Records](https://www.yelp.com/biz/a1-records-new-york), [Yelp — Academy Records EV](https://www.yelp.com/biz/academy-records-new-york), [Village Preservation — Academy Records](https://villagepreservation.org/2025/08/01/business-of-the-month-academy-records-415-east-12th-street/), [smallslive.com — Ticketing](https://www.smallslive.com/tickets/), [smallslive.com — Contact & Info](https://www.smallslive.com/contact-and-info/), [Wikipedia — Smalls Jazz Club](https://en.wikipedia.org/wiki/Smalls_Jazz_Club), [Jazz at Lincoln Center — Best Jazz Clubs in NYC](https://jazz.org/blog/best-guide-top-live-jazz-clubs-nyc/), [NY State Tax — 의류 면세](https://www.tax.ny.gov/bus/st/sales_tax_clothing_exemption.htm) (조사 시점: 2026-09-02, 가격·영업시간·드롭 일정은 연말 재확인 필요)
+
+---
+
+## 52장. The Met(12/31) 입장 무료화 경로 — 현대백화점 The Met Pass 검증 + Met 공식 요금 재확인 (조사 시점: 2026-09-03)
+
+**배경**: 사용자가 The Met 요금·혜택 안내문(현대백화점 그린 등급 이상 본인+동반 1인 무료 / 후원 기업 임직원 사원증 무료 / 일반 성인 $30·65세 이상 $22·학생 $17·12세 이하 무료 / 기부제는 뉴욕주 거주자·NY/NJ/CT 학생 한정)을 제시하며 "이런 혜택도 많네"라고 언급. 42장이 이미 MoMA·구겐하임의 무료입장 창구를 조사해 **둘 다 요일 불일치·거주자 제한으로 기각**한 바 있으나, **The Met은 42장 조사 범위에 없었음**(42-1은 "우리가 이미 방문 예정인 곳"으로 MoMA·구겐하임만 다뤘고 The Met은 누락). 이번에 그 공백을 메움.
+
+### 52-1. Met 공식 요금 — 사용자 제시 정보와 완전 일치(확신 높음)
+
+| 구분 | 요금 | 우리 부부(40세·33세, 한국 거주) 해당 여부 |
+|---|---|---|
+| 성인 | **$30** | ✅ 해당 — 2인 $60 |
+| 65세 이상 | $22 | ❌ |
+| 학생 | $17 | ❌ |
+| 12세 이하 | 무료 | ❌ |
+| **기부제(pay-what-you-wish, 최소 $0.01)** | 자율 | ❌ **뉴욕주 거주자 + NY/NJ/CT 학생 한정** — 외국인 관광객 자격 없음 |
+
+- 뉴욕주 거주자는 뉴욕주 청구지 주소로 **온라인** 구매 가능, NJ·CT 학생은 **현장에서 학생증 제시 시에만** 가능. 우리는 어느 쪽에도 해당하지 않음.
+- **부가 확인(신규)**: Met 티켓 1장에 **당일 The Met Fifth Avenue + The Met Cloisters 양쪽 입장**이 포함됨. 다만 Cloisters는 맨해튼 최북단(Fort Tryon Park)이라 12/31 일정(11:15~15:05 5번가 본관, 15:45 숙소 복귀 → 22:30 Midnight Run)에 물리적으로 끼워 넣을 수 없음 — **정보로만 기록, 일정 반영 대상 아님**.
+- 42-1의 결론("우리가 이미 가는 곳에서 아낄 돈은 없음")은 **MoMA·구겐하임에 대해서는 여전히 유효하나, The Met에 대해서는 아래 52-2로 뒤집힘**.
+
+### 52-2. 현대백화점 The Met Pass — **우리 방문일(2026-12-31)에 유효함(확신 중간~높음)**
+
+현대백화점이 국내 유통업계 최초로 The Met을 공식 후원하며 앱 회원에게 제공하는 혜택. **2025년판이 종료되고 2026-02-01부로 리뉴얼**되었으며, **리뉴얼판 유효기간이 2026-02-01 ~ 2027-01-31**이라 **우리 방문일 12/31이 기간 안에 들어옴**.
+
+| 항목 | 리뉴얼판(2026-02-01~2027-01-31) | 구판(2025-07-01~2025년 말, 참고) |
+|---|---|---|
+| 대상 | **현대백화점 앱 회원 중 Green 등급 이상 우수고객** | 앱 회원(등급 제한 없음) |
+| 인원 | 본인 + **동반 1인** (2인) | 본인 + 동반 1인 |
+| 횟수 | **연 1회 입장교환권** | 1일 1회 |
+| 부가 | **Met 회원 전용 라운지 이용 · 뮤지엄샵 15% 할인** | 라운지 · 뮤지엄샵 할인 |
+| 사용법 | 현대백화점 앱 로그인 상태에서 **`met pass`로 검색**(`the met pass`로는 안 나옴) → 「현대백화점 APP 회원 Voucher」 → 티켓 카운터에서 **앱 화면 직접 제시** | 동일 |
+
+- **⚠ 스크린샷 불가 가능성**: 후기에 "스크린샷도 보여줄 수는 있지만 앱 화면인지 사진인지 확인할 수 있다"는 언급이 있음 — **현장에서 앱에 로그인된 상태로 제시**하는 것을 전제로 준비할 것(Met 관내 Wi-Fi/로밍 상태도 함께 고려).
+- **불확실 구간(반드시 출발 전 재확인)**: ① 현대백화점 공식 안내 페이지는 이 조사 시점(2026-09-03)에도 여전히 "2026-02-01부로 리뉴얼 제공 예정"이라는 문구만 노출하고 **세부 조건(등급·횟수)을 페이지 본문에 싣지 않음** — 위 표의 「Green 등급 이상·연 1회」는 **2차 소스(VIP 혜택 안내·커뮤니티 후기) 근거**임. ② 부부 중 **누가 Green 등급 이상인지, 애초에 현대백화점 앱 회원인지**를 이 조사로는 알 수 없음. ③ 연 1회 제한이라 **2027-01-31 이전에 이미 소진했는지** 확인 필요.
+- **후원 기업 임직원 경로**: 사용자 제시 정보의 "유효한 사원증 제시 시 무료(동반 조건은 회사 안내 확인)"는 별도 경로로, 이번 조사에서 후원 기업 명단을 확인하지 못함 — **해당 여부는 사용자 본인이 재직 회사 복지 안내로 확인해야 함**.
+
+### 52-3. 금액 영향
+
+- **성립 시**: The Met 배정 **80,000원 → 0원**, 미배분 1,940,000 → **2,020,000원**, 완충 3,840,000 → **3,920,000원(잔여의 약 40.3%)** — 현행 최대치(39.5%)를 다시 경신.
+- **추가 이득**: 뮤지엄샵 15% 할인은 12/31 14:15~15:05 「뮤지엄숍·관내 카페」 블록에 그대로 적용 가능(카페·간식 300,000 공유 재원에서 지출). 라운지 이용은 이 블록의 휴식 품질을 올리나 **시간표는 무변동**.
+- **불성립 시**: 현행 80,000원 정가 전제가 그대로 유지되므로 **예산에 위험이 없음**(하방 없는 상방 옵션).
+- **따라서 2-4 액티비티표의 80,000원은 이번 회차에서 바꾸지 않는다** — 자격 확인 전에 예산을 깎으면 미확인 혜택 위에 예산을 세우는 것이 됨. 확인되면 그때 미배분으로 환원.
+
+### 52-4. MoMA 현대카드 경로와의 대조 (41-3 재확인)
+
+| | MoMA(12/26) | The Met(12/31) |
+|---|---|---|
+| 경로 | **현대카드 실물 카드** + 영문 성명 신분증 → 로비 Member Desk | **현대백화점 앱** Green 등급 이상 Voucher |
+| 인원 | **동반 커버 범위 미확인**(41-3에서 이미 미해결로 남김) | 본인 + 동반 1인 = 2인 명시 |
+| 부가 | 20% 할인 쿠폰 | 뮤지엄샵 15% · 전용 라운지 |
+| 현재 배정 | 80,000원(정가 전제 유지) | 80,000원(정가 전제 유지) |
+
+- **둘 다 성립하면 미술관 4곳 예산 340,000원 중 160,000원이 0원**이 되어 미배분이 2,100,000원까지 늘어남. 다만 MoMA 쪽은 동반 커버가 미확인이라 절반(40,000원)만 확실할 수도 있음.
+- **구겐하임(1/1)에는 이런 카드·멤버십 경로가 확인되지 않음**(42-1 "Saturday on the House"는 토요일 18~20시 한정이라 1/1 금요일 오전엔 해당 없음). 미술관 3곳 중 2곳만 무료화 가능.
+- **교훈(하네스)**: 42장이 "이미 방문 예정인 곳"을 조사한다면서 The Met을 빠뜨린 채 "아낄 돈 없음"으로 결론 냈고, 그 결론이 여덟 회차를 그대로 통과했다. **사용자가 외부에서 정보를 가져오지 않았으면 계속 놓쳤을 항목** — 다음 회차부터 "이미 방문 예정인 곳" 유형 조사는 확정 일정의 유료 항목 전수를 목록으로 만들어 놓고 대조할 것.
+
+### 52-5. 확인 필요 사항
+
+1. **부부 중 현대백화점 앱 회원이 있는지 + Green 등급 이상인지** (앱 > 마이페이지 등급 확인) — **가장 먼저 확인할 것, 나머지가 전부 여기에 달려 있음**.
+2. 리뉴얼판 The Met Pass의 **정확한 조건 원문**(등급 하한·연 1회 여부·동반 1인 명시) — 현대백화점 앱 `met pass` 검색 결과 화면에서 직접 확인(공식 웹페이지는 아직 "예정" 문구만 노출).
+3. **2027-01-31 만료 전 연 1회 소진 여부** — 이미 썼다면 사용 불가.
+4. 앱 화면 제시 방식(스크린샷 허용 여부)·현장 데이터 연결 필요성.
+5. 후원 기업 임직원 무료 경로에 사용자 재직 회사가 포함되는지(회사 복지 안내로 확인).
+6. 뮤지엄샵 15% 할인의 적용 범위(전 품목 여부·특별전 도록 제외 여부).
+
+출처(52장): [현대백화점 — The Met Pass 공식 안내](https://www.ehyundai.com/newPortal/CS/theMetPass.do), [현대백화점 — VIP 혜택](https://www.ehyundai.com/mobile/card/vip/view_main.do), [현대백화점 앱 The Met Pass 상세](https://hdeapp.ehyundai.com/metmuseum/view/ABF/F01/001/detail), [The Metropolitan Museum of Art — Plan Your Visit](https://www.metmuseum.org/plan-your-visit), [The Met Fifth Avenue(한국어)](https://www.metmuseum.org/ko/plan-your-visit/met-fifth-avenue), [Hyperallergic — Met Museum Raises Admission Fee to $30](https://hyperallergic.com/met-museum-raises-admission-fee/), [파이낸셜뉴스 — 현대백화점 고객이면 뉴욕 메트로폴리탄 미술관 무료 입장](https://news.zum.com/articles/99233109/), [마일모아 — The MET 2인 무료 입장+라운지 액세스(현대백화점 앱 회원)](https://www.milemoa.com/bbs/board/11997503) (조사 시점: 2026-09-03. 리뉴얼판 세부 조건은 공식 페이지 본문에 미게시 상태라 2차 소스 근거이며, 출발 임박 시 앱에서 직접 재확인 필요.)

@@ -1,4 +1,4 @@
-<title>뉴욕 여행 대시보드 v32 — 12.25~1.2</title>
+<title>뉴욕 여행 대시보드 v33 — 12.25~1.2</title>
 <style>
   @font-face {
     font-family: 'Signage';
@@ -205,8 +205,12 @@
   .day-card ul.tl li { display: grid; grid-template-columns: 3.6rem 1fr; gap: .6rem; font-size: .87rem; align-items: baseline; }
   .day-card ul.tl li .t { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--ink-dim); }
   .day-card ul.tl li .a strong { font-weight: 700; }
+  .note { margin-top: .6rem; font-size: .82rem; color: var(--ink-dim); background: var(--surface-2); border-left: 3px solid var(--accent); padding: .45rem .7rem; border-radius: 0 4px 4px 0; }
+  .note.danger { border-left-color: var(--danger-ink); color: var(--danger-ink); background: var(--danger-bg); }
+  .note.ok { border-left-color: var(--ok-ink); color: var(--ok-ink); background: var(--ok-bg); }
   .day-card .note { margin-top: .6rem; font-size: .82rem; color: var(--ink-dim); background: var(--surface-2); border-left: 3px solid var(--accent); padding: .45rem .7rem; border-radius: 0 4px 4px 0; }
   .day-card .note.danger { border-left-color: var(--danger-ink); color: var(--danger-ink); background: var(--danger-bg); }
+  .day-card .note.ok { border-left-color: var(--ok-ink); color: var(--ok-ink); background: var(--ok-bg); }
 
   /* ---------- Checklist ---------- */
   .checklist-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
@@ -248,11 +252,11 @@
 <div class="wrap">
 
   <header class="masthead">
-    <p class="kicker">Trip Dashboard · V32 · Checklist-Reviewer 조건부 승인</p>
+    <p class="kicker">Trip Dashboard · V33 · Checklist-Reviewer 조건부 승인</p>
     <h1>뉴욕, 부부의 겨울</h1>
     <p class="sub">2026.12.25 ~ 2027.01.02 · 8박 9일 · 부부 2인</p>
     <div class="meta">
-      <span class="dday">D-114 · 2026-09-02 기준 출발까지</span>
+      <span class="dday">D-113 · 2026-09-03 기준 출발까지</span>
       <span><strong>숙소</strong> 331 E 8th St, 이스트빌리지</span>
       <span><strong>총 예산</strong> 15,000,000원</span>
       <span><strong>도착</strong> 12/25 10:00 JFK (OZ222 공시)</span>
@@ -260,6 +264,7 @@
       <span><strong>귀국</strong> 1/3 00:30 뉴욕 출발</span>
     </div>
     <p class="note" style="margin-top:.6rem;">✅ <strong>「택시 절대 안 탐 — 여행 내내」</strong> — 공항 왕복(AirTrain+지하철, E→6 Astor Pl)과 시내 이동 전체에서 택시·라이드셰어 미사용. 12/25 공항→숙소 120분(숙소 13:00), 1/2 숙소 19:00 출발→공항 21:00. 12/28 새벽 숙소→Penn 지하철 40분(기상 04:15, 수면 약 5~5.5h), 12/31 심야 귀가 6호선만. 예산: 2-5 320,000→95,000, 2-6 480,000→190,000(OMNY만, 카드 한 장 공유). <strong>완충 29.9%→39.5%</strong>(v32 Blue Note→Smalls 교체분 포함). 대가: 12/25 5번가 90→60분, 1/2 마지막 저녁 착석 80분→ESB 앞 30분, Astor Pl 계단.</p>
+    <p class="note ok" style="margin-top:.4rem;">💡 <strong>지금 바로 할 일 하나 — 현대백화점 앱에서 등급 확인</strong>: Green 등급 이상이면 12/31 <strong>The Met 2인 무료</strong>(연 1회 Voucher, 유효기간 2026-02-01~2027-01-31로 방문일 포함). 앱에서 <code>met pass</code> 검색 → 「APP 회원 Voucher」. 성립 시 <strong>80,000원 → 0원</strong>(완충 39.5% → 약 40.3%). 자격 미확인이라 예산은 정가 유지 — 불성립이어도 손해 없음.</p>
   </header>
 
   <section class="block">
@@ -587,7 +592,7 @@
             <li><span class="t num">09:30</span><span class="a">브런치 (캐주얼)</span></li>
             <li><span class="t num">10:30</span><span class="a">숙소 → The Met 이동(40분)</span></li>
             <li><span class="t num">11:15</span><span class="a"><strong>The Met 관람</strong>(3시간, 처음 방문) <span class="pill warn" style="margin-left:.3rem;">❓ 운영시간 추정(10:00~17:00)</span></span></li>
-            <li><span class="t num">14:15</span><span class="a">뮤지엄숍 · The Met 카페(50분)</span></li>
+            <li><span class="t num">14:15</span><span class="a">뮤지엄숍 · The Met 카페(50분) <span class="pill ok" style="margin-left:.3rem;">Pass 성립 시 뮤지엄샵 15%·회원 라운지</span></span></li>
             <li><span class="t num">15:05</span><span class="a">The Met → 숙소 복귀(40분)</span></li>
             <li><span class="t num">15:45</span><span class="a">여유 & 정리(30분)</span></li>
             <li><span class="t num">16:15</span><span class="a">숙소 휴식·캐주얼 복장 준비 (135분, 드레스업 불필요) <span class="pill neutral" style="margin-left:.3rem;">v16</span></span></li>
@@ -597,6 +602,7 @@
             <li><span class="t num">자정</span><span class="a"><strong>NYRR Midnight Run 스타트</strong>(4마일) + 불꽃놀이 20분 <span class="pill neutral" style="margin-left:.3rem;">v16</span></span></li>
             <li><span class="t num">01:40</span><span class="a">센트럴파크 → 숙소 (도보 + 6호선 심야 약 45분) → 02:25 귀가 <span class="pill danger" style="margin-left:.3rem;">6호선 단일 경로 — 라이드셰어 대안 삭제, 배차 20분·해산 인파 감안</span></span></li>
           </ul>
+          <p class="note ok">💡 <strong>The Met 입장료를 0원으로 만들 수 있는 경로 — 현대백화점 앱 The Met Pass</strong>: 앱 회원 중 <strong>Green 등급 이상이면 본인+동반 1인(2인) 무료</strong>(연 1회 입장교환권, 뮤지엄샵 15% 할인, Met 회원 전용 라운지). 2025년판 종료 후 <strong>2026-02-01 리뉴얼판의 유효기간이 2026-02-01~2027-01-31</strong>이라 우리 방문일(12/31)이 그 안에 들어옵니다. 앱 로그인 상태에서 <strong>`met pass`로 검색</strong>(`the met pass`로는 안 나옴) → 「현대백화점 APP 회원 Voucher」 → 티켓 카운터에서 <strong>앱 화면을 직접 제시</strong>(스크린샷은 거절될 수 있어 현장 데이터 연결 확보 권장). 성립 시 <strong>80,000원 → 0원</strong>(미배분 2,020,000원·완충 약 40.3%). <strong>부부의 등급 자격이 아직 미확인이라 예산은 정가 80,000원을 유지합니다 — 불성립이어도 하방은 없습니다.</strong> 별도 경로: The Met 후원 기업 임직원은 사원증 제시 시 무료(회사 복지 안내 확인). 일반 요금은 성인 $30·65세 이상 $22·학생 $17이며, 기부제(최소 $0.01)는 <strong>뉴욕주 거주자·NY/NJ/CT 학생 한정</strong>이라 우리는 자격이 없습니다.</p>
           <p class="note danger">⚠ <strong>The Met 12/31 운영시간이 "추정"</strong>: 운영시간(10:00~17:00)이 "추정"이며 공식 사이트 접속 실패로 2차 소스 근거뿐입니다. 이 여행에서 처음이자 마지막 방문이므로 포기하면 대체 불가입니다. 출발 임박 시(11~12월) metmuseum.org에서 정확한 운영시간을 재확인하세요.</p>
           <p class="note danger">⚠ <strong>12/31 낮 활동 강도 상승</strong>: 낮 활동이 스파(휴식 210분)에서 The Met(관람 3시간+왕복 80분)으로 바뀌어, 자정 4마일 레이스 당일의 낮 활동 강도가 올라갑니다. 다만 레이스 전 여유 버퍼 315분(16:15~22:30)은 그대로 유지되므로 회복 가능합니다.</p>
           <p class="note danger">이날 대중교통 이동 합계 약 170분(구 152분 → The Met 이동 포함 +18분)으로 2시간을 50분 초과합니다 — 9일 중 최대 초과폭입니다. 다만 스파 전용 페리(45분)가 The Met 지하철 이동으로 대체된 것까지 고려하면 실이동은 오히려 감소(약 107→80분)합니다.</p>
@@ -695,6 +701,7 @@
           <li><input type="checkbox"><label>Keens 12/26 예약 (Resy 또는 전화)</label></li>
           <li><input type="checkbox"><label><strong>12/29 Birdland TicketWeb 티켓 구매</strong> — 10~11월 캘린더 공개 즉시 구매(전 판매 환불 불가)</label></li>
           <li><input type="checkbox"><label><strong>12/31 The Met 운영시간 재확인</strong> — 11~12월 metmuseum.org에서 신정 운영시간 최종 확인</label></li>
+          <li><input type="checkbox"><label><strong>현대백화점 앱 Green 등급 확인 → The Met Pass 바우처</strong> — 앱 마이페이지에서 부부 중 Green 등급 이상 보유자 확인 후 앱에서 `met pass` 검색 → 「APP 회원 Voucher」. 성립 시 12/31 The Met 2인 무료(80,000원 절감)</label></li>
           <li><input type="checkbox"><label>전망대 3곳 지정시간 사전 예매</label></li>
           <li><input type="checkbox"><label><strong>리버티 아일랜드 왕복권 사전 예매</strong> — Statue City Cruises 공식 사이트, 성수기(12/30) 매진 위험 높음</label></li>
           <li><input type="checkbox"><label><strong>12/30 07:30 기상 대비</strong> — 전날 밤 방한복·가방 미리 챙겨두기, 09:20까지 보안검색 텐트 도착</label></li>
@@ -838,8 +845,8 @@
   </section>
 
   <footer>
-    <span>Dashboard v32 · 2026-09-03 · 회차별 변경 이력은 git 커밋(<code>가족 여행 준비: N차</code>)</span>
-    <span>입력: 00-trip-brief v32 · 01-research-notes(11~51장) · 02-itinerary-current v32 · 03-checklist-review v32</span>
+    <span>Dashboard v33 · 2026-09-03 · 회차별 변경 이력은 git 커밋(<code>가족 여행 준비: N차</code>)</span>
+    <span>입력: 00-trip-brief v33 · 01-research-notes(11~52장) · 02-itinerary-current v33 · 04-execution-action-checklist v18</span>
   </footer>
 
 </div>
