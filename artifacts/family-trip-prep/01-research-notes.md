@@ -3996,3 +3996,129 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 - **글 성격**: 7박 8일 첫 방문자의 "준비하길 잘한 것 4가지" 후기. ① 입장권/전망대 픽패스("한 사이트에서 한꺼번에 구매하면 할인율이 커진다", 구체 금액·비교 없음) ② 유심("픽패스에서 같이 사니 저렴", "앳홈스테이 예약하면 유심 공짜") ③ 공항셔틀(밤 10시 도착, 숙소까지 한 번에) ④ 한인민박(호텔 대비 절약). 네 항목 전부 앳홈트립 계열 상품이며, 가격·비교 대상·업장명 등 검증 가능한 숫자가 하나도 없고, 사진은 영수증·티켓이 아닌 풍경/식사. **44-3이 지적한 "AI 생성 의심 패턴"과 동일한 구조(상품군 나열 + 감상 + 구체성 부재)** — 개인 후기라기보다 제휴·홍보 콘텐츠일 가능성이 높음(확신 중간~높음).
 - **우리 일정과의 접점**: ③ 셔틀·④ 민박은 사용자가 이미 배제(v30 "택시 안타", 숙소 결제 완료). ① 픽패스는 43장 CityPASS 결론과 동일 — 우리처럼 전망대 3곳(ToR·Edge·ESB)이 각각 지정시간·일몰 슬롯에 고정된 일정에서는 통합권의 "시간대 제외" 조건과 "N개 묶음 선결제" 구조가 오히려 손해이거나 이득이 0. ② 유심은 별도 검토 대상이나 이 글은 가격을 제시하지 않아 근거로 쓸 수 없음.
 - **결론**: 44장 판정(앳홈트립 미채택) 유지. 새로 확인된 사실 없음. 이 글은 조사 근거로 인용하지 않는다.
+
+---
+
+## 51장. 취향 적합도 2차 감사 반영 조사 — 슈프림·스투시 / A-1·Academy Records / Smalls·Mezzrow (조사 시점: 2026-09-02)
+
+**배경**: `00-trip-brief.md` "취향 적합도 감사 2차 결과(v32)" 5건 확정에 따라 (1) 슈프림·스투시(누락 보완), (4) A-1·Academy Records(미배치), (5) 12/30 Blue Note → Smalls/Mezzrow 교체를 조사한다. 숙소 331 E 8th St(이스트빌리지), 부부 2인 비음주, 12/25(금)~1/2(토). **본 장은 조사 결과이며 `02-itinerary-current.md`/`02-itinerary-draft.md`는 이 장으로 수정하지 않았다 — 배치·시각은 51-5~51-7을 planner가 반영.**
+
+> ⚠ **연말 주간(12/25~1/2) 영업시간·드롭 여부는 4개 매장 전부 공식 확인 불가 → 전부 "미확인"**. 아래는 평시 기준이며 출발 임박 시(12월 중순) 각 매장 인스타그램·전화로 재확인 필수.
+
+### 51-1. Supreme New York (190 Bowery)
+
+| 항목 | 내용 | 확신 |
+|---|---|---|
+| 주소 | 190 Bowery (Germania Bank Building, Spring St ~ Kenmare St 사이), NoLIta/Bowery | 높음 |
+| 숙소 도보 | 331 E 8th St → St Marks Pl → 3rd Ave/Bowery 남하, **약 0.8mi / 도보 16~19분**. 지하철은 6 Astor Pl → Bleecker St 또는 도보가 더 빠름 | 중간(실측 아님, 지도 추정) |
+| 영업시간(평시) | 대체로 **월~토 11:00~19:00, 일 12:00~18:00**(Yelp/스토어 트래커). 목요일도 11:00~19:00 | 중간 |
+| 목요일 드롭 | **드롭(신제품 출시)일은 목요일.** 현재는 매장 방문에 **사전 등록(온라인 예약) 필수** — Supreme 등록 사이트에서 지정된 요일·시각에 슬롯을 신청하고, 슬롯이 있어야 드롭일 입장 가능(선착순 아님). 등록 없이는 드롭일 구매 불가 | 중간(제도는 확인, 2026-12 시점 세부 운영은 미확인) |
+| 일반(비드롭) 요일 입장 | 예약 불필요. **줄서기 30분~2시간**. 로프·"security" 셔츠 안내원 3~4명이 줄을 통제, 질서는 잡혀 있음 | 중간 |
+| 연말 주간 영업·드롭 | **미확인.** 단, 여행 중 목요일은 **12/25(크리스마스)·1/1(신정)** 둘 뿐이고 **두 날 모두 공휴일이라 매장 휴무·드롭 없음일 가능성이 매우 높음**(near-certain, 공식 미확인). FW26은 주간 드롭제로 8/20 시작 — 12월 말~1월 초 정확한 드롭 캘린더·홀리데이 스킵 여부는 미공개 | 낮음~중간 |
+| 한국 대비 가격 메리트 | 슈프림은 **한국 정식 오프라인 매장이 없고**, 한국 소비자는 supreme.com 직구 또는 리셀(웃돈)로 구매. 미국 정가 = 사실상 글로벌 정가. **티셔츠 약 $44~58 / 캡·소품 대부분 $110 미만 → 뉴욕주 의류 판매세 면제**(11-3 확인, 개당 $110 미만 의류·신발 면세). 후디 약 $158·아우터 $200~600대는 8.875% 과세. 정가 구매 자체가 리셀 대비 메리트, 소품·티는 면세로 추가 이득. **정량 한국가 비교는 이번에 못 함**(확인 필요) | 중간 |
+
+### 51-2. Stüssy New York + 동일 축 스트리트웨어 매장
+
+**⚠ 주소 불일치**: 브리프의 "4 Bond St"는 이번 조사에서 확인되지 않음. **현재 스투시 뉴욕 플래그십("Stüssy New York Chapter")은 50 Prince St(NoLIta, 옛 McNally Jackson 자리), 2025-02-14 오픈.** 4 Bond St 매장은 과거 위치이거나 브리프 기재 오류로 추정(확인 필요). 별도로 Dover Street Market 내 "Stüssy DSM New York" 코너도 존재.
+
+| 매장 | 주소 | 숙소 도보(추정) | 영업시간(평시) | 비고 |
+|---|---|---|---|---|
+| **Stüssy New York Chapter** | 50 Prince St (Mulberry~Lafayette), NoLIta | 약 0.9mi / **18~21분** | 월~토 11:00~19:00, 일 12:00~18:00 | 드롭 제도는 슈프림만큼 엄격하지 않음(일반 리테일에 가까움). 연말 영업 미확인. 한국 일부 온라인 유통 있음, 글로벌 정가 유사, $110 미만 품목 뉴욕 면세 |
+| Kith (플래그십) | 337 Lafayette St @ Bleecker, NoHo | 약 0.7mi / **14~16분** | 통상 11:00~20:00 | 같은 축, 카페(Kith Treats) 병설 |
+| Kith Women/보조 | 644 Broadway | 약 0.8mi / 16분 | 〃 | |
+| Aimé Leon Dore | 214 Mulberry St, NoLIta | 약 0.9mi / **17~19분** | 통상 11:00~19:00 | 카페(ALD Café) 병설, 주말 대기 |
+| Noah | 195 Mulberry St, NoLIta | 약 0.9mi / 17분 | 통상 11:00~19:00 | |
+| Palace Skateboards NY | 132 Lafayette St, SoHo/Chinatown 경계 | 약 1.1mi / 22분 | 통상 11:00~19:00, 드롭은 금요일 | |
+| Supreme | 190 Bowery | 16~19분(51-1) | — | — |
+
+이 매장군은 **Bowery~Lafayette~Mulberry 축에 도보 5~10분 간격으로 몰려 있어**, 슈프림(190 Bowery) → Kith(337 Lafayette) → 스투시(50 Prince) → ALD/Noah(Mulberry)를 한 번의 NoLIta/NoHo 도보 루프로 묶을 수 있음. (추천 아님, 사실만.)
+
+### 51-3. A-1 Records (439 E 6th St) · Academy Records East Village (415 E 12th St)
+
+| 항목 | A-1 Records | Academy Records (EV) |
+|---|---|---|
+| 주소 | 439 E 6th St (Ave A~1st Ave) | 415 E 12th St (1st Ave~Ave A) |
+| 숙소 도보 | **약 5~7분**(남쪽 2블록+한 블록) | **약 5~7분**(북쪽 4블록) |
+| 영업시간(평시) | **매일 12:00~20:00**(Yelp 2026) | **매일 11:00~19:00**(Yelp/Village Preservation 2025) |
+| 12/25·12/28(월)·1/1 영업 | **전부 미확인.** 소규모 독립 레코드샵은 크리스마스·신정 당일 휴무가 흔함(추정, 공식 미확인). 12/28(월)은 평일이라 정상 영업 가능성 높음(미확인) | 동일 — 전부 미확인 |
+| 재즈 강점 | 힙합·소울·펑크·**재즈** 중고 바이닐로 유명(1996년~ 같은 자리). "장르 폭넓은 잡식 중고샵"이라 재즈 전용 깊이보다는 **크레이트 디깅(저가~중가 중고 다량)** 성격. 수집가 후기: 가격 착하고 회전 빠름, 정리는 다소 러프 | Rolling Stone "미국 최고 레코드샵" 선정 이력. 록·소울·**재즈**·포크·디스코 등 전 장르 중고 LP·CD. Village Preservation "Business of the Month"(2025-08). **큐레이션·상태·재즈 섹션 정돈도가 A-1보다 낫다는 평**이 일반적 |
+| 중고 LP 가격대 | 일반 중고 대략 $5~40, 희귀반 그 이상(11-1과 동일, 개별 확인 권장) | 중고 중심, 일반 재즈 LP 대략 $10~40대 |
+| 차이 | **두 곳 다 "재즈 전용"은 아님.** 정돈된 재즈 섹션·상태 좋은 반을 원하면 **Academy**, 저가 대량 디깅·발굴 재미면 **A-1**. 도보 시간은 사실상 동일 | |
+
+출처: [Yelp — A1 Records](https://www.yelp.com/biz/a1-records-new-york), [Yelp — Academy Records (EV)](https://www.yelp.com/biz/academy-records-new-york), [Village Preservation — Academy Records 415 E 12th St](https://villagepreservation.org/2025/08/01/business-of-the-month-academy-records-415-east-12th-street/), [Foursquare — Academy Records EV](https://redirect.foursquare.com/v/academy-records/4bf48bd898ac0f47c32e64a8)
+
+### 51-4. Smalls Jazz Club (183 W 10th St) · Mezzrow (163 W 10th St) — 2026-12-30(수) 실측
+
+| 항목 | 내용 | 확신 |
+|---|---|---|
+| 위치 | 둘 다 W 10th St(7th Ave S 인근), 그리니치빌리지. Smalls 183 W 10th(지하), Mezzrow 163 W 10th(피아노·베이스 듀오 중심 소편성) | 높음 |
+| 커버/티켓 | **예약 티켓 $35(일~목) / $40(금·토), 워크인 뮤직차지 $25**(smallslive.com). Mezzrow는 **티켓 $20 + 1드링크 미니멈**. Smalls도 사이트 안내상 "$10 커버 + 1드링크 미니멈" 표현이 병존 — **정확한 현행 구조는 재확인 필요**(예약 티켓제로 사실상 대체된 것으로 보임) | 중간 |
+| 12/30 = 수요일 → **예약 $35/인** | 2인 예약 $70 + 1드링크 미니멈 2잔(비알코올 소다·탄산수 등으로 충족 가능, 대략 $10~16) + 팁 ≈ **2인 총 $85~100 ≈ 113,000~133,000원**(1,330원). **5천원 올림 135,000원** | 중간 |
+| 비음주 부부 불리 여부 | 1드링크 미니멈은 있으나 **바에 비알코올 옵션(소다·주스·생수)이 있어 소프트드링크로 충족 가능** → 큰 불리함 아님. F&B가 아니라 "드링크" 미니멈이라 식사 강제는 없음 | 중간(비알코올 충족 가능은 일반적 관행, 공식 문구 미확인) |
+| 세트 시각(통상) | 도어 7:00pm. **평일 세트 대략 7:30pm / 9:30pm / (금·토) 11:00pm 심야 + 새벽 1:00am 잼세션**. Mezzrow는 대략 8:00pm / 9:30pm. **정확한 12/30 세트 시각은 라인업 공개 후 확정** | 중간 |
+| 예약 방식·환불 | smallslive.com에서 좌석 예약(온라인). 워크인은 잔여 상황 따라 가능. **환불 정책은 이번 조사로 확인 못 함 — 미확인**(일반적으로 예약 변경·양도는 유연, 환불은 제한적) | 낮음 |
+| 연말 주간 혼잡 | "주말·공휴일엔 30분 전 도착 권장" 공식 안내 → **연말 주간 매진·혼잡 경향 강함**. 12/30(수)도 성수기라 예약 권장 | 중간 |
+| 12/30 라인업 공개 시점 | Smalls는 통상 **월 캘린더를 3~4주 전(11월 중순~하순) 공개**. 출발 임박 시 smallslive.com에서 확인 | 중간 |
+| "애호가 클럽" 평판 근거 | Wikipedia·Jazz at Lincoln Center 가이드·다수 매체: Smalls는 1990년대부터 "뉴욕 재즈 인재의 산실", **뮤지션들이 자기 공연 끝나고 들러 잼하는 곳**, 저렴한 커버·심야 잼·정통(straight-ahead) 전통에 대한 헌신으로 "가장 사랑받는 방". Blue Note는 "세계적으로 유명한 재즈 바"(관광·헤드라이너 중심, 커버·미니멈 높음). **NYT 직접 비교 기사는 이번에 확보 못 함**(확인 필요) — 단 "뮤지션 클럽 vs 관광 클럽" 대비는 재즈 커뮤니티에서 통용 | 중간~높음 |
+| 숙소 → W 10th St 이동 | **(A) 도보 약 1.1mi / 22~26분**(St Marks → W 8th St → 6th Ave → W 10th). **(B) 지하철**: 8 St–NYU(N·R·W) → W 4th St–Wash Sq(3분) → 도보 8~10분(W 4th 6th Ave → 7th Ave S & W 10th), 총 약 25~30분(대기 포함). 심야 귀가도 동일 역 이용 | 중간 |
+
+출처: [smallslive.com — Ticketing](https://www.smallslive.com/tickets/), [smallslive.com — Contact & Info](https://www.smallslive.com/contact-and-info/), [Yelp — Smalls Jazz Club](https://www.yelp.com/biz/smalls-jazz-club-new-york), [Wikipedia — Smalls Jazz Club](https://en.wikipedia.org/wiki/Smalls_Jazz_Club), [Jazz at Lincoln Center — Best Jazz Clubs in NYC](https://jazz.org/blog/best-guide-top-live-jazz-clubs-nyc/)
+
+### 51-5. 12/30 저녁 재구성 초안 (planner에게 넘길 수치)
+
+**현행**: [캐주얼] 저녁 18:15~19:30 · Blue Note 20:00~22:30 · 귀가 23:10 · 예산 2-4 Blue Note 550,000.
+
+**대안 시간표 A — 이른 세트(7:30pm) 기준** (저녁을 앞당김)
+| 시간대 | 활동 |
+|---|---|
+| 17:10~18:25 | [캐주얼] 이스트빌리지 이른 저녁(75분) — 현행보다 65분 앞당김 |
+| 18:25~18:55 | 숙소 인근 → W 10th St (지하철 B안 25~30분, 여유 포함) |
+| 18:55~19:15 | Smalls 도착·입장(공휴기간 30분 전 도착 권장 충족) |
+| 19:30~21:00 | **Smalls 7:30pm 세트**(약 90분) |
+| 21:00~21:30 | W 10th St → 숙소(지하철) |
+
+**대안 시간표 B — 현행 저녁 유지 + 9:30pm 세트** (현행 Blue Note 슬롯과 거의 동일)
+| 시간대 | 활동 |
+|---|---|
+| 18:15~19:30 | [캐주얼] 이스트빌리지 이른 저녁(현행 유지) |
+| 19:30~20:50 | 숙소 복귀·휴식 → W 10th St 이동(여유 포함) |
+| 20:50~21:10 | Smalls 도착·입장 |
+| 21:30~23:00 | **Smalls 9:30pm 세트**(약 90분) |
+| 23:00~23:30 | 귀가(지하철) — 현행 귀가 23:10과 유사 |
+
+**예산**: 2-4 "Blue Note 550,000" → **"Smalls/Mezzrow 2인 135,000"**(51-4 계산, 5천원 올림). **차액 415,000원이 미배분 여유로 복귀**(브리프 v32는 "약 450,000원" 언급 — 실계산은 415,000). TicketWeb/Blue Note 구매 전이라 되돌리기 비용 0원. Mezzrow 선택 시 2인 티켓 $40 + 드링크 → 약 90,000~110,000원으로 더 저렴(5천원 올림 110,000).
+
+### 51-6. 배치 후보 (planner에게)
+
+| 후보 슬롯 | 매장 | 영업시간 정합 | 도보 거리 | 드롭 요일 충돌 | 판정 |
+|---|---|---|---|---|---|
+| **(b) 12/25(금) 산책 17:05~18:00** | A-1 Records | 평시 12:00~20:00 → 시각 정합 O. **단 크리스마스 당일 휴무 리스크 큼(미확인)** | 산책 경로(Tompkins Sq→St Marks→Astor Pl)에서 **도보 2~3분, 사실상 이탈 0** | 12/25는 목요일 아님(슈프림 무관) | **1순위 후보** — 열려 있으면 최적. 닫혔으면 손실 0 |
+| (b) 12/25 산책 | Academy Records (EV) | 평시 11:00~19:00 → 시각 정합 O(마감 19:00 여유). 크리스마스 휴무 리스크 | 산책 경로에서 도보 3~5분 | 무관 | **A-1 대체 1순위**(둘 중 하나) |
+| (b) 12/25 산책 | Supreme / Stüssy | 평시 마감 18:00~19:00 → 17:05 방문 시각 정합 빠듯~O. **크리스마스 당일 휴무 near-certain** | 산책 경로에서 **16~21분 이탈**(NoLIta 방향, 경로 밖) | **12/25 = 목요일 = 원래 드롭일이나 공휴일이라 드롭·영업 없음 추정** | **부적합** — 거리·휴무 이중 문제 |
+| **(a) 1/2(토) 메이시스 자리 14:20~15:50** | Supreme + Stüssy | 평시 토요일 11:00~19:00 → 정합 O | 메이시스(Herald Sq 34th St)와는 **동떨어짐**. **그러나 같은 날 Katz's(205 E Houston)에서 Supreme 190 Bowery까지 도보 약 8분**, Stüssy 50 Prince까지 12~14분 | **1/2는 토요일 = 드롭일 아님** → 혼잡 낮음(단 토요일 리테일은 여전히 붐빔) | **1순위 후보** — 메이시스/헤럴드스퀘어 왕복(F선)을 삭제하고, 오전 이스트빌리지·유니언스퀘어 쇼핑 블록 또는 Katz's 직후를 Bowery/NoLIta 루프(Supreme→Kith→Stüssy)로 대체. ESB(16:30 Herald Sq)는 별도로 이동 |
+| (c) 12/28(월) 귀환 후 20:00대 | A-1 / Academy / Supreme / Stüssy | **전부 마감(19:00~20:00) 이후 → 부적합** | — | — | **부적합** — 영업시간 초과 |
+| (d) 12/30 빌리지 산책 | Supreme / Stüssy | 평시 마감 O | 12/30 경로는 **그리니치빌리지**(Carmine/Bleecker/Washington Sq) — Bowery/NoLIta와 **15~20분 이탈**, 경로 밖 | 12/30은 수요일(드롭 무관) | **부적합** — 동선 불일치(빌리지 산책엔 Village Revival Records가 이미 배치됨) |
+| (d) 12/30 빌리지 산책 | A-1 / Academy | 마감 O | 이스트빌리지 소재 → 12/30 빌리지 경로와 **엇갈림**(도보 12~15분) | 무관 | **부적합** |
+
+### 51-7. 결론 (planner에게)
+
+**권장 배치안**
+1. **A-1 Records(또는 Academy Records EV) → 12/25(금) 저녁 산책 블록(17:05~18:00)에 편입.** 숙소·산책 경로에서 도보 2~5분, 이탈 사실상 0. **크리스마스 당일 영업이 확인되면 방문, 닫혀 있으면 그 자리에서 산책 지속(손실 0원).** 대체 슬롯: 12/26 아침 베이글 이후 또는 1/2 오전 이스트빌리지 쇼핑 블록(둘 다 도보권). 두 매장 다 넣고 싶으면 A-1(6th St) → Academy(12th St)를 St Marks 산책에 이어 붙이면 왕복 15분 내.
+2. **Supreme + Stüssy → 1/2(토) 일정에서 메이시스 헤럴드 스퀘어 90분(14:20~15:50)을 삭제하고, 그 시간을 Bowery/NoLIta 스트리트웨어 루프로 대체.** 동선상 **Katz's(12:30~13:40) 직후 도보 8~14분**이면 Supreme(190 Bowery) → (선택) Kith(337 Lafayette) → Stüssy(50 Prince) 순회가 자연스러움. ESB(16:30 Herald Sq 지정입장)는 유지하되 별도 이동. F선 Herald Sq 왕복이 사라지므로 순 이동시간은 오히려 비슷하거나 감소.
+   - **⚠ 슈프림은 목요일 드롭일에만 사전 등록 필요**. 1/2은 토요일이라 일반 리테일(줄 30분~2시간)로 들어가며 예약 불필요. 여행 중 목요일(12/25·1/1)은 둘 다 공휴일이라 드롭·방문 계획에서 제외.
+3. **12/30 Blue Note → Smalls(수요일 예약 $35/인) 교체.** 시간표는 51-5 대안 B(현행 저녁 유지 + 9:30pm 세트)가 현행 흐름과 가장 가깝고, 이른 마무리를 원하면 대안 A(7:30pm 세트, 저녁 17:10 앞당김).
+
+**예산 권고액**
+- 2-4 "Blue Note 550,000" → **"Smalls/Mezzrow 2인 135,000"**(Mezzrow면 110,000). **차액 약 415,000원 → 미배분 여유로 복귀**(완충률 추가 상승).
+- 쇼핑·기념품 695,000원(2-2 #7)은 **변경 없음** — 슈프림·스투시 구매는 이 공용 재원 안에서 소화. 티셔츠·캡 등 개당 $110 미만 품목은 뉴욕주 판매세 면제로 소폭 이득.
+- Supreme/Stüssy 방문 자체는 무료(입장), 별도 액티비티 예산 불필요.
+
+**남은 미확인 목록**
+1. **4개 매장 전부 12/25·1/1(및 A-1/Academy의 12/28) 실제 영업 여부** — 공식 미확인. 12월 중순 인스타그램·전화 재확인.
+2. **Supreme FW26 12월 말~1월 초 드롭 캘린더 및 12/25·1/1 드롭 스킵 여부** — 미공개(near-certain 스킵이나 공식 확인 필요). 슈프림 매장 방문 예약(등록) 사이트의 2026-12 운영 방식.
+3. **Stüssy 뉴욕 주소** — 현행 플래그십은 50 Prince St. 브리프의 "4 Bond St"가 오기인지 과거 위치인지 확인 필요.
+4. **Smalls/Mezzrow**: 12/30/2026 라인업·정확한 세트 시각(11월 중하순 공개), 예약 환불 정책, 1드링크 미니멈의 비알코올 충족 가능 여부(관행상 가능하나 공식 문구 미확인), 현행 커버 구조($35 예약 vs "$10 커버 + $25 워크인" 문구 병존).
+5. **한국 대비 가격 정량 비교**(슈프림·스투시) — 이번 조사 미실시. 리셀·직구가 대비 뉴욕 정가 우위는 정성적으로만 확인.
+6. 숙소 → W 10th St, Katz's → Bowery 등 **구간 실측 도보·지하철 시간**(본 장 추정치 ±5분).
+
+출처(51장 종합): [Yelp — Supreme 190 Bowery](https://www.yelp.com/biz/supreme-new-york), [nyctourism.com — Supreme](https://www.nyctourism.com/shopping/supreme1/), [soleretriever — Ultimate Supreme Buyers Guide](https://www.soleretriever.com/news/articles/ultimate-guide-to-supreme-where-to-buy-online-in-store-releases), [Tripadvisor — Supreme 리뷰(줄서기/예약)](https://www.tripadvisor.com/ShowUserReviews-g60763-d209845-r632635962-Supreme-New_York_City_New_York.html), [Hypebeast — Stüssy NY Chapter 재개장](https://hypebeast.com/2025/2/stussy-new-york-chapter-flagship-store-reopening-info), [Time Out — Stüssy Nolita flagship](https://www.timeout.com/newyork/news/streetwear-brand-stussy-just-opened-a-new-flagship-store-in-nolita-022425), [stussy.com — New York Chapter](https://www.stussy.com/blogs/chapters/stussy-new-york), [Yelp — A1 Records](https://www.yelp.com/biz/a1-records-new-york), [Yelp — Academy Records EV](https://www.yelp.com/biz/academy-records-new-york), [Village Preservation — Academy Records](https://villagepreservation.org/2025/08/01/business-of-the-month-academy-records-415-east-12th-street/), [smallslive.com — Ticketing](https://www.smallslive.com/tickets/), [smallslive.com — Contact & Info](https://www.smallslive.com/contact-and-info/), [Wikipedia — Smalls Jazz Club](https://en.wikipedia.org/wiki/Smalls_Jazz_Club), [Jazz at Lincoln Center — Best Jazz Clubs in NYC](https://jazz.org/blog/best-guide-top-live-jazz-clubs-nyc/), [NY State Tax — 의류 면세](https://www.tax.ny.gov/bus/st/sales_tax_clothing_exemption.htm) (조사 시점: 2026-09-02, 가격·영업시간·드롭 일정은 연말 재확인 필요)
