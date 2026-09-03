@@ -16,13 +16,13 @@ description: 확정된 조사·일정·예산·체크리스트 산출물을 하�
 ## 입력
 
 - `artifacts/family-trip-prep/01-research-notes.md`
-- `artifacts/family-trip-prep/02-itinerary-draft.md`
+- `artifacts/family-trip-prep/02-itinerary-current.md`
 - `artifacts/family-trip-prep/03-checklist-review.md`
 
 ## 절차
 
 1. 세 입력 파일을 읽고 각 섹션에 필요한 데이터를 추출한다.
-2. 예산 합계·항목이 `02-itinerary-draft.md`와 정확히 일치하는지 옮기기 전에 대조한다. 불일치를 발견하면 임의로 고치지 말고 오케스트레이터에게 차단을 보고한다.
+2. 예산 합계·항목이 `02-itinerary-current.md`와 정확히 일치하는지 옮기기 전에 대조한다. 불일치를 발견하면 임의로 고치지 말고 오케스트레이터에게 차단을 보고한다.
 3. TailwindCSS(CDN)로 일정 카드, 예산 표, 체크리스트, 항공권/숙소 후보 카드를 배치한다.
 4. Chart.js(CDN)로 예산 항목별 비중 차트를 만들고, 차트 데이터가 예산 내역표 숫자와 같은지 다시 확인한다.
 5. 항공권/숙소 후보와 결제가 필요한 모든 항목에 "사람 승인 필요" 배지를 눈에 띄게 표시한다.

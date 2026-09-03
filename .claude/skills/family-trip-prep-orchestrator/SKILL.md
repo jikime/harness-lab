@@ -19,14 +19,14 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 3. 있고 사용자가 특정 단계만 요청하면("항공권 후보만 다시", "예산만 다시 배분", "체크리스트만 갱신", "대시보드만 다시 만들어줘") 해당 단계만 부분 재실행한다.
 4. 완전히 새로운 여행으로 다시 시작해야 하면 기존 산출물을 `artifacts/family-trip-prep/archive/{YYYYMMDD-HHMMSS}/`에 보존하고 새 실행을 시작한다.
 5. 기존 산출물이 있지만 사용자 의도가 불분명하면 "이어 하기 / 부분 수정 / 새 여행으로 새 실행" 중 무엇인지 먼저 확인한다.
-6. 부분 재실행으로 앞 단계 파일이 바뀌면, 그 파일을 입력으로 삼는 뒤 단계 파일을 `README.md`에서 `stale`로 표시한다. 예: `01-research-notes.md`가 바뀌면 `02-itinerary-draft.md`, `03-checklist-review.md`, `dashboard.html`을 `stale`로 표시한다.
+6. 부분 재실행으로 앞 단계 파일이 바뀌면, 그 파일을 입력으로 삼는 뒤 단계 파일을 `README.md`에서 `stale`로 표시한다. 예: `01-research-notes.md`가 바뀌면 `02-itinerary-current.md`, `03-checklist-review.md`, `dashboard.html`을 `stale`로 표시한다.
 
 ## Agent Team 구성
 
 | 팀원 | Agent 파일 | tools | model | 주요 산출물 |
 | --- | --- | --- | --- | --- |
 | trip-researcher | `.claude/agents/trip-researcher.md` | `WebSearch, WebFetch, Read, Write, Edit` | sonnet | `artifacts/family-trip-prep/01-research-notes.md` |
-| itinerary-planner | `.claude/agents/itinerary-planner.md` | `Read, Write, Edit` | opus | `artifacts/family-trip-prep/02-itinerary-draft.md` |
+| itinerary-planner | `.claude/agents/itinerary-planner.md` | `Read, Write, Edit` | opus | `artifacts/family-trip-prep/02-itinerary-current.md` |
 | checklist-reviewer | `.claude/agents/checklist-reviewer.md` | `Read, Write` | sonnet | `artifacts/family-trip-prep/03-checklist-review.md` |
 | dashboard-builder | `.claude/agents/dashboard-builder.md` | `Read, Write` | haiku | `artifacts/family-trip-prep/dashboard.html` |
 
@@ -36,18 +36,18 @@ description: 가족 여행 준비를 조사, 일정·예산 설계, 체크리스
 | --- | --- | --- | --- | --- | --- | --- |
 | T01-input | Orchestrator | 사용자 요청 | `artifacts/family-trip-prep/00-trip-brief.md` | 없음 | 목적지, 날짜, 가족 구성, 예산, 제약이 정리됨 | 작성 완료 |
 | T02-research | trip-researcher | `00-trip-brief.md` | `artifacts/family-trip-prep/01-research-notes.md` | T01 | 항공권·숙소 후보 각 2개 이상, 출처 포함 | 시작, 차단, 완료 |
-| T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md`, (있으면) 직전 `03-checklist-review.md` | `artifacts/family-trip-prep/02-itinerary-draft.md`(이력 원본) + **`02-itinerary-current.md`(현행 스냅샷, 2026-09-02 신설)** | T02, **미검토 버전 확인(아래 T03 진입 검사)** | 예산 항목 합산과 표시 합계 일치, **두 파일의 현행 값 일치** | 시작, 차단, 완료 |
-| T04-checklist-review | checklist-reviewer | `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-draft.md` | `artifacts/family-trip-prep/03-checklist-review.md` | T03 | 예산 재검산·동선 검토 완료, 이슈 심각도 판정 | 시작, 차단, 완료 |
-| T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-draft.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인, **직전 검토가 조건부 승인이면 그 조건이 산출물에 실제로 반영됨(아래 T05 조건 이행 확인)** | 시작, 차단, 완료 |
+| T03-itinerary | itinerary-planner | `00-trip-brief.md`, `01-research-notes.md`, (있으면) 직전 `03-checklist-review.md` | `artifacts/family-trip-prep/02-itinerary-current.md`(유일 정본) | T02, **미검토 버전 확인(아래 T03 진입 검사)** | 예산 항목 합산과 표시 합계 일치 | 시작, 차단, 완료 |
+| T04-checklist-review | checklist-reviewer | `00-trip-brief.md`, `01-research-notes.md`, `02-itinerary-current.md` | `artifacts/family-trip-prep/03-checklist-review.md` | T03 | 예산 재검산·동선 검토 완료, 이슈 심각도 판정 | 시작, 차단, 완료 |
+| T05-dashboard | dashboard-builder | `01-research-notes.md`, `02-itinerary-current.md`, `03-checklist-review.md` | `artifacts/family-trip-prep/dashboard.html` | T04 | 숫자 일치, 승인 배지 존재, 모바일 확인, **직전 검토가 조건부 승인이면 그 조건이 산출물에 실제로 반영됨(아래 T05 조건 이행 확인)** | 시작, 차단, 완료 |
 | T06-artifact-sync | Orchestrator (dashboard-builder에게 위임하지 않음) | `dashboard.html`(갱신된 최종본) | `artifacts/family-trip-prep/dashboard-artifact.html` + Artifact 웹 발행/갱신 | T05 | `dashboard-artifact.html`의 데이터가 `dashboard.html`과 일치, 기존 Artifact URL이 있으면 그 URL로 갱신(새 URL 발급 방지). **본문(day-card·예산표)뿐 아니라 메타 요소(헤더 배지·D-day·`<title>`·하단 버전 로그·요약 리스크표처럼 본문 갱신 시 자연히 손대지 않는 별도 섹션)도 이전 버전 번호·날짜 문자열이 남아있는지 grep으로 스캔(2026-08-20·08-28·08-31 세 차례 방치 발견 이후 정식 반영, T06b 절 참고)** | 시작, 차단, 완료 |
-| T06b-notion-sync | Orchestrator (서브에이전트에게 위임하지 않음) | `02-itinerary-draft.md`·`03-checklist-review.md` 최신 데이터 | 노션 "뉴욕 여행 — 한장 정리" 페이지 | T06 | 노션 페이지의 예산 표·일자별 일정·조건부 사항 콜아웃이 최신 데이터와 일치, 제목·상단 안내문의 버전 표기 갱신 | 시작, 차단, 완료 |
+| T06b-notion-sync | Orchestrator (서브에이전트에게 위임하지 않음) | `02-itinerary-current.md`·`03-checklist-review.md` 최신 데이터 | 노션 "뉴욕 여행 — 한장 정리" 페이지 | T06 | 노션 페이지의 예산 표·일자별 일정·조건부 사항 콜아웃이 최신 데이터와 일치, 제목·상단 안내문의 버전 표기 갱신 | 시작, 차단, 완료 |
 | T07-record-close | Orchestrator | 이번 회차에 바뀐 모든 산출물 | `artifacts/family-trip-prep/README.md`, `artifacts/family-trip-prep/improvement-log.md` | T06b(대시보드·노션까지 간 회차) 또는 실제로 수행한 마지막 단계 | 이번 회차가 두 파일에 모두 기록됨(아래 T07 완료 기준) | 시작, 차단, 완료 |
 
 T04에서 중요 이상 이슈가 발견되면 itinerary-planner에게 수정 Task를 재등록한다(최대 2회, `T03-itinerary-revision-N`).
 
 ### T03 진입 검사 — 미검토 버전 위에 덧쓰지 않기
 
-T03을 시작하기 전에 **직전 버전이 T04 검토를 받았는지** 확인한다. `README.md`의 `03-checklist-review.md` 행이 현재 `02-itinerary-draft.md` 버전을 검토한 상태가 아니면(예: 일정은 v7인데 검토는 v6까지), 그대로 진행하지 말고 다음 중 하나를 택한다.
+T03을 시작하기 전에 **직전 버전이 T04 검토를 받았는지** 확인한다. `README.md`의 `03-checklist-review.md` 행이 현재 `02-itinerary-current.md` 버전을 검토한 상태가 아니면(예: 일정은 v7인데 검토는 v6까지), 그대로 진행하지 말고 다음 중 하나를 택한다.
 
 - **원칙**: 미검토분을 먼저 T04로 검토한 뒤 새 요청을 T03에 태운다.
 - **예외**: 사용자가 연속으로 요청해 중간 검토가 비효율적이면, 새 버전 작업을 진행하되 **다음 T04를 "통합 검토"로 등록**한다(예: `T04-checklist-review-v7+v8`). 이때 checklist-reviewer에게 **미검토 구간이 어디부터인지 명시적으로 알린다** — 그러지 않으면 reviewer가 마지막 회차만 보고 넘어간다.
@@ -55,11 +55,15 @@ T03을 시작하기 전에 **직전 버전이 T04 검토를 받았는지** 확�
 
 이 검사가 없으면 요청이 연달아 들어올 때 T04를 건너뛰고 T03만 반복하는 흐름이 생긴다(2026-07-30 v7이 실제로 그랬다).
 
-### 현행 스냅샷 `02-itinerary-current.md` — 이력 원본과의 이중 유지(2026-09-02 신설)
+### 일정 정본 `02-itinerary-current.md` — 이력을 파일에 쌓지 않는다(2026-09-03 통합)
 
-`02-itinerary-draft.md`는 "과거 장을 소급 수정하지 않고 새 장으로만 갱신"하는 이력 무결성 설계라 v28 시점 8,541줄·2MB가 되었고, reviewer가 "매 라운드 원문 전수 대조가 비현실적"이라고 보고했다. 실제로 폐기된 A안(09:05 열차) 서술이 현행 1-A 식사표·2-4 액티비티표·3장 대조표에 v21부터 v28까지 남아 있었는데도 "30차 전체 일관성 감사"가 놓쳤다. 그래서 **현행 표만 담은 스냅샷 파일을 별도로 두고 planner가 매 회차 둘 다 갱신**하며, reviewer는 스냅샷을 기준으로 전수 대조하고 원본과의 일치를 확인한다. dashboard-builder·T06·T06b도 이 스냅샷을 1차 입력으로 쓴다. **Orchestrator는 T03 완료 판정 전에 두 파일의 헤더 버전이 같은지, 이번 회차 바뀐 표가 양쪽에 다 들어갔는지 grep으로 확인한다.**
+**연혁**: 초기 설계는 `02-itinerary-draft.md`가 "과거 장을 소급 수정하지 않고 새 장으로만 갱신"하는 이력 누적 원본이었다. v28에 8,541줄이 되어 전수 대조가 비현실적이라는 reviewer 보고가 나왔고(폐기된 A안 09:05 열차 서술이 현행 표에 여덟 회차 잔존), 2026-09-02에 현행 값만 담은 스냅샷 `02-itinerary-current.md`를 별도로 뒀다. 그런데 스냅샷을 뒀는데도 draft는 v29~v32에서 계속 커졌고(9,282줄), **본표는 고치면서 그 값을 재인용하는 프로즈·리스크·메모는 안 고치는** 사고가 한 세션에서 5번 났다. 사용자가 "폐기된 건 지워버려 — 데이터가 너무 많으니까 못 찾는 거 아냐"라고 지시해, 2026-09-03에 **`02-itinerary-draft.md`를 폐지하고 `02-itinerary-current.md` 하나로 통합**했다.
 
-**2026-09-03 draft 이력 슬림화**: 스냅샷을 뒀는데도 draft는 v29~v32에서 계속 커졌고(9,282줄), 사용자가 "폐기된 건 지워버려 — 데이터가 너무 많으니까 못 찾는 거 아냐"라고 지시했다. draft에서 회차별 수정 이력 챕터(ch11~31)·재검토 스코프·중복 (이력) Day 섹션·스택형 헤더·폐기 대안 서술을 삭제해 약 2,700줄로 줄이고, **회차 상세는 git 커밋 히스토리에, v2~vNN 한 줄 요약은 draft 9장에** 위임하는 구조로 바꿨다. 앞으로 planner는 draft에 개정 이력 챕터를 새로 쌓지 않는다(planner 정의 「출력」·작업 방식 8 참조). reviewer가 T04에서 draft와 스냅샷을 대조할 때 "이전 값 문자열 grep"(바뀐 값의 옛 값이 프로즈·리스크행·메모에 잔존하는지)을 필수로 넣는다 — v29~v32에서 본표는 고쳐졌는데 재인용이 3회차 연속 안 바뀐 사고가 있었다.
+**현재 규칙**:
+- **`02-itinerary-current.md`가 유일한 일정 정본**이다(약 600줄, 현행 값만). planner·reviewer·dashboard-builder·T06·T06b 전부 이 파일 하나를 본다.
+- planner는 이 파일에 **개정 이력 챕터를 쌓지 않는다** — 회차별 재검산·트레이드오프 계산 과정과 폐기 대안의 이유는 **git 커밋(`가족 여행 준비: N차 —`)에 위임**하고, 이 파일에는 「개정 이력 요약」 표에 v2~vNN 한 줄 행 하나만 추가한다.
+- **Orchestrator는 T03 완료 판정 전에 grep으로** ① 이번 회차 바뀐 값이 프로즈·리스크·대조표·메모에 옛 값으로 남아 있지 않은지(바뀐 값의 *이전 값* 문자열로 검색), ② 헤더 버전 표기가 갱신됐는지 확인한다.
+- reviewer T04에도 "이전 값 문자열 grep"이 필수 절차로 들어가 있다(checklist-reviewer 정의 3-1).
 
 ### 회차 진입 시 "가정" 값 산술 검증(2026-09-02 신설)
 

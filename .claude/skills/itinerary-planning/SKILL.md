@@ -30,7 +30,7 @@ description: 조사된 목적지 정보와 가족 제약(나이, 체력, 예산)
 
 ## 출력
 
-- 저장 위치: `artifacts/family-trip-prep/02-itinerary-draft.md`
+- 저장 위치: `artifacts/family-trip-prep/02-itinerary-current.md`
 - 필수 섹션: 일자별 일정(시간대·장소·이동수단·소요시간) / 예산 내역표(항목별 금액 + 합계) / 절충한 트레이드오프와 이유 / 확인 필요 사항
 - 완료 기준: 예산 내역표의 항목 합산과 표시된 합계가 정확히 일치한다.
 

@@ -17,11 +17,11 @@ description: 가족 여행 출발 전 준비물·서류 체크리스트를 만�
 
 - `artifacts/family-trip-prep/00-trip-brief.md`
 - `artifacts/family-trip-prep/01-research-notes.md`
-- `artifacts/family-trip-prep/02-itinerary-draft.md`
+- `artifacts/family-trip-prep/02-itinerary-current.md`
 
 ## 절차
 
-1. `02-itinerary-draft.md`의 예산 내역표를 항목별로 직접 다시 더해 표시된 합계와 대조한다.
+1. `02-itinerary-current.md`의 예산 내역표를 항목별로 직접 다시 더해 표시된 합계와 대조한다.
 2. 일자별 일정의 이동 시간과 활동 강도를 가족 구성(나이·체력)과 대조한다.
 3. 조사 노트에 없던 근거 없는 가정이 일정표에 들어갔는지 확인한다.
 4. 여행 유형(국내/해외, 아이 동반 여부)에 맞는 준비물·서류 체크리스트를 작성한다(항목/담당자/기한/완료여부).
@@ -44,7 +44,7 @@ description: 가족 여행 출발 전 준비물·서류 체크리스트를 만�
 
 - 통과 기준: 모든 숫자·동선 판정에 근거(인용)가 있고, 치명 이슈가 없으면 "승인 필요 없음"으로 명시한다.
 - 사람 승인 조건: 치명 이슈가 2회 수정 요청 후에도 남아 있으면 사람 확인 필요로 표시한다.
-- 실패 시 처리: `02-itinerary-draft.md`가 없으면 검토를 시작하지 않고 오케스트레이터에게 보고한다.
+- 실패 시 처리: `02-itinerary-current.md`가 없으면 검토를 시작하지 않고 오케스트레이터에게 보고한다.
 
 ## 예시
 
@@ -57,4 +57,4 @@ Should not trigger:
 - "숙소 후보 새로 찾아줘" (trip-research의 책임)
 
 Ask before proceeding:
-- `02-itinerary-draft.md`가 아직 없는 상태에서 검토부터 요청하는 경우
+- `02-itinerary-current.md`가 아직 없는 상태에서 검토부터 요청하는 경우
