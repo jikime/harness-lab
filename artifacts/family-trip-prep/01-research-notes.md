@@ -4357,3 +4357,16 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 **교훈**: 시즌성 시설은 "겨울에 여느냐"뿐 아니라 **"우리 방문일에도 아직 열려 있느냐"**(개시일·종료일 양쪽)를 봐야 한다. 홀리데이 마켓 대부분은 크리스마스 이브~크리스마스 당일에 끝나므로, 12/26 이후 일정에 "홀리데이 마켓"이 있으면 그 마켓의 종료일을 반드시 확인.
 
 출처(54-8): [Union Square Holiday Market 공식](https://unionsquareholidaymarket.com/), [urbanspacemarkets.com — Union Square](https://urbanspacemarkets.com/pages/union-square), [Bryant Park — Holiday Shops](https://bryantpark.org/activities/holiday-shops), [Time Out — Saks Holiday Light Show 2025](https://www.timeout.com/newyork/things-to-do/holiday-windows-in-new-york-city), [Time Out — Rockefeller tree removal](https://www.timeout.com/newyork/news/the-rockefeller-center-christmas-tree-is-being-removed-tomorrowso-today-is-your-last-chance-to-see-it-010926) (조사 시점 2026-09-04. 2026-27 시즌 정확한 마켓 종료일은 11월 공식 공지로 재확인.)
+
+### 54-9. [2026-09-04 추가] 9/11 메모리얼 & 뮤지엄 — 타임드 티켓 사전 예매가 v3~v33 내내 누락
+
+**배경**: 54장 조사 중 9/11 뮤지엄의 입장 방식을 확인. **타임드(지정시간) 티켓 사전 예매가 필수**인데(911memorial.org, 6개월 전부터 가능, 24시간 전까지 환불·교환), 우리 문서는 Top of the Rock·Edge·ESB만 "지정시간 예매 대상"으로 다뤄 왔고 9/11 뮤지엄은 v3부터 v33까지 예매 액션 목록에 한 번도 없었다.
+
+- **메모리얼(야외 쌍둥이 풀)**: 무료·무예약. 항상 접근 가능.
+- **뮤지엄(실내)**: 타임드 티켓 필수. 성인 약 $36(배정 100,000원/2인은 세금·기부 포함).
+- **12/27(일)은 크리스마스 주간 일요일** — 홀리데이 주간엔 보안검색 대기가 길고 인기 슬롯이 매진될 수 있다. 우리 배정은 11:00 입장·135분 관람.
+- **권고**: 늦어도 12/13(2~3주 전)까지 911memorial.org에서 **12/27 11:00 슬롯을 지정 예매**. 11:00이 매진이면 그날 다른 오전 슬롯, 12/27 전체 매진이면 12/29·1/2 오전 중 대체일 검토(동선 재산정). 완전 불가 시 야외 메모리얼만 보고 뮤지엄 포기(100,000원 미집행).
+
+**교훈**: "예매가 필요한 시설" 목록을 처음 만들 때(v6 전망대 3곳) 그 목록이 완결적인지 검토하지 않았다. 실내 뮤지엄·전망대·공연은 대부분 타임드 티켓 체제이므로, 일정의 모든 유료 실내 시설에 대해 "당일 워크인 가능한가, 사전 예매 대상인가"를 한 번씩 물어야 한다.
+
+출처(54-9): [National September 11 Memorial & Museum — Visit](https://www.911memorial.org/visit/visit-museum-1), [911memorial.org — Tickets](https://www.911memorial.org/visit) (조사 시점 2026-09-04. 2026-12-27 슬롯 실제 매진 상황은 예매 시점 확인.)
