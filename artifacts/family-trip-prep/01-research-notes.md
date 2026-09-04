@@ -11,7 +11,7 @@
 
 - 뉴욕(맨해튼 중심)은 연중 가장 붐비는 시즌 중 하나인 연말연시(크리스마스~새해)에 방문하는 일정. 록펠러 센터 크리스마스 트리, 5번가 쇼윈도, 브라이언트 파크 윈터 빌리지 등 겨울 시즌 한정 명소가 모두 운영 중인 시기와 겹침.
 - 록펠러 센터 크리스마스 트리는 통상 1월 초~중순(대략 1/7~1/14 전후)까지 점등 유지 후 철거되는 경우가 많아, 이번 여행 기간(~1/2) 동안은 트리를 볼 수 있을 가능성이 높음. **정확한 2026년 점등/철거 일정은 출발 전 재확인 필요.**
-- 센트럴파크 월먼 링크(Wollman Rink) 스케이트장은 2025-10-26~2026-03-22 시즌 운영 중으로, 여행 기간 내내 이용 가능. (출처: [Centralpark.com](https://www.centralpark.com/things-to-do/sports/ice-skating/), 스케이트 대여 약 $12+세)
+- 센트럴파크 월먼 링크(Wollman Rink) 스케이트장은 통상 10월 말~3월 말 시즌 운영(2025-26 시즌은 2025-10-26~2026-03-22). **[2026-09-04] 2026-27 시즌 캘린더·요금표는 아직 미발표**이나 같은 패턴이면 우리 여행일(12/25~1/2) 전 기간 운영. 공식이 "public school holiday/vacation days: All day" 운영을 명시하고 **1/1은 뉴욕시 학교 겨울방학 기간이라 신정 종일 개장이 유력**(요금 티어·단가는 시즌 캘린더 발표 후 확인 — 정본 확인 항목 81). (출처: [Centralpark.com](https://www.centralpark.com/things-to-do/sports/ice-skating/), [nycgovparks.org](https://www.nycgovparks.org/facilities/iceskating/5), [wollmanrinknyc.com](https://wollmanrinknyc.com/), 스케이트 대여 약 $12+세)
 
 ## 2. 날씨·시즌 팁
 
@@ -4371,3 +4371,12 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 **교훈**: "예매가 필요한 시설" 목록을 처음 만들 때(v6 전망대 3곳) 그 목록이 완결적인지 검토하지 않았다. 실내 뮤지엄·전망대·공연은 대부분 타임드 티켓 체제이므로, 일정의 모든 유료 실내 시설에 대해 "당일 워크인 가능한가, 사전 예매 대상인가"를 한 번씩 물어야 한다.
 
 출처(54-9): [National September 11 Memorial & Museum — Visit](https://www.911memorial.org/visit/visit-museum-1), [911memorial.org — Tickets](https://www.911memorial.org/visit) (조사 시점 2026-09-04. 2026-12-27 슬롯 실제 매진 상황은 예매 시점 확인.)
+
+### 54-10. [2026-09-04 추가] 1/1 폴백 2건(J.G. Melon·월먼 링크) 개장 여부 — 둘 다 걱정 낮음, 요금·특별시간만 잔여
+
+**배경**: 57차(백업 전수 검증) 후속. 1/1(금)의 두 미확정 시설을 가볍게 재확인(D-112, rule 3-5는 D-100+에서 가벼운 조회를 허용).
+
+- **J.G. Melon(1291 3rd Ave)**: 정규 영업 **금요일 11:30~04:00**(월~수 ~03:00 · 목~토 ~04:00 · 일 ~01:00). 예약 불가·워크인·현금 전용. 신정 당일 특별 단축·휴무는 미확인(전화 212-744-0585). **분점 2곳(480 Amsterdam Ave · 89 MacDougal St)은 폐업** — 원조 3rd Ave점만 남았고 정본 배치와 일치. 닫혀 있으면 슬롯 비우고 어퍼이스트사이드 워크인 대체(사전결제 없어 손실 0, 다만 그날 유일 유명 끼니는 상실).
+- **월먼 링크**: 2026-27 시즌 캘린더·요금표 미발표. 통상 10월 말~3월 말 시즌이라 우리 여행 전 기간 운영이 유력하고, 공식이 **"public school holiday/vacation days: All day"** 운영을 명시 — 1/1은 뉴욕시 학교 겨울방학이라 신정 종일 개장이 유력. 남은 미확정은 요금 티어(prime $40)·2026-27 시즌 단가·날짜별 캘린더뿐(정본 확인 항목 81). 닫혀 있어도 사전결제 없어 손실 0.
+
+출처(54-10): [J.G. Melon — OpenTable](https://www.opentable.com/r/jg-melon-new-york), [J.G. Melon — Wikipedia](https://en.wikipedia.org/wiki/J.G._Melon), [Wollman Rink — NYC Parks](https://www.nycgovparks.org/facilities/iceskating/5), [wollmanrinknyc.com](https://wollmanrinknyc.com/) (조사 시점 2026-09-04)
