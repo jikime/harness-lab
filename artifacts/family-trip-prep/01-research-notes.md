@@ -1046,7 +1046,14 @@
 - 15-3이 "12/28"로 분석한 "센트럴파크 산책 90분 + 월먼 링크 90분 = 3시간 연속 옥외"가 **v20~v22에서 1/1로 통째 이설**됐다. 분석 내용(체감온도 추정, Wollman Café 실내 휴식 권고)은 그대로 유효하다.
 - **1/1 특유의 추가 요인**: 전날 자정 레이스로 **수면 약 6~6.5시간** — 피로가 한파 내성을 떨어뜨린다. 15-3의 "스케이팅 전후 각 10분 실내 휴식"을 **각 15분으로 늘리고**, 아침 컨디션이 나쁘면 월먼 링크를 1순위로 생략(이미 일정표 트리거에 있음).
 
-**출처(15-8)**: 15-0의 체감온도표·NWS 윈드칠 산식 재사용, [NYRR Midnight Run 공식](https://events.nyrr.org/nyrr-midnight-run), [Statue City Cruises](https://www.statuecitycruises.com/), [WeatherSpark — NYC December](https://weatherspark.com/m/23912/12/Average-Weather-in-December-in-New-York-City) (조사 시점 2026-09-04. 실제 12/31 예보는 출발 1주 전 재확인 — 이 구간은 "예보 재확인"이 특히 중요하다.)
+#### 15-8-4. [2026-09-04 추가] 12/28 보스턴 프리덤 트레일 — 15장이 뉴욕 기준이라 아예 없던 구간
+
+- 15장 전체가 뉴욕 기온 기준이라 **12/28 보스턴 당일치기의 옥외 노출이 분석된 적이 없다.** 보스턴 프리덤 트레일 도보 관람 **10:35~12:35 = 옥외 약 2시간**(정본 Day 4).
+- **보스턴 12월 말 기온**: 아침 최저 약 -3~-4℃, 오후 최고 약 3~4℃ — **뉴욕보다 약 3~4℃ 낮다**(WeatherSpark). 12월 후반은 강설 확률이 높고 평균 총 적설 약 23cm.
+- **판단**: ① 시간대가 아침~정오라 하루 중 최저는 아니고, ② 프리덤 트레일은 걸어다니는 구간이라 정적 노출이 아니다(15-8-1 아내 대기와 반대). 다만 ③ **12/28은 하루 18시간 여정·수면 5~5.5시간이라 피로가 한파 내성을 크게 떨어뜨리고**, ④ 눈이 오면 프리덤 트레일 벽돌·자갈 노면이 미끄럽다.
+- **권고**: 방풍 셸·손 핫팩·방수 부츠 필수(어차피 이번 여행 방한 장비에 포함). **프리덤 트레일 중간에 퀸시 마켓(Faneuil Hall Marketplace, 실내)에서 12:35~13:35 점심**이 예정돼 있어 2시간 옥외 후 자연스러운 실내 휴식이 붙는다 — 구조적으로 이미 괜찮다. **강설 예보 시**: 프리덤 트레일을 120→90분으로 줄이고(정본에 이미 있는 탄력 조정) 실내 사적지(파네일홀·올드 사우스 미팅하우스) 위주로. **폭설·기상특보 시**: Amtrak이 지연·결항될 수 있으므로(Northeast Regional은 겨울 폭설에 취약) 12/28 당일치기 자체를 포기하고 뉴욕에서 휴식 — 예매 후라 환불은 Amtrak 정책 따름.
+
+**출처(15-8)**: 15-0의 체감온도표·NWS 윈드칠 산식 재사용, [NYRR Midnight Run 공식](https://events.nyrr.org/nyrr-midnight-run), [Statue City Cruises](https://www.statuecitycruises.com/), [WeatherSpark — NYC December](https://weatherspark.com/m/23912/12/Average-Weather-in-December-in-New-York-City), [WeatherSpark — Boston December](https://weatherspark.com/m/26197/12/Average-Weather-in-December-in-Boston) (조사 시점 2026-09-04. 실제 12/31 예보는 출발 1주 전 재확인 — 이 구간은 "예보 재확인"이 특히 중요하다.)
 
 ---
 
