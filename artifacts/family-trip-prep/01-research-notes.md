@@ -4328,3 +4328,25 @@ ESB(고정)+ToR·9/11·구겐하임(3택) 조합이면 우리가 원하는 4곳(
 | 6 | The Met 12/31 단축 가능성 높음 | Day 7 메모: 10:30 출발을 10:00으로 당길 여지, 단축 시 숍만 잘림 |
 
 출처(54장): [NYC 공식 — Times Square NYE Street Closures](https://www.nyc.gov/assets/cecm/downloads/pdf/2025-nye-street-closures-info.pdf), [Times Square NYC — NYE FAQ](https://www.timessquarenyc.org/nye/nye-faq), [MTA — Holiday Service](https://www.mta.info/article/mta-service-new-years-2026), [centralpark.com — NYRR Midnight Run and Fireworks](https://www.centralpark.com/events/nyrr-midnight-run-and-fireworks/), [ABC7 — NYE fireworks canceled (drought)](https://abc7ny.com/post/new-years-eve-fireworks-central-park-prospect-canceled-due-ongoing-drought/15623139/), [NYC 공식 — Rockefeller Center Holiday Pedestrian Plan](https://www.nyc.gov/office-of-the-mayor/news/789-21/mayor-de-blasio-holiday-plans-pedestrian-space-rockefeller-center), [Statue City Cruises — Schedule](https://statuecitycruises.com/plan-your-visit/schedule/), [The Met — Holiday Hours(2차)](https://www.wonderfulmuseums.com/museum/metropolitan-museum-of-art-holiday-hours/) (조사 시점 2026-09-04. 정확한 12/31 미술관·식당 시각과 2026 NYE 공식 통제구역 지도는 출발 임박 재확인.)
+
+### 54-8. [2026-09-04 추가] 홀리데이 마켓·쇼윈도·트리의 시즌 유효 기간 — 12/30 유니언스퀘어 마켓은 이미 없음
+
+**배경**: 54장 조사 중 "연말 특수"를 확정 일정에 대입하다가, 홀리데이 마켓의 **운영 종료일**을 아무도 확인한 적이 없다는 걸 발견. v32 감사가 "12/30 유니언스퀘어 홀리데이 마켓 체류 45 → 통과 ≤15분 축소"로 처리했으나, 그건 축소가 아니라 **대상 소멸**이었다.
+
+| 항목 | 2026-27 시즌 운영 | 우리 방문일 | 판정 |
+|---|---|---|---|
+| **유니언스퀘어 홀리데이 마켓** | 11/13 ~ **12/24 16:00 마감** (크리스마스 이브까지만) | 12/30 방문 예정 | ❌ **6일 전 철거. 일정에서 삭제** |
+| **브라이언트파크 윈터 빌리지 홀리데이 숍** | 10/28 ~ **2027-01-03** | 12/26 방문 | ✅ 정상 |
+| 브라이언트파크 스케이트링크 | 10/28 ~ 2027-02-28 | (방문 안 함) | — |
+| **Saks 5번가 라이트쇼** | 매일 17:00~23:00, **1월 초까지** | 12/25 | ✅ |
+| **Bergdorf Goodman 홀리데이 윈도** | 시즌 내내(57~58가) | 12/25 | ✅ |
+| **록펠러 센터 크리스마스 트리** | 약 **1/10 철거**(에피파니 이후) | 12/25 | ✅ |
+
+**반영**:
+- 12/30 Day 6 15:55~16:55 블록에서 "유니언스퀘어 홀리데이 마켓 통과 ≤15분"을 삭제. 회수된 시간은 Academy Records EV 체류(25→40분)로 재배분. Academy가 12/30(수) 휴무면 유니언스퀘어~14가 일반 산책으로 대체(손실 0).
+- 2-4 「홀리데이 마켓·소액 체험」 180,000원 배정은 유지 — 실제 지출처는 12/26 브라이언트파크 윈터 빌리지·5번가·록펠러로 명시.
+- Day 9(1/2) "유니언스퀘어 마지막 쇼핑"은 홀리데이 마켓이 아니라 일반 상점·그린마켓(토요일 운영)이므로 무관.
+
+**교훈**: 시즌성 시설은 "겨울에 여느냐"뿐 아니라 **"우리 방문일에도 아직 열려 있느냐"**(개시일·종료일 양쪽)를 봐야 한다. 홀리데이 마켓 대부분은 크리스마스 이브~크리스마스 당일에 끝나므로, 12/26 이후 일정에 "홀리데이 마켓"이 있으면 그 마켓의 종료일을 반드시 확인.
+
+출처(54-8): [Union Square Holiday Market 공식](https://unionsquareholidaymarket.com/), [urbanspacemarkets.com — Union Square](https://urbanspacemarkets.com/pages/union-square), [Bryant Park — Holiday Shops](https://bryantpark.org/activities/holiday-shops), [Time Out — Saks Holiday Light Show 2025](https://www.timeout.com/newyork/things-to-do/holiday-windows-in-new-york-city), [Time Out — Rockefeller tree removal](https://www.timeout.com/newyork/news/the-rockefeller-center-christmas-tree-is-being-removed-tomorrowso-today-is-your-last-chance-to-see-it-010926) (조사 시점 2026-09-04. 2026-27 시즌 정확한 마켓 종료일은 11월 공식 공지로 재확인.)
