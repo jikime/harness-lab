@@ -108,4 +108,4 @@ Orchestrator가 v31 일정을 두 분 프로필(아이코닉·오센틱, 마케�
 ## 상태
 
 - 작성: Orchestrator (사용자 입력 기반)
-- 다음 단계: trip-researcher가 이 파일을 입력으로 뉴욕 조사를 시작
+- **[2026-09-04] 파이프라인 완료 — 산출물 버전 v33. 이 브리프는 입력 문서로 유지되며, "확정된 선호"·"공항 이동 수단"·"취향 적합도 감사" 절이 날짜 태그와 함께 계속 갱신됨.** 현행 일정·예산은 `02-itinerary-current.md`(v33), 실행 액션은 `04-execution-action-checklist.md`(v18), 회차 이력은 git 커밋(`가족 여행 준비: N차`)과 `README.md`·`improvement-log.md`.
